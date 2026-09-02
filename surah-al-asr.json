@@ -1,0 +1,2259 @@
+{
+  "metadata": {
+    "title": "Surah Al-Asr (سورة العصر) — Complete Grammatical, Morphological, Rhetorical & Deep Analytical Dataset",
+    "surah_number": 103,
+    "surah_name_ar": "سورة العصر",
+    "surah_name_en": "Surah Al-Asr",
+    "surah_name_translation": "The Declining Day / Time",
+    "revelation_type": "Meccan (مكية)",
+    "chronological_order": 13,
+    "total_verses": 3,
+    "total_words": 14,
+    "total_morphemes": 32,
+    "version": "1.0.0",
+    "updated_at": "2026-09-03 00:26",
+    "compiler": "Antigravity Arabic Grammar Intelligence System",
+    "guideline_basis": "Comprehensive Quranic Arabic Analysis Matrix (Nahw, Sarf, Balaghah, Aqidah, Ontology, Knowledge Graph, Semantic Metadata)",
+    "license": "Open Data for Quranic Education",
+    "footer_version": "v1.0.0 (updated 2026-09-03 00:26)"
+  },
+  "color_coding_system": {
+    "description": "Pedagogical color-coding matrix mapping phonetic vowels, grammatical cases (i'rab), word classes (ism/fi'l/harf), and morpheme tiers to visual color tokens.",
+    "case_and_mood_palette": {
+      "raf": {
+        "case": "raf",
+        "case_ar": "مرفوع (الرفع)",
+        "vowel": "Dhumma (ـُ)",
+        "color": "#2563eb",
+        "bg": "#eff6ff",
+        "border": "#3b82f6",
+        "text": "#1e40af",
+        "concept": "Elevation (الرفع) — Primary, independent, subject or topic."
+      },
+      "nasb": {
+        "case": "nasb",
+        "case_ar": "منصوب (النصب)",
+        "vowel": "Fatha (ـَ)",
+        "color": "#059669",
+        "bg": "#ecfdf5",
+        "border": "#10b981",
+        "text": "#065f46",
+        "concept": "Setting up / Erecting (النصب) — Dependency, object, subject of Inna."
+      },
+      "jarr": {
+        "case": "jarr",
+        "case_ar": "مجرور (الجر / الخفض)",
+        "vowel": "Kasra (ـِ)",
+        "color": "#7c3aed",
+        "bg": "#f5f3ff",
+        "border": "#8b5cf6",
+        "text": "#5b21b6",
+        "concept": "Dragging / Pulling down (الجر) — Attachment, prepositions, swearing oath noun."
+      },
+      "jazm": {
+        "case": "jazm",
+        "case_ar": "مجزوم (الجزم)",
+        "vowel": "Sukun (ـْ)",
+        "color": "#d97706",
+        "bg": "#fffbeb",
+        "border": "#f59e0b",
+        "text": "#92400e",
+        "concept": "Cutting / Clipping (الجزم) — Absence of vowel, conditions, commands."
+      },
+      "mabni": {
+        "case": "mabni",
+        "case_ar": "مبني (البناء)",
+        "vowel": "Fixed (مبني)",
+        "color": "#64748b",
+        "bg": "#f8fafc",
+        "border": "#94a3b8",
+        "text": "#334155",
+        "concept": "Fixed base (المبني) — Invariable structural ending."
+      }
+    },
+    "word_classification_palette": {
+      "ism": {
+        "color": "#1d4ed8",
+        "bg": "#dbeafe",
+        "label": "Ism (Noun / Pronoun / Relative Noun)"
+      },
+      "fi'l": {
+        "color": "#e11d48",
+        "bg": "#ffe4e6",
+        "label": "Fi'l (Verb)"
+      },
+      "harf": {
+        "color": "#d97706",
+        "bg": "#fef3c7",
+        "label": "Harf (Particle / Preposition / Conjunction)"
+      }
+    },
+    "morpheme_tier_palette": {
+      "prefix": {
+        "color": "#d97706",
+        "bg": "#fef3c7",
+        "label": "Prefix (Oath Waw, Preposition Ba, Emphatic Lam, Conjunction Waw)"
+      },
+      "stem_root": {
+        "color": "#2563eb",
+        "bg": "#eff6ff",
+        "label": "Stem Consonantal Root"
+      },
+      "stem_augmented": {
+        "color": "#0284c7",
+        "bg": "#e0f2fe",
+        "label": "Augmented Letters forming Forms IV & VI"
+      },
+      "suffix": {
+        "color": "#ec4899",
+        "bg": "#fce7f3",
+        "label": "Suffix (Attached Subject Pronoun Waw al-Jama'ah)"
+      }
+    }
+  },
+  "pedagogical_framework": {
+    "title": "Pedagogical Principles & Systematic Grammar Guide of Surah Al-Asr",
+    "trilateral_word_classification": {
+      "ism": "Encompasses Al-Asr (time/oath), Al-Insan (mankind), Khusr (loss), Al-Ladhina (relative pronoun), Al-Salihat (righteous deeds), Al-Haqq (truth), and Al-Sabr (patience).",
+      "fil": "Includes Form IV verb 'Amanu' (believed), Form I verb 'Amilu' (worked/performed), and Form VI verb 'Tawasaw' (enjoined/advised one another).",
+      "harf": "Includes Waw al-Qasam (oath particle), Inna (emphatic particle), Lam al-Muzahlaqah (emphatic attached particle), Illa (exception particle), Waw al-Atf (conjunction), and Ba al-Jarr (preposition)."
+    },
+    "core_surah_thesis": "Imam Al-Shafi'i noted: 'If Allah had revealed no other surah to His creation except this surah, it would have been sufficient for them.' It outlines the universal law of human salvation across four essential pillars: Faith (Iman), Righteous Action (Amal Salih), Mutual Enjoining of Truth (Tawasi bil-Haqq), and Mutual Enjoining of Steadfast Patience (Tawasi bis-Sabr)."
+  },
+  "thematic_sections": [
+    {
+      "section_id": 1,
+      "ayah_range": "1-2",
+      "title_en": "The Divine Oath by Time & The Universal Condition of Mankind in Loss",
+      "title_ar": "القسم بالعصر وبيان خسران الجنس البشري",
+      "color": "#ef4444",
+      "summary": "Allah swears by Al-Asr (Time / The Declining Day) that every human being is intrinsically trapped in a state of absolute depletion and loss (Khusr)."
+    },
+    {
+      "section_id": 2,
+      "ayah_range": "3",
+      "title_en": "The Four Divine Qualifications for Salvation and Eternal Success",
+      "title_ar": "أركان النجاة الأربعة من الخسران",
+      "color": "#10b981",
+      "summary": "The exception to universal loss: those who embody Faith, perform Righteous Deeds, and actively build a resilient community through mutual recommendation of Truth and Patience."
+    }
+  ],
+  "verses": [
+    {
+      "ayah_number": 1,
+      "surah_number": 103,
+      "text_uthmani": "وَٱلْعَصْرِ",
+      "text_imlaei": "وَالْعَصْرِ",
+      "translation": "By time,",
+      "thematic_section_id": 1,
+      "thematic_section_title": "The Divine Oath by Time",
+      "words_count": 1,
+      "sentence_analysis": {
+        "sentence_type": "shibh_jumlah_qasam",
+        "primary_structure": {
+          "phrase": "والعصر",
+          "type": "prepositional_oath_construction"
+        },
+        "mahzuf": {
+          "exists": true,
+          "type": "verb",
+          "estimated_forms": [
+            "أُقْسِمُ",
+            "أَحْلِفُ"
+          ],
+          "reason_for_omission": {
+            "brevity": true,
+            "universality": true,
+            "rhetorical_expansion": true
+          }
+        },
+        "taalluq": {
+          "jar_majroor_requires_attachment": true,
+          "attached_to": {
+            "type": "hidden_verb",
+            "status": "mahdhuf",
+            "meaning": "I swear by"
+          }
+        }
+      },
+      "syntax": {
+        "harf_qasam": "وَ",
+        "muqsam_bihi": "العَصْرِ",
+        "case": "majroor"
+      },
+      "dependency_tree": {
+        "root_concept": "hidden_verb_uqsimu",
+        "edges": [
+          {
+            "head": "hidden_verb_uqsimu",
+            "dependent": "وَ",
+            "relation": "oath_particle"
+          },
+          {
+            "head": "وَ",
+            "dependent": "العَصْرِ",
+            "relation": "governed_oath_noun"
+          }
+        ]
+      },
+      "balaghah": {
+        "qasam": {
+          "present": true,
+          "muqsam_bihi": "العصر",
+          "purpose": "Emphasizing the value of time as the capital asset of human existence."
+        },
+        "ijaz": {
+          "present": true,
+          "description": "Omission of the oath verb (أقسم) for immediate dramatic impact."
+        }
+      },
+      "aqidah": {
+        "divine_oath_significance": "Allah swears by created phenomena like Time to demonstrate their grand cosmic sign value and gravity for human accountability."
+      },
+      "words": [
+        {
+          "id": 103001001,
+          "location": "103:1:1",
+          "surah": 103,
+          "ayah": 1,
+          "word_position": 1,
+          "arabic_uthmani": "وَٱلْعَصْرِ",
+          "arabic_clean": "والعصر",
+          "transliteration": "wal-ʿaṣri",
+          "translation": "By time,",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_001_001.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "jamid",
+              "derivation": "masdar",
+              "derivation_ar": "مصدر (Verbal Noun)",
+              "definiteness": "definite",
+              "gender": "masculine",
+              "number": "singular"
+            }
+          },
+          "sarf": {
+            "root": "ع-ص-ر",
+            "root_ar": "عصر",
+            "root_meaning": "to press, squeeze out, decline of day, time era",
+            "root_concept": "Time / Squeezing / Declining Day",
+            "lemma": "عَصْر",
+            "root_letters": [
+              "ع",
+              "ص",
+              "ر"
+            ],
+            "wazn": "فَعْل",
+            "person": null,
+            "gender": "masculine",
+            "number": "singular"
+          },
+          "irab_and_case": {
+            "case_or_mood": "jarr",
+            "case_or_mood_ar": "مجرور (الجر / الخفض)",
+            "case_concept": "Dragging / Pulling down (الجر) — Governed by oath particle Waw.",
+            "ending_vowel": "kasra",
+            "grammatical_role": "muqsam_bihi",
+            "grammatical_role_ar": "اسم مجرور بواو القسم وعلامة جره الكسرة الظاهرة",
+            "why_this_ending": "Preceded by Waw al-Qasam (واو القسم), which functions grammatically as a Harf Jarr (preposition).",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 3,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "وَ",
+                "transliteration": "wa",
+                "type": "prefix",
+                "pos_tag": "P/QASAM",
+                "role": "Oath particle (واو القسم) acting as preposition",
+                "vowel": "fatha",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "ٱلْ",
+                "transliteration": "al",
+                "type": "prefix",
+                "pos_tag": "DET",
+                "role": "Definite article (لام التعريف)",
+                "vowel": "sukun",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "عَصْرِ",
+                "transliteration": "ʿaṣri",
+                "type": "stem",
+                "pos_tag": "N",
+                "role": "Noun stem in genitive case",
+                "vowel": "kasra",
+                "color_code": "#7c3aed",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#7c3aed",
+            "case_bg": "#f5f3ff",
+            "case_border": "#8b5cf6",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Kasra (ـِ) • مجرور (الجر)",
+            "pedagogical_badge": "اسم • مجرور بالقسم"
+          },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_waw_al_qasam",
+            "function": "muqsam_bihi"
+          },
+          "semantics": {
+            "gloss": "by time / the declining day",
+            "semantic_field": [
+              "time",
+              "duration",
+              "urgency",
+              "human_lifetime"
+            ]
+          },
+          "ontology_tags": [
+            "DIVINE_OATH",
+            "TIME",
+            "TEMPORAL_CAPITAL"
+          ]
+        }
+      ]
+    },
+    {
+      "ayah_number": 2,
+      "surah_number": 103,
+      "text_uthmani": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+      "text_imlaei": "إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ",
+      "translation": "Indeed, mankind is in loss,",
+      "thematic_section_id": 1,
+      "thematic_section_title": "Universal Condition of Mankind in Loss",
+      "words_count": 4,
+      "sentence_analysis": {
+        "sentence_type": "jumlah_ismiyyah_naskhiyyah",
+        "primary_structure": {
+          "part_inna": "إِنَّ",
+          "ism_inna": "الْإِنْسَانَ",
+          "khabar_inna": "لَفِي خُسْرٍ"
+        },
+        "taalluq": {
+          "jar_majroor_requires_attachment": true,
+          "attached_to": {
+            "type": "khabar_inna_shibh_jumlah",
+            "status": "established_predicate",
+            "meaning": "existing / submerged in"
+          }
+        }
+      },
+      "syntax": {
+        "naskh_particle": "إِنَّ",
+        "ism_inna": "الْإِنْسَانَ",
+        "khabar_inna": "لَفِي خُسْرٍ",
+        "emphatic_lam": "لَ",
+        "jar_majroor": "فِي خُسْرٍ"
+      },
+      "dependency_tree": {
+        "root_concept": "إِنَّ",
+        "edges": [
+          {
+            "head": "إِنَّ",
+            "dependent": "الْإِنْسَانَ",
+            "relation": "ism_inna"
+          },
+          {
+            "head": "إِنَّ",
+            "dependent": "فِي",
+            "relation": "khabar_inna"
+          },
+          {
+            "head": "فِي",
+            "dependent": "لَ",
+            "relation": "emphatic_lam_muzahlaqah"
+          },
+          {
+            "head": "فِي",
+            "dependent": "خُسْرٍ",
+            "relation": "governed_noun"
+          }
+        ]
+      },
+      "balaghah": {
+        "tawkid": {
+          "present": true,
+          "levels_of_emphasis": 3,
+          "elements": [
+            "Divine Oath (والعصر)",
+            "Particle Inna (إنَّ)",
+            "Lam al-Muzahlaqah (لَفِي)"
+          ],
+          "rhetorical_purpose": "Removing any doubt regarding the reality of human decay without spiritual intervention."
+        },
+        "tanker_for_magnification": {
+          "word": "خُسْرٍ",
+          "effect": "Tanween al-Ta'dheem / al-Tahweel — designating an immense, terrifying, and total loss."
+        },
+        "zarfiyyah_metaphor": {
+          "phrase": "فِي خُسْرٍ",
+          "effect": "Using the preposition 'Fi' (in) depicts loss as a container or deep ocean in which human beings are fully submerged."
+        }
+      },
+      "aqidah": {
+        "human_nature": "Left to pure material inclinations, human existence continuously depreciates in spiritual value with every passing second."
+      },
+      "words": [
+        {
+          "id": 103002001,
+          "location": "103:2:1",
+          "surah": 103,
+          "ayah": 2,
+          "word_position": 1,
+          "arabic_uthmani": "إِنَّ",
+          "arabic_clean": "إن",
+          "transliteration": "inna",
+          "translation": "Indeed,",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_002_001.mp3",
+          "classification": {
+            "primary_type": "harf",
+            "primary_type_ar": "حرف",
+            "details": {
+              "category": "harf",
+              "particle_type": "harf_nasb_watawkeed",
+              "particle_type_ar": "حرف توكيد ونصب (Harf of Emphasis and Accusative Governance)"
+            }
+          },
+          "sarf": {
+            "root": null,
+            "root_ar": null,
+            "root_meaning": null,
+            "root_concept": null,
+            "lemma": "إِنَّ",
+            "root_letters": [],
+            "wazn": null,
+            "person": null,
+            "gender": null,
+            "number": null
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني (البناء)",
+            "case_concept": "Fixed base (المبني) — Particle built on Fatha.",
+            "ending_vowel": "fatha",
+            "grammatical_role": "harf_tawkeed",
+            "grammatical_role_ar": "حرف توكيد ونصب مبني على الفتح لا محل له من الإعراب",
+            "why_this_ending": "Fixed particle (مبني على الفتح) that enters nominal sentences, making the subject منصوب (Nasb).",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 1,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "إِنَّ",
+                "transliteration": "inna",
+                "type": "stem",
+                "pos_tag": "ACC",
+                "role": "Accusative emphatic particle",
+                "vowel": "fatha",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#d97706",
+            "pos_bg": "#fef3c7",
+            "vowel_badge": "Fixed (مبني) • مبني على الفتح",
+            "pedagogical_badge": "حرف • حرف توكيد ونصب"
+          },
+          "nahw": {
+            "function": "harf_naskh",
+            "governs": "ism_inna_nasb"
+          },
+          "semantics": {
+            "gloss": "indeed / verily",
+            "semantic_field": [
+              "emphasis",
+              "certainty"
+            ]
+          },
+          "ontology_tags": [
+            "EMPHASIS_PARTICLE",
+            "CERTAINTY"
+          ]
+        },
+        {
+          "id": 103002002,
+          "location": "103:2:2",
+          "surah": 103,
+          "ayah": 2,
+          "word_position": 2,
+          "arabic_uthmani": "ٱلْإِنسَـٰنَ",
+          "arabic_clean": "الإنسان",
+          "transliteration": "al-insāna",
+          "translation": "mankind",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_002_002.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "jamid",
+              "derivation": "generic_noun",
+              "derivation_ar": "اسم جنس لاستغراق الاستغراق (Generic Collective Noun)",
+              "definiteness": "definite",
+              "gender": "masculine",
+              "number": "singular_generic_plural_meaning"
+            }
+          },
+          "sarf": {
+            "root": "أ-ن-س",
+            "root_ar": "أنس",
+            "root_meaning": "to be companionable, perceive, forgetfulness (ن-س-ي)",
+            "root_concept": "Mankind / Sociability / Perception",
+            "lemma": "إِنْسَان",
+            "root_letters": [
+              "أ",
+              "ن",
+              "س"
+            ],
+            "wazn": "إِفْعَال",
+            "person": null,
+            "gender": "masculine",
+            "number": "singular"
+          },
+          "irab_and_case": {
+            "case_or_mood": "nasb",
+            "case_or_mood_ar": "منصوب (النصب)",
+            "case_concept": "Setting up / Erecting (النصب) — Subject of Inna.",
+            "ending_vowel": "fatha",
+            "grammatical_role": "ism_inna",
+            "grammatical_role_ar": "اسم إن منصوب وعلامة نصبه الفتحة الظاهرة",
+            "why_this_ending": "Takes Fatha (Accusative) because it functions as the subject (Ism) governed by Inna.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 2,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "ٱلْ",
+                "transliteration": "al",
+                "type": "prefix",
+                "pos_tag": "DET",
+                "role": "Generic definite article (لام الجنس لاستغراق الأفراد)",
+                "vowel": "sukun",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "إِنسَـٰنَ",
+                "transliteration": "insāna",
+                "type": "stem",
+                "pos_tag": "N",
+                "role": "Noun stem in accusative case",
+                "vowel": "fatha",
+                "color_code": "#059669",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#059669",
+            "case_bg": "#ecfdf5",
+            "case_border": "#10b981",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Fatha (ـَ) • منصوب (النصب)",
+            "pedagogical_badge": "اسم • اسم إن"
+          },
+          "nahw": {
+            "case": "mansoob",
+            "case_reason": "ism_inna",
+            "alif_lam_type": "al_jinsiyyah_for_exhaustion_of_species"
+          },
+          "semantics": {
+            "gloss": "mankind / human species",
+            "semantic_field": [
+              "humanity",
+              "creation",
+              "mankind",
+              "fragility"
+            ]
+          },
+          "ontology_tags": [
+            "HUMANITY",
+            "SPECIES_COLLECTIVE"
+          ]
+        },
+        {
+          "id": 103002003,
+          "location": "103:2:3",
+          "surah": 103,
+          "ayah": 2,
+          "word_position": 3,
+          "arabic_uthmani": "لَفِى",
+          "arabic_clean": "لفي",
+          "transliteration": "lafī",
+          "translation": "is surely in",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_002_003.mp3",
+          "classification": {
+            "primary_type": "harf",
+            "primary_type_ar": "حرف",
+            "details": {
+              "category": "harf",
+              "particle_type": "compound_emphatic_preposition",
+              "particle_type_ar": "لام المزحلقة + حرف جر (Emphatic Lam + Preposition Fi)"
+            }
+          },
+          "sarf": {
+            "root": null,
+            "root_ar": null,
+            "root_meaning": null,
+            "root_concept": null,
+            "lemma": "فِي",
+            "root_letters": [],
+            "wazn": null,
+            "person": null,
+            "gender": null,
+            "number": null
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني (البناء)",
+            "case_concept": "Fixed base (المبني) — Particles built on fixed vowels.",
+            "ending_vowel": "sukun_on_ya",
+            "grammatical_role": "harf_jar_with_lam_muzahlaqah",
+            "grammatical_role_ar": "اللام المزحلقة حرف توكيد، وفِي حرف جر مبني على السكون",
+            "why_this_ending": "Fixed particle combining emphatic Lam with preposition Fi.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 2,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "لَ",
+                "transliteration": "la",
+                "type": "prefix",
+                "pos_tag": "EMPH",
+                "role": "Emphatic attached Lam (اللام المزحلقة في خبر إن)",
+                "vowel": "fatha",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "فِى",
+                "transliteration": "fī",
+                "type": "stem",
+                "pos_tag": "P",
+                "role": "Preposition (حرف جر) denoting container/submersion",
+                "vowel": "sukun",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#d97706",
+            "pos_bg": "#fef3c7",
+            "vowel_badge": "Fixed (مبني) • لام المزحلقة + حرف جر",
+            "pedagogical_badge": "حرف • حرف توكيد وجر"
+          },
+          "nahw": {
+            "function": "harf_jar_plus_emphatic_lam",
+            "creates_genitive": true
+          },
+          "semantics": {
+            "gloss": "surely in",
+            "semantic_field": [
+              "container",
+              "submersion",
+              "certainty"
+            ]
+          },
+          "ontology_tags": [
+            "EMPHASIS",
+            "CONTAINMENT"
+          ]
+        },
+        {
+          "id": 103002004,
+          "location": "103:2:4",
+          "surah": 103,
+          "ayah": 2,
+          "word_position": 4,
+          "arabic_uthmani": "خُسْرٍ",
+          "arabic_clean": "خسر",
+          "transliteration": "khus'rin",
+          "translation": "loss",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_002_004.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "jamid",
+              "derivation": "masdar",
+              "derivation_ar": "مصدر (Verbal Noun / Abstract Noun)",
+              "definiteness": "indefinite_indefinite_tanween",
+              "gender": "masculine",
+              "number": "singular"
+            }
+          },
+          "sarf": {
+            "root": "خ-س-ر",
+            "root_ar": "خسر",
+            "root_meaning": "to lose, suffer deficit, ruin, perish",
+            "root_concept": "Loss / Deficit / Ruin",
+            "lemma": "خُسْر",
+            "root_letters": [
+              "خ",
+              "س",
+              "ر"
+            ],
+            "wazn": "فُعْل",
+            "person": null,
+            "gender": "masculine",
+            "number": "singular"
+          },
+          "irab_and_case": {
+            "case_or_mood": "jarr",
+            "case_or_mood_ar": "مجرور (الجر / الخفض)",
+            "case_concept": "Dragging / Pulling down (الجر) — Governed by preposition Fi.",
+            "ending_vowel": "kasratan",
+            "grammatical_role": "majroor_bi_fi",
+            "grammatical_role_ar": "اسم مجرور بفي وعلامة جره الكسرة الظاهرة، والجار والمجرور خسران في محل رفع خبر إن",
+            "why_this_ending": "Governed by preposition Fi (في). The phrase 'في خسر' forms the predicate (Khabar) of Inna.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 1,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "خُسْرٍ",
+                "transliteration": "khus'rin",
+                "type": "stem",
+                "pos_tag": "N",
+                "role": "Noun stem in genitive case with indefinite tanween",
+                "vowel": "kasratan",
+                "color_code": "#7c3aed",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#7c3aed",
+            "case_bg": "#f5f3ff",
+            "case_border": "#8b5cf6",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Kasra (ـٍ) • مجرور (الجر)",
+            "pedagogical_badge": "اسم • مجرور بـ في"
+          },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_fi",
+            "tanween_type": "tanween_ta'dheem_and_tahweel"
+          },
+          "semantics": {
+            "gloss": "loss / ruin / bankruptcy",
+            "semantic_field": [
+              "loss",
+              "ruin",
+              "bankruptcy",
+              "depletion"
+            ]
+          },
+          "ontology_tags": [
+            "LOSS",
+            "SPIRITUAL_BANKRUPT",
+            "DEFICIT"
+          ]
+        }
+      ]
+    },
+    {
+      "ayah_number": 3,
+      "surah_number": 103,
+      "text_uthmani": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+      "text_imlaei": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+      "translation": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+      "thematic_section_id": 2,
+      "thematic_section_title": "The Four Divine Qualifications for Salvation",
+      "words_count": 9,
+      "sentence_analysis": {
+        "sentence_type": "istithna_muttasil",
+        "primary_structure": {
+          "adat_istithna": "إِلَّا",
+          "mustathna": "الَّذِينَ",
+          "silat_al_mewsool": "آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ"
+        },
+        "taalluq": {
+          "jar_majroor_requires_attachment": true,
+          "attached_to": {
+            "type": "verbs_in_silah",
+            "details": [
+              "بِالْحَقِّ attached to تَوَاصَوْا",
+              "بِالصَّبْرِ attached to SECOND تَوَاصَوْا"
+            ]
+          }
+        }
+      },
+      "syntax": {
+        "exception_particle": "إِلَّا",
+        "relative_pronoun": "الَّذِينَ",
+        "verbs": [
+          "آمَنُوا",
+          "عَمِلُوا",
+          "تَوَاصَوْا",
+          "تَوَاصَوْا"
+        ],
+        "objects": [
+          "الصَّالِحَاتِ"
+        ],
+        "prepositional_attachments": [
+          "بِالْحَقِّ",
+          "بِالصَّبْرِ"
+        ]
+      },
+      "dependency_tree": {
+        "root_concept": "إِلَّا",
+        "edges": [
+          {
+            "head": "إِلَّا",
+            "dependent": "الَّذِينَ",
+            "relation": "mustathna"
+          },
+          {
+            "head": "الَّذِينَ",
+            "dependent": "آمَنُوا",
+            "relation": "silat_al_mawsool_primary_verb"
+          },
+          {
+            "head": "آمَنُوا",
+            "dependent": "وَعَمِلُوا",
+            "relation": "atf_conjunction_verb"
+          },
+          {
+            "head": "وَعَمِلُوا",
+            "dependent": "الصَّالِحَاتِ",
+            "relation": "direct_object_mafool_bihi"
+          },
+          {
+            "head": "وَعَمِلُوا",
+            "dependent": "وَتَوَاصَوْا",
+            "relation": "atf_conjunction_verb"
+          },
+          {
+            "head": "وَتَوَاصَوْا",
+            "dependent": "بِالْحَقِّ",
+            "relation": "prepositional_attachment"
+          },
+          {
+            "head": "وَتَوَاصَوْا",
+            "dependent": "وَتَوَاصَوْا (2)",
+            "relation": "atf_conjunction_verb"
+          },
+          {
+            "head": "وَتَوَاصَوْا (2)",
+            "dependent": "بِالصَّبْرِ",
+            "relation": "prepositional_attachment"
+          }
+        ]
+      },
+      "balaghah": {
+        "istithna": {
+          "present": true,
+          "type": "istithna_muttasil_min_jins_al_insan",
+          "rhetorical_effect": "Confining true success exclusively to those who combine all four internal and social virtues."
+        },
+        "tikrar": {
+          "repeated_word": "تَوَاصَوْا",
+          "rhetorical_effect": "Repetition of Form VI reciprocal verb highlights the indispensable dual pillars of social solidarity: Truth and Endurance."
+        },
+        "form_vi_reciprocity": {
+          "wazn": "تَفَاعَلُوا (تَوَاصَوْا)",
+          "semantic_implication": "Signifies mandatory mutual exchange; faith is not solitary but requires communal encouragement."
+        }
+      },
+      "aqidah": {
+        "four_pillars_of_salvation": [
+          "1. Iman (Correct Faith and Knowledge)",
+          "2. Amal Salih (Righteous Actions fulfilling Faith)",
+          "3. Tawasi bil-Haqq (Promoting Truth, Justice, and Dawah)",
+          "4. Tawasi bis-Sabr (Constancy, Patience, and Resilience)"
+        ]
+      },
+      "words": [
+        {
+          "id": 103003001,
+          "location": "103:3:1",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 1,
+          "arabic_uthmani": "إِلَّا",
+          "arabic_clean": "إلا",
+          "transliteration": "illā",
+          "translation": "Except",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_001.mp3",
+          "classification": {
+            "primary_type": "harf",
+            "primary_type_ar": "حرف",
+            "details": {
+              "category": "harf",
+              "particle_type": "adat_istithna",
+              "particle_type_ar": "أداة استثناء (Particle of Exception)"
+            }
+          },
+          "sarf": {
+            "root": null,
+            "root_ar": null,
+            "root_meaning": null,
+            "root_concept": null,
+            "lemma": "إِلَّا",
+            "root_letters": [],
+            "wazn": null,
+            "person": null,
+            "gender": null,
+            "number": null
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني (البناء)",
+            "case_concept": "Fixed base (المبني) — Particle built on Sukun.",
+            "ending_vowel": "sukun",
+            "grammatical_role": "adat_istithna",
+            "grammatical_role_ar": "حرف استثناء مبني على السكون لا محل له من الإعراب",
+            "why_this_ending": "Fixed particle of exception built on Sukun.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 1,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "إِلَّا",
+                "transliteration": "illā",
+                "type": "stem",
+                "pos_tag": "EXCEPT",
+                "role": "Exception particle stem",
+                "vowel": "sukun",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#d97706",
+            "pos_bg": "#fef3c7",
+            "vowel_badge": "Fixed (مبني) • مبني على السكون",
+            "pedagogical_badge": "حرف • حرف استثناء"
+          },
+          "nahw": {
+            "function": "adat_istithna"
+          },
+          "semantics": {
+            "gloss": "except / save",
+            "semantic_field": [
+              "exception",
+              "exclusion"
+            ]
+          },
+          "ontology_tags": [
+            "EXCEPTION_PARTICLE"
+          ]
+        },
+        {
+          "id": 103003002,
+          "location": "103:3:2",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 2,
+          "arabic_uthmani": "ٱلَّذِينَ",
+          "arabic_clean": "الذين",
+          "transliteration": "alladhīna",
+          "translation": "those who",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_002.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "mabni_ism_mawsool",
+              "derivation": "relative_pronoun",
+              "derivation_ar": "اسم موصول (Relative Pronoun)",
+              "definiteness": "inherently_definite",
+              "gender": "masculine",
+              "number": "plural"
+            }
+          },
+          "sarf": {
+            "root": null,
+            "root_ar": null,
+            "root_meaning": null,
+            "root_concept": null,
+            "lemma": "الَّذِي",
+            "root_letters": [],
+            "wazn": null,
+            "person": "3rd",
+            "gender": "masculine",
+            "number": "plural"
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني (في محل نصب)",
+            "case_concept": "Fixed base (المبني) — In local Accusative position (في محل نصب مستثنى).",
+            "ending_vowel": "fatha_ending",
+            "grammatical_role": "mustathna",
+            "grammatical_role_ar": "اسم موصول مبني على الفتح في محل نصب مستثنى بإلا",
+            "why_this_ending": "Fixed relative pronoun built on Fatha, occupying the local accusative case as the excepted entity (Mustathna).",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 1,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "ٱلَّذِينَ",
+                "transliteration": "alladhīna",
+                "type": "stem",
+                "pos_tag": "REL",
+                "role": "Masculine plural relative pronoun stem",
+                "vowel": "fatha",
+                "color_code": "#059669",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#059669",
+            "case_bg": "#ecfdf5",
+            "case_border": "#10b981",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Fixed (مبني) • في محل نصب",
+            "pedagogical_badge": "اسم • اسم موصول مستثنى"
+          },
+          "nahw": {
+            "case": "in_place_of_nasb",
+            "function": "mustathna"
+          },
+          "semantics": {
+            "gloss": "those who",
+            "semantic_field": [
+              "people",
+              "believers",
+              "specified_group"
+            ]
+          },
+          "ontology_tags": [
+            "RELATIVE_PRONOUN",
+            "BELIEVERS_GROUP"
+          ]
+        },
+        {
+          "id": 103003003,
+          "location": "103:3:3",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 3,
+          "arabic_uthmani": "ءَامَنُوا۟",
+          "arabic_clean": "آمنوا",
+          "transliteration": "āmanū",
+          "translation": "have believed",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_003.mp3",
+          "classification": {
+            "primary_type": "fi'l",
+            "primary_type_ar": "فعل",
+            "details": {
+              "category": "fi'l",
+              "tense": "past",
+              "tense_ar": "ماضٍ",
+              "form": "IV",
+              "form_ar": "أَفْعَلَ",
+              "form_meaning": "Form IV: Causative / Transitive Faith (Affirming Security & Truth)",
+              "voice": "active",
+              "voice_ar": "مبني للمعلوم",
+              "transitivity": "intransitive_with_bi",
+              "soundness": "mahmouz_fa",
+              "soundness_ar": "مهموز الفاء (Hamza in 1st Radical)"
+            }
+          },
+          "sarf": {
+            "root": "أ-م-ن",
+            "root_ar": "أمن",
+            "root_meaning": "to be safe, trust, believe, grant security",
+            "root_concept": "Faith / Security / Trust",
+            "lemma": "آمَنَ",
+            "root_letters": [
+              "أ",
+              "م",
+              "ن"
+            ],
+            "wazn": "أَفْعَلُوا",
+            "person": "3rd",
+            "gender": "masculine",
+            "number": "plural"
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني (البناء)",
+            "case_concept": "Fixed base (المبني) — Past verb built on Dhumma due to attached Waw al-Jama'ah.",
+            "ending_vowel": "dhumma_on_noon",
+            "grammatical_role": "past_verb_with_pronoun",
+            "grammatical_role_ar": "فعل ماضٍ مبني على الضم لاتصاله بواو الجماعة، والواو ضمير متصل في محل رفع فاعل",
+            "why_this_ending": "Past verb built on Dhumma (مبني على الضم) because of attached masculine plural pronoun Waw.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 3,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "ءَامَنَ",
+                "transliteration": "āmana",
+                "type": "stem",
+                "pos_tag": "V",
+                "role": "Form IV past active verb stem",
+                "vowel": "dhumma",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "و",
+                "transliteration": "ū",
+                "type": "suffix",
+                "pos_tag": "PRON/3MP",
+                "role": "Subject pronoun Waw al-Jama'ah (واو الجماعة فاعل)",
+                "vowel": "sukun",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "ا۟",
+                "transliteration": "",
+                "type": "suffix",
+                "pos_tag": "SILENT",
+                "role": "Silent orthographic Alif al-Fariqah (الألف الفارقة)",
+                "vowel": "none",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#e11d48",
+            "pos_bg": "#ffe4e6",
+            "vowel_badge": "Fixed (مبني) • مبني على الضم",
+            "pedagogical_badge": "فعل • فعل ماضٍ"
+          },
+          "nahw": {
+            "function": "silah_verb",
+            "subject": "waw_al_jamaah_raf"
+          },
+          "semantics": {
+            "gloss": "they believed",
+            "semantic_field": [
+              "faith",
+              "belief",
+              "trust",
+              "security"
+            ]
+          },
+          "ontology_tags": [
+            "FAITH",
+            "IMAN",
+            "CORNERSTONE_1"
+          ]
+        },
+        {
+          "id": 103003004,
+          "location": "103:3:4",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 4,
+          "arabic_uthmani": "وَعَمِلُوا۟",
+          "arabic_clean": "وعملوا",
+          "transliteration": "waʿamilū",
+          "translation": "and done",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_004.mp3",
+          "classification": {
+            "primary_type": "fi'l",
+            "primary_type_ar": "فعل",
+            "details": {
+              "category": "fi'l",
+              "tense": "past",
+              "tense_ar": "ماضٍ",
+              "form": "I",
+              "form_ar": "فَعِلَ",
+              "form_meaning": "Form I: Basic action stem",
+              "voice": "active",
+              "voice_ar": "مبني للمعلوم",
+              "transitivity": "transitive",
+              "soundness": "sahih_salim",
+              "soundness_ar": "صحيح سالم (Sound & Regular)"
+            }
+          },
+          "sarf": {
+            "root": "ع-م-ل",
+            "root_ar": "عمل",
+            "root_meaning": "to work, perform action, labor, execute",
+            "root_concept": "Action / Labor / Execution",
+            "lemma": "عَمِلَ",
+            "root_letters": [
+              "ع",
+              "م",
+              "ل"
+            ],
+            "wazn": "فَعِلُوا",
+            "person": "3rd",
+            "gender": "masculine",
+            "number": "plural"
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني (البناء)",
+            "case_concept": "Fixed base (المبني) — Past verb built on Dhumma.",
+            "ending_vowel": "dhumma_on_lam",
+            "grammatical_role": "past_verb_conjoined",
+            "grammatical_role_ar": "الواو عاطفة، عملوا فعل ماضٍ مبني على الضم، والواو فاعل",
+            "why_this_ending": "Conjoined past verb built on Dhumma due to Waw al-Jama'ah.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 4,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "وَ",
+                "transliteration": "wa",
+                "type": "prefix",
+                "pos_tag": "CONJ",
+                "role": "Conjunction particle Waw (واو العطف)",
+                "vowel": "fatha",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "عَمِلَ",
+                "transliteration": "ʿamila",
+                "type": "stem",
+                "pos_tag": "V",
+                "role": "Form I past active verb stem",
+                "vowel": "dhumma",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "و",
+                "transliteration": "ū",
+                "type": "suffix",
+                "pos_tag": "PRON/3MP",
+                "role": "Subject pronoun Waw al-Jama'ah (فاعل)",
+                "vowel": "sukun",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              },
+              {
+                "segment_index": 4,
+                "arabic": "ا۟",
+                "transliteration": "",
+                "type": "suffix",
+                "pos_tag": "SILENT",
+                "role": "Orthographic Alif al-Fariqah",
+                "vowel": "none",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#e11d48",
+            "pos_bg": "#ffe4e6",
+            "vowel_badge": "Fixed (مبني) • مبني على الضم",
+            "pedagogical_badge": "فعل • معطوف على آمنوا"
+          },
+          "nahw": {
+            "function": "ma'toof_verb",
+            "subject": "waw_al_jamaah_raf"
+          },
+          "semantics": {
+            "gloss": "and performed / worked",
+            "semantic_field": [
+              "action",
+              "work",
+              "deeds",
+              "practice"
+            ]
+          },
+          "ontology_tags": [
+            "RIGHTEOUS_ACTION",
+            "AMAL_SALIH",
+            "CORNERSTONE_2"
+          ]
+        },
+        {
+          "id": 103003005,
+          "location": "103:3:5",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 5,
+          "arabic_uthmani": "ٱلصَّـٰلِحَـٰتِ",
+          "arabic_clean": "الصالحات",
+          "transliteration": "al-ṣāliḥāti",
+          "translation": "righteous deeds",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_005.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "mushtaq",
+              "derivation": "ism_fail_plural",
+              "derivation_ar": "جمع مؤنث سالم لاسم الفاعل (Sound Feminine Plural Active Participle)",
+              "definiteness": "definite",
+              "gender": "feminine",
+              "number": "plural"
+            }
+          },
+          "sarf": {
+            "root": "ص-ل-ح",
+            "root_ar": "صلح",
+            "root_meaning": "to be good, righteous, proper, beneficial, sound",
+            "root_concept": "Righteousness / Benefit / Soundness",
+            "lemma": "صَالِحَة",
+            "root_letters": [
+              "ص",
+              "ل",
+              "ح"
+            ],
+            "wazn": "الفَاعِلات",
+            "person": null,
+            "gender": "feminine",
+            "number": "plural"
+          },
+          "irab_and_case": {
+            "case_or_mood": "nasb",
+            "case_or_mood_ar": "منصوب (بالكسرة نيابة عن الفتحة)",
+            "case_concept": "Setting up / Erecting (النصب) — Subordinated direct object taking Kasra as substitute marker.",
+            "ending_vowel": "kasra_substitute_for_fatha",
+            "grammatical_role": "mafool_bihi",
+            "grammatical_role_ar": "مفعول به منصوب وعلامة نصبه الكسرة نيابة عن الفتحة لأنه جمع مؤنث سالم",
+            "why_this_ending": "Takes Kasra instead of Fatha because sound feminine plurals (جمع مؤنث سالم) mark Accusative case with Kasra.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 2,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "ٱلصَّـٰ",
+                "transliteration": "al-ṣā",
+                "type": "prefix",
+                "pos_tag": "DET",
+                "role": "Definite article (لام التعريف المدغمة في الصاد)",
+                "vowel": "sukun_assimilated",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "لِحَـٰتِ",
+                "transliteration": "liḥāti",
+                "type": "stem",
+                "pos_tag": "N",
+                "role": "Plural active participle stem in accusative case marked by kasra",
+                "vowel": "kasra",
+                "color_code": "#059669",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#059669",
+            "case_bg": "#ecfdf5",
+            "case_border": "#10b981",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Kasra (ـِ نيابة عن الفتحة) • منصوب",
+            "pedagogical_badge": "اسم • مفعول به منصوب بالكسرة"
+          },
+          "nahw": {
+            "case": "mansoob",
+            "case_substitute": "kasra_instead_of_fatha",
+            "plural_type": "jam_muannath_salim"
+          },
+          "semantics": {
+            "gloss": "righteous deeds / wholesome actions",
+            "semantic_field": [
+              "virtue",
+              "righteousness",
+              "goodness",
+              "benefit"
+            ]
+          },
+          "ontology_tags": [
+            "RIGHTEOUS_DEEDS",
+            "VIRTUE"
+          ]
+        },
+        {
+          "id": 103003006,
+          "location": "103:3:6",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 6,
+          "arabic_uthmani": "وَتَوَاصَوْا۟",
+          "arabic_clean": "وتواصوا",
+          "transliteration": "watawāṣaw",
+          "translation": "and advised each other",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_006.mp3",
+          "classification": {
+            "primary_type": "fi'l",
+            "primary_type_ar": "فعل",
+            "details": {
+              "category": "fi'l",
+              "tense": "past",
+              "tense_ar": "ماضٍ",
+              "form": "VI",
+              "form_ar": "تَفَاعَلَ",
+              "form_meaning": "Form VI: Reciprocal mutual cooperation / Enjoining one another",
+              "voice": "active",
+              "voice_ar": "مبني للمعلوم",
+              "transitivity": "transitive_with_bi",
+              "soundness": "naqis_lam",
+              "soundness_ar": "ناقص اللام (Defective 3rd Radical Weak Ya/Alif)"
+            }
+          },
+          "sarf": {
+            "root": "و-ص-ي",
+            "root_ar": "وصي",
+            "root_meaning": "to enjoin, advise, bequeath, urge mutually",
+            "root_concept": "Mutual Advice / Counsel / Bequest",
+            "lemma": "تَوَاصَى",
+            "root_letters": [
+              "و",
+              "ص",
+              "ي"
+            ],
+            "wazn": "تَفَاعَوْا",
+            "person": "3rd",
+            "gender": "masculine",
+            "number": "plural"
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني على الفتح المقدر",
+            "case_concept": "Fixed base (المبني) — Past verb built on estimated Fatha on deleted Alif.",
+            "ending_vowel": "fatha_muqaddara_on_deleted_alif",
+            "grammatical_role": "past_verb_reciprocal",
+            "grammatical_role_ar": "الواو عاطفة، تواصوا فعل ماضٍ مبني على الفتح المقدر على الألف المحذوفة لالتقاء الساكنين، والواو فاعل",
+            "why_this_ending": "Built on estimated Fatha on the weak root letter deleted to prevent meeting of two silent letters (سكونين).",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 4,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "وَ",
+                "transliteration": "wa",
+                "type": "prefix",
+                "pos_tag": "CONJ",
+                "role": "Conjunction particle Waw (واو العطف)",
+                "vowel": "fatha",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "تَوَاصَ",
+                "transliteration": "tawāṣa",
+                "type": "stem",
+                "pos_tag": "V",
+                "role": "Form VI reciprocal past verb stem",
+                "vowel": "fatha",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "وْ",
+                "transliteration": "w",
+                "type": "suffix",
+                "pos_tag": "PRON/3MP",
+                "role": "Subject pronoun Waw al-Jama'ah (فاعل)",
+                "vowel": "sukun",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              },
+              {
+                "segment_index": 4,
+                "arabic": "ا۟",
+                "transliteration": "",
+                "type": "suffix",
+                "pos_tag": "SILENT",
+                "role": "Orthographic Alif al-Fariqah",
+                "vowel": "none",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#e11d48",
+            "pos_bg": "#ffe4e6",
+            "vowel_badge": "Fixed (مبني) • الفتح المقدر",
+            "pedagogical_badge": "فعل • صيغة تفاعل التشاركية"
+          },
+          "nahw": {
+            "function": "ma'toof_verb_form_vi",
+            "reciprocity": true
+          },
+          "semantics": {
+            "gloss": "and mutually enjoined / recommended",
+            "semantic_field": [
+              "counsel",
+              "advice",
+              "mutual_support",
+              "exhortation"
+            ]
+          },
+          "ontology_tags": [
+            "MUTUAL_ENJOINING",
+            "COMMUNAL_SOLIDARITY",
+            "CORNERSTONE_3"
+          ]
+        },
+        {
+          "id": 103003007,
+          "location": "103:3:7",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 7,
+          "arabic_uthmani": "بِٱلْحَقِّ",
+          "arabic_clean": "بالحق",
+          "transliteration": "bil-ḥaqqi",
+          "translation": "to truth",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_007.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "jamid",
+              "derivation": "masdar",
+              "derivation_ar": "مصدر (Verbal Noun of Absolute Reality & Truth)",
+              "definiteness": "definite",
+              "gender": "masculine",
+              "number": "singular"
+            }
+          },
+          "sarf": {
+            "root": "ح-ق-ق",
+            "root_ar": "حقق",
+            "root_meaning": "to be true, real, binding, confirmed, just",
+            "root_concept": "Truth / Reality / Justice",
+            "lemma": "حَقّ",
+            "root_letters": [
+              "ح",
+              "ق",
+              "ق"
+            ],
+            "wazn": "فَعْل",
+            "person": null,
+            "gender": "masculine",
+            "number": "singular"
+          },
+          "irab_and_case": {
+            "case_or_mood": "jarr",
+            "case_or_mood_ar": "مجرور (الجر / الخفض)",
+            "case_concept": "Dragging / Pulling down (الجر) — Governed by preposition Ba.",
+            "ending_vowel": "kasra_shaddah",
+            "grammatical_role": "majroor_bi_ba",
+            "grammatical_role_ar": "الباء حرف جر، الحق اسم مجرور بالباء وعلامة جره الكسرة الظاهرة، متعلقان بـ تواصوا",
+            "why_this_ending": "Governed by preposition Ba (الباء). Attached directly to the verb Tawasaw.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 3,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "بِ",
+                "transliteration": "bi",
+                "type": "prefix",
+                "pos_tag": "P",
+                "role": "Preposition Ba (حرف جر)",
+                "vowel": "kasra",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "ٱلْ",
+                "transliteration": "al",
+                "type": "prefix",
+                "pos_tag": "DET",
+                "role": "Definite article (لام التعريف)",
+                "vowel": "sukun",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "حَقِّ",
+                "transliteration": "ḥaqqi",
+                "type": "stem",
+                "pos_tag": "N",
+                "role": "Noun stem in genitive case",
+                "vowel": "kasra",
+                "color_code": "#7c3aed",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#7c3aed",
+            "case_bg": "#f5f3ff",
+            "case_border": "#8b5cf6",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Kasra (ـِ) • مجرور (الجر)",
+            "pedagogical_badge": "اسم • مجرور بـ الباء"
+          },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_ba",
+            "taalluq": "attached_to_tawasaw_1"
+          },
+          "semantics": {
+            "gloss": "to the truth / divine reality",
+            "semantic_field": [
+              "truth",
+              "justice",
+              "revelation",
+              "right"
+            ]
+          },
+          "ontology_tags": [
+            "TRUTH",
+            "HAQQ",
+            "JUSTICE"
+          ]
+        },
+        {
+          "id": 103003008,
+          "location": "103:3:8",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 8,
+          "arabic_uthmani": "وَتَوَاصَوْا۟",
+          "arabic_clean": "وتواصوا",
+          "transliteration": "watawāṣaw",
+          "translation": "and advised each other",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_008.mp3",
+          "classification": {
+            "primary_type": "fi'l",
+            "primary_type_ar": "فعل",
+            "details": {
+              "category": "fi'l",
+              "tense": "past",
+              "tense_ar": "ماضٍ",
+              "form": "VI",
+              "form_ar": "تَفَاعَلَ",
+              "form_meaning": "Form VI: Reciprocal mutual cooperation (Repetition for emphasis and distinct pillar)",
+              "voice": "active",
+              "voice_ar": "مبني للمعلوم",
+              "transitivity": "transitive_with_bi",
+              "soundness": "naqis_lam",
+              "soundness_ar": "ناقص اللام (Defective 3rd Radical Weak Ya/Alif)"
+            }
+          },
+          "sarf": {
+            "root": "و-ص-ي",
+            "root_ar": "وصي",
+            "root_meaning": "to enjoin, advise, bequeath, urge mutually",
+            "root_concept": "Mutual Advice / Counsel / Bequest",
+            "lemma": "تَوَاصَى",
+            "root_letters": [
+              "و",
+              "ص",
+              "ي"
+            ],
+            "wazn": "تَفَاعَوْا",
+            "person": "3rd",
+            "gender": "masculine",
+            "number": "plural"
+          },
+          "irab_and_case": {
+            "case_or_mood": "mabni",
+            "case_or_mood_ar": "مبني على الفتح المقدر",
+            "case_concept": "Fixed base (المبني) — Past verb built on estimated Fatha.",
+            "ending_vowel": "fatha_muqaddara_on_deleted_alif",
+            "grammatical_role": "past_verb_reciprocal_repeated",
+            "grammatical_role_ar": "الواو عاطفة، تواصوا فعل ماضٍ مبني على الفتح المقدر، والواو فاعل",
+            "why_this_ending": "Repeated past verb built on estimated Fatha on deleted weak letter.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 4,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "وَ",
+                "transliteration": "wa",
+                "type": "prefix",
+                "pos_tag": "CONJ",
+                "role": "Conjunction particle Waw (واو العطف)",
+                "vowel": "fatha",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "تَوَاصَ",
+                "transliteration": "tawāṣa",
+                "type": "stem",
+                "pos_tag": "V",
+                "role": "Form VI reciprocal past verb stem",
+                "vowel": "fatha",
+                "color_code": "#64748b",
+                "color_name": "stem_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "وْ",
+                "transliteration": "w",
+                "type": "suffix",
+                "pos_tag": "PRON/3MP",
+                "role": "Subject pronoun Waw al-Jama'ah (فاعل)",
+                "vowel": "sukun",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              },
+              {
+                "segment_index": 4,
+                "arabic": "ا۟",
+                "transliteration": "",
+                "type": "suffix",
+                "pos_tag": "SILENT",
+                "role": "Orthographic Alif al-Fariqah",
+                "vowel": "none",
+                "color_code": "#ec4899",
+                "color_name": "suffix_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#64748b",
+            "case_bg": "#f8fafc",
+            "case_border": "#94a3b8",
+            "pos_color": "#e11d48",
+            "pos_bg": "#ffe4e6",
+            "vowel_badge": "Fixed (مبني) • الفتح المقدر",
+            "pedagogical_badge": "فعل • تكرار للتأكيد والإشادة"
+          },
+          "nahw": {
+            "function": "ma'toof_verb_form_vi_repeated",
+            "reciprocity": true
+          },
+          "semantics": {
+            "gloss": "and mutually enjoined / recommended",
+            "semantic_field": [
+              "counsel",
+              "perseverance_support",
+              "exhortation"
+            ]
+          },
+          "ontology_tags": [
+            "MUTUAL_ENJOINING",
+            "PATIENCE_SOLIDARITY",
+            "CORNERSTONE_4"
+          ]
+        },
+        {
+          "id": 103003009,
+          "location": "103:3:9",
+          "surah": 103,
+          "ayah": 3,
+          "word_position": 9,
+          "arabic_uthmani": "بِٱلصَّبْرِ",
+          "arabic_clean": "بالصبر",
+          "transliteration": "bil-ṣabri",
+          "translation": "to patience",
+          "audio_url": "https://audio.qurancdn.com/wbw/103_003_009.mp3",
+          "classification": {
+            "primary_type": "ism",
+            "primary_type_ar": "اسم",
+            "details": {
+              "category": "ism",
+              "noun_type": "jamid",
+              "derivation": "masdar",
+              "derivation_ar": "مصدر (Verbal Noun of Perseverance & Restraint)",
+              "definiteness": "definite",
+              "gender": "masculine",
+              "number": "singular"
+            }
+          },
+          "sarf": {
+            "root": "ص-ب-ر",
+            "root_ar": "صبر",
+            "root_meaning": "to bind, restrain, endure, remain steadfast",
+            "root_concept": "Patience / Steadfastness / Endurance",
+            "lemma": "صَبْر",
+            "root_letters": [
+              "ص",
+              "ب",
+              "ر"
+            ],
+            "wazn": "فَعْل",
+            "person": null,
+            "gender": "masculine",
+            "number": "singular"
+          },
+          "irab_and_case": {
+            "case_or_mood": "jarr",
+            "case_or_mood_ar": "مجرور (الجر / الخفض)",
+            "case_concept": "Dragging / Pulling down (الجر) — Governed by preposition Ba.",
+            "ending_vowel": "kasra",
+            "grammatical_role": "majroor_bi_ba",
+            "grammatical_role_ar": "الباء حرف جر، الصبر اسم مجرور بالباء وعلامة جره الكسرة الظاهرة، متعلقان بـ تواصوا الثانية",
+            "why_this_ending": "Governed by preposition Ba (الباء). Attached directly to second Tawasaw.",
+            "idafa": {
+              "role": "none",
+              "notes": null
+            }
+          },
+          "lowest_level_breakdown": {
+            "morphemes_count": 3,
+            "morphemes": [
+              {
+                "segment_index": 1,
+                "arabic": "بِ",
+                "transliteration": "bi",
+                "type": "prefix",
+                "pos_tag": "P",
+                "role": "Preposition Ba (حرف جر)",
+                "vowel": "kasra",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 2,
+                "arabic": "ٱلصَّ",
+                "transliteration": "al-ṣ",
+                "type": "prefix",
+                "pos_tag": "DET",
+                "role": "Definite article (لام التعريف المدغمة في الصاد)",
+                "vowel": "sukun_assimilated",
+                "color_code": "#d97706",
+                "color_name": "prefix_subsegment"
+              },
+              {
+                "segment_index": 3,
+                "arabic": "بْرِ",
+                "transliteration": "bri",
+                "type": "stem",
+                "pos_tag": "N",
+                "role": "Noun stem in genitive case",
+                "vowel": "kasra",
+                "color_code": "#7c3aed",
+                "color_name": "stem_subsegment"
+              }
+            ]
+          },
+          "color_coding": {
+            "case_color": "#7c3aed",
+            "case_bg": "#f5f3ff",
+            "case_border": "#8b5cf6",
+            "pos_color": "#1d4ed8",
+            "pos_bg": "#dbeafe",
+            "vowel_badge": "Kasra (ـِ) • مجرور (الجر)",
+            "pedagogical_badge": "اسم • مجرور بـ الباء"
+          },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_ba",
+            "taalluq": "attached_to_tawasaw_2"
+          },
+          "semantics": {
+            "gloss": "to patience / endurance",
+            "semantic_field": [
+              "patience",
+              "endurance",
+              "perseverance",
+              "resilience"
+            ]
+          },
+          "ontology_tags": [
+            "PATIENCE",
+            "SABR",
+            "STEADFASTNESS"
+          ]
+        }
+      ]
+    }
+  ],
+  "root_network": {
+    "عصر": {
+      "occurrences": [
+        "العصر"
+      ],
+      "semantic_domain": [
+        "time",
+        "duration",
+        "squeezing",
+        "declining_day"
+      ]
+    },
+    "أنس": {
+      "occurrences": [
+        "الإنسان"
+      ],
+      "semantic_domain": [
+        "mankind",
+        "humanity",
+        "sociability"
+      ]
+    },
+    "خسر": {
+      "occurrences": [
+        "خسر"
+      ],
+      "semantic_domain": [
+        "loss",
+        "bankruptcy",
+        "ruin",
+        "deficit"
+      ]
+    },
+    "أمن": {
+      "occurrences": [
+        "آمنوا"
+      ],
+      "semantic_domain": [
+        "faith",
+        "trust",
+        "security",
+        "belief"
+      ]
+    },
+    "عمل": {
+      "occurrences": [
+        "عملوا"
+      ],
+      "semantic_domain": [
+        "action",
+        "labor",
+        "deeds",
+        "work"
+      ]
+    },
+    "صلح": {
+      "occurrences": [
+        "الصالحات"
+      ],
+      "semantic_domain": [
+        "righteousness",
+        "benefit",
+        "goodness",
+        "correctness"
+      ]
+    },
+    "وصي": {
+      "occurrences": [
+        "تواصوا",
+        "تواصوا"
+      ],
+      "semantic_domain": [
+        "counsel",
+        "advice",
+        "mutual_bequest",
+        "enjoining"
+      ]
+    },
+    "حقق": {
+      "occurrences": [
+        "بالحق"
+      ],
+      "semantic_domain": [
+        "truth",
+        "reality",
+        "justice",
+        "certainty"
+      ]
+    },
+    "صبر": {
+      "occurrences": [
+        "بالصبر"
+      ],
+      "semantic_domain": [
+        "patience",
+        "endurance",
+        "steadfastness",
+        "restraint"
+      ]
+    }
+  },
+  "nahw": {
+    "sentence_types": [
+      "shibh_jumlah_qasam (والعصر)",
+      "jumlah_ismiyyah_naskhiyyah (إن الإنسان لفي خسر)",
+      "istithna_muttasil (إلا الذين آمنوا...)"
+    ],
+    "idafah_rules": [],
+    "agreement_rules": {
+      "relative_pronoun_and_silah": {
+        "pronoun": "الذين (plural masculine)",
+        "matching_verbs": [
+          "آمنوا",
+          "عملوا",
+          "تواصوا"
+        ],
+        "agreement": "Pronoun Waw al-Jama'ah (واو الجماعة) matches masculine plural."
+      }
+    }
+  },
+  "sarf": {
+    "derived_forms": [
+      {
+        "form": "IV (أفعل)",
+        "word": "آمنوا",
+        "root": "أمن",
+        "semantic_implication": "Transitive/Causative: entering state of security and affirming truth"
+      },
+      {
+        "form": "VI (تفاعل)",
+        "word": "تواصوا",
+        "root": "وصي",
+        "semantic_implication": "Reciprocity: mutual action between two or more parties"
+      }
+    ],
+    "participles": [
+      {
+        "type": "ism_fail_plural",
+        "word": "الصالحات",
+        "root": "صلح",
+        "singular_form": "صَالِحَة"
+      }
+    ]
+  },
+  "balaghah": {
+    "qasam": "Divine oath by Time (العصر) setting the urgent context of human life.",
+    "tawkid": "Triple emphasis in verse 2: Oath + Inna + Lam al-Muzahlaqah.",
+    "tanker": "Khusrin (خسرٍ) with tanween al-tahweel signifying catastrophic loss.",
+    "majaz_zarfiyyah": "Fi Khusr (في خسر) framing loss as an enclosing vessel.",
+    "repetition": "Repeating Tawasaw (تواصوا) to highlight both Truth and Patience as distinct, equal imperatives."
+  },
+  "aqidah": {
+    "salvation_matrix": {
+      "foundation": "Time is limited capital.",
+      "default_state": "All human beings head towards spiritual bankruptcy (Khusr).",
+      "exemption": "Only achieved by fulfilling all 4 conditions simultaneously: Iman, Amal Salih, Tawasi bil-Haqq, Tawasi bis-Sabr."
+    }
+  },
+  "ontology": {
+    "TEMPORAL_REALITY": {
+      "children": [
+        "TIME",
+        "DECLINING_DAY",
+        "HUMAN_LIFETIME"
+      ]
+    },
+    "HUMAN_CONDITION": {
+      "children": [
+        "LOSS",
+        "SPIRITUAL_BANKRUPTCY",
+        "SALVATION_ROADMAP"
+      ]
+    },
+    "PILLARS_OF_SALVATION": {
+      "children": [
+        "FAITH_IMAN",
+        "RIGHTEOUS_ACTION",
+        "MUTUAL_TRUTH",
+        "MUTUAL_PATIENCE"
+      ]
+    }
+  },
+  "knowledge_graph": {
+    "nodes": [
+      "العصر (Time)",
+      "الإنسان (Mankind)",
+      "خسر (Loss)",
+      "الذين آمنوا (Believers)",
+      "عملوا الصالحات (Righteous Deeds)",
+      "تواصوا بالحق (Enjoin Truth)",
+      "تواصوا بالصبر (Enjoin Patience)"
+    ],
+    "edges": [
+      {
+        "from": "العصر (Time)",
+        "to": "الإنسان (Mankind)",
+        "relation": "sworn_oath_context_for"
+      },
+      {
+        "from": "الإنسان (Mankind)",
+        "to": "خسر (Loss)",
+        "relation": "default_state_of_submersion"
+      },
+      {
+        "from": "الذين آمنوا (Believers)",
+        "to": "الإنسان (Mankind)",
+        "relation": "excepted_subgroup_from"
+      },
+      {
+        "from": "الذين آمنوا (Believers)",
+        "to": "عملوا الصالحات (Righteous Deeds)",
+        "relation": "demonstrates_faith_through"
+      },
+      {
+        "from": "الذين آمنوا (Believers)",
+        "to": "تواصوا بالحق (Enjoin Truth)",
+        "relation": "builds_community_with"
+      },
+      {
+        "from": "الذين آمنوا (Believers)",
+        "to": "تواصوا بالصبر (Enjoin Patience)",
+        "relation": "sustains_resilience_with"
+      }
+    ]
+  },
+  "semantic_search_metadata": {
+    "topics": [
+      "surah asr",
+      "salvation in islam",
+      "time management",
+      "four pillars of success",
+      "iman and amal salih",
+      "tawasi bil haqq",
+      "tawasi bis sabr",
+      "shafi quote surah asr"
+    ],
+    "keywords_ar": [
+      "العصر",
+      "الإنسان",
+      "خسر",
+      "آمنوا",
+      "الصالحات",
+      "تواصوا",
+      "الحق",
+      "الصبر"
+    ],
+    "keywords_en": [
+      "time",
+      "mankind",
+      "loss",
+      "believed",
+      "righteous deeds",
+      "truth",
+      "patience",
+      "enjoin"
+    ]
+  },
+  "cross_root_links": {
+    "عصر": [
+      "103:1:1"
+    ],
+    "أنس": [
+      "103:2:2"
+    ],
+    "خسر": [
+      "103:2:4"
+    ],
+    "أمن": [
+      "103:3:3"
+    ],
+    "عمل": [
+      "103:3:4"
+    ],
+    "صلح": [
+      "103:3:5"
+    ],
+    "وصي": [
+      "103:3:6",
+      "103:3:8"
+    ],
+    "حقق": [
+      "103:3:7"
+    ],
+    "صبر": [
+      "103:3:9"
+    ]
+  }
+}
