@@ -1,0 +1,1206 @@
+{
+  "surah_id": 108,
+  "surah_name": "الكوثر",
+  "surah_name_en": "Al-Kawthar",
+  "surah_name_translation": "The Abundance",
+  "classification": "Makki",
+  "total_verses": 3,
+  "total_words": 10,
+  "total_letters": 42,
+  "version": "1.0.0",
+  "verses": [
+    {
+      "id": "108:1",
+      "number": 1,
+      "text_uthmani": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ",
+      "text_simple": "إنا أعطيناك الكوثر",
+      "translation": "Indeed, We have granted you, [O Muhammad], al-Kawthar.",
+      "transliteration": "Innā aʿṭaynāka l-kawthar",
+      "tokens": [
+        {
+          "id": "108:1:1",
+          "text": "إِنَّا",
+          "token_clean": "إنا",
+          "part_of_speech": "particle",
+          "pos_class": "particle",
+          "css_class": "particle",
+          "tooltip": "Particle + Pronoun: Indeed, We",
+          "lemma": "إن",
+          "root": null,
+          "type": "particle_plus_pronoun",
+          "subtype": "harf_tawkid_wa_nasb",
+          "meaning": "indeed We (plural of majesty)",
+          "case": "mansoob_in_place",
+          "irab": "حرف توكيد ونصب مبني على الفتح، و(نا) ضمير متصل مبني في محل نصب اسم إن",
+          "case_class": "case-mansoob",
+          "syntax_class": "syntax-harf",
+          "pos_label": "Particle",
+          "wazn": "—",
+          "ai_explanations": {
+            "beginner": "Inna means 'Indeed We'. Allah uses 'We' to show His supreme power and majesty.",
+            "intermediate": "Compound of the emphatic particle Inna + attached pronoun Na (first-person plural of majesty), serving as Ism Inna.",
+            "advanced": "The plural of majesty (نون العظمة) emphasizes the grandeur of the Giver before mentioning the gift, instilling awe."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:1:1 (إِنَّا)",
+              "to": "108:1:2 (أَعْطَيْنَاكَ)",
+              "relation": "khabar_inna",
+              "description": "The verbal sentence functions as the predicate of Inna."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "97:1",
+              "text": "إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+              "explanation": "Inna + Plural of Majesty introducing the Quran"
+            },
+            {
+              "ayah": "48:1",
+              "text": "إِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا",
+              "explanation": "Inna + Plural of Majesty promising victory"
+            }
+          ],
+          "same_root_words": [],
+          "same_pattern_words": []
+        },
+        {
+          "id": "108:1:2",
+          "text": "أَعْطَيْنَـٰكَ",
+          "token_clean": "أعطيناك",
+          "part_of_speech": "verb",
+          "pos_class": "verb-past",
+          "css_class": "verb-past pulse-past",
+          "tooltip": "Verb (Past Form IV) + Subject + Object: We have granted you",
+          "lemma": "أَعْطَى",
+          "root": "عطي",
+          "root_letters": [
+            "ع",
+            "ط",
+            "ي"
+          ],
+          "wazn": "أَفْعَلْنَاكَ",
+          "verb_form": 4,
+          "tense": "past",
+          "voice": "active",
+          "person": "first",
+          "number": "plural",
+          "gender": "masculine",
+          "attached_pronoun": "كَ (مفعول به أول)",
+          "meaning": "We granted you",
+          "irab": "فعل ماض مبني على السكون لاتصاله بنا الفاعلين، و(نا) فاعل، والكاف ضمير متصل مبني في محل نصب مفعول به أول، والجملة في محل رفع خبر إن",
+          "case_class": "case-mabni",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Verb Past",
+          "ai_explanations": {
+            "beginner": "A'tayna means 'We gave', and 'ka' means 'to you' (Prophet Muhammad ﷺ).",
+            "intermediate": "Form IV past active verb (أَفْعَلَ) with attached subject pronoun Na and attached direct object pronoun Ka.",
+            "advanced": "Form IV denotes total conferral. Past tense guarantees certainty: though realized in Paradise, the gift is already decreed."
+          },
+          "syntax_tree": [
+            {
+              "from": "Allah (Subject of Majesty)",
+              "to": "108:1:2 (أَعْطَيْنَاكَ)",
+              "relation": "subject",
+              "description": "Allah is the supreme Giver performing the bestowal."
+            },
+            {
+              "from": "108:1:2 (أَعْطَيْنَاكَ)",
+              "to": "Prophet Muhammad ﷺ (كَ)",
+              "relation": "recipient",
+              "description": "The Prophet ﷺ is the honored recipient (Maf'ul bihi 1)."
+            },
+            {
+              "from": "108:1:2 (أَعْطَيْنَاكَ)",
+              "to": "108:1:3 (ٱلْكَوْثَرَ)",
+              "relation": "direct_object",
+              "description": "Al-Kawthar is the second direct object (Maf'ul bihi 2)."
+            },
+            {
+              "from": "108:1:1 (إِنَّا)",
+              "to": "108:1:2 (أَعْطَيْنَاكَ)",
+              "relation": "khabar_inna",
+              "description": "The verbal sentence functions as the predicate of Inna."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "93:5",
+              "text": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+              "explanation": "Promise of divine giving until complete satisfaction"
+            }
+          ],
+          "same_root_words": [
+            {
+              "word": "عَطَاء",
+              "ayah": "78:36",
+              "meaning": "gift / divine reward"
+            },
+            {
+              "word": "أَعْطَىٰ",
+              "ayah": "92:5",
+              "meaning": "he gave in charity"
+            }
+          ],
+          "same_pattern_words": [
+            {
+              "pattern": "أَفْعَلْنَا",
+              "words": [
+                "أَنزَلْنَا (We sent down)",
+                "أَرْسَلْنَا (We sent)",
+                "أَكْرَمْنَا (We honored)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "108:1:3",
+          "text": "ٱلْكَوْثَرَ",
+          "token_clean": "الكوثر",
+          "part_of_speech": "noun",
+          "pos_class": "noun",
+          "css_class": "noun",
+          "tooltip": "Noun (Mansub): The Abundance / River in Paradise",
+          "lemma": "كَوْثَر",
+          "root": "كثر",
+          "root_letters": [
+            "ك",
+            "ث",
+            "ر"
+          ],
+          "wazn": "فَوْعَل",
+          "case": "mansoob",
+          "meaning": "the boundless abundance / celestial river",
+          "irab": "مفعول به ثان منصوب وعلامة نصبه الفتحة الظاهرة على آخره",
+          "case_class": "case-mansoob",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Noun",
+          "ai_explanations": {
+            "beginner": "Al-Kawthar means 'abundance'—all good in this life and the river in Paradise.",
+            "intermediate": "Noun in accusative case (mansoob) on pattern Faw'al (فَوْعَل) derived from root kaf-tha-ra (abundance).",
+            "advanced": "Pattern Faw'al signifies infinite multiplicity: not merely a lot, but a self-replenishing fountain of spiritual and material grace."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:1:2 (أَعْطَيْنَاكَ)",
+              "to": "108:1:3 (ٱلْكَوْثَرَ)",
+              "relation": "direct_object",
+              "description": "Al-Kawthar is the second direct object (Maf'ul bihi 2)."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "102:1",
+              "text": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+              "explanation": "Competition in increase"
+            }
+          ],
+          "same_root_words": [
+            {
+              "word": "كَثِير",
+              "ayah": "2:26",
+              "meaning": "many / abundant"
+            },
+            {
+              "word": "تَكَاثُر",
+              "ayah": "102:1",
+              "meaning": "mutual rivalry in increase"
+            }
+          ],
+          "same_pattern_words": [
+            {
+              "pattern": "فَوْعَل",
+              "words": [
+                "جَوْهَر (Jewel/Essence)",
+                "نَوْفَل (Generous)",
+                "كَوْثَر (Abundance)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "108:2",
+      "number": 2,
+      "text_uthmani": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+      "text_simple": "فصل لربك وانحر",
+      "translation": "So pray to your Lord and sacrifice [to Him alone].",
+      "transliteration": "Fa-ṣalli li-rabbika wan-ḥar",
+      "tokens": [
+        {
+          "id": "108:2:1",
+          "text": "فَـ",
+          "token_clean": "ف",
+          "part_of_speech": "particle",
+          "pos_class": "particle",
+          "css_class": "particle",
+          "tooltip": "Particle: So / Therefore (Cause & Consequence)",
+          "lemma": "ف",
+          "root": null,
+          "type": "particle",
+          "subtype": "fa_sababiyyah_or_fasiha",
+          "meaning": "so / consequently",
+          "irab": "الفاء فصيحة أو سببية رابطة لجواب شرط مقدر مبنية على الفتح",
+          "case_class": "case-mabni",
+          "syntax_class": "syntax-fa",
+          "pos_label": "Particle",
+          "wazn": "—",
+          "ai_explanations": {
+            "beginner": "Fa means 'So' or 'Therefore'. It connects the gift to our duty of gratitude.",
+            "intermediate": "Consequential particle (Fa al-Sababiyyah). Links divine bounty to immediate devotional response.",
+            "advanced": "Functions as Fa al-Fasiha; unrolls an implicit premise: 'Since you have been granted limitless abundance, then pray.'"
+          },
+          "syntax_tree": [
+            {
+              "from": "108:2:1 (فَـ)",
+              "to": "108:2:2 (صَلِّ)",
+              "relation": "causation_consequence",
+              "description": "Causal connector: gratitude through devotion follows abundance."
+            }
+          ],
+          "similar_quran_examples": [],
+          "same_root_words": [],
+          "same_pattern_words": []
+        },
+        {
+          "id": "108:2:2",
+          "text": "صَلِّ",
+          "token_clean": "صل",
+          "part_of_speech": "verb",
+          "pos_class": "verb-imperative",
+          "css_class": "verb-imperative",
+          "tooltip": "Verb (Imperative Form II): Pray!",
+          "lemma": "صَلَّى",
+          "root": "صلو",
+          "root_letters": [
+            "ص",
+            "ل",
+            "و"
+          ],
+          "wazn": "فَعِّلْ",
+          "verb_form": 2,
+          "tense": "imperative",
+          "voice": "active",
+          "person": "second",
+          "number": "singular",
+          "gender": "masculine",
+          "meaning": "pray / establish prayer",
+          "irab": "فعل أمر مبني على حذف حرف العلة (الياء)، والفاعل ضمير مستتر تقديره أنت",
+          "case_class": "case-mabni",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Verb Imperative",
+          "ai_explanations": {
+            "beginner": "Salli means 'Pray!'. Prayer is our highest expression of thanks.",
+            "intermediate": "Form II imperative verb (فَعِّلْ). Built on deletion of final weak vowel (harf al-'illah).",
+            "advanced": "Form II implies intensive, consistent devotion. In Islamic jurisprudence, encompasses the Eid prayer and all obligations."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:2:1 (فَـ)",
+              "to": "108:2:2 (صَلِّ)",
+              "relation": "causation_consequence",
+              "description": "Causal connector: gratitude through devotion follows abundance."
+            },
+            {
+              "from": "108:2:2 (صَلِّ)",
+              "to": "108:2:3 (لِرَبِّكَ)",
+              "relation": "prepositional_attachment",
+              "description": "Prayer is dedicated exclusively to the Lord."
+            },
+            {
+              "from": "108:2:2 (صَلِّ)",
+              "to": "108:2:4 (وَٱنْحَرْ)",
+              "relation": "conjoined_imperative",
+              "description": "Sacrifice is conjoined to prayer."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "87:15",
+              "text": "وَذَكَرَ ٱسْمَ رَبِّهِۦ فَصَلَّىٰ",
+              "explanation": "Remembering the Lord and praying"
+            }
+          ],
+          "same_root_words": [
+            {
+              "word": "صَلَاة",
+              "ayah": "2:3",
+              "meaning": "prayer"
+            },
+            {
+              "word": "مُصَلًّى",
+              "ayah": "2:125",
+              "meaning": "place of prayer"
+            }
+          ],
+          "same_pattern_words": [
+            {
+              "pattern": "فَعِّلْ",
+              "words": [
+                "سَبِّحْ (Glorify!)",
+                "كَبِّرْ (Magnify!)",
+                "يَسِّرْ (Make easy!)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "108:2:3",
+          "text": "لِرَبِّكَ",
+          "token_clean": "لربك",
+          "part_of_speech": "preposition_phrase",
+          "pos_class": "preposition",
+          "css_class": "preposition",
+          "tooltip": "Preposition + Noun + Pronoun: For your Lord alone",
+          "lemma": "رَبّ",
+          "root": "ربب",
+          "root_letters": [
+            "ر",
+            "ب",
+            "ب"
+          ],
+          "case": "majroor",
+          "is_mudaf": true,
+          "attached_pronoun": "كَ (مضاف إليه)",
+          "meaning": "to / for your Lord",
+          "irab": "اللام حرف جر للاختصاص، رب اسم مجرور بالكسرة وهو مضاف، والكاف مضاف إليه، والجار والمجرور متعلقان بـ صَلّ",
+          "case_class": "case-majroor",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Preposition",
+          "wazn": "—",
+          "ai_explanations": {
+            "beginner": "Li-Rabbika means 'for your Lord'. Worship Allah alone, with total sincerity.",
+            "intermediate": "Preposition Lam (indicating exclusivity/Ikhlas) + noun Rabb in genitive + attached pronoun Ka as Mudaf Ilayh.",
+            "advanced": "Rabb invokes divine nurturing care and lordship. Directly counters pagan rituals dedicated to idols."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:2:2 (صَلِّ)",
+              "to": "108:2:3 (لِرَبِّكَ)",
+              "relation": "prepositional_attachment",
+              "description": "Prayer is dedicated exclusively to the Lord."
+            },
+            {
+              "from": "108:2:3 (رَبِّ)",
+              "to": "كَ",
+              "relation": "mudaf_to_pronoun",
+              "description": "Idafah of ownership and affectionate closeness."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "6:162",
+              "text": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+              "explanation": "Prayer and sacrifice dedicated solely to Allah"
+            }
+          ],
+          "same_root_words": [
+            {
+              "word": "رَبّ",
+              "ayah": "1:2",
+              "meaning": "Lord and Sustainer"
+            }
+          ],
+          "same_pattern_words": []
+        },
+        {
+          "id": "108:2:4",
+          "text": "وَٱنْحَرْ",
+          "token_clean": "وانحر",
+          "part_of_speech": "verb",
+          "pos_class": "verb-imperative",
+          "css_class": "verb-imperative",
+          "tooltip": "Conjunction + Verb (Imperative Form I): And sacrifice!",
+          "lemma": "نَحَرَ",
+          "root": "نحر",
+          "root_letters": [
+            "ن",
+            "ح",
+            "ر"
+          ],
+          "wazn": "اِفْعَلْ",
+          "verb_form": 1,
+          "tense": "imperative",
+          "voice": "active",
+          "person": "second",
+          "number": "singular",
+          "gender": "masculine",
+          "meaning": "and sacrifice",
+          "irab": "الواو عاطفة، وانحر فعل أمر مبني على السكون، والفاعل ضمير مستتر تقديره أنت، والجملة معطوفة على صل",
+          "case_class": "case-mabni",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Verb Imperative",
+          "ai_explanations": {
+            "beginner": "Wanhar means 'and sacrifice'. Giving food and charity to thank Allah.",
+            "intermediate": "Conjunction Waw + Form I imperative verb on pattern If'al (اِفْعَلْ), built on Sukun.",
+            "advanced": "Nahr specifically designates camel sacrifice (the most valuable livestock in Arabia), embodying sincere physical and wealth surrender."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:2:2 (صَلِّ)",
+              "to": "108:2:4 (وَٱنْحَرْ)",
+              "relation": "conjoined_imperative",
+              "description": "Sacrifice is conjoined to prayer."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "22:36",
+              "text": "وَٱلْبُدْنَ جَعَلْنَـٰهَا لَكُم مِّن شَعَـٰٓئِرِ ٱللَّهِ",
+              "explanation": "Sacrificial camels as sacred symbols"
+            }
+          ],
+          "same_root_words": [],
+          "same_pattern_words": [
+            {
+              "pattern": "اِفْعَلْ",
+              "words": [
+                "ٱصْبِرْ (Endure!)",
+                "ٱعْلَمْ (Know!)",
+                "ٱقْرَأْ (Recite!)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "108:3",
+      "number": 3,
+      "text_uthmani": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+      "text_simple": "إن شانئك هو الأبتر",
+      "translation": "Indeed, your enemy is the one cut off.",
+      "transliteration": "Inna shāni'aka huwa l-abtar",
+      "tokens": [
+        {
+          "id": "108:3:1",
+          "text": "إِنَّ",
+          "token_clean": "إن",
+          "part_of_speech": "particle",
+          "pos_class": "particle",
+          "css_class": "particle",
+          "tooltip": "Particle: Indeed (Emphasis)",
+          "lemma": "إن",
+          "root": null,
+          "type": "particle",
+          "subtype": "harf_tawkid_wa_nasb",
+          "meaning": "indeed / verily",
+          "irab": "حرف توكيد ونصب مبني على الفتح ينصب الاسم ويرفع الخبر",
+          "case_class": "case-mabni",
+          "syntax_class": "syntax-harf",
+          "pos_label": "Particle",
+          "wazn": "—",
+          "ai_explanations": {
+            "beginner": "Inna means 'Indeed'. It guarantees that Allah's declaration is certain.",
+            "intermediate": "Particle of emphasis and accusative governance (Harf Tawkeed wa Nasb).",
+            "advanced": "Re-opening verse 3 with Inna reinforces absolute divine reassurance against enemy slander."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:3:1 (إِنَّ)",
+              "to": "108:3:2 (شَانِئَكَ)",
+              "relation": "ism_inna",
+              "description": "Shani'aka is the accusative subject of Inna."
+            },
+            {
+              "from": "108:3:1 (إِنَّ)",
+              "to": "108:3:4 (ٱلْأَبْتَرُ)",
+              "relation": "khabar_inna",
+              "description": "Al-Abtar is the nominative predicate of Inna."
+            }
+          ],
+          "similar_quran_examples": [],
+          "same_root_words": [],
+          "same_pattern_words": []
+        },
+        {
+          "id": "108:3:2",
+          "text": "شَانِئَكَ",
+          "token_clean": "شانئك",
+          "part_of_speech": "noun",
+          "pos_class": "noun",
+          "css_class": "noun",
+          "tooltip": "Active Participle (Ism Inna) + Pronoun: Your hater / enemy",
+          "lemma": "شَانِئ",
+          "root": "شنأ",
+          "root_letters": [
+            "ش",
+            "ن",
+            "أ"
+          ],
+          "part_of_speech_detail": "active_participle",
+          "wazn": "فَاعِل",
+          "case": "mansoob",
+          "attached_pronoun": "كَ (مضاف إليه)",
+          "meaning": "your hater / adversary",
+          "irab": "اسم إن منصوب وعلامة نصبه الفتحة الظاهرة وهو مضاف، والكاف ضمير متصل مبني في محل جر مضاف إليه",
+          "case_class": "case-mansoob",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Noun",
+          "ai_explanations": {
+            "beginner": "Shani'aka means 'your hater'. The pagan leaders who mocked the Prophet.",
+            "intermediate": "Active participle (Ism Fa'il) on pattern Fa'il serving as Ism Inna in accusative, with attached pronoun Ka.",
+            "advanced": "Root shin-nun-hamza denotes spiteful enmity. The active participle denotes ongoing malice that condemns the perpetrator."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:3:1 (إِنَّ)",
+              "to": "108:3:2 (شَانِئَكَ)",
+              "relation": "ism_inna",
+              "description": "Shani'aka is the accusative subject of Inna."
+            },
+            {
+              "from": "108:3:2 (شَانِئَكَ)",
+              "to": "108:3:3 (هُوَ)",
+              "relation": "damir_fasl",
+              "description": "Separation pronoun providing absolute exclusivity."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "5:8",
+              "text": "وَلَا يَجْرِمَنَّكُمْ شَنَـَٔانُ قَوْمٍ",
+              "explanation": "Hatred of a people"
+            }
+          ],
+          "same_root_words": [
+            {
+              "word": "شَنَـَٔان",
+              "ayah": "5:2",
+              "meaning": "hatred / hostility"
+            }
+          ],
+          "same_pattern_words": [
+            {
+              "pattern": "فَاعِل",
+              "words": [
+                "صَالِح (Righteous)",
+                "صَابِر (Patient)",
+                "شَاكِر (Grateful)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "108:3:3",
+          "text": "هُوَ",
+          "token_clean": "هو",
+          "part_of_speech": "pronoun",
+          "pos_class": "pronoun",
+          "css_class": "negative",
+          "tooltip": "Pronoun: He alone (Separation / Restriction)",
+          "lemma": "هُوَ",
+          "root": null,
+          "type": "pronoun",
+          "subtype": "damir_fasl",
+          "meaning": "he [alone] is",
+          "irab": "ضمير فصل مبني على الفتح لا محل له من الإعراب يفيد التوكيد والحصر",
+          "case_class": "case-mabni",
+          "syntax_class": "syntax-damir",
+          "pos_label": "Pronoun",
+          "wazn": "—",
+          "ai_explanations": {
+            "beginner": "Huwa means 'he is the one'. It directs the blame strictly onto the hater.",
+            "intermediate": "Separation pronoun (Damir Fasl). Distinguishes subject from predicate and produces exclusivity.",
+            "advanced": "Rhetorical restriction (Hasr): 'He—and he alone—is the one severed from all legacy, not you!'"
+          },
+          "syntax_tree": [
+            {
+              "from": "108:3:2 (شَانِئَكَ)",
+              "to": "108:3:3 (هُوَ)",
+              "relation": "damir_fasl",
+              "description": "Separation pronoun providing absolute exclusivity."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "2:37",
+              "text": "إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+              "explanation": "Damir Fasl highlighting exclusivity"
+            }
+          ],
+          "same_root_words": [],
+          "same_pattern_words": []
+        },
+        {
+          "id": "108:3:4",
+          "text": "ٱلْأَبْتَرُ",
+          "token_clean": "الأبتر",
+          "part_of_speech": "noun",
+          "pos_class": "noun",
+          "css_class": "noun",
+          "tooltip": "Adjective (Khabar Inna): The one cut off without legacy",
+          "lemma": "أَبْتَر",
+          "root": "بتر",
+          "root_letters": [
+            "ب",
+            "ت",
+            "ر"
+          ],
+          "wazn": "أَفْعَل",
+          "case": "marfoo",
+          "meaning": "the one cut off from all good and progeny",
+          "irab": "خبر إن مرفوع وعلامة رفعه الضمة الظاهرة على آخره",
+          "case_class": "case-marfoo",
+          "syntax_class": "syntax-noun",
+          "pos_label": "Noun",
+          "ai_explanations": {
+            "beginner": "Al-Abtar means 'cut off'. While the enemy is forgotten, the Prophet's name is remembered forever.",
+            "intermediate": "Adjective on pattern Af'al (أَفْعَل) functioning as Khabar Inna in nominative (marfoo' with Dhumma).",
+            "advanced": "Batar means total severance. History fulfilled this prophecy: the mockers vanished, while billions send blessings on Muhammad ﷺ daily."
+          },
+          "syntax_tree": [
+            {
+              "from": "108:3:1 (إِنَّ)",
+              "to": "108:3:4 (ٱلْأَبْتَرُ)",
+              "relation": "khabar_inna",
+              "description": "Al-Abtar is the nominative predicate of Inna."
+            }
+          ],
+          "similar_quran_examples": [
+            {
+              "ayah": "94:4",
+              "text": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+              "explanation": "And We raised high for you your repute"
+            }
+          ],
+          "same_root_words": [
+            {
+              "word": "بَتْر",
+              "ayah": "Lexicon",
+              "meaning": "to sever completely"
+            }
+          ],
+          "same_pattern_words": [
+            {
+              "pattern": "أَفْعَل",
+              "words": [
+                "أَعْظَم (Greater)",
+                "أَحْسَن (Best)",
+                "أَبْتَر (Cut off)"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "syntax": {
+    "relationships": [
+      {
+        "from": "Allah (Subject of Majesty)",
+        "to": "108:1:2 (أَعْطَيْنَاكَ)",
+        "relation": "subject",
+        "description": "Allah is the supreme Giver performing the bestowal."
+      },
+      {
+        "from": "108:1:2 (أَعْطَيْنَاكَ)",
+        "to": "Prophet Muhammad ﷺ (كَ)",
+        "relation": "recipient",
+        "description": "The Prophet ﷺ is the honored recipient (Maf'ul bihi 1)."
+      },
+      {
+        "from": "108:1:2 (أَعْطَيْنَاكَ)",
+        "to": "108:1:3 (ٱلْكَوْثَرَ)",
+        "relation": "direct_object",
+        "description": "Al-Kawthar is the second direct object (Maf'ul bihi 2)."
+      },
+      {
+        "from": "108:1:1 (إِنَّا)",
+        "to": "108:1:2 (أَعْطَيْنَاكَ)",
+        "relation": "khabar_inna",
+        "description": "The verbal sentence functions as the predicate of Inna."
+      },
+      {
+        "from": "108:2:1 (فَـ)",
+        "to": "108:2:2 (صَلِّ)",
+        "relation": "causation_consequence",
+        "description": "Causal connector: gratitude through devotion follows abundance."
+      },
+      {
+        "from": "108:2:2 (صَلِّ)",
+        "to": "108:2:3 (لِرَبِّكَ)",
+        "relation": "prepositional_attachment",
+        "description": "Prayer is dedicated exclusively to the Lord."
+      },
+      {
+        "from": "108:2:3 (رَبِّ)",
+        "to": "كَ",
+        "relation": "mudaf_to_pronoun",
+        "description": "Idafah of ownership and affectionate closeness."
+      },
+      {
+        "from": "108:2:2 (صَلِّ)",
+        "to": "108:2:4 (وَٱنْحَرْ)",
+        "relation": "conjoined_imperative",
+        "description": "Sacrifice is conjoined to prayer."
+      },
+      {
+        "from": "108:3:1 (إِنَّ)",
+        "to": "108:3:2 (شَانِئَكَ)",
+        "relation": "ism_inna",
+        "description": "Shani'aka is the accusative subject of Inna."
+      },
+      {
+        "from": "108:3:1 (إِنَّ)",
+        "to": "108:3:4 (ٱلْأَبْتَرُ)",
+        "relation": "khabar_inna",
+        "description": "Al-Abtar is the nominative predicate of Inna."
+      },
+      {
+        "from": "108:3:2 (شَانِئَكَ)",
+        "to": "108:3:3 (هُوَ)",
+        "relation": "damir_fasl",
+        "description": "Separation pronoun providing absolute exclusivity."
+      }
+    ]
+  },
+  "ontology": [
+    {
+      "token": "ٱلْكَوْثَرَ",
+      "concept": "ABUNDANCE",
+      "description": "Infinite spiritual, worldly, and celestial bounties granted to the Prophet ﷺ."
+    },
+    {
+      "token": "أَعْطَيْنَـٰكَ",
+      "concept": "DIVINE_GIFT",
+      "description": "Sovereign bestowal marked by permanent confirmation."
+    },
+    {
+      "token": "صَلِّ",
+      "concept": "DEVOTIONAL_GRATITUDE",
+      "description": "Pure prayer fulfilling the purpose of thanksgiving."
+    },
+    {
+      "token": "ٱنْحَرْ",
+      "concept": "SACRIFICIAL_CHARITY",
+      "description": "Devotion through economic and physical sacrifice for Allah and humanity."
+    },
+    {
+      "token": "شَانِئَكَ",
+      "concept": "ENMITY_AND_RESENTMENT",
+      "description": "Active malice and mocking toward divine truth and the Prophet."
+    },
+    {
+      "token": "هُوَ ٱلْأَبْتَرُ",
+      "concept": "DIVINE_VINDICATION",
+      "description": "God overturning the slurs of the oppressors, rendering them forgotten."
+    }
+  ],
+  "balaghah": [
+    {
+      "type": "fa_sababiyyah",
+      "word": "فَـ",
+      "effect": "Causal consequence: because Allah gave you boundless abundance, wholehearted worship is the only fitting reply."
+    },
+    {
+      "type": "sequence_pattern",
+      "pattern": [
+        "Gift (Al-Kawthar)",
+        "Gratitude (Prayer)",
+        "Sacrifice (Nahr)",
+        "Vindication (Abtar)"
+      ],
+      "effect": "Sublime balance: divine gift meets human devotion, followed by guaranteed protection from mockery."
+    },
+    {
+      "type": "sighat_mubalaghah_fawal",
+      "word": "الكوثر",
+      "effect": "The pattern Faw'al expresses overwhelming, limitless multiplicity that cannot be depleted."
+    },
+    {
+      "type": "hasr_via_damir_fasl",
+      "word": "هُوَ",
+      "effect": "Pronoun of separation creates definitive restriction: 'He—and he alone—is the one cut off!'"
+    },
+    {
+      "type": "fawasil_harmony",
+      "rhyme": "Letter Rā' (الكوثر، وانحر، الأبتر)",
+      "effect": "A triumphant, resonant ending echoing divine sovereignty and justice."
+    }
+  ],
+  "aqidah": [
+    {
+      "theme": "HONOR_OF_THE_PROPHET",
+      "lesson": "Allah directly comforts, validates, and defends His Messenger against smear campaigns."
+    },
+    {
+      "theme": "IKHLAS_IN_WORSHIP",
+      "lesson": "Prayer and sacrifice must be purely dedicated to Allah alone (لِرَبِّكَ), rejecting polytheism."
+    },
+    {
+      "theme": "DIVINE_JUSTICE",
+      "lesson": "Those who oppose the message of truth will ultimately face eradication of their legacy."
+    }
+  ],
+  "knowledge_graph": [
+    {
+      "from": "Allah",
+      "to": "Prophet Muhammad ﷺ",
+      "relation": "bestows_kawthar_upon"
+    },
+    {
+      "from": "Prophet Muhammad ﷺ",
+      "to": "Prayer",
+      "relation": "commands_worship_for_lord"
+    },
+    {
+      "from": "Prophet Muhammad ﷺ",
+      "to": "Sacrifice",
+      "relation": "dedicates_nahr_to_lord"
+    },
+    {
+      "from": "Enemies (Shani')",
+      "to": "Cut Off (Abtar)",
+      "relation": "condemned_to_be"
+    },
+    {
+      "from": "Al-Kawthar",
+      "to": "Eternal Honor",
+      "relation": "guarantees"
+    }
+  ],
+  "ai_explanations": [
+    {
+      "token_id": "108:1:1",
+      "text": "إِنَّا",
+      "beginner": {
+        "text": "Inna means 'Indeed We'. Allah uses 'We' to show His supreme power and majesty."
+      },
+      "intermediate": {
+        "text": "Compound of the emphatic particle Inna + attached pronoun Na (first-person plural of majesty), serving as Ism Inna."
+      },
+      "advanced": {
+        "text": "The plural of majesty (نون العظمة) emphasizes the grandeur of the Giver before mentioning the gift, instilling awe."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "97:1",
+          "text": "إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+          "explanation": "Inna + Plural of Majesty introducing the Quran"
+        },
+        {
+          "ayah": "48:1",
+          "text": "إِنَّا فَتَحْنَا لَكَ فَتْحًۭا مُّبِينًۭا",
+          "explanation": "Inna + Plural of Majesty promising victory"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "108:1:2",
+      "text": "أَعْطَيْنَـٰكَ",
+      "beginner": {
+        "text": "A'tayna means 'We gave', and 'ka' means 'to you' (Prophet Muhammad ﷺ)."
+      },
+      "intermediate": {
+        "text": "Form IV past active verb (أَفْعَلَ) with attached subject pronoun Na and attached direct object pronoun Ka."
+      },
+      "advanced": {
+        "text": "Form IV denotes total conferral. Past tense guarantees certainty: though realized in Paradise, the gift is already decreed."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "93:5",
+          "text": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+          "explanation": "Promise of divine giving until complete satisfaction"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "عَطَاء",
+          "ayah": "78:36",
+          "meaning": "gift / divine reward"
+        },
+        {
+          "word": "أَعْطَىٰ",
+          "ayah": "92:5",
+          "meaning": "he gave in charity"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "أَفْعَلْنَا",
+          "words": [
+            "أَنزَلْنَا (We sent down)",
+            "أَرْسَلْنَا (We sent)",
+            "أَكْرَمْنَا (We honored)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "108:1:3",
+      "text": "ٱلْكَوْثَرَ",
+      "beginner": {
+        "text": "Al-Kawthar means 'abundance'—all good in this life and the river in Paradise."
+      },
+      "intermediate": {
+        "text": "Noun in accusative case (mansoob) on pattern Faw'al (فَوْعَل) derived from root kaf-tha-ra (abundance)."
+      },
+      "advanced": {
+        "text": "Pattern Faw'al signifies infinite multiplicity: not merely a lot, but a self-replenishing fountain of spiritual and material grace."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "102:1",
+          "text": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+          "explanation": "Competition in increase"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "كَثِير",
+          "ayah": "2:26",
+          "meaning": "many / abundant"
+        },
+        {
+          "word": "تَكَاثُر",
+          "ayah": "102:1",
+          "meaning": "mutual rivalry in increase"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَوْعَل",
+          "words": [
+            "جَوْهَر (Jewel/Essence)",
+            "نَوْفَل (Generous)",
+            "كَوْثَر (Abundance)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "108:2:1",
+      "text": "فَـ",
+      "beginner": {
+        "text": "Fa means 'So' or 'Therefore'. It connects the gift to our duty of gratitude."
+      },
+      "intermediate": {
+        "text": "Consequential particle (Fa al-Sababiyyah). Links divine bounty to immediate devotional response."
+      },
+      "advanced": {
+        "text": "Functions as Fa al-Fasiha; unrolls an implicit premise: 'Since you have been granted limitless abundance, then pray.'"
+      },
+      "similar_quran_examples": [],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "108:2:2",
+      "text": "صَلِّ",
+      "beginner": {
+        "text": "Salli means 'Pray!'. Prayer is our highest expression of thanks."
+      },
+      "intermediate": {
+        "text": "Form II imperative verb (فَعِّلْ). Built on deletion of final weak vowel (harf al-'illah)."
+      },
+      "advanced": {
+        "text": "Form II implies intensive, consistent devotion. In Islamic jurisprudence, encompasses the Eid prayer and all obligations."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "87:15",
+          "text": "وَذَكَرَ ٱسْمَ رَبِّهِۦ فَصَلَّىٰ",
+          "explanation": "Remembering the Lord and praying"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "صَلَاة",
+          "ayah": "2:3",
+          "meaning": "prayer"
+        },
+        {
+          "word": "مُصَلًّى",
+          "ayah": "2:125",
+          "meaning": "place of prayer"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَعِّلْ",
+          "words": [
+            "سَبِّحْ (Glorify!)",
+            "كَبِّرْ (Magnify!)",
+            "يَسِّرْ (Make easy!)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "108:2:3",
+      "text": "لِرَبِّكَ",
+      "beginner": {
+        "text": "Li-Rabbika means 'for your Lord'. Worship Allah alone, with total sincerity."
+      },
+      "intermediate": {
+        "text": "Preposition Lam (indicating exclusivity/Ikhlas) + noun Rabb in genitive + attached pronoun Ka as Mudaf Ilayh."
+      },
+      "advanced": {
+        "text": "Rabb invokes divine nurturing care and lordship. Directly counters pagan rituals dedicated to idols."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "6:162",
+          "text": "قُلْ إِنَّ صَلَاتِى وَنُسُكِى وَمَحْيَاىَ وَمَمَاتِى لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+          "explanation": "Prayer and sacrifice dedicated solely to Allah"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "رَبّ",
+          "ayah": "1:2",
+          "meaning": "Lord and Sustainer"
+        }
+      ],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "108:2:4",
+      "text": "وَٱنْحَرْ",
+      "beginner": {
+        "text": "Wanhar means 'and sacrifice'. Giving food and charity to thank Allah."
+      },
+      "intermediate": {
+        "text": "Conjunction Waw + Form I imperative verb on pattern If'al (اِفْعَلْ), built on Sukun."
+      },
+      "advanced": {
+        "text": "Nahr specifically designates camel sacrifice (the most valuable livestock in Arabia), embodying sincere physical and wealth surrender."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "22:36",
+          "text": "وَٱلْبُدْنَ جَعَلْنَـٰهَا لَكُم مِّن شَعَـٰٓئِرِ ٱللَّهِ",
+          "explanation": "Sacrificial camels as sacred symbols"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": [
+        {
+          "pattern": "اِفْعَلْ",
+          "words": [
+            "ٱصْبِرْ (Endure!)",
+            "ٱعْلَمْ (Know!)",
+            "ٱقْرَأْ (Recite!)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "108:3:1",
+      "text": "إِنَّ",
+      "beginner": {
+        "text": "Inna means 'Indeed'. It guarantees that Allah's declaration is certain."
+      },
+      "intermediate": {
+        "text": "Particle of emphasis and accusative governance (Harf Tawkeed wa Nasb)."
+      },
+      "advanced": {
+        "text": "Re-opening verse 3 with Inna reinforces absolute divine reassurance against enemy slander."
+      },
+      "similar_quran_examples": [],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "108:3:2",
+      "text": "شَانِئَكَ",
+      "beginner": {
+        "text": "Shani'aka means 'your hater'. The pagan leaders who mocked the Prophet."
+      },
+      "intermediate": {
+        "text": "Active participle (Ism Fa'il) on pattern Fa'il serving as Ism Inna in accusative, with attached pronoun Ka."
+      },
+      "advanced": {
+        "text": "Root shin-nun-hamza denotes spiteful enmity. The active participle denotes ongoing malice that condemns the perpetrator."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "5:8",
+          "text": "وَلَا يَجْرِمَنَّكُمْ شَنَـَٔانُ قَوْمٍ",
+          "explanation": "Hatred of a people"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "شَنَـَٔان",
+          "ayah": "5:2",
+          "meaning": "hatred / hostility"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَاعِل",
+          "words": [
+            "صَالِح (Righteous)",
+            "صَابِر (Patient)",
+            "شَاكِر (Grateful)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "108:3:3",
+      "text": "هُوَ",
+      "beginner": {
+        "text": "Huwa means 'he is the one'. It directs the blame strictly onto the hater."
+      },
+      "intermediate": {
+        "text": "Separation pronoun (Damir Fasl). Distinguishes subject from predicate and produces exclusivity."
+      },
+      "advanced": {
+        "text": "Rhetorical restriction (Hasr): 'He—and he alone—is the one severed from all legacy, not you!'"
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "2:37",
+          "text": "إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+          "explanation": "Damir Fasl highlighting exclusivity"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "108:3:4",
+      "text": "ٱلْأَبْتَرُ",
+      "beginner": {
+        "text": "Al-Abtar means 'cut off'. While the enemy is forgotten, the Prophet's name is remembered forever."
+      },
+      "intermediate": {
+        "text": "Adjective on pattern Af'al (أَفْعَل) functioning as Khabar Inna in nominative (marfoo' with Dhumma)."
+      },
+      "advanced": {
+        "text": "Batar means total severance. History fulfilled this prophecy: the mockers vanished, while billions send blessings on Muhammad ﷺ daily."
+      },
+      "similar_quran_examples": [
+        {
+          "ayah": "94:4",
+          "text": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+          "explanation": "And We raised high for you your repute"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "بَتْر",
+          "ayah": "Lexicon",
+          "meaning": "to sever completely"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "أَفْعَل",
+          "words": [
+            "أَعْظَم (Greater)",
+            "أَحْسَن (Best)",
+            "أَبْتَر (Cut off)"
+          ]
+        }
+      ]
+    }
+  ]
+}
