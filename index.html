@@ -22,12 +22,15 @@
       </div>
       <div class="header-actions">
         <select id="surah-select" class="surah-select" title="Switch Surah">
-          <option value="surah-al-asr.json" selected>Surah Al-Asr (103) — AI Tutor</option>
-          <option value="surah-al-qamar.json">Surah Al-Qamar (54)</option>
+          <option value="surah-al-qamar.json" selected>Surah Al-Qamar (54) — Full 55 Ayahs</option>
+          <option value="surah-al-asr.json">Surah Al-Asr (103) — AI Tutor</option>
         </select>
         <a href="kawthar.html" class="btn btn-outline" style="background:#eff6ff; color:#1d4ed8; border-color:#bfdbfe; text-decoration:none; display:inline-flex; align-items:center; gap:4px;" title="Open Surah 108 React App">
           <span class="btn-icon">⚡</span> Surah 108 React App
         </a>
+                <button class="btn btn-outline" id="open-settings-btn" title="Quranic Font & Reading Settings">
+          <span class="btn-icon">⚙️</span> Settings
+        </button>
         <button class="btn btn-outline" id="open-pedagogy-btn">
           <span class="btn-icon">📖</span> Grammar Guide
         </button>
@@ -125,6 +128,11 @@
             <option value="mabni">Mabni (Fixed Base)</option>
           </select>
 
+                    <div class="quick-font-controls" title="Quick Adjust Arabic Font Size">
+            <button class="font-stepper-btn" id="quick-dec-font" title="Decrease Font Size (A-)">A-</button>
+            <span class="font-stepper-display" id="quick-font-display">100%</span>
+            <button class="font-stepper-btn" id="quick-inc-font" title="Increase Font Size (A+)">A+</button>
+          </div>
           <button class="btn btn-sm btn-ghost" id="reset-filters-btn">Reset Filters</button>
         </div>
       </div>
@@ -174,6 +182,140 @@
     </div>
   </div>
 
+  <!-- Display & Quranic Font Settings Modal -->
+  <div class="modal-backdrop" id="settings-modal-backdrop">
+    <div class="modal-dialog settings-modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge">⚙️ DISPLAY</span>
+          <h3 style="font-size: 1.25rem;">Font & Reading Settings</h3>
+        </div>
+        <button class="modal-close-btn" id="settings-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Live Preview Box -->
+        <div class="settings-preview-box">
+          <div class="settings-preview-label">Live Typography Preview (معاينة الخط)</div>
+          <div class="settings-preview-text" id="settings-preview-text">
+            « ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ »
+          </div>
+        </div>
+
+        <!-- Font Family Selector -->
+        <div class="settings-section">
+          <div class="settings-section-title">
+            <span>🔤 Quranic Font Typeface</span>
+            <span class="settings-badge" id="current-font-name">Madina Othmani</span>
+          </div>
+          <div class="font-cards-grid">
+            <div class="font-card active" data-font="me_quran">
+              <div class="font-card-header">
+                <span class="font-card-title">Madina Othmani</span>
+                <span class="font-card-tag">Tanzil.net</span>
+              </div>
+              <div class="font-card-sample" style="font-family: 'me_quran', serif;">
+                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+              </div>
+              <small style="font-size: 0.72rem; color: #64748b;">Authentic Tanzil Medina Mushaf with sequential tanweens</small>
+            </div>
+
+            <div class="font-card" data-font="UthmanicHafs">
+              <div class="font-card-header">
+                <span class="font-card-title">Madina Mushaf</span>
+                <span class="font-card-tag">KFGQPC</span>
+              </div>
+              <div class="font-card-sample" style="font-family: 'UthmanicHafs', serif;">
+                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+              </div>
+              <small style="font-size: 0.72rem; color: #64748b;">King Fahd Glorious Quran Printing Complex official font</small>
+            </div>
+
+            <div class="font-card" data-font="UthmanTN">
+              <div class="font-card-header">
+                <span class="font-card-title">Uthman Taha Naskh</span>
+                <span class="font-card-tag">Classical</span>
+              </div>
+              <div class="font-card-sample" style="font-family: 'UthmanTN', serif;">
+                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+              </div>
+              <small style="font-size: 0.72rem; color: #64748b;">Classical calligraphic Naskh script by Uthman Taha</small>
+            </div>
+
+            <div class="font-card" data-font="Amiri Quran">
+              <div class="font-card-header">
+                <span class="font-card-title">Amiri Quran</span>
+                <span class="font-card-tag">Web Font</span>
+              </div>
+              <div class="font-card-sample" style="font-family: 'Amiri Quran', serif;">
+                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+              </div>
+              <small style="font-size: 0.72rem; color: #64748b;">Bulaq Press revival typeface with broad digital compatibility</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Size Presets -->
+        <div class="settings-section">
+          <div class="settings-section-title">
+            <span>⚡ Size Presets</span>
+          </div>
+          <div class="presets-row">
+            <button class="preset-btn" data-preset="compact">Compact (80%)</button>
+            <button class="preset-btn active" data-preset="normal">Default (100%)</button>
+            <button class="preset-btn" data-preset="large">Large (125%)</button>
+            <button class="preset-btn" data-preset="xlarge">Extra Large (150%)</button>
+          </div>
+        </div>
+
+        <!-- Size Sliders -->
+        <div class="settings-section">
+          <div class="slider-control-group">
+            <div class="slider-label-row">
+              <span>Full Ayah Text Size (حجم خط الآية)</span>
+              <span class="slider-val-badge" id="ayah-size-val">2.15rem</span>
+            </div>
+            <div class="range-slider-wrap">
+              <button class="range-stepper-btn" id="btn-dec-ayah">-</button>
+              <input type="range" class="range-slider" id="slider-ayah-size" min="1.4" max="3.4" step="0.05" value="2.15">
+              <button class="range-stepper-btn" id="btn-inc-ayah">+</button>
+            </div>
+          </div>
+
+          <div class="slider-control-group">
+            <div class="slider-label-row">
+              <span>Word Cards Arabic Size (حجم خط الكلمات)</span>
+              <span class="slider-val-badge" id="word-size-val">1.55rem</span>
+            </div>
+            <div class="range-slider-wrap">
+              <button class="range-stepper-btn" id="btn-dec-word">-</button>
+              <input type="range" class="range-slider" id="slider-word-size" min="1.1" max="2.5" step="0.05" value="1.55">
+              <button class="range-stepper-btn" id="btn-inc-word">+</button>
+            </div>
+          </div>
+
+          <div class="slider-control-group">
+            <div class="slider-label-row">
+              <span>Line Spacing (تباعد الأسطر)</span>
+              <span class="slider-val-badge" id="line-height-val">2.4</span>
+            </div>
+            <div class="range-slider-wrap">
+              <button class="range-stepper-btn" id="btn-dec-line">-</button>
+              <input type="range" class="range-slider" id="slider-line-height" min="1.8" max="3.4" step="0.1" value="2.4">
+              <button class="range-stepper-btn" id="btn-inc-line">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Footer -->
+        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 8px;">
+          <button class="btn btn-sm btn-ghost" id="reset-settings-btn">Reset to Defaults</button>
+          <button class="btn btn-sm btn-primary" id="save-settings-btn">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer with Required Versioning (Rule 1) -->
   <footer class="app-footer">
     <div class="footer-container">
@@ -183,7 +325,7 @@
       </div>
       <div class="footer-right">
         <div class="version-tag" id="footer-version-tag">
-          v1.0.5 (updated 2026-09-03 00:58)
+          v1.0.6 (updated 2026-09-03 01:15)
         </div>
         <div class="footer-links">
           <a href="#top">Back to top ↑</a>

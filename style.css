@@ -1,3 +1,39 @@
+/* ==========================================================================
+   Quranic Fonts (Madina Othmani — Tanzil.net & King Fahd Complex)
+   ========================================================================== */
+@font-face {
+  font-family: 'me_quran';
+  src: url('fonts/me_quran.woff') format('woff'),
+       url('fonts/me_quran.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UthmanicHafs';
+  src: url('fonts/UthmanicHafs.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UthmanTN';
+  src: url('fonts/UthmanTN.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hafs';
+  src: url('fonts/hafs.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Color Palette — Case & Mood (I'rab) */
   --raf-blue: #2563eb;
@@ -52,6 +88,13 @@
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 24px;
+
+  /* Quranic Typography Tokens (Configurable via Settings Menu) */
+  --quran-font-family: 'me_quran', 'UthmanicHafs', 'UthmanTN', 'Amiri Quran', serif;
+  --ayah-font-size: 2.15rem;
+  --word-font-size: 1.55rem;
+  --ayah-line-height: 2.4;
+  --word-line-height: 1.6;
 }
 
 * {
@@ -70,7 +113,7 @@ body {
 
 /* Typography Helpers */
 .arabic-font {
-  font-family: 'Amiri Quran', 'Amiri', 'Traditional Arabic', serif;
+  font-family: var(--quran-font-family);
   direction: rtl;
 }
 
@@ -519,9 +562,9 @@ body {
 
 /* Full Quranic Ayah Text */
 .verse-full-arabic {
-  font-family: 'Amiri Quran', 'Amiri', serif;
-  font-size: 1.9rem;
-  line-height: 2.2;
+  font-family: var(--quran-font-family);
+  font-size: var(--ayah-font-size);
+  line-height: var(--ayah-line-height);
   text-align: right;
   direction: rtl;
   color: #0f172a;
@@ -569,8 +612,9 @@ body {
 }
 
 .word-arabic {
-  font-family: 'Amiri Quran', 'Amiri', serif;
-  font-size: 1.5rem;
+  font-family: var(--quran-font-family);
+  font-size: var(--word-font-size);
+  line-height: var(--word-line-height, 1.6);
   line-height: 1.6;
   text-align: center;
   direction: rtl;
@@ -607,13 +651,13 @@ body {
 }
 
 .morpheme-pill {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 700;
   border: 1px solid;
   direction: rtl;
-  font-family: 'Amiri', serif;
+  font-family: var(--quran-font-family);
 }
 
 /* Word Case Ending Pill */
@@ -706,7 +750,8 @@ body {
 }
 
 #modal-word-arabic {
-  font-size: 2rem;
+  font-family: var(--quran-font-family);
+  font-size: calc(var(--word-font-size) * 1.35);
   color: #0f172a;
 }
 
@@ -827,8 +872,8 @@ body {
 }
 
 .morpheme-table td.ar-cell {
-  font-family: 'Amiri', serif;
-  font-size: 1.2rem;
+  font-family: var(--quran-font-family);
+  font-size: calc(var(--word-font-size) * 0.9);
   direction: rtl;
   text-align: right;
 }
@@ -1178,7 +1223,7 @@ body {
   font-weight: 600;
 }
 .quran-example-ayah {
-  font-family: 'Amiri', serif;
+  font-family: var(--quran-font-family);
   font-size: 1.15rem;
   color: #1e293b;
   direction: rtl;
@@ -1210,4 +1255,278 @@ body {
   font-family: 'Amiri', serif;
   font-size: 0.95rem;
   color: #1e40af;
+}
+
+
+/* ==========================================================================
+   Settings Menu & Quick Stepper Styles
+   ========================================================================== */
+.quick-font-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+}
+
+.font-stepper-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  color: #334155;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.font-stepper-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.font-stepper-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #475569;
+  min-width: 44px;
+  text-align: center;
+}
+
+.settings-modal-dialog {
+  max-width: 600px;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.settings-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.settings-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.settings-badge {
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #bfdbfe;
+}
+
+.font-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .font-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.font-card {
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.font-card:hover {
+  border-color: #93c5fd;
+  background: #f8fafc;
+}
+
+.font-card.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.font-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.font-card-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0f172a;
+}
+
+.font-card-tag {
+  font-size: 0.68rem;
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.font-card-sample {
+  font-size: 1.35rem;
+  direction: rtl;
+  text-align: center;
+  color: #1e293b;
+  line-height: 1.8;
+  padding: 4px 0;
+}
+
+.slider-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.slider-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.slider-val-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.range-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-slider {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.1s ease;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.range-stepper-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-stepper-btn:hover {
+  background: #f1f5f9;
+}
+
+.presets-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.preset-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.preset-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.settings-preview-box {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  text-align: center;
+}
+
+.settings-preview-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.settings-preview-text {
+  font-family: var(--quran-font-family);
+  font-size: var(--ayah-font-size);
+  line-height: var(--ayah-line-height);
+  direction: rtl;
+  color: #0f172a;
 }

@@ -1,17 +1,28 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.0.3 (updated 2026-09-03 00:48)
+ * Version: v1.0.6 (updated 2026-09-03 01:15)
  */
 
 class QuranGrammarApp {
   constructor() {
     this.data = null;
-    this.currentSurahFile = 'surah-al-asr.json';
+    const urlParams = new URLSearchParams(window.location.search);
+    const surahParam = urlParams.get('surah');
+    this.currentSurahFile = (surahParam === 'asr' || surahParam === '103') ? 'surah-al-asr.json' : 'surah-al-qamar.json';
     this.activeColorMode = 'case'; // 'case' | 'pos' | 'syntax' | 'morpheme'
     this.activeThemeFilter = 'all';
     this.activeCaseFilter = 'all';
     this.searchQuery = '';
     this.currentAudio = null;
+    this.settings = {
+      fontFamily: 'me_quran',
+      ayahFontSize: 2.15,
+      wordFontSize: 1.55,
+      lineHeight: 2.4,
+      scale: 1.0
+    };
+    this.loadSettings();
+    this.applySettings();
 
     this.init();
   }
@@ -23,6 +34,8 @@ class QuranGrammarApp {
 
   async loadSurah(filename) {
     this.currentSurahFile = filename;
+    const sel = document.getElementById('surah-select');
+    if (sel) sel.value = filename;
     const container = document.getElementById('verses-container');
     if (container) {
       container.innerHTML = `
@@ -112,6 +125,7 @@ class QuranGrammarApp {
   }
 
   setupEventListeners() {
+    this.setupSettingsListeners();
     // Surah selector
     const surahSelect = document.getElementById('surah-select');
     if (surahSelect) {
@@ -318,6 +332,267 @@ class QuranGrammarApp {
           <strong>Suffix (لاحق)</strong>: Attached Pronouns, Feminine Tā', Plural Markers
         </span>
       `;
+    }
+  }
+
+
+  loadSettings() {
+    try {
+      const saved = localStorage.getItem('quran_reader_settings');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        this.settings = { ...this.settings, ...parsed };
+      }
+    } catch (e) {
+      console.warn('Could not load settings from localStorage', e);
+    }
+  }
+
+  saveSettings() {
+    try {
+      localStorage.setItem('quran_reader_settings', JSON.stringify(this.settings));
+    } catch (e) {
+      console.warn('Could not save settings to localStorage', e);
+    }
+  }
+
+  applySettings() {
+    const root = document.documentElement;
+    const font = this.settings.fontFamily || 'me_quran';
+    const ayahSize = (this.settings.ayahFontSize * this.settings.scale).toFixed(2);
+    const wordSize = (this.settings.wordFontSize * this.settings.scale).toFixed(2);
+    const lineH = this.settings.lineHeight.toFixed(1);
+
+    // Apply CSS variables
+    root.style.setProperty('--quran-font-family', `'${font}', 'UthmanicHafs', 'UthmanTN', 'Amiri Quran', serif`);
+    root.style.setProperty('--ayah-font-size', `${ayahSize}rem`);
+    root.style.setProperty('--word-font-size', `${wordSize}rem`);
+    root.style.setProperty('--ayah-line-height', lineH);
+
+    // Update UI Elements
+    const quickDisplay = document.getElementById('quick-font-display');
+    if (quickDisplay) quickDisplay.textContent = `${Math.round(this.settings.scale * 100)}%`;
+
+    const ayahVal = document.getElementById('ayah-size-val');
+    if (ayahVal) ayahVal.textContent = `${ayahSize}rem`;
+
+    const wordVal = document.getElementById('word-size-val');
+    if (wordVal) wordVal.textContent = `${wordSize}rem`;
+
+    const lineVal = document.getElementById('line-height-val');
+    if (lineVal) lineVal.textContent = lineH;
+
+    const sliderAyah = document.getElementById('slider-ayah-size');
+    if (sliderAyah) sliderAyah.value = this.settings.ayahFontSize;
+
+    const sliderWord = document.getElementById('slider-word-size');
+    if (sliderWord) sliderWord.value = this.settings.wordFontSize;
+
+    const sliderLine = document.getElementById('slider-line-height');
+    if (sliderLine) sliderLine.value = this.settings.lineHeight;
+
+    const fontBadge = document.getElementById('current-font-name');
+    const fontNames = {
+      'me_quran': 'Madina Othmani (Tanzil)',
+      'UthmanicHafs': 'Madina Mushaf (KFGQPC)',
+      'UthmanTN': 'Uthman Taha Naskh',
+      'Amiri Quran': 'Amiri Quran'
+    };
+    if (fontBadge) fontBadge.textContent = fontNames[font] || font;
+
+    // Update active font cards
+    document.querySelectorAll('.font-card').forEach(card => {
+      card.classList.toggle('active', card.dataset.font === font);
+    });
+
+    // Update live preview in modal
+    const preview = document.getElementById('settings-preview-text');
+    if (preview) {
+      preview.style.fontFamily = `'${font}', serif`;
+      preview.style.fontSize = `${ayahSize}rem`;
+      preview.style.lineHeight = lineH;
+    }
+  }
+
+  setupSettingsListeners() {
+    // Open/Close Settings Modal
+    const openBtn = document.getElementById('open-settings-btn');
+    const closeBtn = document.getElementById('settings-close-btn');
+    const saveBtn = document.getElementById('save-settings-btn');
+    const backdrop = document.getElementById('settings-modal-backdrop');
+
+    if (openBtn && backdrop) {
+      openBtn.addEventListener('click', () => {
+        this.applySettings();
+        backdrop.style.display = 'flex';
+      });
+    }
+
+    const closeModal = () => {
+      if (backdrop) backdrop.style.display = 'none';
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (saveBtn) saveBtn.addEventListener('click', closeModal);
+    if (backdrop) {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) closeModal();
+      });
+    }
+
+    // Font card selection
+    document.querySelectorAll('.font-card').forEach(card => {
+      card.addEventListener('click', () => {
+        this.settings.fontFamily = card.dataset.font;
+        this.saveSettings();
+        this.applySettings();
+      });
+    });
+
+    // Quick Stepper (A- / A+)
+    const quickDec = document.getElementById('quick-dec-font');
+    const quickInc = document.getElementById('quick-inc-font');
+    if (quickDec) {
+      quickDec.addEventListener('click', () => {
+        if (this.settings.scale > 0.7) {
+          this.settings.scale = Math.max(0.7, parseFloat((this.settings.scale - 0.1).toFixed(2)));
+          this.saveSettings();
+          this.applySettings();
+        }
+      });
+    }
+    if (quickInc) {
+      quickInc.addEventListener('click', () => {
+        if (this.settings.scale < 1.8) {
+          this.settings.scale = Math.min(1.8, parseFloat((this.settings.scale + 0.1).toFixed(2)));
+          this.saveSettings();
+          this.applySettings();
+        }
+      });
+    }
+
+    // Sliders
+    const sliderAyah = document.getElementById('slider-ayah-size');
+    if (sliderAyah) {
+      sliderAyah.addEventListener('input', (e) => {
+        this.settings.ayahFontSize = parseFloat(e.target.value);
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const sliderWord = document.getElementById('slider-word-size');
+    if (sliderWord) {
+      sliderWord.addEventListener('input', (e) => {
+        this.settings.wordFontSize = parseFloat(e.target.value);
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const sliderLine = document.getElementById('slider-line-height');
+    if (sliderLine) {
+      sliderLine.addEventListener('input', (e) => {
+        this.settings.lineHeight = parseFloat(e.target.value);
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    // Individual Slider Steppers (- / +)
+    const btnDecAyah = document.getElementById('btn-dec-ayah');
+    const btnIncAyah = document.getElementById('btn-inc-ayah');
+    if (btnDecAyah && sliderAyah) {
+      btnDecAyah.addEventListener('click', () => {
+        this.settings.ayahFontSize = Math.max(1.4, parseFloat((this.settings.ayahFontSize - 0.1).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+    if (btnIncAyah && sliderAyah) {
+      btnIncAyah.addEventListener('click', () => {
+        this.settings.ayahFontSize = Math.min(3.4, parseFloat((this.settings.ayahFontSize + 0.1).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const btnDecWord = document.getElementById('btn-dec-word');
+    const btnIncWord = document.getElementById('btn-inc-word');
+    if (btnDecWord && sliderWord) {
+      btnDecWord.addEventListener('click', () => {
+        this.settings.wordFontSize = Math.max(1.1, parseFloat((this.settings.wordFontSize - 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+    if (btnIncWord && sliderWord) {
+      btnIncWord.addEventListener('click', () => {
+        this.settings.wordFontSize = Math.min(2.5, parseFloat((this.settings.wordFontSize + 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const btnDecLine = document.getElementById('btn-dec-line');
+    const btnIncLine = document.getElementById('btn-inc-line');
+    if (btnDecLine && sliderLine) {
+      btnDecLine.addEventListener('click', () => {
+        this.settings.lineHeight = Math.max(1.8, parseFloat((this.settings.lineHeight - 0.1).toFixed(1)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+    if (btnIncLine && sliderLine) {
+      btnIncLine.addEventListener('click', () => {
+        this.settings.lineHeight = Math.min(3.4, parseFloat((this.settings.lineHeight + 0.1).toFixed(1)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    // Presets
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const preset = btn.dataset.preset;
+        if (preset === 'compact') {
+          this.settings.scale = 0.8;
+          this.settings.ayahFontSize = 1.85;
+          this.settings.wordFontSize = 1.35;
+        } else if (preset === 'normal') {
+          this.settings.scale = 1.0;
+          this.settings.ayahFontSize = 2.15;
+          this.settings.wordFontSize = 1.55;
+        } else if (preset === 'large') {
+          this.settings.scale = 1.25;
+          this.settings.ayahFontSize = 2.45;
+          this.settings.wordFontSize = 1.75;
+        } else if (preset === 'xlarge') {
+          this.settings.scale = 1.5;
+          this.settings.ayahFontSize = 2.75;
+          this.settings.wordFontSize = 1.95;
+        }
+        this.saveSettings();
+        this.applySettings();
+      });
+    });
+
+    // Reset settings
+    const resetBtn = document.getElementById('reset-settings-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        this.settings = {
+          fontFamily: 'me_quran',
+          ayahFontSize: 2.15,
+          wordFontSize: 1.55,
+          lineHeight: 2.4,
+          scale: 1.0
+        };
+        this.saveSettings();
+        this.applySettings();
+      });
     }
   }
 
