@@ -2,20 +2,22 @@
   "metadata": {
     "title": "Surah Al-Asr (سورة العصر) — Complete Grammatical, Morphological, Rhetorical & Deep Analytical Dataset",
     "surah_number": 103,
-    "surah_name_ar": "سورة العصر",
-    "surah_name_en": "Surah Al-Asr",
+    "surah_name_ar": "العصر",
+    "surah_name_en": "Al-Asr",
     "surah_name_translation": "The Declining Day / Time",
     "revelation_type": "Meccan (مكية)",
+    "classification": "Makki",
     "chronological_order": 13,
     "total_verses": 3,
     "total_words": 14,
+    "total_letters": 70,
     "total_morphemes": 32,
-    "version": "1.0.0",
-    "updated_at": "2026-09-03 00:26",
+    "version": "1.0.2",
+    "updated_at": "2026-09-03 00:41",
     "compiler": "Antigravity Arabic Grammar Intelligence System",
     "guideline_basis": "Comprehensive Quranic Arabic Analysis Matrix (Nahw, Sarf, Balaghah, Aqidah, Ontology, Knowledge Graph, Semantic Metadata)",
     "license": "Open Data for Quranic Education",
-    "footer_version": "v1.0.0 (updated 2026-09-03 00:26)"
+    "footer_version": "v1.0.2 (updated 2026-09-03 00:41)"
   },
   "color_coding_system": {
     "description": "Pedagogical color-coding matrix mapping phonetic vowels, grammatical cases (i'rab), word classes (ism/fi'l/harf), and morpheme tiers to visual color tokens.",
@@ -38,7 +40,7 @@
         "bg": "#ecfdf5",
         "border": "#10b981",
         "text": "#065f46",
-        "concept": "Setting up / Erecting (النصب) — Dependency, object, subject of Inna."
+        "concept": "Setting up / Subordination (النصب) — Direct object, subject of Inna, excepted noun."
       },
       "jarr": {
         "case": "jarr",
@@ -48,7 +50,7 @@
         "bg": "#f5f3ff",
         "border": "#8b5cf6",
         "text": "#5b21b6",
-        "concept": "Dragging / Pulling down (الجر) — Attachment, prepositions, swearing oath noun."
+        "concept": "Attachment / Dependency (الجر) — Prepositional governance and sworn oath noun."
       },
       "jazm": {
         "case": "jazm",
@@ -58,7 +60,7 @@
         "bg": "#fffbeb",
         "border": "#f59e0b",
         "text": "#92400e",
-        "concept": "Cutting / Clipping (الجزم) — Absence of vowel, conditions, commands."
+        "concept": "Cutting / Decisive cutoff (الجزم) — Absence of vowel, jussive conditions."
       },
       "mabni": {
         "case": "mabni",
@@ -68,14 +70,14 @@
         "bg": "#f8fafc",
         "border": "#94a3b8",
         "text": "#334155",
-        "concept": "Fixed base (المبني) — Invariable structural ending."
+        "concept": "Fixed base (المبني) — Invariable structural ending unaffected by preceding governing agents."
       }
     },
     "word_classification_palette": {
       "ism": {
         "color": "#1d4ed8",
         "bg": "#dbeafe",
-        "label": "Ism (Noun / Pronoun / Relative Noun)"
+        "label": "Ism (Noun / Pronoun / Relative Pronoun)"
       },
       "fi'l": {
         "color": "#e11d48",
@@ -107,18 +109,15 @@
       "suffix": {
         "color": "#ec4899",
         "bg": "#fce7f3",
-        "label": "Suffix (Attached Subject Pronoun Waw al-Jama'ah)"
+        "label": "Suffix (Attached Subject Pronoun Waw al-Jama'ah, Silent Alif)"
       }
     }
   },
   "pedagogical_framework": {
     "title": "Pedagogical Principles & Systematic Grammar Guide of Surah Al-Asr",
-    "trilateral_word_classification": {
-      "ism": "Encompasses Al-Asr (time/oath), Al-Insan (mankind), Khusr (loss), Al-Ladhina (relative pronoun), Al-Salihat (righteous deeds), Al-Haqq (truth), and Al-Sabr (patience).",
-      "fil": "Includes Form IV verb 'Amanu' (believed), Form I verb 'Amilu' (worked/performed), and Form VI verb 'Tawasaw' (enjoined/advised one another).",
-      "harf": "Includes Waw al-Qasam (oath particle), Inna (emphatic particle), Lam al-Muzahlaqah (emphatic attached particle), Illa (exception particle), Waw al-Atf (conjunction), and Ba al-Jarr (preposition)."
-    },
-    "core_surah_thesis": "Imam Al-Shafi'i noted: 'If Allah had revealed no other surah to His creation except this surah, it would have been sufficient for them.' It outlines the universal law of human salvation across four essential pillars: Faith (Iman), Righteous Action (Amal Salih), Mutual Enjoining of Truth (Tawasi bil-Haqq), and Mutual Enjoining of Steadfast Patience (Tawasi bis-Sabr)."
+    "historical_maxim": "Imam Muhammad ibn Idris al-Shafi'i (رحمه الله) stated: 'If the people were to reflect upon Surah Al-Asr alone, it would be sufficient for them' (لو تدبر الناس هذه السورة لوسعتهم).",
+    "core_surah_thesis": "Surah Al-Asr establishes a complete constitution of human salvation in three short verses: (1) An oath by Time emphasizing human life as depreciating capital; (2) The universal diagnosis that all mankind is naturally sliding into loss; (3) The four interdependent pillars of rescue: Sound Faith (الإيمان), Virtuous Action (العمل الصالح), Mutual Teaching of Truth (التواصي بالحق), and Mutual Support in Steadfast Patience (التواصي بالصبر).",
+    "grammatical_balance": "The Surah demonstrates sublime structural balance: starting with an oath (شبه جملة قسم), moving to an emphasized nominal declaration (جملة اسمية ناسخة), and culminating in a comprehensive exception clause (جملة استثنائية متصلة) linked by verbs of active participation (صيغة تفاعل)."
   },
   "thematic_sections": [
     {
@@ -127,7 +126,7 @@
       "title_en": "The Divine Oath by Time & The Universal Condition of Mankind in Loss",
       "title_ar": "القسم بالعصر وبيان خسران الجنس البشري",
       "color": "#ef4444",
-      "summary": "Allah swears by Al-Asr (Time / The Declining Day) that every human being is intrinsically trapped in a state of absolute depletion and loss (Khusr)."
+      "summary": "Allah swears by Al-Asr (Time / The Declining Day) that every human being is intrinsically trapped in a state of continuous depletion and loss (Khusr)."
     },
     {
       "section_id": 2,
@@ -135,16 +134,26 @@
       "title_en": "The Four Divine Qualifications for Salvation and Eternal Success",
       "title_ar": "أركان النجاة الأربعة من الخسران",
       "color": "#10b981",
-      "summary": "The exception to universal loss: those who embody Faith, perform Righteous Deeds, and actively build a resilient community through mutual recommendation of Truth and Patience."
+      "summary": "The sole exception to universal ruin: those who embody Faith, perform Righteous Deeds, and actively cultivate a resilient community through mutual recommendation of Truth and Patience."
     }
   ],
   "verses": [
     {
-      "ayah_number": 1,
-      "surah_number": 103,
-      "text_uthmani": "وَٱلْعَصْرِ",
-      "text_imlaei": "وَالْعَصْرِ",
+      "metadata": {
+        "surah_number": 103,
+        "surah_name_ar": "العصر",
+        "surah_name_en": "Al-Asr",
+        "ayah_number": 1,
+        "ayah_key": "103:1",
+        "classification": "Makki"
+      },
+      "text": {
+        "uthmani": "وَٱلْعَصْرِ",
+        "simple": "والعصر",
+        "clean": "والعصر"
+      },
       "translation": "By time,",
+      "transliteration": "Wal-ʿaṣr",
       "thematic_section_id": 1,
       "thematic_section_title": "The Divine Oath by Time",
       "words_count": 1,
@@ -196,32 +205,36 @@
           }
         ]
       },
-      "balaghah": {
-        "qasam": {
-          "present": true,
-          "muqsam_bihi": "العصر",
-          "purpose": "Emphasizing the value of time as the capital asset of human existence."
-        },
-        "ijaz": {
-          "present": true,
-          "description": "Omission of the oath verb (أقسم) for immediate dramatic impact."
-        }
-      },
-      "aqidah": {
-        "divine_oath_significance": "Allah swears by created phenomena like Time to demonstrate their grand cosmic sign value and gravity for human accountability."
-      },
       "words": [
         {
+          "position": 1,
           "id": 103001001,
           "location": "103:1:1",
           "surah": 103,
           "ayah": 1,
           "word_position": 1,
+          "token": "وَٱلْعَصْرِ",
+          "token_clean": "والعصر",
           "arabic_uthmani": "وَٱلْعَصْرِ",
           "arabic_clean": "والعصر",
           "transliteration": "wal-ʿaṣri",
           "translation": "By time,",
           "audio_url": "https://audio.qurancdn.com/wbw/103_001_001.mp3",
+          "lemma": "عَصْر",
+          "root": {
+            "letters": [
+              "ع",
+              "ص",
+              "ر"
+            ],
+            "normalized": "عصر",
+            "meaning": "to press, squeeze out, declining daylight, time era",
+            "concept": "Time / Squeezing / Depleting Life"
+          },
+          "part_of_speech": {
+            "arabic": "حرف جر وقسم + اسم مجرور",
+            "english": "Oath preposition + Noun"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -235,21 +248,27 @@
               "number": "singular"
             }
           },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_waw_al_qasam",
+            "function": "muqsam_bihi",
+            "governing_agent": "waw_al_qasam",
+            "ending_marker": "kasra_zahirah"
+          },
           "sarf": {
-            "root": "ع-ص-ر",
-            "root_ar": "عصر",
-            "root_meaning": "to press, squeeze out, decline of day, time era",
-            "root_concept": "Time / Squeezing / Declining Day",
-            "lemma": "عَصْر",
-            "root_letters": [
-              "ع",
-              "ص",
-              "ر"
-            ],
+            "word_type": "masdar_noun",
+            "derived": false,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "فَعْل",
-            "person": null,
-            "gender": "masculine",
-            "number": "singular"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "squeezing / passage of daylight"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "jarr",
@@ -311,13 +330,14 @@
             "vowel_badge": "Kasra (ـِ) • مجرور (الجر)",
             "pedagogical_badge": "اسم • مجرور بالقسم"
           },
-          "nahw": {
-            "case": "majroor",
-            "case_reason": "preceded_by_waw_al_qasam",
-            "function": "muqsam_bihi"
-          },
           "semantics": {
             "gloss": "by time / the declining day",
+            "core_meanings": [
+              "time as the span of human life",
+              "the declining hours of the day (afternoon)",
+              "the historical era of prophetic revelation",
+              "the squeezing out of life's moments"
+            ],
             "semantic_field": [
               "time",
               "duration",
@@ -328,17 +348,92 @@
           "ontology_tags": [
             "DIVINE_OATH",
             "TIME",
-            "TEMPORAL_CAPITAL"
+            "TEMPORAL_CAPITAL",
+            "COSMIC_SIGN"
           ]
         }
-      ]
+      ],
+      "idafah_rules": [],
+      "agreement_rules": {},
+      "definiteness_propagation": {
+        "source": "لام التعريف (الـ)",
+        "target": "عصر",
+        "effect": "Transforms the indefinite concept of time into the definite, total cosmic reality of Time."
+      },
+      "root_network": {
+        "عصر": {
+          "occurrences": [
+            "العصر"
+          ],
+          "semantic_domain": [
+            "time",
+            "duration",
+            "squeezing",
+            "declining_day"
+          ]
+        }
+      },
+      "rhetorical_analysis": {
+        "ijaz": {
+          "present": true,
+          "description": "Omission of the oath verb (أقسم / أحلف) for immediate dramatic impact."
+        },
+        "ellipsis": {
+          "present": true,
+          "element": "verb",
+          "benefit": "brevity_and_immediacy"
+        },
+        "attribute_pairing": null,
+        "semantic_progression": {
+          "concept": "Opening with an oath draws sharp listener focus before announcing the critical verdict in verse 2."
+        }
+      },
+      "semantic_roles": [
+        {
+          "entity": "العصر",
+          "role": "sworn_object_of_reverence"
+        },
+        {
+          "entity": "الله",
+          "role": "divine_speaker_taking_oath"
+        }
+      ],
+      "knowledge_graph": {
+        "nodes": [
+          "الله (The Creator)",
+          "العصر (Time)",
+          "القسم (Divine Oath)"
+        ],
+        "edges": [
+          {
+            "from": "الله (The Creator)",
+            "to": "العصر (Time)",
+            "relation": "swears_by"
+          },
+          {
+            "from": "العصر (Time)",
+            "to": "القسم (Divine Oath)",
+            "relation": "serves_as_object_of"
+          }
+        ]
+      }
     },
     {
-      "ayah_number": 2,
-      "surah_number": 103,
-      "text_uthmani": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
-      "text_imlaei": "إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ",
+      "metadata": {
+        "surah_number": 103,
+        "surah_name_ar": "العصر",
+        "surah_name_en": "Al-Asr",
+        "ayah_number": 2,
+        "ayah_key": "103:2",
+        "classification": "Makki"
+      },
+      "text": {
+        "uthmani": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+        "simple": "إن الإنسان لفي خسر",
+        "clean": "ان الانسان لفي خسر"
+      },
       "translation": "Indeed, mankind is in loss,",
+      "transliteration": "Inna l-insāna lafī khusr",
       "thematic_section_id": 1,
       "thematic_section_title": "Universal Condition of Mankind in Loss",
       "words_count": 4,
@@ -348,6 +443,19 @@
           "part_inna": "إِنَّ",
           "ism_inna": "الْإِنْسَانَ",
           "khabar_inna": "لَفِي خُسْرٍ"
+        },
+        "mahzuf": {
+          "exists": true,
+          "type": "predicate_essence",
+          "estimated_forms": [
+            "كائنٌ",
+            "مستقرٌّ"
+          ],
+          "reason_for_omission": {
+            "brevity": true,
+            "universality": true,
+            "rhetorical_expansion": true
+          }
         },
         "taalluq": {
           "jar_majroor_requires_attachment": true,
@@ -390,41 +498,27 @@
           }
         ]
       },
-      "balaghah": {
-        "tawkid": {
-          "present": true,
-          "levels_of_emphasis": 3,
-          "elements": [
-            "Divine Oath (والعصر)",
-            "Particle Inna (إنَّ)",
-            "Lam al-Muzahlaqah (لَفِي)"
-          ],
-          "rhetorical_purpose": "Removing any doubt regarding the reality of human decay without spiritual intervention."
-        },
-        "tanker_for_magnification": {
-          "word": "خُسْرٍ",
-          "effect": "Tanween al-Ta'dheem / al-Tahweel — designating an immense, terrifying, and total loss."
-        },
-        "zarfiyyah_metaphor": {
-          "phrase": "فِي خُسْرٍ",
-          "effect": "Using the preposition 'Fi' (in) depicts loss as a container or deep ocean in which human beings are fully submerged."
-        }
-      },
-      "aqidah": {
-        "human_nature": "Left to pure material inclinations, human existence continuously depreciates in spiritual value with every passing second."
-      },
       "words": [
         {
+          "position": 1,
           "id": 103002001,
           "location": "103:2:1",
           "surah": 103,
           "ayah": 2,
           "word_position": 1,
+          "token": "إِنَّ",
+          "token_clean": "إن",
           "arabic_uthmani": "إِنَّ",
           "arabic_clean": "إن",
           "transliteration": "inna",
           "translation": "Indeed,",
           "audio_url": "https://audio.qurancdn.com/wbw/103_002_001.mp3",
+          "lemma": "إِنَّ",
+          "root": null,
+          "part_of_speech": {
+            "arabic": "حرف توكيد ونصب (حرف ناسخ)",
+            "english": "Emphatic accusative particle"
+          },
           "classification": {
             "primary_type": "harf",
             "primary_type_ar": "حرف",
@@ -434,17 +528,27 @@
               "particle_type_ar": "حرف توكيد ونصب (Harf of Emphasis and Accusative Governance)"
             }
           },
+          "nahw": {
+            "function": "harf_naskh",
+            "case": "mabni",
+            "case_reason": "fixed_particle_on_fatha",
+            "governs": "ism_inna_nasb",
+            "ending_marker": "fatha"
+          },
           "sarf": {
-            "root": null,
-            "root_ar": null,
-            "root_meaning": null,
-            "root_concept": null,
-            "lemma": "إِنَّ",
-            "root_letters": [],
+            "word_type": "particle",
+            "derived": false,
+            "inflectable": false,
+            "root_letters": null,
             "wazn": null,
-            "person": null,
-            "gender": null,
-            "number": null
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "affirmation / certainty"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -484,15 +588,17 @@
             "vowel_badge": "Fixed (مبني) • مبني على الفتح",
             "pedagogical_badge": "حرف • حرف توكيد ونصب"
           },
-          "nahw": {
-            "function": "harf_naskh",
-            "governs": "ism_inna_nasb"
-          },
           "semantics": {
             "gloss": "indeed / verily",
+            "core_meanings": [
+              "certainty",
+              "categorical affirmation",
+              "dispelling doubt"
+            ],
             "semantic_field": [
               "emphasis",
-              "certainty"
+              "certainty",
+              "truth_assertion"
             ]
           },
           "ontology_tags": [
@@ -501,16 +607,34 @@
           ]
         },
         {
+          "position": 2,
           "id": 103002002,
           "location": "103:2:2",
           "surah": 103,
           "ayah": 2,
           "word_position": 2,
+          "token": "ٱلْإِنسَـٰنَ",
+          "token_clean": "الانسان",
           "arabic_uthmani": "ٱلْإِنسَـٰنَ",
           "arabic_clean": "الإنسان",
           "transliteration": "al-insāna",
           "translation": "mankind",
           "audio_url": "https://audio.qurancdn.com/wbw/103_002_002.mp3",
+          "lemma": "إِنْسَان",
+          "root": {
+            "letters": [
+              "أ",
+              "ن",
+              "س"
+            ],
+            "normalized": "أنس",
+            "meaning": "to be companionable, perceive, awareness, sociability",
+            "concept": "Mankind / Human Nature"
+          },
+          "part_of_speech": {
+            "arabic": "اسم جنس",
+            "english": "Noun (Generic collective)"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -518,32 +642,38 @@
               "category": "ism",
               "noun_type": "jamid",
               "derivation": "generic_noun",
-              "derivation_ar": "اسم جنس لاستغراق الاستغراق (Generic Collective Noun)",
+              "derivation_ar": "اسم جنس لاستغراق الجنس (Generic Collective Noun)",
               "definiteness": "definite",
               "gender": "masculine",
               "number": "singular_generic_plural_meaning"
             }
           },
+          "nahw": {
+            "case": "mansoob",
+            "case_reason": "ism_inna",
+            "function": "ism_inna",
+            "governing_agent": "inna",
+            "ending_marker": "fatha_zahirah"
+          },
           "sarf": {
-            "root": "أ-ن-س",
-            "root_ar": "أنس",
-            "root_meaning": "to be companionable, perceive, forgetfulness (ن-س-ي)",
-            "root_concept": "Mankind / Sociability / Perception",
-            "lemma": "إِنْسَان",
-            "root_letters": [
-              "أ",
-              "ن",
-              "س"
-            ],
+            "word_type": "noun",
+            "derived": true,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "إِفْعَال",
-            "person": null,
-            "gender": "masculine",
-            "number": "singular"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": true,
+              "origin_meaning": "sociability (أنس) or forgetfulness (نسي)"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "nasb",
             "case_or_mood_ar": "منصوب (النصب)",
-            "case_concept": "Setting up / Erecting (النصب) — Subject of Inna.",
+            "case_concept": "Setting up / Subordination (النصب) — Subject of Inna.",
             "ending_vowel": "fatha",
             "grammatical_role": "ism_inna",
             "grammatical_role_ar": "اسم إن منصوب وعلامة نصبه الفتحة الظاهرة",
@@ -589,13 +719,13 @@
             "vowel_badge": "Fatha (ـَ) • منصوب (النصب)",
             "pedagogical_badge": "اسم • اسم إن"
           },
-          "nahw": {
-            "case": "mansoob",
-            "case_reason": "ism_inna",
-            "alif_lam_type": "al_jinsiyyah_for_exhaustion_of_species"
-          },
           "semantics": {
-            "gloss": "mankind / human species",
+            "gloss": "mankind / the human race",
+            "core_meanings": [
+              "every human individual without exception",
+              "the human species in its mortal nature",
+              "the creature endowed with moral responsibility"
+            ],
             "semantic_field": [
               "humanity",
               "creation",
@@ -605,20 +735,30 @@
           },
           "ontology_tags": [
             "HUMANITY",
-            "SPECIES_COLLECTIVE"
+            "SPECIES_COLLECTIVE",
+            "CREATION"
           ]
         },
         {
+          "position": 3,
           "id": 103002003,
           "location": "103:2:3",
           "surah": 103,
           "ayah": 2,
           "word_position": 3,
+          "token": "لَفِى",
+          "token_clean": "لفي",
           "arabic_uthmani": "لَفِى",
           "arabic_clean": "لفي",
           "transliteration": "lafī",
           "translation": "is surely in",
           "audio_url": "https://audio.qurancdn.com/wbw/103_002_003.mp3",
+          "lemma": "فِي",
+          "root": null,
+          "part_of_speech": {
+            "arabic": "لام المزحلقة للتوكيد + حرف جر",
+            "english": "Emphatic Lam + Preposition"
+          },
           "classification": {
             "primary_type": "harf",
             "primary_type_ar": "حرف",
@@ -628,17 +768,27 @@
               "particle_type_ar": "لام المزحلقة + حرف جر (Emphatic Lam + Preposition Fi)"
             }
           },
+          "nahw": {
+            "function": "harf_jar_plus_emphatic_lam",
+            "case": "mabni",
+            "case_reason": "fixed_particle_combination",
+            "creates_genitive": true,
+            "ending_marker": "sukun_on_ya"
+          },
           "sarf": {
-            "root": null,
-            "root_ar": null,
-            "root_meaning": null,
-            "root_concept": null,
-            "lemma": "فِي",
-            "root_letters": [],
+            "word_type": "particle",
+            "derived": false,
+            "inflectable": false,
+            "root_letters": null,
             "wazn": null,
-            "person": null,
-            "gender": null,
-            "number": null
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "inward containment and emphasis"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -689,12 +839,13 @@
             "vowel_badge": "Fixed (مبني) • لام المزحلقة + حرف جر",
             "pedagogical_badge": "حرف • حرف توكيد وجر"
           },
-          "nahw": {
-            "function": "harf_jar_plus_emphatic_lam",
-            "creates_genitive": true
-          },
           "semantics": {
-            "gloss": "surely in",
+            "gloss": "is surely in",
+            "core_meanings": [
+              "total enclosure",
+              "inescapable immersion",
+              "heightened certainty"
+            ],
             "semantic_field": [
               "container",
               "submersion",
@@ -707,16 +858,34 @@
           ]
         },
         {
+          "position": 4,
           "id": 103002004,
           "location": "103:2:4",
           "surah": 103,
           "ayah": 2,
           "word_position": 4,
+          "token": "خُسْرٍ",
+          "token_clean": "خسر",
           "arabic_uthmani": "خُسْرٍ",
           "arabic_clean": "خسر",
           "transliteration": "khus'rin",
           "translation": "loss",
           "audio_url": "https://audio.qurancdn.com/wbw/103_002_004.mp3",
+          "lemma": "خُسْر",
+          "root": {
+            "letters": [
+              "خ",
+              "س",
+              "ر"
+            ],
+            "normalized": "خسر",
+            "meaning": "to suffer loss, diminution of capital, bankruptcy, ruin",
+            "concept": "Loss / Deficit / Spiritual Ruin"
+          },
+          "part_of_speech": {
+            "arabic": "اسم / مصدر",
+            "english": "Noun (Verbal noun)"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -730,21 +899,28 @@
               "number": "singular"
             }
           },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_fi",
+            "function": "majroor_bi_harf_al_jar",
+            "governing_agent": "fi",
+            "ending_marker": "kasratan_with_tanween",
+            "shibh_jumlah_role": "in_place_of_raf_khabar_inna"
+          },
           "sarf": {
-            "root": "خ-س-ر",
-            "root_ar": "خسر",
-            "root_meaning": "to lose, suffer deficit, ruin, perish",
-            "root_concept": "Loss / Deficit / Ruin",
-            "lemma": "خُسْر",
-            "root_letters": [
-              "خ",
-              "س",
-              "ر"
-            ],
+            "word_type": "masdar",
+            "derived": false,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "فُعْل",
-            "person": null,
-            "gender": "masculine",
-            "number": "singular"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "depletion of wealth and capital"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "jarr",
@@ -752,7 +928,7 @@
             "case_concept": "Dragging / Pulling down (الجر) — Governed by preposition Fi.",
             "ending_vowel": "kasratan",
             "grammatical_role": "majroor_bi_fi",
-            "grammatical_role_ar": "اسم مجرور بفي وعلامة جره الكسرة الظاهرة، والجار والمجرور خسران في محل رفع خبر إن",
+            "grammatical_role_ar": "اسم مجرور بفي وعلامة جره الكسرة الظاهرة، والجار والمجرور في محل رفع خبر إن",
             "why_this_ending": "Governed by preposition Fi (في). The phrase 'في خسر' forms the predicate (Khabar) of Inna.",
             "idafa": {
               "role": "none",
@@ -784,13 +960,14 @@
             "vowel_badge": "Kasra (ـٍ) • مجرور (الجر)",
             "pedagogical_badge": "اسم • مجرور بـ في"
           },
-          "nahw": {
-            "case": "majroor",
-            "case_reason": "preceded_by_fi",
-            "tanween_type": "tanween_ta'dheem_and_tahweel"
-          },
           "semantics": {
             "gloss": "loss / ruin / bankruptcy",
+            "core_meanings": [
+              "complete spiritual bankruptcy",
+              "wasted human capital",
+              "eternal ruin in the hereafter",
+              "gradual decay of life without righteous investment"
+            ],
             "semantic_field": [
               "loss",
               "ruin",
@@ -800,18 +977,111 @@
           },
           "ontology_tags": [
             "LOSS",
-            "SPIRITUAL_BANKRUPT",
+            "SPIRITUAL_BANKRUPTCY",
             "DEFICIT"
           ]
         }
-      ]
+      ],
+      "idafah_rules": [],
+      "agreement_rules": {},
+      "definiteness_propagation": {
+        "source": "لام الجنس (الـ)",
+        "target": "إنسان",
+        "effect": "Broadens the noun to encompass every single individual member of the human genus without exception (استغراق الأفراد)."
+      },
+      "root_network": {
+        "أنس": {
+          "occurrences": [
+            "الإنسان"
+          ],
+          "semantic_domain": [
+            "mankind",
+            "humanity",
+            "sociability"
+          ]
+        },
+        "خسر": {
+          "occurrences": [
+            "خسر"
+          ],
+          "semantic_domain": [
+            "loss",
+            "bankruptcy",
+            "ruin",
+            "deficit"
+          ]
+        }
+      },
+      "rhetorical_analysis": {
+        "ijaz": {
+          "present": true,
+          "description": "Summarizing the universal human predicament in four poignant words."
+        },
+        "ellipsis": {
+          "present": true,
+          "element": "predicate_essence",
+          "benefit": "Expressing existence via prepositional relationship (في خسر)."
+        },
+        "attribute_pairing": {
+          "elements": [
+            "الإنسان",
+            "خسر"
+          ],
+          "effect": "Direct pairing of humanity with loss establishes ruin as the baseline human condition absent divine guidance."
+        },
+        "semantic_progression": {
+          "from": "Oath by Time",
+          "to": "Mankind in Loss",
+          "effect": "Demonstrates why time was sworn by: because human seconds are being wasted away into loss."
+        }
+      },
+      "semantic_roles": [
+        {
+          "entity": "الإنسان (Mankind)",
+          "role": "subject_in_state_of_loss"
+        },
+        {
+          "entity": "خسر (Loss)",
+          "role": "surrounding_predicament"
+        }
+      ],
+      "knowledge_graph": {
+        "nodes": [
+          "الإنسان (Mankind)",
+          "خسر (Loss)",
+          "إنَّ (Certainty)",
+          "اللام المزحلقة (Emphasis)"
+        ],
+        "edges": [
+          {
+            "from": "الإنسان (Mankind)",
+            "to": "خسر (Loss)",
+            "relation": "engulfed_by"
+          },
+          {
+            "from": "إنَّ (Certainty)",
+            "to": "الإنسان (Mankind)",
+            "relation": "affirms_status_of"
+          }
+        ]
+      }
     },
     {
-      "ayah_number": 3,
-      "surah_number": 103,
-      "text_uthmani": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
-      "text_imlaei": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+      "metadata": {
+        "surah_number": 103,
+        "surah_name_ar": "العصر",
+        "surah_name_en": "Al-Asr",
+        "ayah_number": 3,
+        "ayah_key": "103:3",
+        "classification": "Makki"
+      },
+      "text": {
+        "uthmani": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+        "simple": "إلا الذين آمنوا وعملوا الصالحات وتواصوا بالحق وتواصوا بالصبر",
+        "clean": "الا الذين امنوا وعملوا الصالحات وتواصوا بالحق وتواصوا بالصبر"
+      },
       "translation": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+      "transliteration": "Illā l-ladhīna āmanū wa-ʿamilū ṣ-ṣāliḥāti wa-tawāṣaw bil-ḥaqqi wa-tawāṣaw biṣ-ṣabr",
       "thematic_section_id": 2,
       "thematic_section_title": "The Four Divine Qualifications for Salvation",
       "words_count": 9,
@@ -822,13 +1092,25 @@
           "mustathna": "الَّذِينَ",
           "silat_al_mewsool": "آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ"
         },
+        "mahzuf": {
+          "exists": true,
+          "type": "qualified_noun",
+          "estimated_forms": [
+            "الأَعْمَالَ الصَّالِحَاتِ"
+          ],
+          "reason_for_omission": {
+            "brevity": true,
+            "universality": true,
+            "rhetorical_expansion": true
+          }
+        },
         "taalluq": {
           "jar_majroor_requires_attachment": true,
           "attached_to": {
             "type": "verbs_in_silah",
             "details": [
-              "بِالْحَقِّ attached to تَوَاصَوْا",
-              "بِالصَّبْرِ attached to SECOND تَوَاصَوْا"
+              "بِالْحَقِّ attached to first تَوَاصَوْا",
+              "بِالصَّبْرِ attached to second تَوَاصَوْا"
             ]
           }
         }
@@ -895,41 +1177,27 @@
           }
         ]
       },
-      "balaghah": {
-        "istithna": {
-          "present": true,
-          "type": "istithna_muttasil_min_jins_al_insan",
-          "rhetorical_effect": "Confining true success exclusively to those who combine all four internal and social virtues."
-        },
-        "tikrar": {
-          "repeated_word": "تَوَاصَوْا",
-          "rhetorical_effect": "Repetition of Form VI reciprocal verb highlights the indispensable dual pillars of social solidarity: Truth and Endurance."
-        },
-        "form_vi_reciprocity": {
-          "wazn": "تَفَاعَلُوا (تَوَاصَوْا)",
-          "semantic_implication": "Signifies mandatory mutual exchange; faith is not solitary but requires communal encouragement."
-        }
-      },
-      "aqidah": {
-        "four_pillars_of_salvation": [
-          "1. Iman (Correct Faith and Knowledge)",
-          "2. Amal Salih (Righteous Actions fulfilling Faith)",
-          "3. Tawasi bil-Haqq (Promoting Truth, Justice, and Dawah)",
-          "4. Tawasi bis-Sabr (Constancy, Patience, and Resilience)"
-        ]
-      },
       "words": [
         {
+          "position": 1,
           "id": 103003001,
           "location": "103:3:1",
           "surah": 103,
           "ayah": 3,
           "word_position": 1,
+          "token": "إِلَّا",
+          "token_clean": "إلا",
           "arabic_uthmani": "إِلَّا",
           "arabic_clean": "إلا",
           "transliteration": "illā",
           "translation": "Except",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_001.mp3",
+          "lemma": "إِلَّا",
+          "root": null,
+          "part_of_speech": {
+            "arabic": "أداة استثناء",
+            "english": "Exception particle"
+          },
           "classification": {
             "primary_type": "harf",
             "primary_type_ar": "حرف",
@@ -939,17 +1207,27 @@
               "particle_type_ar": "أداة استثناء (Particle of Exception)"
             }
           },
+          "nahw": {
+            "function": "adat_istithna",
+            "case": "mabni",
+            "case_reason": "fixed_particle_on_sukun",
+            "governs": "nasb_mustathna",
+            "ending_marker": "sukun"
+          },
           "sarf": {
-            "root": null,
-            "root_ar": null,
-            "root_meaning": null,
-            "root_concept": null,
-            "lemma": "إِلَّا",
-            "root_letters": [],
+            "word_type": "particle",
+            "derived": false,
+            "inflectable": false,
+            "root_letters": null,
             "wazn": null,
-            "person": null,
-            "gender": null,
-            "number": null
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "restriction and exclusion"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -989,14 +1267,17 @@
             "vowel_badge": "Fixed (مبني) • مبني على السكون",
             "pedagogical_badge": "حرف • حرف استثناء"
           },
-          "nahw": {
-            "function": "adat_istithna"
-          },
           "semantics": {
             "gloss": "except / save",
+            "core_meanings": [
+              "exclusion from general rule",
+              "salvation pathway",
+              "qualification demarcation"
+            ],
             "semantic_field": [
               "exception",
-              "exclusion"
+              "exclusion",
+              "condition"
             ]
           },
           "ontology_tags": [
@@ -1004,16 +1285,25 @@
           ]
         },
         {
+          "position": 2,
           "id": 103003002,
           "location": "103:3:2",
           "surah": 103,
           "ayah": 3,
           "word_position": 2,
+          "token": "ٱلَّذِينَ",
+          "token_clean": "الذين",
           "arabic_uthmani": "ٱلَّذِينَ",
           "arabic_clean": "الذين",
           "transliteration": "alladhīna",
           "translation": "those who",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_002.mp3",
+          "lemma": "الَّذِي",
+          "root": null,
+          "part_of_speech": {
+            "arabic": "اسم موصول",
+            "english": "Relative pronoun (masculine plural)"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -1027,17 +1317,27 @@
               "number": "plural"
             }
           },
+          "nahw": {
+            "case": "in_place_of_nasb",
+            "case_reason": "mustathna_bi_illa",
+            "function": "mustathna",
+            "governing_agent": "illa",
+            "ending_marker": "fatha_ending_mabni"
+          },
           "sarf": {
-            "root": null,
-            "root_ar": null,
-            "root_meaning": null,
-            "root_concept": null,
-            "lemma": "الَّذِي",
-            "root_letters": [],
+            "word_type": "relative_noun",
+            "derived": false,
+            "inflectable": false,
+            "root_letters": null,
             "wazn": null,
-            "person": "3rd",
-            "gender": "masculine",
-            "number": "plural"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "relational connection to clause"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -1077,12 +1377,13 @@
             "vowel_badge": "Fixed (مبني) • في محل نصب",
             "pedagogical_badge": "اسم • اسم موصول مستثنى"
           },
-          "nahw": {
-            "case": "in_place_of_nasb",
-            "function": "mustathna"
-          },
           "semantics": {
             "gloss": "those who",
+            "core_meanings": [
+              "the faithful believers",
+              "the successful cohort",
+              "those meeting the criteria"
+            ],
             "semantic_field": [
               "people",
               "believers",
@@ -1095,16 +1396,34 @@
           ]
         },
         {
+          "position": 3,
           "id": 103003003,
           "location": "103:3:3",
           "surah": 103,
           "ayah": 3,
           "word_position": 3,
+          "token": "ءَامَنُوا۟",
+          "token_clean": "آمنوا",
           "arabic_uthmani": "ءَامَنُوا۟",
           "arabic_clean": "آمنوا",
           "transliteration": "āmanū",
           "translation": "have believed",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_003.mp3",
+          "lemma": "آمَنَ",
+          "root": {
+            "letters": [
+              "أ",
+              "م",
+              "ن"
+            ],
+            "normalized": "أمن",
+            "meaning": "safety, security, trust, belief",
+            "concept": "Faith / Internal Conviction"
+          },
+          "part_of_speech": {
+            "arabic": "فعل ماضٍ + ضمير فاعل",
+            "english": "Past verb (Form IV) + Subject pronoun"
+          },
           "classification": {
             "primary_type": "fi'l",
             "primary_type_ar": "فعل",
@@ -1114,7 +1433,7 @@
               "tense_ar": "ماضٍ",
               "form": "IV",
               "form_ar": "أَفْعَلَ",
-              "form_meaning": "Form IV: Causative / Transitive Faith (Affirming Security & Truth)",
+              "form_meaning": "Form IV: Causative / Affirmative of security and truth",
               "voice": "active",
               "voice_ar": "مبني للمعلوم",
               "transitivity": "intransitive_with_bi",
@@ -1122,21 +1441,27 @@
               "soundness_ar": "مهموز الفاء (Hamza in 1st Radical)"
             }
           },
+          "nahw": {
+            "function": "silah_verb",
+            "case": "mabni",
+            "case_reason": "attached_to_waw_al_jamaah",
+            "subject": "waw_al_jamaah_raf",
+            "ending_marker": "dhumma_on_noon"
+          },
           "sarf": {
-            "root": "أ-م-ن",
-            "root_ar": "أمن",
-            "root_meaning": "to be safe, trust, believe, grant security",
-            "root_concept": "Faith / Security / Trust",
-            "lemma": "آمَنَ",
-            "root_letters": [
-              "أ",
-              "م",
-              "ن"
-            ],
+            "word_type": "verb",
+            "derived": true,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "أَفْعَلُوا",
-            "person": "3rd",
-            "gender": "masculine",
-            "number": "plural"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": true,
+              "origin_meaning": "entering into security through faith"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -1198,12 +1523,13 @@
             "vowel_badge": "Fixed (مبني) • مبني على الضم",
             "pedagogical_badge": "فعل • فعل ماضٍ"
           },
-          "nahw": {
-            "function": "silah_verb",
-            "subject": "waw_al_jamaah_raf"
-          },
           "semantics": {
             "gloss": "they believed",
+            "core_meanings": [
+              "sincere faith in Allah and His revelation",
+              "internal conviction and intellectual assent",
+              "attaining security from doubt and hypocrisy"
+            ],
             "semantic_field": [
               "faith",
               "belief",
@@ -1218,16 +1544,34 @@
           ]
         },
         {
+          "position": 4,
           "id": 103003004,
           "location": "103:3:4",
           "surah": 103,
           "ayah": 3,
           "word_position": 4,
+          "token": "وَعَمِلُوا۟",
+          "token_clean": "وعملوا",
           "arabic_uthmani": "وَعَمِلُوا۟",
           "arabic_clean": "وعملوا",
           "transliteration": "waʿamilū",
           "translation": "and done",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_004.mp3",
+          "lemma": "عَمِلَ",
+          "root": {
+            "letters": [
+              "ع",
+              "م",
+              "ل"
+            ],
+            "normalized": "عمل",
+            "meaning": "action, labor, deed, practical execution",
+            "concept": "Action / Outward Manifestation"
+          },
+          "part_of_speech": {
+            "arabic": "حرف عطف + فعل ماضٍ + فاعل",
+            "english": "Conjunction + Past verb + Subject pronoun"
+          },
           "classification": {
             "primary_type": "fi'l",
             "primary_type_ar": "فعل",
@@ -1245,21 +1589,27 @@
               "soundness_ar": "صحيح سالم (Sound & Regular)"
             }
           },
+          "nahw": {
+            "function": "ma'toof_verb",
+            "case": "mabni",
+            "case_reason": "attached_to_waw_al_jamaah",
+            "subject": "waw_al_jamaah_raf",
+            "ending_marker": "dhumma_on_lam"
+          },
           "sarf": {
-            "root": "ع-م-ل",
-            "root_ar": "عمل",
-            "root_meaning": "to work, perform action, labor, execute",
-            "root_concept": "Action / Labor / Execution",
-            "lemma": "عَمِلَ",
-            "root_letters": [
-              "ع",
-              "م",
-              "ل"
-            ],
+            "word_type": "verb",
+            "derived": false,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "فَعِلُوا",
-            "person": "3rd",
-            "gender": "masculine",
-            "number": "plural"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "actualized physical or verbal labor"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -1332,12 +1682,13 @@
             "vowel_badge": "Fixed (مبني) • مبني على الضم",
             "pedagogical_badge": "فعل • معطوف على آمنوا"
           },
-          "nahw": {
-            "function": "ma'toof_verb",
-            "subject": "waw_al_jamaah_raf"
-          },
           "semantics": {
             "gloss": "and performed / worked",
+            "core_meanings": [
+              "practical fulfillment of belief",
+              "action conforming with divine command",
+              "external translation of inward faith"
+            ],
             "semantic_field": [
               "action",
               "work",
@@ -1352,16 +1703,34 @@
           ]
         },
         {
+          "position": 5,
           "id": 103003005,
           "location": "103:3:5",
           "surah": 103,
           "ayah": 3,
           "word_position": 5,
+          "token": "ٱلصَّـٰلِحَـٰتِ",
+          "token_clean": "الصالحات",
           "arabic_uthmani": "ٱلصَّـٰلِحَـٰتِ",
           "arabic_clean": "الصالحات",
           "transliteration": "al-ṣāliḥāti",
           "translation": "righteous deeds",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_005.mp3",
+          "lemma": "صَالِحَة",
+          "root": {
+            "letters": [
+              "ص",
+              "ل",
+              "ح"
+            ],
+            "normalized": "صلح",
+            "meaning": "righteousness, integrity, sound benefit, rectitude",
+            "concept": "Righteous Deeds / Wholesomeness"
+          },
+          "part_of_speech": {
+            "arabic": "اسم فاعل جمع مؤنث سالم",
+            "english": "Noun (Active participle, sound feminine plural)"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -1375,26 +1744,33 @@
               "number": "plural"
             }
           },
+          "nahw": {
+            "case": "mansoob",
+            "case_reason": "mafool_bihi_for_amilu",
+            "function": "mafool_bihi",
+            "governing_agent": "amilu",
+            "ending_marker": "kasra_niyabatan_an_al_fatha",
+            "plural_type": "jam_muannath_salim"
+          },
           "sarf": {
-            "root": "ص-ل-ح",
-            "root_ar": "صلح",
-            "root_meaning": "to be good, righteous, proper, beneficial, sound",
-            "root_concept": "Righteousness / Benefit / Soundness",
-            "lemma": "صَالِحَة",
-            "root_letters": [
-              "ص",
-              "ل",
-              "ح"
-            ],
+            "word_type": "active_participle",
+            "derived": true,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "الفَاعِلات",
-            "person": null,
-            "gender": "feminine",
-            "number": "plural"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": true,
+              "origin_meaning": "wholesome, sound, and beneficial acts"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "nasb",
             "case_or_mood_ar": "منصوب (بالكسرة نيابة عن الفتحة)",
-            "case_concept": "Setting up / Erecting (النصب) — Subordinated direct object taking Kasra as substitute marker.",
+            "case_concept": "Setting up / Subordination (النصب) — Direct object taking Kasra as substitute marker.",
             "ending_vowel": "kasra_substitute_for_fatha",
             "grammatical_role": "mafool_bihi",
             "grammatical_role_ar": "مفعول به منصوب وعلامة نصبه الكسرة نيابة عن الفتحة لأنه جمع مؤنث سالم",
@@ -1440,13 +1816,13 @@
             "vowel_badge": "Kasra (ـِ نيابة عن الفتحة) • منصوب",
             "pedagogical_badge": "اسم • مفعول به منصوب بالكسرة"
           },
-          "nahw": {
-            "case": "mansoob",
-            "case_substitute": "kasra_instead_of_fatha",
-            "plural_type": "jam_muannath_salim"
-          },
           "semantics": {
             "gloss": "righteous deeds / wholesome actions",
+            "core_meanings": [
+              "acts performed purely for Allah",
+              "actions following prophetic guidance",
+              "beneficial social and personal conduct"
+            ],
             "semantic_field": [
               "virtue",
               "righteousness",
@@ -1456,20 +1832,39 @@
           },
           "ontology_tags": [
             "RIGHTEOUS_DEEDS",
-            "VIRTUE"
+            "VIRTUE",
+            "GOOD_WORKS"
           ]
         },
         {
+          "position": 6,
           "id": 103003006,
           "location": "103:3:6",
           "surah": 103,
           "ayah": 3,
           "word_position": 6,
+          "token": "وَتَوَاصَوْا۟",
+          "token_clean": "وتواصوا",
           "arabic_uthmani": "وَتَوَاصَوْا۟",
           "arabic_clean": "وتواصوا",
           "transliteration": "watawāṣaw",
           "translation": "and advised each other",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_006.mp3",
+          "lemma": "تَوَاصَى",
+          "root": {
+            "letters": [
+              "و",
+              "ص",
+              "ي"
+            ],
+            "normalized": "وصي",
+            "meaning": "to enjoin, advise, bequeath, urge mutually",
+            "concept": "Mutual Counsel / Collective Solidarity"
+          },
+          "part_of_speech": {
+            "arabic": "حرف عطف + فعل ماضٍ تفاعلي + فاعل",
+            "english": "Conjunction + Reciprocal past verb (Form VI) + Subject pronoun"
+          },
           "classification": {
             "primary_type": "fi'l",
             "primary_type_ar": "فعل",
@@ -1487,21 +1882,27 @@
               "soundness_ar": "ناقص اللام (Defective 3rd Radical Weak Ya/Alif)"
             }
           },
+          "nahw": {
+            "function": "ma'toof_verb_form_vi",
+            "case": "mabni",
+            "case_reason": "estimated_fatha_on_deleted_alif",
+            "subject": "waw_al_jamaah_raf",
+            "ending_marker": "fatha_muqaddara"
+          },
           "sarf": {
-            "root": "و-ص-ي",
-            "root_ar": "وصي",
-            "root_meaning": "to enjoin, advise, bequeath, urge mutually",
-            "root_concept": "Mutual Advice / Counsel / Bequest",
-            "lemma": "تَوَاصَى",
-            "root_letters": [
-              "و",
-              "ص",
-              "ي"
-            ],
+            "word_type": "verb",
+            "derived": true,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "تَفَاعَوْا",
-            "person": "3rd",
-            "gender": "masculine",
-            "number": "plural"
+            "weak_letters": {
+              "contains_weak_letter": true,
+              "weak_letter": "ي (محذوفة لالتقاء الساكنين)"
+            },
+            "ishtiqaq": {
+              "derived": true,
+              "origin_meaning": "mutual exchange of sincere counsel"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -1574,12 +1975,13 @@
             "vowel_badge": "Fixed (مبني) • الفتح المقدر",
             "pedagogical_badge": "فعل • صيغة تفاعل التشاركية"
           },
-          "nahw": {
-            "function": "ma'toof_verb_form_vi",
-            "reciprocity": true
-          },
           "semantics": {
             "gloss": "and mutually enjoined / recommended",
+            "core_meanings": [
+              "reciprocal urging and counseling",
+              "standing shoulder-to-shoulder in community",
+              "holding one another accountable in love and truth"
+            ],
             "semantic_field": [
               "counsel",
               "advice",
@@ -1594,16 +1996,34 @@
           ]
         },
         {
+          "position": 7,
           "id": 103003007,
           "location": "103:3:7",
           "surah": 103,
           "ayah": 3,
           "word_position": 7,
+          "token": "بِٱلْحَقِّ",
+          "token_clean": "بالحق",
           "arabic_uthmani": "بِٱلْحَقِّ",
           "arabic_clean": "بالحق",
           "transliteration": "bil-ḥaqqi",
           "translation": "to truth",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_007.mp3",
+          "lemma": "حَقّ",
+          "root": {
+            "letters": [
+              "ح",
+              "ق",
+              "ق"
+            ],
+            "normalized": "حقق",
+            "meaning": "truth, reality, justice, confirmed duty",
+            "concept": "Truth / Divine Revelation / Justice"
+          },
+          "part_of_speech": {
+            "arabic": "حرف جر + اسم مجرور",
+            "english": "Preposition + Noun"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -1617,21 +2037,28 @@
               "number": "singular"
             }
           },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_ba",
+            "function": "majroor_bi_harf_al_jar",
+            "governing_agent": "ba",
+            "ending_marker": "kasra_shaddah",
+            "taalluq": "attached_to_tawasaw_1"
+          },
           "sarf": {
-            "root": "ح-ق-ق",
-            "root_ar": "حقق",
-            "root_meaning": "to be true, real, binding, confirmed, just",
-            "root_concept": "Truth / Reality / Justice",
-            "lemma": "حَقّ",
-            "root_letters": [
-              "ح",
-              "ق",
-              "ق"
-            ],
+            "word_type": "masdar",
+            "derived": false,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "فَعْل",
-            "person": null,
-            "gender": "masculine",
-            "number": "singular"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "binding, unwavering truth"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "jarr",
@@ -1693,13 +2120,13 @@
             "vowel_badge": "Kasra (ـِ) • مجرور (الجر)",
             "pedagogical_badge": "اسم • مجرور بـ الباء"
           },
-          "nahw": {
-            "case": "majroor",
-            "case_reason": "preceded_by_ba",
-            "taalluq": "attached_to_tawasaw_1"
-          },
           "semantics": {
             "gloss": "to the truth / divine reality",
+            "core_meanings": [
+              "orthodox belief in Allah's oneness",
+              "fidelity to divine revelation",
+              "standing for justice and ethical integrity"
+            ],
             "semantic_field": [
               "truth",
               "justice",
@@ -1710,20 +2137,39 @@
           "ontology_tags": [
             "TRUTH",
             "HAQQ",
-            "JUSTICE"
+            "JUSTICE",
+            "REVELATION"
           ]
         },
         {
+          "position": 8,
           "id": 103003008,
           "location": "103:3:8",
           "surah": 103,
           "ayah": 3,
           "word_position": 8,
+          "token": "وَتَوَاصَوْا۟",
+          "token_clean": "وتواصوا",
           "arabic_uthmani": "وَتَوَاصَوْا۟",
           "arabic_clean": "وتواصوا",
           "transliteration": "watawāṣaw",
           "translation": "and advised each other",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_008.mp3",
+          "lemma": "تَوَاصَى",
+          "root": {
+            "letters": [
+              "و",
+              "ص",
+              "ي"
+            ],
+            "normalized": "وصي",
+            "meaning": "to enjoin, advise, bequeath, urge mutually",
+            "concept": "Mutual Counsel / Repetition for Distinct Pillar"
+          },
+          "part_of_speech": {
+            "arabic": "حرف عطف + فعل ماضٍ تفاعلي + فاعل",
+            "english": "Conjunction + Reciprocal past verb (Form VI) + Subject pronoun"
+          },
           "classification": {
             "primary_type": "fi'l",
             "primary_type_ar": "فعل",
@@ -1741,21 +2187,27 @@
               "soundness_ar": "ناقص اللام (Defective 3rd Radical Weak Ya/Alif)"
             }
           },
+          "nahw": {
+            "function": "ma'toof_verb_form_vi_repeated",
+            "case": "mabni",
+            "case_reason": "estimated_fatha_on_deleted_alif",
+            "subject": "waw_al_jamaah_raf",
+            "ending_marker": "fatha_muqaddara"
+          },
           "sarf": {
-            "root": "و-ص-ي",
-            "root_ar": "وصي",
-            "root_meaning": "to enjoin, advise, bequeath, urge mutually",
-            "root_concept": "Mutual Advice / Counsel / Bequest",
-            "lemma": "تَوَاصَى",
-            "root_letters": [
-              "و",
-              "ص",
-              "ي"
-            ],
+            "word_type": "verb",
+            "derived": true,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "تَفَاعَوْا",
-            "person": "3rd",
-            "gender": "masculine",
-            "number": "plural"
+            "weak_letters": {
+              "contains_weak_letter": true,
+              "weak_letter": "ي (محذوفة لالتقاء الساكنين)"
+            },
+            "ishtiqaq": {
+              "derived": true,
+              "origin_meaning": "mutual encouragement under testing"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "mabni",
@@ -1828,12 +2280,13 @@
             "vowel_badge": "Fixed (مبني) • الفتح المقدر",
             "pedagogical_badge": "فعل • تكرار للتأكيد والإشادة"
           },
-          "nahw": {
-            "function": "ma'toof_verb_form_vi_repeated",
-            "reciprocity": true
-          },
           "semantics": {
             "gloss": "and mutually enjoined / recommended",
+            "core_meanings": [
+              "re-affirming perseverance",
+              "strengthening hearts in difficulty",
+              "collective fortitude"
+            ],
             "semantic_field": [
               "counsel",
               "perseverance_support",
@@ -1847,16 +2300,34 @@
           ]
         },
         {
+          "position": 9,
           "id": 103003009,
           "location": "103:3:9",
           "surah": 103,
           "ayah": 3,
           "word_position": 9,
+          "token": "بِٱلصَّبْرِ",
+          "token_clean": "بالصبر",
           "arabic_uthmani": "بِٱلصَّبْرِ",
           "arabic_clean": "بالصبر",
           "transliteration": "bil-ṣabri",
           "translation": "to patience",
           "audio_url": "https://audio.qurancdn.com/wbw/103_003_009.mp3",
+          "lemma": "صَبْر",
+          "root": {
+            "letters": [
+              "ص",
+              "ب",
+              "ر"
+            ],
+            "normalized": "صبر",
+            "meaning": "restraint, fortitude, steadfast endurance",
+            "concept": "Patience / Steadfastness / Resilience"
+          },
+          "part_of_speech": {
+            "arabic": "حرف جر + اسم مجرور",
+            "english": "Preposition + Noun"
+          },
           "classification": {
             "primary_type": "ism",
             "primary_type_ar": "اسم",
@@ -1870,21 +2341,28 @@
               "number": "singular"
             }
           },
+          "nahw": {
+            "case": "majroor",
+            "case_reason": "preceded_by_ba",
+            "function": "majroor_bi_harf_al_jar",
+            "governing_agent": "ba",
+            "ending_marker": "kasra_zahirah",
+            "taalluq": "attached_to_tawasaw_2"
+          },
           "sarf": {
-            "root": "ص-ب-ر",
-            "root_ar": "صبر",
-            "root_meaning": "to bind, restrain, endure, remain steadfast",
-            "root_concept": "Patience / Steadfastness / Endurance",
-            "lemma": "صَبْر",
-            "root_letters": [
-              "ص",
-              "ب",
-              "ر"
-            ],
+            "word_type": "masdar",
+            "derived": false,
+            "inflectable": true,
+            "root_letters": 3,
             "wazn": "فَعْل",
-            "person": null,
-            "gender": "masculine",
-            "number": "singular"
+            "weak_letters": {
+              "contains_weak_letter": false,
+              "weak_letter": null
+            },
+            "ishtiqaq": {
+              "derived": false,
+              "origin_meaning": "binding the soul against impatience and despair"
+            }
           },
           "irab_and_case": {
             "case_or_mood": "jarr",
@@ -1946,13 +2424,13 @@
             "vowel_badge": "Kasra (ـِ) • مجرور (الجر)",
             "pedagogical_badge": "اسم • مجرور بـ الباء"
           },
-          "nahw": {
-            "case": "majroor",
-            "case_reason": "preceded_by_ba",
-            "taalluq": "attached_to_tawasaw_2"
-          },
           "semantics": {
             "gloss": "to patience / endurance",
+            "core_meanings": [
+              "patience in obeying Allah",
+              "patience in refraining from sin",
+              "patience through hardships and divine decrees"
+            ],
             "semantic_field": [
               "patience",
               "endurance",
@@ -1963,10 +2441,217 @@
           "ontology_tags": [
             "PATIENCE",
             "SABR",
-            "STEADFASTNESS"
+            "STEADFASTNESS",
+            "FORTITUDE"
           ]
         }
-      ]
+      ],
+      "idafah_rules": [],
+      "agreement_rules": {
+        "relative_pronoun_and_silah_verbs": {
+          "pronoun": "الَّذِينَ (masculine plural)",
+          "verbs": [
+            "آمَنُوا",
+            "عَمِلُوا",
+            "تَوَاصَوْا",
+            "تَوَاصَوْا"
+          ],
+          "match_gender": true,
+          "match_number": true,
+          "marker": "Waw al-Jama'ah (واو الجماعة)"
+        },
+        "naat_and_omitted_manut": {
+          "omitted_manut": "الأَعْمَالَ (broken plural of inanimate entity, treated as feminine singular/plural)",
+          "naat": "الصَّالِحَاتِ (sound feminine plural matching descriptive plural meaning)",
+          "match_case": true,
+          "match_definiteness": true
+        }
+      },
+      "definiteness_propagation": {
+        "source": "لام التعريف (الـ)",
+        "target": "الصالحات / الحق / الصبر",
+        "effect": "Specifies known, absolute categories of virtuous acts, divine truth, and spiritual perseverance."
+      },
+      "root_network": {
+        "أمن": {
+          "occurrences": [
+            "آمنوا"
+          ],
+          "semantic_domain": [
+            "faith",
+            "trust",
+            "security",
+            "belief"
+          ]
+        },
+        "عمل": {
+          "occurrences": [
+            "عملوا"
+          ],
+          "semantic_domain": [
+            "action",
+            "labor",
+            "deeds",
+            "work"
+          ]
+        },
+        "صلح": {
+          "occurrences": [
+            "الصالحات"
+          ],
+          "semantic_domain": [
+            "righteousness",
+            "benefit",
+            "goodness",
+            "correctness"
+          ]
+        },
+        "وصي": {
+          "occurrences": [
+            "تواصوا",
+            "تواصوا"
+          ],
+          "semantic_domain": [
+            "counsel",
+            "advice",
+            "mutual_bequest",
+            "enjoining"
+          ]
+        },
+        "حقق": {
+          "occurrences": [
+            "بالحق"
+          ],
+          "semantic_domain": [
+            "truth",
+            "reality",
+            "justice",
+            "certainty"
+          ]
+        },
+        "صبر": {
+          "occurrences": [
+            "بالصبر"
+          ],
+          "semantic_domain": [
+            "patience",
+            "endurance",
+            "steadfastness",
+            "restraint"
+          ]
+        }
+      },
+      "rhetorical_analysis": {
+        "ijaz": {
+          "present": true,
+          "description": "Formulating the four comprehensive conditions of salvation in concise, musical, rhythmic language."
+        },
+        "ellipsis": {
+          "present": true,
+          "element": "omitted_qualified_noun",
+          "phrase": "عَمِلُوا الصَّالِحَاتِ",
+          "original": "عملوا الأعمال الصالحات",
+          "benefit": "Focusing the attention strictly on the righteousness of the deed rather than just the act itself."
+        },
+        "attribute_pairing": {
+          "pairs": [
+            {
+              "first": "آمَنُوا (Inward Faith)",
+              "second": "عَمِلُوا الصَّالِحَاتِ (Outward Action)"
+            },
+            {
+              "first": "تَوَاصَوْا بِالْحَقِّ (Standing for Truth)",
+              "second": "تَوَاصَوْا بِالصَّبْرِ (Enduring with Patience)"
+            }
+          ],
+          "effect": "Harmonious integration of personal rectitude and social reform."
+        },
+        "semantic_progression": {
+          "steps": [
+            "1. Inward conviction (الإيمان)",
+            "2. External good works (العمل الصالح)",
+            "3. Spreading and defending the truth socially (التواصي بالحق)",
+            "4. Maintaining patience amid struggles (التواصي بالصبر)"
+          ],
+          "effect": "Logical, ascending graduation from individual heart reform to resilient communal civilization."
+        }
+      },
+      "semantic_roles": [
+        {
+          "entity": "الَّذِينَ آمَنُوا (Believers)",
+          "role": "saved_actors"
+        },
+        {
+          "entity": "الصَّالِحَاتِ (Righteous Deeds)",
+          "role": "action_products"
+        },
+        {
+          "entity": "الحَقِّ (Truth)",
+          "role": "counseled_principle"
+        },
+        {
+          "entity": "الصَّبْرِ (Patience)",
+          "role": "sustaining_virtue"
+        }
+      ],
+      "knowledge_graph": {
+        "nodes": [
+          "الإنسان (Mankind)",
+          "الَّذِينَ آمَنُوا (Believers)",
+          "الإيمان (Faith)",
+          "العمل الصالح (Righteous Deeds)",
+          "التواصي بالحق (Enjoining Truth)",
+          "التواصي بالصبر (Enjoining Patience)",
+          "النجاة (Salvation)"
+        ],
+        "edges": [
+          {
+            "from": "الَّذِينَ آمَنُوا (Believers)",
+            "to": "الإنسان (Mankind)",
+            "relation": "excepted_from_loss_of"
+          },
+          {
+            "from": "الَّذِينَ آمَنُوا (Believers)",
+            "to": "الإيمان (Faith)",
+            "relation": "embodies"
+          },
+          {
+            "from": "الَّذِينَ آمَنُوا (Believers)",
+            "to": "العمل الصالح (Righteous Deeds)",
+            "relation": "performs"
+          },
+          {
+            "from": "الَّذِينَ آمَنُوا (Believers)",
+            "to": "التواصي بالحق (Enjoining Truth)",
+            "relation": "actively_counsels"
+          },
+          {
+            "from": "الَّذِينَ آمَنُوا (Believers)",
+            "to": "التواصي بالصبر (Enjoining Patience)",
+            "relation": "actively_sustains_with"
+          },
+          {
+            "from": "الإيمان (Faith)",
+            "to": "النجاة (Salvation)",
+            "relation": "condition_one_for"
+          },
+          {
+            "from": "العمل الصالح (Righteous Deeds)",
+            "to": "النجاة (Salvation)",
+            "relation": "condition_two_for"
+          },
+          {
+            "from": "التواصي بالحق (Enjoining Truth)",
+            "to": "النجاة (Salvation)",
+            "relation": "condition_three_for"
+          },
+          {
+            "from": "التواصي بالصبر (Enjoining Patience)",
+            "to": "النجاة (Salvation)",
+            "relation": "condition_four_for"
+          }
+        ]
+      }
     }
   ],
   "root_network": {
@@ -1979,7 +2664,8 @@
         "duration",
         "squeezing",
         "declining_day"
-      ]
+      ],
+      "thematic_significance": "Time as an exhaustible capital resource."
     },
     "أنس": {
       "occurrences": [
@@ -1989,7 +2675,8 @@
         "mankind",
         "humanity",
         "sociability"
-      ]
+      ],
+      "thematic_significance": "The whole human species subject to temporal vulnerability."
     },
     "خسر": {
       "occurrences": [
@@ -2000,7 +2687,8 @@
         "bankruptcy",
         "ruin",
         "deficit"
-      ]
+      ],
+      "thematic_significance": "The baseline spiritual and existential reality without faith."
     },
     "أمن": {
       "occurrences": [
@@ -2011,7 +2699,8 @@
         "trust",
         "security",
         "belief"
-      ]
+      ],
+      "thematic_significance": "First foundational pillar of salvation."
     },
     "عمل": {
       "occurrences": [
@@ -2022,7 +2711,8 @@
         "labor",
         "deeds",
         "work"
-      ]
+      ],
+      "thematic_significance": "Second foundational pillar of salvation."
     },
     "صلح": {
       "occurrences": [
@@ -2033,7 +2723,8 @@
         "benefit",
         "goodness",
         "correctness"
-      ]
+      ],
+      "thematic_significance": "The quality benchmark of deeds required for salvation."
     },
     "وصي": {
       "occurrences": [
@@ -2045,7 +2736,8 @@
         "advice",
         "mutual_bequest",
         "enjoining"
-      ]
+      ],
+      "thematic_significance": "Form VI reciprocal duty ensuring community resilience."
     },
     "حقق": {
       "occurrences": [
@@ -2056,7 +2748,8 @@
         "reality",
         "justice",
         "certainty"
-      ]
+      ],
+      "thematic_significance": "Third pillar: championing truth and justice."
     },
     "صبر": {
       "occurrences": [
@@ -2067,145 +2760,411 @@
         "endurance",
         "steadfastness",
         "restraint"
-      ]
+      ],
+      "thematic_significance": "Fourth pillar: perseverance to maintain the truth."
     }
   },
   "nahw": {
     "sentence_types": [
-      "shibh_jumlah_qasam (والعصر)",
-      "jumlah_ismiyyah_naskhiyyah (إن الإنسان لفي خسر)",
-      "istithna_muttasil (إلا الذين آمنوا...)"
-    ],
-    "idafah_rules": [],
-    "agreement_rules": {
-      "relative_pronoun_and_silah": {
-        "pronoun": "الذين (plural masculine)",
-        "matching_verbs": [
-          "آمنوا",
-          "عملوا",
-          "تواصوا"
-        ],
-        "agreement": "Pronoun Waw al-Jama'ah (واو الجماعة) matches masculine plural."
-      }
-    }
-  },
-  "sarf": {
-    "derived_forms": [
       {
-        "form": "IV (أفعل)",
-        "word": "آمنوا",
-        "root": "أمن",
-        "semantic_implication": "Transitive/Causative: entering state of security and affirming truth"
+        "ayah": 1,
+        "type": "shibh_jumlah_qasam",
+        "description": "Prepositional oath phrase attached to omitted verb (أقسم بالعصر)."
       },
       {
-        "form": "VI (تفاعل)",
-        "word": "تواصوا",
-        "root": "وصي",
-        "semantic_implication": "Reciprocity: mutual action between two or more parties"
+        "ayah": 2,
+        "type": "jumlah_ismiyyah_naskhiyyah",
+        "description": "Nominal sentence governed by Inna with emphatic Lam and prepositional predicate (إن الإنسان لفي خسر)."
+      },
+      {
+        "ayah": 3,
+        "type": "istithna_muttasil_tam_moojab",
+        "description": "Complete affirmative connected exception clause modifying mankind (إلا الذين آمنوا...)."
       }
     ],
-    "participles": [
+    "governing_agents": [
       {
-        "type": "ism_fail_plural",
-        "word": "الصالحات",
-        "root": "صلح",
-        "singular_form": "صَالِحَة"
+        "agent": "واو القسم (Waw al-Qasam)",
+        "type": "harf_jarr",
+        "governed": "العَصْرِ",
+        "effect": "Genitive case (الجر بالكسرة)"
+      },
+      {
+        "agent": "إِنَّ (Inna)",
+        "type": "harf_nasikh_mushabbah_bil_fil",
+        "governed": "الإِنْسَانَ (subject) and لَفِي خُسْرٍ (predicate)",
+        "effect": "Accusative on noun (النصب بالفتحة) and local nominative on predicate"
+      },
+      {
+        "agent": "فِي (Fi)",
+        "type": "harf_jarr",
+        "governed": "خُسْرٍ",
+        "effect": "Genitive case with tanween (الجر بالكسرة والتنوين)"
+      },
+      {
+        "agent": "إِلَّا (Illa)",
+        "type": "adat_istithna",
+        "governed": "الَّذِينَ",
+        "effect": "Accusative position of exception (في محل نصب مستثنى)"
+      },
+      {
+        "agent": "عَمِلُوا (Amilu)",
+        "type": "fil_madi_mutaaddi",
+        "governed": "الصَّالِحَاتِ",
+        "effect": "Accusative direct object taking Kasra (مفعول به منصوب بالكسرة)"
+      },
+      {
+        "agent": "الباء (Ba)",
+        "type": "harf_jarr",
+        "governed": "الحَقِّ and الصَّبْرِ",
+        "effect": "Genitive case (الجر بالكسرة)"
       }
-    ]
+    ],
+    "cases_distribution": {
+      "marfooat": [
+        "واو الجماعة في (آمَنُوا) — ضمير متصل فاعل في محل رفع",
+        "واو الجماعة في (عَمِلُوا) — ضمير متصل فاعل في محل رفع",
+        "واو الجماعة في (تَوَاصَوْا) الأولى — ضمير متصل فاعل في محل رفع",
+        "واو الجماعة في (تَوَاصَوْا) الثانية — ضمير متصل فاعل في محل رفع",
+        "شبه الجملة (لَفِي خُسْرٍ) — في محل رفع خبر إنّ"
+      ],
+      "mansoobat": [
+        "الإِنْسَانَ — اسم إن منصوب بالفتحة الظاهرة",
+        "الَّذِينَ — اسم موصول في محل نصب مستثنى بإلا",
+        "الصَّالِحَاتِ — مفعول به منصوب بالكسرة نيابة عن الفتحة (جمع مؤنث سالم)"
+      ],
+      "majroorat": [
+        "العَصْرِ — مجرور بواو القسم بالكسرة الظاهرة",
+        "خُسْرٍ — مجرور بفي بالكسرة الظاهرة والتنوين",
+        "الحَقِّ — مجرور بالباء بالكسرة الظاهرة",
+        "الصَّبْرِ — مجرور بالباء بالكسرة الظاهرة"
+      ],
+      "mabniyyat": [
+        "واو القسم — مبنية على الفتح",
+        "إِنَّ — مبنية على الفتح",
+        "لام التوكيد المزحلقة — مبنية على الفتح",
+        "فِي — مبنية على السكون",
+        "إِلَّا — مبنية على السكون",
+        "الَّذِينَ — مبني على الفتح",
+        "آمَنُوا — ماض مبني على الضم",
+        "عَمِلُوا — ماض مبني على الضم",
+        "تَوَاصَوْا (مرتان) — ماض مبني على الفتح المقدر على الألف المحذوفة",
+        "واو العطف (ثلاث مرات) — مبنية على الفتح",
+        "باء الجر (مرتان) — مبنية على الكسر"
+      ]
+    },
+    "substitutions_and_special_irab": [
+      {
+        "word": "الصَّالِحَاتِ",
+        "phenomenon": "نيابة الكسرة عن الفتحة في جمع المؤنث السالم",
+        "explanation": "Because it is a sound feminine plural, its accusative case marker is kasra instead of fatha."
+      },
+      {
+        "word": "تَوَاصَوْا",
+        "phenomenon": "البناء على الفتح المقدر على الألف المحذوفة لالتقاء الساكنين",
+        "explanation": "Form VI defective past verb drops its weak final root letter before plural Waw, leaving the fatha on Sad to indicate the deleted Alif."
+      }
+    ],
+    "ellipses_and_hidden_elements": [
+      {
+        "element": "فعل القسم (Oath Verb)",
+        "estimated_text": "أُقْسِمُ / أَحْلِفُ",
+        "location": "103:1",
+        "purpose": "Omitted for stylistic vigor, brevity, and directness."
+      },
+      {
+        "element": "المنعوت الموصوف (Omitted Qualified Noun)",
+        "estimated_text": "الأَعْمَالَ الصَّالِحَاتِ",
+        "location": "103:3",
+        "purpose": "The adjective takes the place of the noun (أقيم النعت مقام المنعوت) to emphasize the pure attribute of righteousness."
+      }
+    ],
+    "phrase_attachments": [
+      {
+        "phrase": "وَٱلْعَصْرِ",
+        "attached_to": "Deleted oath verb (أقسم)"
+      },
+      {
+        "phrase": "لَفِى خُسْرٍ",
+        "attached_to": "Predicate of Inna (كائن / مستقر)"
+      },
+      {
+        "phrase": "بِٱلْحَقِّ",
+        "attached_to": "First verb (تَوَاصَوْا)"
+      },
+      {
+        "phrase": "بِٱلصَّبْرِ",
+        "attached_to": "Second verb (تَوَاصَوْا)"
+      }
+    ],
+    "syntactic_cohesion": "A tightly wound syntactic chain linking belief (آمنوا), action (عملوا), communal advocacy (تواصوا بالحق), and collective fortitude (تواصوا بالصبر) via the coordinating conjunction Waw."
   },
-  "balaghah": {
-    "qasam": "Divine oath by Time (العصر) setting the urgent context of human life.",
-    "tawkid": "Triple emphasis in verse 2: Oath + Inna + Lam al-Muzahlaqah.",
-    "tanker": "Khusrin (خسرٍ) with tanween al-tahweel signifying catastrophic loss.",
-    "majaz_zarfiyyah": "Fi Khusr (في خسر) framing loss as an enclosing vessel.",
-    "repetition": "Repeating Tawasaw (تواصوا) to highlight both Truth and Patience as distinct, equal imperatives."
-  },
-  "aqidah": {
-    "salvation_matrix": {
-      "foundation": "Time is limited capital.",
-      "default_state": "All human beings head towards spiritual bankruptcy (Khusr).",
-      "exemption": "Only achieved by fulfilling all 4 conditions simultaneously: Iman, Amal Salih, Tawasi bil-Haqq, Tawasi bis-Sabr."
+  "sarf": {
+    "verbs_analysis": [
+      {
+        "word": "آمَنُوا",
+        "form": "IV (أَفْعَلَ)",
+        "root": "أ-م-ن",
+        "root_type": "Mahmouz Fa (مهموز الفاء)",
+        "tense": "Past (ماض)",
+        "voice": "Active (معلوم)",
+        "original_pattern": "أَأْمَنُوا",
+        "phonological_rule": "Two hamzas met at the beginning of the word; the first was vowelled with fatha and the second was silent, so the second was converted into an alif madd (إبدال الهمزة الثانية ألف مد)."
+      },
+      {
+        "word": "عَمِلُوا",
+        "form": "I (فَعِلَ)",
+        "root": "ع-م-ل",
+        "root_type": "Sahih Salim (صحيح سالم)",
+        "tense": "Past (ماض)",
+        "voice": "Active (معلوم)",
+        "original_pattern": "عَمِلُوا",
+        "phonological_rule": "Regular sound verb taking Dhumma on third radical upon suffixing Waw al-Jama'ah."
+      },
+      {
+        "word": "تَوَاصَوْا",
+        "form": "VI (تَفَاعَلَ)",
+        "root": "و-ص-ي",
+        "root_type": "Mithal Wawi & Naqis Ya'i / Lafif Mafrooq (لفيف مفروق: فاؤه واو ولامه ياء)",
+        "tense": "Past (ماض)",
+        "voice": "Active (معلوم)",
+        "original_pattern": "تَوَاصَيُوا",
+        "phonological_rule": "The weak letter Ya was vowelled with a preceding fatha, so it converted to Alif (تَوَاصَى). When plural Waw was added, two unvowelled letters met (the alif and waw). The alif was dropped to prevent التقاء الساكنين, while retaining the fatha on Sad to indicate the dropped alif."
+      }
+    ],
+    "nouns_and_participles_analysis": [
+      {
+        "word": "العَصْرِ",
+        "type": "Masdar (مصدر ثلاثي)",
+        "wazn": "فَعْل",
+        "root": "ع-ص-ر"
+      },
+      {
+        "word": "الإِنْسَانَ",
+        "type": "Ism Jins (اسم جنس جمعي)",
+        "wazn": "إِفْعَال",
+        "root": "أ-ن-س"
+      },
+      {
+        "word": "خُسْرٍ",
+        "type": "Masdar (مصدر ثلاثي)",
+        "wazn": "فُعْل",
+        "root": "خ-س-ر"
+      },
+      {
+        "word": "الصَّالِحَاتِ",
+        "type": "Ism Fa'il Jam' Mu'annath Salim (اسم فاعل جمع مؤنث سالم)",
+        "wazn": "الفَاعِلات",
+        "root": "ص-ل-ح",
+        "singular": "صَالِحَة"
+      },
+      {
+        "word": "الحَقِّ",
+        "type": "Masdar / Sifah Mushabbahah (مصدر أو صفة مشبهة)",
+        "wazn": "فَعْل",
+        "root": "ح-ق-ق"
+      },
+      {
+        "word": "الصَّبْرِ",
+        "type": "Masdar (مصدر ثلاثي)",
+        "wazn": "فَعْل",
+        "root": "ص-ب-ر"
+      }
+    ],
+    "wazn_matrix": {
+      "فَعْل": [
+        "عَصْر",
+        "حَقّ",
+        "صَبْر"
+      ],
+      "فُعْل": [
+        "خُسْر"
+      ],
+      "إِفْعَال": [
+        "إِنْسَان"
+      ],
+      "الفَاعِلات": [
+        "الصَّالِحَات"
+      ],
+      "أَفْعَلُوا": [
+        "آمَنُوا"
+      ],
+      "فَعِلُوا": [
+        "عَمِلُوا"
+      ],
+      "تَفَاعَوْا": [
+        "تَوَاصَوْا"
+      ]
     }
   },
+  "balaghah": {
+    "ilm_al_maani": {
+      "qasam_strategy": "Swearing by Time draws urgent attention to life as a depleting countdown. What is sworn upon (Time) matches what is asserted (human life slipping away).",
+      "triple_emphasis": "Verse 2 deploys three accumulative tiers of emphasis: (1) The preceding divine oath, (2) The emphatic particle إِنَّ, and (3) The shifted emphatic Lam (اللام المزحلقة in لَفِي). This removes all skepticism about the certainty of human loss.",
+      "istithna_restriction": "The exception using إِلَّا restricts salvation exclusively to those who combine all four qualities, proving that partial adherence is inadequate.",
+      "repetition_of_verb": "Repeating تَوَاصَوْا before both بِالْحَقِّ and بِالصَّبْرِ separates Truth and Patience into two distinct, honored pillars of equal weight rather than subordinating one to the other."
+    },
+    "ilm_al_bayan": {
+      "majaz_zarfiyyah": "The preposition فِي in (لَفِي خُسْرٍ) creates an immersive spatial metaphor: loss is not just an attribute; it is an all-encompassing vessel or ocean in which the human being is submerged.",
+      "kinayah": "Using (عَمِلُوا الصَّالِحَاتِ) without the noun 'deeds' is an elegant metonymy emphasizing that true faith must produce visible wholesome fruits."
+    },
+    "ilm_al_badi": {
+      "tibaq_and_muqabalah": "A comprehensive contrast between the sweeping condition of total ruin (خُسْر) in verse 2 and the fourfold path of supreme triumph (النجاة) in verse 3.",
+      "fawasil_harmony": "All three verses conclude with the letter Rā' (العَصْرْ، خُسْرْ، الصَّبْرْ), creating a powerful, solemn, percussive cadence that echoes the ticking of passing time.",
+      "form_vi_harmony": "The balanced rhythm of (وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ) produces phonetic symmetry and a sense of shared responsibility."
+    }
+  },
+  "aqidah": {
+    "theology_of_time": "Time is the precious capital of human existence; every breath spent without spiritual benefit is an irreversible loss.",
+    "divine_oath_theology": "Allah the Creator has the sovereign right to swear by whatever created signs He chooses to highlight their grandeur, whereas the creation may only swear by Allah.",
+    "human_condition": "Human nature, left unanchored by divine revelation, naturally slides toward moral and spiritual bankruptcy.",
+    "four_pillars_of_salvation": [
+      {
+        "pillar": "1. الإيمان (Sound Faith)",
+        "sphere": "Heart & Mind (باطني)",
+        "role": "Cognitive foundation: Correct knowledge of Allah, His angels, books, messengers, and the Last Day."
+      },
+      {
+        "pillar": "2. العمل الصالح (Righteous Action)",
+        "sphere": "Limbs & Body (ظاهري فردي)",
+        "role": "Behavioral proof: Fulfilling obligations and avoiding prohibitions with sincere intention."
+      },
+      {
+        "pillar": "3. التواصي بالحق (Enjoining Truth)",
+        "sphere": "Social & Intellectual (اجتماعي دعوي)",
+        "role": "Community mandate: Encouraging belief, justice, truthfulness, and standing against falsehood."
+      },
+      {
+        "pillar": "4. التواصي بالصبر (Enjoining Patience)",
+        "sphere": "Social & Moral Resilience (اجتماعي أخلاقي)",
+        "role": "Sustaining virtue: Collective endurance through adversity, persecution, and the trials of life."
+      }
+    ],
+    "interdependence": "Imam Al-Razi noted that individual virtue (Iman and Amal) is incomplete without social virtue (Tawasi bil-Haqq and Tawasi bis-Sabr); true salvation requires active community engagement."
+  },
   "ontology": {
-    "TEMPORAL_REALITY": {
+    "DIVINE_REALITY": {
+      "description": "The Creator who swears by His created signs.",
       "children": [
-        "TIME",
-        "DECLINING_DAY",
-        "HUMAN_LIFETIME"
+        "CREATOR_SWEEPER_OF_OATHS",
+        "LAW_GIVER"
+      ]
+    },
+    "TEMPORAL_REALITY": {
+      "description": "The medium in which human accountability occurs.",
+      "children": [
+        "COSMIC_TIME",
+        "AFTERNOON_DECLINE",
+        "HUMAN_LIFETIME_CAPITAL"
       ]
     },
     "HUMAN_CONDITION": {
+      "description": "The existential state of human beings.",
       "children": [
-        "LOSS",
-        "SPIRITUAL_BANKRUPTCY",
-        "SALVATION_ROADMAP"
+        "BASELINE_STATE_LOSS",
+        "EXCEPTED_COMMUNITY_BELIEVERS"
       ]
     },
-    "PILLARS_OF_SALVATION": {
+    "SALVATION_PILLARS": {
+      "description": "The four non-negotiable requirements for eternal success.",
       "children": [
-        "FAITH_IMAN",
-        "RIGHTEOUS_ACTION",
-        "MUTUAL_TRUTH",
-        "MUTUAL_PATIENCE"
+        "SOUND_FAITH",
+        "RIGHTEOUS_DEEDS",
+        "MUTUAL_TRUTH_ADVOCACY",
+        "MUTUAL_PATIENT_ENDURANCE"
       ]
     }
   },
   "knowledge_graph": {
     "nodes": [
+      "الله (Allah)",
       "العصر (Time)",
       "الإنسان (Mankind)",
       "خسر (Loss)",
-      "الذين آمنوا (Believers)",
-      "عملوا الصالحات (Righteous Deeds)",
-      "تواصوا بالحق (Enjoin Truth)",
-      "تواصوا بالصبر (Enjoin Patience)"
+      "الذين آمنوا (The Believers)",
+      "الإيمان (Faith)",
+      "العمل الصالح (Righteous Deeds)",
+      "الحق (The Truth)",
+      "الصبر (Patience)",
+      "النجاة والخلود (Salvation & Paradise)"
     ],
     "edges": [
       {
+        "from": "الله (Allah)",
+        "to": "العصر (Time)",
+        "relation": "swears_by"
+      },
+      {
         "from": "العصر (Time)",
         "to": "الإنسان (Mankind)",
-        "relation": "sworn_oath_context_for"
+        "relation": "serves_as_measure_of_life_for"
       },
       {
         "from": "الإنسان (Mankind)",
         "to": "خسر (Loss)",
-        "relation": "default_state_of_submersion"
+        "relation": "naturally_submerged_in"
       },
       {
-        "from": "الذين آمنوا (Believers)",
+        "from": "الذين آمنوا (The Believers)",
         "to": "الإنسان (Mankind)",
         "relation": "excepted_subgroup_from"
       },
       {
-        "from": "الذين آمنوا (Believers)",
-        "to": "عملوا الصالحات (Righteous Deeds)",
-        "relation": "demonstrates_faith_through"
+        "from": "الذين آمنوا (The Believers)",
+        "to": "الإيمان (Faith)",
+        "relation": "possesses_and_internalizes"
       },
       {
-        "from": "الذين آمنوا (Believers)",
-        "to": "تواصوا بالحق (Enjoin Truth)",
-        "relation": "builds_community_with"
+        "from": "الذين آمنوا (The Believers)",
+        "to": "العمل الصالح (Righteous Deeds)",
+        "relation": "puts_into_practice"
       },
       {
-        "from": "الذين آمنوا (Believers)",
-        "to": "تواصوا بالصبر (Enjoin Patience)",
-        "relation": "sustains_resilience_with"
+        "from": "الذين آمنوا (The Believers)",
+        "to": "الحق (The Truth)",
+        "relation": "mutually_counsels_and_champions"
+      },
+      {
+        "from": "الذين آمنوا (The Believers)",
+        "to": "الصبر (Patience)",
+        "relation": "mutually_supports_with"
+      },
+      {
+        "from": "الإيمان (Faith)",
+        "to": "النجاة والخلود (Salvation & Paradise)",
+        "relation": "essential_foundation_for"
+      },
+      {
+        "from": "العمل الصالح (Righteous Deeds)",
+        "to": "النجاة والخلود (Salvation & Paradise)",
+        "relation": "practical_qualification_for"
+      },
+      {
+        "from": "الحق (The Truth)",
+        "to": "النجاة والخلود (Salvation & Paradise)",
+        "relation": "social_mandate_for"
+      },
+      {
+        "from": "الصبر (Patience)",
+        "to": "النجاة والخلود (Salvation & Paradise)",
+        "relation": "shield_and_preserver_of"
       }
     ]
   },
   "semantic_search_metadata": {
     "topics": [
-      "surah asr",
-      "salvation in islam",
-      "time management",
-      "four pillars of success",
-      "iman and amal salih",
+      "surah asr explanation",
+      "meaning of wal asr",
+      "four pillars of salvation in islam",
+      "time in islam",
+      "human condition of loss khusr",
       "tawasi bil haqq",
       "tawasi bis sabr",
-      "shafi quote surah asr"
+      "imam shafi reflection on surah asr",
+      "faith and righteous deeds"
     ],
     "keywords_ar": [
+      "سورة العصر",
       "العصر",
       "الإنسان",
       "خسر",
@@ -2213,17 +3172,39 @@
       "الصالحات",
       "تواصوا",
       "الحق",
-      "الصبر"
+      "الصبر",
+      "أركان النجاة",
+      "تفسير الشافعي"
     ],
     "keywords_en": [
-      "time",
-      "mankind",
-      "loss",
-      "believed",
-      "righteous deeds",
-      "truth",
-      "patience",
-      "enjoin"
+      "Surah Al-Asr",
+      "Time",
+      "Mankind",
+      "Loss",
+      "Faith",
+      "Righteous deeds",
+      "Mutual advice",
+      "Truth",
+      "Patience",
+      "Salvation pillars",
+      "Imam Shafi"
+    ],
+    "cross_quranic_parallels": [
+      {
+        "reference": "95:4-6 (Surah Al-Tin)",
+        "arabic": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ",
+        "parallel_theme": "Parallel exception structure (Mankind falling to lowest depths except those with faith and good deeds)."
+      },
+      {
+        "reference": "90:17 (Surah Al-Balad)",
+        "arabic": "ثُمَّ كَانَ مِنَ الَّذِينَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ",
+        "parallel_theme": "Coupling faith with mutual encouragement in patience and mercy."
+      },
+      {
+        "reference": "70:19-22 (Surah Al-Ma'arij)",
+        "arabic": "إِنَّ الْإِنسَانَ خُلِقَ هَلُوعًا ... إِلَّا الْمُصَلِّينَ",
+        "parallel_theme": "Inherent human frailty and distress excepted only by consistent spiritual devotion."
+      }
     ]
   },
   "cross_root_links": {
