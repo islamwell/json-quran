@@ -1,7 +1,7 @@
 {
   "name": "surah-al-qamar-sarf-nahw-json",
-  "version": "1.0.3",
-  "description": "Exhaustive word-by-word, lowest-level morpheme, Sarf morphology, Nahw syntactic i'rab, and color-coding dataset for Surah Al-Qamar (54:1-55)",
+  "version": "1.0.4",
+  "description": "Exhaustive word-by-word, lowest-level morpheme, Sarf morphology, Nahw syntactic i'rab, and color-coding dataset for Surah Al-Qamar (54:1-55), Surah Al-Asr (103:1-3), and Surah Al-Kawthar (108:1-3)",
   "main": "index.html",
   "scripts": {
     "generate": "python3 generate_complete_json.py",
@@ -14,11 +14,14 @@
     "nahw",
     "morphology",
     "surah-al-qamar",
+    "surah-al-asr",
+    "surah-al-kawthar",
     "color-coding",
     "irab",
-    "morphemes"
+    "morphemes",
+    "react"
   ],
   "author": "Antigravity",
   "license": "GPL-3.0",
-  "footer_version": "v1.0.3 (updated 2026-09-03 00:48)"
+  "footer_version": "v1.0.4 (updated 2026-09-03 00:52)"
 }
