@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surah Al-Qamar (سورة القمر) — Word by Word Sarf, Nahw & Morpheme Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">🌙</div>
+        <div class="brand-titles">
+          <h1>Surah Al-Qamar <span class="arabic-title">سورة القمر</span></h1>
+          <p class="subtitle">Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I'rab color coding</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-outline" id="open-pedagogy-btn">
+          <span class="btn-icon">📖</span> Grammar Guide
+        </button>
+        <button class="btn btn-primary" id="download-json-btn">
+          <span class="btn-icon">📥</span> Download JSON
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Stats Bar -->
+  <section class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number">55</span>
+        <span class="stat-label">Ayahs (Verses)</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">342</span>
+        <span class="stat-label">Words Analyzed</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">579</span>
+        <span class="stat-label">Lowest-Level Morphemes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">140</span>
+        <span class="stat-label">Unique Triliteral Roots</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">4</span>
+        <span class="stat-label">Divine Refrains (يَسَّرْنَا الْقُرْآنَ)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Color Coding Legend & Controls -->
+  <section class="controls-section">
+    <div class="controls-container">
+      <!-- Mode Toggle -->
+      <div class="control-group">
+        <label class="control-label">Color-Coding Dimension:</label>
+        <div class="segmented-control" id="color-mode-toggle">
+          <button class="segment active" data-mode="case">
+            <span class="seg-icon">⚖️</span> Case & I'rab (Endings)
+          </button>
+          <button class="segment" data-mode="pos">
+            <span class="seg-icon">🏷️</span> Word Class (Ism / Fi'l / Harf)
+          </button>
+          <button class="segment" data-mode="morpheme">
+            <span class="seg-icon">🧩</span> Morpheme Tiers
+          </button>
+        </div>
+      </div>
+
+      <!-- Color Legend Chips -->
+      <div class="legend-chips" id="legend-chips-container">
+        <!-- Dynamically rendered based on active mode -->
+      </div>
+
+      <!-- Filter and Search Row -->
+      <div class="filter-search-row">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search Arabic, English, Root (e.g. قرب, دكر), or Rule...">
+          <button class="clear-search-btn" id="clear-search" style="display:none;">✕</button>
+        </div>
+
+        <div class="select-group">
+          <select id="theme-filter" class="filter-select">
+            <option value="all">All Stories & Themes (8 Sections)</option>
+            <option value="1">1. Splitting of the Moon (1-8)</option>
+            <option value="2">2. Nuh & The Cataclysmic Deluge (9-17)</option>
+            <option value="3">3. 'Ad & The Violent Frigid Wind (18-22)</option>
+            <option value="4">4. Thamud & The She-Camel (23-32)</option>
+            <option value="5">5. Lut & The Pelting Stones (33-40)</option>
+            <option value="6">6. Dynasty of Pharaoh (41-42)</option>
+            <option value="7">7. Challenge to Quraysh & Saqar (43-53)</option>
+            <option value="8">8. Honor of the Righteous (54-55)</option>
+          </select>
+
+          <select id="case-filter" class="filter-select">
+            <option value="all">All Cases & Moods</option>
+            <option value="raf">Raf' (Nominative / Dhumma) — Actor / Primary</option>
+            <option value="nasb">Nasb (Accusative / Fatha) — Object / Dependent</option>
+            <option value="jarr">Jarr (Genitive / Kasra) — Attached / Idafa</option>
+            <option value="jazm">Jazm (Jussive / Sukun) — Cutoff / Condition</option>
+            <option value="mabni">Mabni (Fixed Base)</option>
+          </select>
+
+          <button class="btn btn-sm btn-ghost" id="reset-filters-btn">Reset Filters</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Quran Verses Feed -->
+  <main class="main-content">
+    <div class="content-container" id="verses-container">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading Surah Al-Qamar dataset and morphological matrix...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Word Detail Modal -->
+  <div class="modal-backdrop" id="word-modal-backdrop">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-badge" id="modal-loc-badge">54:1:1</span>
+          <h3 id="modal-word-arabic" class="arabic-font">ٱقْتَرَبَتِ</h3>
+          <span id="modal-word-translit" class="translit-text">iq'tarabati</span>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Filled dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Pedagogical Framework Drawer -->
+  <div class="drawer-backdrop" id="pedagogy-drawer-backdrop">
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <h2>Arabic Grammar & Pedagogical Architecture</h2>
+          <p class="drawer-subtitle">Comprehensive guide to classification, morphology, case endings, and color coding</p>
+        </div>
+        <button class="drawer-close-btn" id="drawer-close-btn">&times;</button>
+      </div>
+      <div class="drawer-body" id="drawer-body-content">
+        <!-- Content injected from dataset pedagogical_framework -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with Required Versioning (Rule 1) -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">🌙 Surah Al-Qamar Intelligence System</div>
+        <p class="footer-desc">Exhaustive word-by-word morpheme breakdown, Sarf morphology, and I'rab color matrix for classical Arabic education.</p>
+      </div>
+      <div class="footer-right">
+        <div class="version-tag" id="footer-version-tag">
+          v1.0.0 (updated 2026-09-02 18:35)
+        </div>
+        <div class="footer-links">
+          <a href="#top">Back to top ↑</a>
+          <a href="surah-al-qamar.json" target="_blank">Raw JSON API</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
