@@ -3236,5 +3236,1455 @@
     "صبر": [
       "103:3:9"
     ]
-  }
+  },
+  "surah_id": 103,
+  "surah_name": "العصر",
+  "surah_name_en": "Al-Asr",
+  "tokens": [
+    {
+      "verse_id": "103:1",
+      "tokens": [
+        {
+          "id": "103:1:1",
+          "text": "وَٱلْعَصْرِ",
+          "segments": [
+            {
+              "text": "وَ",
+              "type": "prefix",
+              "role": "harf_qasam"
+            },
+            {
+              "text": "ٱلْ",
+              "type": "prefix",
+              "role": "definite_article"
+            },
+            {
+              "text": "عَصْرِ",
+              "type": "stem",
+              "role": "sworn_noun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "verse_id": "103:2",
+      "tokens": [
+        {
+          "id": "103:2:1",
+          "text": "إِنَّ",
+          "segments": [
+            {
+              "text": "إِنَّ",
+              "type": "stem",
+              "role": "emphatic_particle"
+            }
+          ]
+        },
+        {
+          "id": "103:2:2",
+          "text": "ٱلْإِنسَـٰنَ",
+          "segments": [
+            {
+              "text": "ٱلْ",
+              "type": "prefix",
+              "role": "generic_article"
+            },
+            {
+              "text": "إِنسَـٰنَ",
+              "type": "stem",
+              "role": "collective_noun"
+            }
+          ]
+        },
+        {
+          "id": "103:2:3",
+          "text": "لَفِى",
+          "segments": [
+            {
+              "text": "لَ",
+              "type": "prefix",
+              "role": "lam_muzahlaqah"
+            },
+            {
+              "text": "فِى",
+              "type": "stem",
+              "role": "preposition"
+            }
+          ]
+        },
+        {
+          "id": "103:2:4",
+          "text": "خُسْرٍ",
+          "segments": [
+            {
+              "text": "خُسْرٍ",
+              "type": "stem",
+              "role": "verbal_noun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "verse_id": "103:3",
+      "tokens": [
+        {
+          "id": "103:3:1",
+          "text": "إِلَّا",
+          "segments": [
+            {
+              "text": "إِلَّا",
+              "type": "stem",
+              "role": "exception_particle"
+            }
+          ]
+        },
+        {
+          "id": "103:3:2",
+          "text": "ٱلَّذِينَ",
+          "segments": [
+            {
+              "text": "ٱلَّذِينَ",
+              "type": "stem",
+              "role": "relative_pronoun"
+            }
+          ]
+        },
+        {
+          "id": "103:3:3",
+          "text": "ءَامَنُوا۟",
+          "segments": [
+            {
+              "text": "ءَامَنَ",
+              "type": "stem",
+              "role": "past_verb_form_iv"
+            },
+            {
+              "text": "و",
+              "type": "suffix",
+              "role": "subject_pronoun"
+            },
+            {
+              "text": "ا۟",
+              "type": "suffix",
+              "role": "silent_alif"
+            }
+          ]
+        },
+        {
+          "id": "103:3:4",
+          "text": "وَعَمِلُوا۟",
+          "segments": [
+            {
+              "text": "وَ",
+              "type": "prefix",
+              "role": "conjunction"
+            },
+            {
+              "text": "عَمِلَ",
+              "type": "stem",
+              "role": "past_verb_form_i"
+            },
+            {
+              "text": "و",
+              "type": "suffix",
+              "role": "subject_pronoun"
+            },
+            {
+              "text": "ا۟",
+              "type": "suffix",
+              "role": "silent_alif"
+            }
+          ]
+        },
+        {
+          "id": "103:3:5",
+          "text": "ٱلصَّـٰلِحَـٰتِ",
+          "segments": [
+            {
+              "text": "ٱلـ",
+              "type": "prefix",
+              "role": "definite_article"
+            },
+            {
+              "text": "صَّـٰلِحَـٰتِ",
+              "type": "stem",
+              "role": "active_participle_plural"
+            }
+          ]
+        },
+        {
+          "id": "103:3:6",
+          "text": "وَتَوَاصَوْا۟",
+          "segments": [
+            {
+              "text": "وَ",
+              "type": "prefix",
+              "role": "conjunction"
+            },
+            {
+              "text": "تَوَاصَ",
+              "type": "stem",
+              "role": "reciprocal_verb_form_vi"
+            },
+            {
+              "text": "وْ",
+              "type": "suffix",
+              "role": "subject_pronoun"
+            },
+            {
+              "text": "ا۟",
+              "type": "suffix",
+              "role": "silent_alif"
+            }
+          ]
+        },
+        {
+          "id": "103:3:7",
+          "text": "بِٱلْحَقِّ",
+          "segments": [
+            {
+              "text": "بِ",
+              "type": "prefix",
+              "role": "preposition"
+            },
+            {
+              "text": "ٱلْ",
+              "type": "prefix",
+              "role": "definite_article"
+            },
+            {
+              "text": "حَقِّ",
+              "type": "stem",
+              "role": "noun"
+            }
+          ]
+        },
+        {
+          "id": "103:3:8",
+          "text": "وَتَوَاصَوْا۟",
+          "segments": [
+            {
+              "text": "وَ",
+              "type": "prefix",
+              "role": "conjunction"
+            },
+            {
+              "text": "تَوَاصَ",
+              "type": "stem",
+              "role": "reciprocal_verb_form_vi"
+            },
+            {
+              "text": "وْ",
+              "type": "suffix",
+              "role": "subject_pronoun"
+            },
+            {
+              "text": "ا۟",
+              "type": "suffix",
+              "role": "silent_alif"
+            }
+          ]
+        },
+        {
+          "id": "103:3:9",
+          "text": "بِٱلصَّبْرِ",
+          "segments": [
+            {
+              "text": "بِ",
+              "type": "prefix",
+              "role": "preposition"
+            },
+            {
+              "text": "ٱلـ",
+              "type": "prefix",
+              "role": "definite_article"
+            },
+            {
+              "text": "صَّبْرِ",
+              "type": "stem",
+              "role": "verbal_noun"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "morphology": [
+    {
+      "id": "103:1:1",
+      "text": "وَٱلْعَصْرِ",
+      "lemma": "عَصْر",
+      "root": "عصر",
+      "root_letters": [
+        "ع",
+        "ص",
+        "ر"
+      ],
+      "wazn": "فَعْل",
+      "part_of_speech": "noun",
+      "subtype": "masdar_muqsam_bihi",
+      "case": "majroor",
+      "attached_prefix": "وَ (واو القسم)",
+      "meaning": "time / the declining afternoon era"
+    },
+    {
+      "id": "103:2:1",
+      "text": "إِنَّ",
+      "lemma": "إن",
+      "root": null,
+      "type": "particle",
+      "part_of_speech": "particle",
+      "subtype": "harf_tawkid_wa_nasb",
+      "meaning": "indeed / verily"
+    },
+    {
+      "id": "103:2:2",
+      "text": "ٱلْإِنسَـٰنَ",
+      "lemma": "إِنْسَان",
+      "root": "أنس",
+      "root_letters": [
+        "أ",
+        "ن",
+        "س"
+      ],
+      "wazn": "إِفْعَال",
+      "part_of_speech": "noun",
+      "subtype": "ism_jins_collective",
+      "case": "mansoob",
+      "meaning": "mankind / the human race"
+    },
+    {
+      "id": "103:2:3",
+      "text": "لَفِى",
+      "lemma": "فِي",
+      "root": null,
+      "type": "particle_compound",
+      "part_of_speech": "particle",
+      "subtype": "lam_muzahlaqah_plus_harf_jar",
+      "meaning": "surely in"
+    },
+    {
+      "id": "103:2:4",
+      "text": "خُسْرٍ",
+      "lemma": "خُسْر",
+      "root": "خسر",
+      "root_letters": [
+        "خ",
+        "س",
+        "ر"
+      ],
+      "wazn": "فُعْل",
+      "part_of_speech": "noun",
+      "subtype": "masdar_munawwan",
+      "case": "majroor",
+      "meaning": "loss / ruin / spiritual bankruptcy"
+    },
+    {
+      "id": "103:3:1",
+      "text": "إِلَّا",
+      "lemma": "إِلَّا",
+      "root": null,
+      "type": "particle",
+      "part_of_speech": "particle",
+      "subtype": "adat_istithna",
+      "meaning": "except / save"
+    },
+    {
+      "id": "103:3:2",
+      "text": "ٱلَّذِينَ",
+      "lemma": "الَّذِي",
+      "root": null,
+      "type": "pronoun",
+      "part_of_speech": "pronoun",
+      "subtype": "ism_mawsool",
+      "gender": "masculine",
+      "number": "plural",
+      "case": "mabni_fi_mahall_nasb",
+      "meaning": "those who"
+    },
+    {
+      "id": "103:3:3",
+      "text": "ءَامَنُوا۟",
+      "lemma": "آمَنَ",
+      "root": "أمن",
+      "root_letters": [
+        "أ",
+        "م",
+        "ن"
+      ],
+      "wazn": "أَفْعَلُوا",
+      "verb_form": 4,
+      "tense": "past",
+      "voice": "active",
+      "person": "third",
+      "number": "plural",
+      "gender": "masculine",
+      "part_of_speech": "verb",
+      "attached_pronoun": "و (واو الجماعة - فاعل)",
+      "meaning": "believed"
+    },
+    {
+      "id": "103:3:4",
+      "text": "وَعَمِلُوا۟",
+      "lemma": "عَمِلَ",
+      "root": "عمل",
+      "root_letters": [
+        "ع",
+        "م",
+        "ل"
+      ],
+      "wazn": "فَعِلُوا",
+      "verb_form": 1,
+      "tense": "past",
+      "voice": "active",
+      "person": "third",
+      "number": "plural",
+      "gender": "masculine",
+      "part_of_speech": "verb",
+      "attached_prefix": "وَ (حرف عطف)",
+      "attached_pronoun": "و (واو الجماعة - فاعل)",
+      "meaning": "and performed / worked"
+    },
+    {
+      "id": "103:3:5",
+      "text": "ٱلصَّـٰلِحَـٰتِ",
+      "lemma": "صَالِحَة",
+      "root": "صلح",
+      "root_letters": [
+        "ص",
+        "ل",
+        "ح"
+      ],
+      "wazn": "الفَاعِلات",
+      "part_of_speech": "noun",
+      "subtype": "active_participle_sound_feminine_plural",
+      "case": "mansoob_bil_kasra",
+      "meaning": "righteous deeds"
+    },
+    {
+      "id": "103:3:6",
+      "text": "وَتَوَاصَوْا۟",
+      "lemma": "تَوَاصَى",
+      "root": "وصي",
+      "root_letters": [
+        "و",
+        "ص",
+        "ي"
+      ],
+      "wazn": "تَفَاعَوْا",
+      "verb_form": 6,
+      "tense": "past",
+      "voice": "active",
+      "person": "third",
+      "number": "plural",
+      "gender": "masculine",
+      "part_of_speech": "verb",
+      "attached_prefix": "وَ (حرف عطف)",
+      "attached_pronoun": "وْ (واو الجماعة - فاعل)",
+      "meaning": "and mutually advised / enjoined"
+    },
+    {
+      "id": "103:3:7",
+      "text": "بِٱلْحَقِّ",
+      "lemma": "حَقّ",
+      "root": "حقق",
+      "root_letters": [
+        "ح",
+        "ق",
+        "ق"
+      ],
+      "wazn": "فَعْل",
+      "part_of_speech": "noun",
+      "subtype": "masdar",
+      "case": "majroor",
+      "attached_prefix": "بِ (حرف جر)",
+      "meaning": "to the truth"
+    },
+    {
+      "id": "103:3:8",
+      "text": "وَتَوَاصَوْا۟",
+      "lemma": "تَوَاصَى",
+      "root": "وصي",
+      "root_letters": [
+        "و",
+        "ص",
+        "ي"
+      ],
+      "wazn": "تَفَاعَوْا",
+      "verb_form": 6,
+      "tense": "past",
+      "voice": "active",
+      "person": "third",
+      "number": "plural",
+      "gender": "masculine",
+      "part_of_speech": "verb",
+      "attached_prefix": "وَ (حرف عطف)",
+      "attached_pronoun": "وْ (واو الجماعة - فاعل)",
+      "meaning": "and mutually advised / enjoined (repeated for emphasis)"
+    },
+    {
+      "id": "103:3:9",
+      "text": "بِٱلصَّبْرِ",
+      "lemma": "صَبْر",
+      "root": "صبر",
+      "root_letters": [
+        "ص",
+        "ب",
+        "ر"
+      ],
+      "wazn": "فَعْل",
+      "part_of_speech": "noun",
+      "subtype": "masdar",
+      "case": "majroor",
+      "attached_prefix": "بِ (حرف جر)",
+      "meaning": "to patience"
+    }
+  ],
+  "syntax": {
+    "relationships": [
+      {
+        "from": "Hidden_Oath_Verb (أقسم)",
+        "to": "103:1:1 (وَٱلْعَصْرِ)",
+        "relation": "oath_phrase_attachment",
+        "description": "The oath phrase (preposition + noun) attaches to the hidden oath verb."
+      },
+      {
+        "from": "103:2:1 (إِنَّ)",
+        "to": "103:2:2 (ٱلْإِنسَـٰنَ)",
+        "relation": "ism_inna",
+        "description": "Al-Insan is the subject (Ism) governed in accusative by Inna."
+      },
+      {
+        "from": "103:2:1 (إِنَّ)",
+        "to": "103:2:4 (خُسْرٍ)",
+        "relation": "khabar_inna",
+        "description": "The prepositional phrase (lafī khusr) occupies the nominative place as the predicate (Khabar) of Inna."
+      },
+      {
+        "from": "103:2:3 (لَفِى)",
+        "to": "103:2:4 (خُسْرٍ)",
+        "relation": "jar_majroor",
+        "description": "Preposition Fi governs Khusr in the genitive case."
+      },
+      {
+        "from": "103:2:2 (ٱلْإِنسَـٰنَ)",
+        "to": "103:3:2 (ٱلَّذِينَ)",
+        "relation": "exception_from_collective_species",
+        "description": "Those who believe are excepted from the general category of mankind via Illa."
+      },
+      {
+        "from": "103:3:1 (إِلَّا)",
+        "to": "103:3:2 (ٱلَّذِينَ)",
+        "relation": "mustathna",
+        "description": "Alladhina is the excepted relative noun governed in the accusative position."
+      },
+      {
+        "from": "103:3:2 (ٱلَّذِينَ)",
+        "to": "103:3:3 (ءَامَنُوا۟)",
+        "relation": "silat_al_mawsool",
+        "description": "Amanu opens the relative connective clause (Silah) defining the believers."
+      },
+      {
+        "from": "103:3:3 (ءَامَنُوا۟)",
+        "to": "103:3:4 (وَعَمِلُوا۟)",
+        "relation": "conjoined_verb_atf",
+        "description": "Amilu is conjoined to Amanu, uniting faith with practical action."
+      },
+      {
+        "from": "103:3:4 (وَعَمِلُوا۟)",
+        "to": "103:3:5 (ٱلصَّـٰلِحَـٰتِ)",
+        "relation": "direct_object",
+        "description": "Al-Salihat is the direct object (Maf'ul bihi) of the transitive verb Amilu."
+      },
+      {
+        "from": "103:3:4 (وَعَمِلُوا۟)",
+        "to": "103:3:6 (وَتَوَاصَوْا۟)",
+        "relation": "conjoined_verb_atf",
+        "description": "Tawasaw is conjoined to Amilu, expanding virtue to community enjoining."
+      },
+      {
+        "from": "103:3:6 (وَتَوَاصَوْا۟)",
+        "to": "103:3:7 (بِٱلْحَقِّ)",
+        "relation": "prepositional_object_taalluq",
+        "description": "Bil-Haqq attaches directly to the first reciprocal verb Tawasaw."
+      },
+      {
+        "from": "103:3:6 (وَتَوَاصَوْا۟)",
+        "to": "103:3:8 (وَتَوَاصَوْا۟)",
+        "relation": "conjoined_verb_atf",
+        "description": "Second Tawasaw is conjoined for independent emphasis on endurance."
+      },
+      {
+        "from": "103:3:8 (وَتَوَاصَوْا۟)",
+        "to": "103:3:9 (بِٱلصَّبْرِ)",
+        "relation": "prepositional_object_taalluq",
+        "description": "Bis-Sabr attaches directly to the second reciprocal verb Tawasaw."
+      }
+    ]
+  },
+  "semantics": [
+    {
+      "token_id": "103:1:1",
+      "concept": "TIME_AS_CAPITAL",
+      "meaning": "Time as the irreversible, depleting currency of human life."
+    },
+    {
+      "token_id": "103:2:2",
+      "concept": "HUMAN_VULNERABILITY",
+      "meaning": "The baseline spiritual fragility of human beings when detached from revelation."
+    },
+    {
+      "token_id": "103:2:4",
+      "concept": "EXISTENTIAL_RUIN",
+      "meaning": "Spiritual bankruptcy resulting from squandered time and lack of guidance."
+    },
+    {
+      "token_id": "103:3:3",
+      "concept": "FOUNDATIONAL_FAITH",
+      "meaning": "Inner certainty, intellectual conviction, and security in Allah."
+    },
+    {
+      "token_id": "103:3:4",
+      "concept": "RIGHTEOUS_ACTION",
+      "meaning": "Outward tangible deeds executing divine guidance."
+    },
+    {
+      "token_id": "103:3:6",
+      "concept": "COMMUNAL_ADVOCACY",
+      "meaning": "Mutual counsel, active teaching, and social responsibility."
+    },
+    {
+      "token_id": "103:3:7",
+      "concept": "DIVINE_TRUTH",
+      "meaning": "Justice, revelation, monotheism, and moral uprightness."
+    },
+    {
+      "token_id": "103:3:9",
+      "concept": "STEADFAST_PERSEVERANCE",
+      "meaning": "Fortitude, self-restraint, and resilience through trials."
+    }
+  ],
+  "ui": {
+    "modes": {
+      "part_of_speech": {
+        "noun": {
+          "color": "#2ecc71",
+          "bg": "#eafaf1",
+          "label": "Noun (اسم)"
+        },
+        "verb": {
+          "color": "#3498db",
+          "bg": "#ebf5fb",
+          "label": "Verb (فعل)"
+        },
+        "particle": {
+          "color": "#9b59b6",
+          "bg": "#f4ecf7",
+          "label": "Particle (حرف)"
+        },
+        "pronoun": {
+          "color": "#f39c12",
+          "bg": "#fef5e7",
+          "label": "Pronoun (ضمير / اسم موصول)"
+        }
+      },
+      "case": {
+        "marfoo": {
+          "color": "#2ecc71",
+          "bg": "#eafaf1",
+          "label": "Marfoo' / Raf' (مرفوع)"
+        },
+        "mansoob": {
+          "color": "#f39c12",
+          "bg": "#fef5e7",
+          "label": "Mansoob / Nasb (منصوب)"
+        },
+        "majroor": {
+          "color": "#3498db",
+          "bg": "#ebf5fb",
+          "label": "Majroor / Jarr (مجرور)"
+        },
+        "majzoom": {
+          "color": "#e74c3c",
+          "bg": "#fdedec",
+          "label": "Majzoom / Jazm (مجزوم)"
+        },
+        "mabni": {
+          "color": "#95a5a6",
+          "bg": "#f2f4f4",
+          "label": "Mabni / Fixed (مبني)"
+        }
+      },
+      "syntax": {
+        "muqsam_bihi": {
+          "color": "#8e44ad",
+          "bg": "#f4ecf7",
+          "label": "Sworn Noun (مقسم به)"
+        },
+        "ism_inna": {
+          "color": "#e67e22",
+          "bg": "#fef5e7",
+          "label": "Subject of Inna (اسم إن)"
+        },
+        "khabar_inna": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Predicate of Inna (خبر إن)"
+        },
+        "mustathna": {
+          "color": "#d35400",
+          "bg": "#fbeee6",
+          "label": "Excepted Entity (مستثنى)"
+        },
+        "silah_verb": {
+          "color": "#2980b9",
+          "bg": "#ebf5fb",
+          "label": "Relative Clause Verb (صلة)"
+        },
+        "mafool": {
+          "color": "#16a085",
+          "bg": "#e8f8f5",
+          "label": "Direct Object (مفعول به)"
+        },
+        "reciprocal_verb": {
+          "color": "#c0392b",
+          "bg": "#fdedec",
+          "label": "Form VI Reciprocal Verb (تفاعل)"
+        },
+        "jar_majroor": {
+          "color": "#7f8c8d",
+          "bg": "#eaeded",
+          "label": "Prepositional Phrase (جار ومجرور)"
+        }
+      },
+      "verb_tense": {
+        "past": {
+          "color": "#2980b9",
+          "bg": "#ebf5fb",
+          "label": "Past Tense (ماض)"
+        },
+        "present": {
+          "color": "#27ae60",
+          "bg": "#eafaf1",
+          "label": "Present Tense (مضارع)"
+        },
+        "imperative": {
+          "color": "#8e44ad",
+          "bg": "#f4ecf7",
+          "label": "Imperative (أمر)"
+        }
+      }
+    }
+  },
+  "ai_explanations": [
+    {
+      "token_id": "103:1:1",
+      "text": "وَٱلْعَصْرِ",
+      "beginner": {
+        "text": "Wal-'Asr means 'By time' or 'By the afternoon'. Here, Allah takes an oath by Time itself to grab our attention."
+      },
+      "intermediate": {
+        "text": "The letter Waw is 'Waw al-Qasam' (an oath particle acting as a preposition). Because of this preposition, the noun 'al-'Asr' takes Kasra (majroor)."
+      },
+      "advanced": {
+        "text": "Grammatically, the prepositional phrase attaches to an omitted oath verb (أُقْسِمُ بالعصر). Morphologically, 'Asr comes from the root 'ain-sad-ra meaning to press or squeeze out juice, hinting at the squeezing out of life's final hours."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "Hidden Verb (أقسم)",
+          "relation": "governing_predicate"
+        },
+        {
+          "node": "وَ",
+          "relation": "oath_particle"
+        },
+        {
+          "node": "العَصْرِ",
+          "relation": "muqsam_bihi_noun"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "91:1",
+          "text": "وَٱلشَّمْسِ وَضُحَىٰهَا",
+          "explanation": "Swearing by cosmic creation using Waw al-Qasam"
+        },
+        {
+          "ayah": "92:1",
+          "text": "وَٱلَّيْلِ إِذَا يَغْشَىٰ",
+          "explanation": "Swearing by the Night using Waw al-Qasam"
+        },
+        {
+          "ayah": "93:1",
+          "text": "وَٱلضُّحَىٰ",
+          "explanation": "Swearing by the Morning Light using Waw al-Qasam"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "مُعْصِرَات",
+          "ayah": "78:14",
+          "meaning": "rain clouds squeezing out heavy rain"
+        },
+        {
+          "word": "أَعْصِرُ",
+          "ayah": "12:36",
+          "meaning": "I am pressing wine/grapes"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَعْل",
+          "words": [
+            "شَمْس (Sun)",
+            "فَجْر (Dawn)",
+            "نَصْر (Victory)",
+            "عَصْر (Time)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:2:1",
+      "text": "إِنَّ",
+      "beginner": {
+        "text": "Inna means 'Indeed' or 'Verily'. It is used to emphasize that what follows is 100% true without any doubt."
+      },
+      "intermediate": {
+        "text": "Inna is a 'Harf Tawkeed wa Nasb' (particle of emphasis and accusative governance). It enters a nominal sentence, placing the subject (Ism Inna) into the accusative case (Nasb with Fatha)."
+      },
+      "advanced": {
+        "text": "Inna here serves as the answer to the oath (جواب القسم). Classical rhetoricians point out that combined with the oath and the upcoming Lam, it constitutes a triple-emphasis structure aimed at breaking human complacency."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "ٱلْإِنسَـٰنَ",
+          "relation": "governs_as_ism_inna"
+        },
+        {
+          "node": "لَفِى خُسْرٍ",
+          "relation": "locates_as_khabar_inna"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "95:4",
+          "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍ",
+          "explanation": "Emphatic opening stating a fundamental human condition"
+        },
+        {
+          "ayah": "100:6",
+          "text": "إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ",
+          "explanation": "Identical structure with Inna + al-Insan + Lam al-Muzahlaqah"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "103:2:2",
+      "text": "ٱلْإِنسَـٰنَ",
+      "beginner": {
+        "text": "Al-Insan means 'mankind' or 'human beings'. It refers to all of us."
+      },
+      "intermediate": {
+        "text": "Al-Insan is a generic collective noun (ism jins). It takes Fatha because it is the subject (Ism) of Inna."
+      },
+      "advanced": {
+        "text": "The definite article 'Al-' here functions for 'istighraq al-jins' (exhaustive inclusion of every single human being without exception). Root lexicographers link it to 'uns' (sociability) and 'nasy' (forgetfulness)."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "إِنَّ",
+          "relation": "ism_inna_subject"
+        },
+        {
+          "node": "إِلَّا ٱلَّذِينَ",
+          "relation": "source_of_exception"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "70:19",
+          "text": "إِنَّ ٱلْإِنسَـٰنَ خُلِقَ هَلُوعًا",
+          "explanation": "Collective diagnosis of human weakness"
+        },
+        {
+          "ayah": "96:6",
+          "text": "كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ",
+          "explanation": "Inna + al-Insan + Lam of emphasis"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "إِنس",
+          "ayah": "55:33",
+          "meaning": "human beings (as opposed to jinn)"
+        },
+        {
+          "word": "أُنَاس",
+          "ayah": "2:60",
+          "meaning": "groups of people"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "إِفْعَال",
+          "words": [
+            "إِحْسَان (Excellence)",
+            "إِكْرَام (Honor)",
+            "إِنْسَان (Human)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:2:3",
+      "text": "لَفِى",
+      "beginner": {
+        "text": "Lafi means 'is surely in'. The 'La' adds strong emphasis, and 'fi' means inside."
+      },
+      "intermediate": {
+        "text": "This is a compound word: the emphatic 'Lam al-Muzahlaqah' (shifted Lam of emphasis attached to the predicate of Inna) combined with the preposition 'Fi'."
+      },
+      "advanced": {
+        "text": "In balaghah, using 'Fi' (in) creates 'majaz fi al-zarfiyyah' (spatial metaphor). Instead of merely saying humans are losers, it visualizes loss as a surrounding vessel or bottomless ocean in which human beings are drowning."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "لَ",
+          "relation": "lam_muzahlaqah_tawkid"
+        },
+        {
+          "node": "فِى",
+          "relation": "harf_jar_head"
+        },
+        {
+          "node": "خُسْرٍ",
+          "relation": "governed_majroor_noun"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "100:6",
+          "text": "إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ",
+          "explanation": "Lam al-Muzahlaqah attached to the predicate"
+        },
+        {
+          "ayah": "82:13",
+          "text": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ",
+          "explanation": "Same 'Lafī' structure describing the righteous immersed in bliss"
+        },
+        {
+          "ayah": "82:14",
+          "text": "وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍ",
+          "explanation": "Same 'Lafī' structure describing the wicked in hellfire"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "103:2:4",
+      "text": "خُسْرٍ",
+      "beginner": {
+        "text": "Khusr means 'loss' or 'ruin'. It means someone who loses their business, investment, or life."
+      },
+      "intermediate": {
+        "text": "Khusr is a verbal noun (masdar) on the pattern 'Fu'l'. It is majroor with Kasra and Tanween because of the preposition 'Fi'."
+      },
+      "advanced": {
+        "text": "The indefinite Tanween here is 'Tanween al-Ta'dheem wa al-Tahweel'—denoting an unimaginable, immense, catastrophic loss of eternal magnitude. Time is human capital, and spending it without divine return is ultimate bankruptcy."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "فِى",
+          "relation": "governed_by_preposition"
+        },
+        {
+          "node": "شبه الجملة (لفي خسر)",
+          "relation": "khabar_inna_in_place_of_raf"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "2:86",
+          "text": "أُو۟لَـٰٓئِكَ ٱلَّذِينَ ٱشْتَرَوُا۟ ٱلْحَيَوٰةَ ٱلدُّنْيَا بِٱلْـَٔاخِرَةِ",
+          "explanation": "The ultimate bad transaction"
+        },
+        {
+          "ayah": "39:15",
+          "text": "إِنَّ ٱلْخَـٰسِرِينَ ٱلَّذِينَ خَسِرُوٓا۟ أَنفُسَهُمْ",
+          "explanation": "Those who lose their own souls"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "خَسِرَ",
+          "ayah": "22:11",
+          "meaning": "he lost both this world and the hereafter"
+        },
+        {
+          "word": "أَخْسَرِين",
+          "ayah": "18:103",
+          "meaning": "the greatest losers in deeds"
+        },
+        {
+          "word": "خُسْرَان",
+          "ayah": "22:11",
+          "meaning": "manifest ruin"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فُعْل",
+          "words": [
+            "شُكْر (Gratitude)",
+            "كُفْر (Disbelief)",
+            "ظُلْم (Injustice)",
+            "خُسْر (Loss)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:1",
+      "text": "إِلَّا",
+      "beginner": {
+        "text": "Illa means 'Except'. It introduces the only way out of the loss."
+      },
+      "intermediate": {
+        "text": "Illa is the particle of exception (Adat Istithna). It creates an exception from the general rule established in the previous verse."
+      },
+      "advanced": {
+        "text": "This is 'Istithna Muttasil Tam Moojab' (connected, complete, affirmative exception). What follows is the exclusive, exhaustive path to rescue, highlighting that without fulfilling these traits, escape from Khusr is impossible."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "ٱلْإِنسَـٰنَ",
+          "relation": "mustathna_minhu"
+        },
+        {
+          "node": "ٱلَّذِينَ",
+          "relation": "mustathna_governed"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "95:6",
+          "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
+          "explanation": "Identical exception clause in Surah Al-Tin"
+        },
+        {
+          "ayah": "84:25",
+          "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
+          "explanation": "Identical exception clause in Surah Al-Inshiqaq"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "103:3:2",
+      "text": "ٱلَّذِينَ",
+      "beginner": {
+        "text": "Alladhina means 'those who'. It refers to the special group of people who are saved."
+      },
+      "intermediate": {
+        "text": "Alladhina is a masculine plural relative pronoun (ism mawsool). It is uninflected (mabni) with a fixed Fatha, sitting in the accusative position of exception (fi mahall nasb mustathna)."
+      },
+      "advanced": {
+        "text": "Being a relative pronoun, it syntactically demands a following sentence called 'Silat al-Mawsool' to complete its meaning. The sentence 'they believed and did righteous deeds...' serves as that indispensable clause."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "إِلَّا",
+          "relation": "mustathna_exception"
+        },
+        {
+          "node": "ءَامَنُوا۟",
+          "relation": "silah_clause_head"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "2:25",
+          "text": "وَبَشِّرِ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ",
+          "explanation": "Relative pronoun identifying the saved community"
+        }
+      ],
+      "same_root_words": [],
+      "same_pattern_words": []
+    },
+    {
+      "token_id": "103:3:3",
+      "text": "ءَامَنُوا۟",
+      "beginner": {
+        "text": "Amanu means 'they believed'. Faith is the very first step to salvation."
+      },
+      "intermediate": {
+        "text": "Amanu is a past tense verb in Form IV (أَفْعَلَ). It has the plural subject pronoun 'Waw al-Jama'ah' attached, which gives it a fixed Dhumma ending (mabni 'ala al-damm)."
+      },
+      "advanced": {
+        "text": "From root 'A-M-N' (security). Form IV carries causative meaning: affirming truth so deeply that one enters into peace and security from fear, hypocrisy, and divine wrath. It is the internal heart foundation (Batin)."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "ٱلَّذِينَ",
+          "relation": "silat_al_mawsool"
+        },
+        {
+          "node": "و (واو الجماعة)",
+          "relation": "subject_fail"
+        },
+        {
+          "node": "وَعَمِلُوا۟",
+          "relation": "conjoined_verb"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "2:62",
+          "text": "مَنْ ءَامَنَ بِٱللَّهِ وَٱلْيَوْمِ ٱلْـَٔاخِرِ",
+          "explanation": "Belief as primary qualification"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "إِيمَان",
+          "ayah": "49:14",
+          "meaning": "true faith in the heart"
+        },
+        {
+          "word": "أَمْن",
+          "ayah": "6:82",
+          "meaning": "divine security"
+        },
+        {
+          "word": "مُؤْمِن",
+          "ayah": "23:1",
+          "meaning": "believer"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "أَفْعَلُوا",
+          "words": [
+            "أَسْلَمُوا (They submitted)",
+            "أَحْسَنُوا (They did good)",
+            "آمَنُوا (They believed)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:4",
+      "text": "وَعَمِلُوا۟",
+      "beginner": {
+        "text": "Wa 'amilu means 'and did deeds'. Faith must be shown through actions."
+      },
+      "intermediate": {
+        "text": "The Waw is a conjunction (Harf 'Atf). 'Amilu is a Form I past tense verb (fa'ila pattern) with attached plural subject pronoun Waw al-Jama'ah."
+      },
+      "advanced": {
+        "text": "The conjunction Waw grammatically ties action directly to faith. In Islamic theology (Aqidah), faith without good deeds is deficient, and deeds without faith are unaccepted. They are paired 50+ times in the Qur'an."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "ءَامَنُوا۟",
+          "relation": "conjoined_to_faith"
+        },
+        {
+          "node": "ٱلصَّـٰلِحَـٰتِ",
+          "relation": "governs_direct_object"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "18:110",
+          "text": "فَمَن كَانَ يَرْجُوا۟ لِقَآءَ رَبِّهِۦ فَلْيَعْمَلْ عَمَلًۭا صَـٰلِحًۭا",
+          "explanation": "Pairing belief in meeting Allah with righteous action"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "عَمَل",
+          "ayah": "99:7",
+          "meaning": "deed / action"
+        },
+        {
+          "word": "عَامِل",
+          "ayah": "3:195",
+          "meaning": "worker / doer of good"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَعِلُوا",
+          "words": [
+            "شَهِدُوا (They witnessed)",
+            "سَمِعُوا (They heard)",
+            "عَمِلُوا (They worked)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:5",
+      "text": "ٱلصَّـٰلِحَـٰتِ",
+      "beginner": {
+        "text": "Al-Salihat means 'righteous, good deeds'. This includes prayer, charity, kindness, and honest living."
+      },
+      "intermediate": {
+        "text": "It is a sound feminine plural (Jam' Mu'annath Salim) of the active participle 'Salihah'. It is the direct object (Maf'ul bihi) of 'Amilu. Because it is a sound feminine plural, its accusative case is marked by Kasra instead of Fatha."
+      },
+      "advanced": {
+        "text": "Stylistic ellipsis (حذف المنعوت): originally 'al-a'mal al-salihat'. Dropping the noun 'actions' and keeping the adjective 'wholesome' focuses attention entirely on the essential quality: deeds must be inherently sound, sincere, and beneficial."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "عَمِلُوا",
+          "relation": "mafool_bihi_object"
+        },
+        {
+          "node": "Omitted Noun (الأعمال)",
+          "relation": "substituted_descriptive_naat"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "2:82",
+          "text": "وَٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ أُو۟لَـٰٓئِكَ أَصْحَـٰبُ ٱلْجَنَّةِ",
+          "explanation": "Direct promise of Paradise for righteous actions"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "صَالِح",
+          "ayah": "7:73",
+          "meaning": "Prophet Salih / upright person"
+        },
+        {
+          "word": "إِصْلَاح",
+          "ayah": "7:170",
+          "meaning": "reforming / peacemaking"
+        },
+        {
+          "word": "مُصْلِحُون",
+          "ayah": "11:117",
+          "meaning": "reformers / rectifiers"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "الفَاعِلات",
+          "words": [
+            "الصَّادِقَات (Truthful women)",
+            "القَانِتَات (Devout women)",
+            "الصَّالِحَات (Righteous deeds)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:6",
+      "text": "وَتَوَاصَوْا۟",
+      "beginner": {
+        "text": "Wa tawāsaw means 'and they advised each other'. You cannot practice faith alone; you must help and encourage others."
+      },
+      "intermediate": {
+        "text": "A Form VI reciprocal verb (تَفَاعَلَ) in the past tense. Form VI indicates mutual interaction between two or more parties. Built on estimated Fatha on the deleted weak letter Alif."
+      },
+      "advanced": {
+        "text": "Significance of Form VI (تَفَاعَلَ): it requires two-way participation. The teacher must listen, and the student must advise. It shifts religion from individual isolation into vibrant community solidarity and mutual accountability."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "وَعَمِلُوا۟",
+          "relation": "conjoined_verb"
+        },
+        {
+          "node": "بِٱلْحَقِّ",
+          "relation": "prepositional_attachment"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "90:17",
+          "text": "وَتَوَاصَوْا۟ بِٱلصَّبْرِ وَتَوَاصَوْا۟ بِٱلْمَرْحَمَةِ",
+          "explanation": "Mutually enjoining patience and compassion"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "وَصِيَّة",
+          "ayah": "2:180",
+          "meaning": "bequest / solemn advice"
+        },
+        {
+          "word": "وَصَّىٰ",
+          "ayah": "4:11",
+          "meaning": "He ordained / commanded"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "تَفَاعَوْا",
+          "words": [
+            "تَعَاوَنُوا (They cooperated)",
+            "تَنَاجَوْا (They conferred)",
+            "تَوَاصَوْا (They mutually advised)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:7",
+      "text": "بِٱلْحَقِّ",
+      "beginner": {
+        "text": "Bil-Haqq means 'to the truth'. Encouraging each other to stand for justice, honesty, and Islam."
+      },
+      "intermediate": {
+        "text": "Preposition Ba attached to the definite noun Al-Haqq. Majroor with Kasra. The phrase attaches to the verb 'Tawasaw'."
+      },
+      "advanced": {
+        "text": "Al-Haqq encompasses both theoretical truth (theology, monotheism, revelation) and practical truth (justice, rights of humans, honesty). Advising each other to Haqq is the core of Dawah and Enjoining Good."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "تَوَاصَوْا۟",
+          "relation": "taalluq_attachment"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "17:81",
+          "text": "وَقُلْ جَآءَ ٱلْحَقُّ وَزَهَقَ ٱلْبَـٰطِلُ",
+          "explanation": "The ultimate triumph of Haqq over falsehood"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "حَقِيق",
+          "ayah": "7:105",
+          "meaning": "obligated / duty-bound"
+        },
+        {
+          "word": "حَقًّا",
+          "ayah": "4:122",
+          "meaning": "a true promise"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَعْل",
+          "words": [
+            "عَدْل (Justice)",
+            "صِدْق (Truthfulness)",
+            "حَقّ (Truth)"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:8",
+      "text": "وَتَوَاصَوْا۟",
+      "beginner": {
+        "text": "Wa tawāsaw is repeated: 'and they advised each other'. Repeating it shows that this next point is just as important!"
+      },
+      "intermediate": {
+        "text": "Exact repetition of the Form VI reciprocal verb. Conjoined by Waw to the previous clause."
+      },
+      "advanced": {
+        "text": "Rhetorical repetition (I'adat al-Fi'l): why repeat 'Tawasaw' instead of saying 'and advised to truth and patience'? Because speaking truth generates hostility, hardship, and persecution. Standing for Truth immediately requires a separate, dedicated communal fortification in Patience."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "تَوَاصَوْا۟ الأولى",
+          "relation": "conjoined_repeated_verb"
+        },
+        {
+          "node": "بِٱلصَّبْرِ",
+          "relation": "prepositional_attachment"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "90:17",
+          "text": "وَتَوَاصَوْا۟ بِٱلصَّبْرِ وَتَوَاصَوْا۟ بِٱلْمَرْحَمَةِ",
+          "explanation": "Rhetorical repetition of Tawasaw for both virtues"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "وَصِيَّة",
+          "ayah": "2:180",
+          "meaning": "bequest / solemn advice"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "تَفَاعَوْا",
+          "words": [
+            "تَوَاصَوْا"
+          ]
+        }
+      ]
+    },
+    {
+      "token_id": "103:3:9",
+      "text": "بِٱلصَّبْرِ",
+      "beginner": {
+        "text": "Bis-Sabr means 'to patience and perseverance'. Staying strong when things get difficult."
+      },
+      "intermediate": {
+        "text": "Preposition Ba attached to Al-Sabr. Majroor with Kasra. Attaches directly to the second 'Tawasaw'."
+      },
+      "advanced": {
+        "text": "Sabr is the preserver of all virtues. Scholars define three levels of Sabr: (1) Sabr upon obeying Allah, (2) Sabr in restraining oneself from sin, and (3) Sabr under painful divine decrees. Without Sabr, Haqq cannot be maintained."
+      },
+      "syntax_tree_connections": [
+        {
+          "node": "تَوَاصَوْا۟ الثانية",
+          "relation": "taalluq_attachment"
+        }
+      ],
+      "similar_quran_examples": [
+        {
+          "ayah": "2:153",
+          "text": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱسْتَعِينُوا۟ بِٱلصَّبْرِ وَٱلصَّلَوٰةِ",
+          "explanation": "Seeking assistance through patience"
+        },
+        {
+          "ayah": "3:200",
+          "text": "يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱصْبِرُوا۟ وَصَابِرُوا۟",
+          "explanation": "Command to persevere individually and collectively"
+        }
+      ],
+      "same_root_words": [
+        {
+          "word": "صَابِرِين",
+          "ayah": "2:155",
+          "meaning": "the patient ones"
+        },
+        {
+          "word": "اصْطَبِر",
+          "ayah": "19:65",
+          "meaning": "be steadfastly patient"
+        }
+      ],
+      "same_pattern_words": [
+        {
+          "pattern": "فَعْل",
+          "words": [
+            "نَصْر (Help)",
+            "شُكْر (Thanks)",
+            "صَبْر (Patience)"
+          ]
+        }
+      ]
+    }
+  ]
 }

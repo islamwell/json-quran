@@ -1,12 +1,13 @@
 /**
- * Surah Al-Qamar Word-by-Word Intelligence Application
- * Version: v1.0.0 (updated 2026-09-02 18:35)
+ * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
+ * Version: v1.0.3 (updated 2026-09-03 00:48)
  */
 
-class SurahQamarApp {
+class QuranGrammarApp {
   constructor() {
     this.data = null;
-    this.activeColorMode = 'case'; // 'case' | 'pos' | 'morpheme'
+    this.currentSurahFile = 'surah-al-asr.json';
+    this.activeColorMode = 'case'; // 'case' | 'pos' | 'syntax' | 'morpheme'
     this.activeThemeFilter = 'all';
     this.activeCaseFilter = 'all';
     this.searchQuery = '';
@@ -16,26 +17,109 @@ class SurahQamarApp {
   }
 
   async init() {
+    this.setupEventListeners();
+    await this.loadSurah(this.currentSurahFile);
+  }
+
+  async loadSurah(filename) {
+    this.currentSurahFile = filename;
+    const container = document.getElementById('verses-container');
+    if (container) {
+      container.innerHTML = `
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>Loading Quranic dataset and morphological matrix...</p>
+        </div>
+      `;
+    }
+
     try {
-      const response = await fetch('surah-al-qamar.json');
+      const response = await fetch(filename);
       this.data = await response.json();
-      this.setupEventListeners();
+      this.updateHeaderAndStats();
+      this.populateThemeFilter();
       this.renderLegend();
       this.renderVerses();
     } catch (err) {
-      console.error('Failed to load surah-al-qamar.json:', err);
-      const container = document.getElementById('verses-container');
+      console.error('Failed to load dataset:', err);
       if (container) {
         container.innerHTML = `
           <div class="loading-state" style="color: #ef4444;">
-            <p><strong>Error loading data.</strong> Please ensure <code>surah-al-qamar.json</code> is accessible.</p>
+            <p><strong>Error loading data.</strong> Please ensure <code>${filename}</code> is accessible.</p>
           </div>
         `;
       }
     }
   }
 
+  updateHeaderAndStats() {
+    if (!this.data) return;
+    const meta = this.data.metadata;
+
+    // Header Title
+    const brandIcon = document.getElementById('brand-icon');
+    const brandTitle = document.getElementById('brand-title');
+    const brandTitleAr = document.getElementById('brand-title-ar');
+    const brandSubtitle = document.getElementById('brand-subtitle');
+
+    if (brandTitle) brandTitle.childNodes[0].textContent = meta.surah_name_en + ' ';
+    if (brandTitleAr) brandTitleAr.textContent = meta.surah_name_ar;
+    if (brandIcon) brandIcon.textContent = meta.surah_number === 103 ? '⏳' : '🌙';
+    if (brandSubtitle) {
+      brandSubtitle.textContent = meta.surah_number === 103
+        ? 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Root Intelligence'
+        : 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding';
+    }
+
+    // Stats
+    const statAyahs = document.getElementById('stat-ayahs');
+    const statWords = document.getElementById('stat-words');
+    const statMorphemes = document.getElementById('stat-morphemes');
+    const statRoots = document.getElementById('stat-roots');
+    const refrainsDivider = document.getElementById('stat-refrains-divider');
+    const refrainsItem = document.getElementById('stat-refrains-item');
+
+    if (statAyahs) statAyahs.textContent = meta.total_verses;
+    if (statWords) statWords.textContent = meta.total_words;
+    if (statMorphemes) statMorphemes.textContent = meta.total_morphemes || 32;
+    if (statRoots) {
+      const rootCount = this.data.root_network ? Object.keys(this.data.root_network).length : (this.data.root_index ? this.data.root_index.length : 9);
+      statRoots.textContent = rootCount;
+    }
+
+    if (refrainsDivider && refrainsItem) {
+      if (meta.surah_number === 54) {
+        refrainsDivider.style.display = 'block';
+        refrainsItem.style.display = 'flex';
+      } else {
+        refrainsDivider.style.display = 'none';
+        refrainsItem.style.display = 'none';
+      }
+    }
+  }
+
+  populateThemeFilter() {
+    const themeFilter = document.getElementById('theme-filter');
+    if (!themeFilter || !this.data || !this.data.thematic_sections) return;
+
+    const sections = this.data.thematic_sections;
+    let html = `<option value="all">All Stories & Themes (${sections.length} Sections)</option>`;
+    sections.forEach(sec => {
+      html += `<option value="${sec.section_id}">${sec.section_id}. ${sec.title_en} (${sec.ayah_range})</option>`;
+    });
+    themeFilter.innerHTML = html;
+    this.activeThemeFilter = 'all';
+  }
+
   setupEventListeners() {
+    // Surah selector
+    const surahSelect = document.getElementById('surah-select');
+    if (surahSelect) {
+      surahSelect.addEventListener('change', (e) => {
+        this.loadSurah(e.target.value);
+      });
+    }
+
     // Mode toggles
     const modeButtons = document.querySelectorAll('#color-mode-toggle .segment');
     modeButtons.forEach(btn => {
@@ -139,7 +223,7 @@ class SurahQamarApp {
         const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.data, null, 2));
         const dlAnchor = document.createElement('a');
         dlAnchor.setAttribute("href", dataStr);
-        dlAnchor.setAttribute("download", "surah-al-qamar.json");
+        dlAnchor.setAttribute("download", this.currentSurahFile);
         document.body.appendChild(dlAnchor);
         dlAnchor.click();
         dlAnchor.remove();
@@ -156,23 +240,23 @@ class SurahQamarApp {
       container.innerHTML = `
         <span class="legend-chip" style="background:${palette.raf.bg}; color:${palette.raf.text}; border-color:${palette.raf.border};">
           <span class="legend-dot" style="background:${palette.raf.color};"></span>
-          <strong>Raf' (الرفع / الضمة)</strong>: Actor, Subject, Primary Independent [Blue]
+          <strong>Raf' (الرفع / الضمة)</strong>: Actor, Subject, Primary Independent
         </span>
         <span class="legend-chip" style="background:${palette.nasb.bg}; color:${palette.nasb.text}; border-color:${palette.nasb.border};">
           <span class="legend-dot" style="background:${palette.nasb.color};"></span>
-          <strong>Nasb (النصب / الفتحة)</strong>: Direct Object, Circumstance, Dependent [Green]
+          <strong>Nasb (النصب / الفتحة)</strong>: Direct Object, Inna Subject, Dependent
         </span>
         <span class="legend-chip" style="background:${palette.jarr.bg}; color:${palette.jarr.text}; border-color:${palette.jarr.border};">
           <span class="legend-dot" style="background:${palette.jarr.color};"></span>
-          <strong>Jarr (الجر / الكسرة)</strong>: Preposition, Idafa Specifier [Purple]
+          <strong>Jarr (الجر / الكسرة)</strong>: Preposition, Oath Noun, Idafa Specifier
         </span>
         <span class="legend-chip" style="background:${palette.jazm.bg}; color:${palette.jazm.text}; border-color:${palette.jazm.border};">
           <span class="legend-dot" style="background:${palette.jazm.color};"></span>
-          <strong>Jazm (الجزم / السكون)</strong>: Command, Condition, Cutoff [Amber]
+          <strong>Jazm (الجزم / السكون)</strong>: Command, Condition, Cutoff
         </span>
         <span class="legend-chip" style="background:${palette.mabni.bg}; color:${palette.mabni.text}; border-color:${palette.mabni.border};">
           <span class="legend-dot" style="background:${palette.mabni.color};"></span>
-          <strong>Mabni (المبني)</strong>: Invariable Base (Past verbs, Particles) [Slate]
+          <strong>Mabni (المبني)</strong>: Invariable Base (Past verbs, Particles)
         </span>
       `;
     } else if (this.activeColorMode === 'pos') {
@@ -188,7 +272,34 @@ class SurahQamarApp {
         </span>
         <span class="legend-chip" style="background:${palette.harf.bg}; color:#92400e; border-color:#fde68a;">
           <span class="legend-dot" style="background:${palette.harf.color};"></span>
-          <strong>Harf (حرف)</strong>: Particle (Meaning depends on adjacent words)
+          <strong>Harf (حرف)</strong>: Particle (Prepositions, Conjunctions, Emphasis)
+        </span>
+      `;
+    } else if (this.activeColorMode === 'syntax') {
+      container.innerHTML = `
+        <span class="legend-chip" style="background:#f4ecf7; color:#6c3483; border-color:#d7bde2;">
+          <span class="legend-dot" style="background:#8e44ad;"></span>
+          <strong>Sworn Oaths (مقسم به)</strong>
+        </span>
+        <span class="legend-chip" style="background:#fef5e7; color:#b9770e; border-color:#f9e79f;">
+          <span class="legend-dot" style="background:#e67e22;"></span>
+          <strong>Subject of Inna (اسم إن)</strong>
+        </span>
+        <span class="legend-chip" style="background:#eafaf1; color:#1e8449; border-color:#a9dfbf;">
+          <span class="legend-dot" style="background:#27ae60;"></span>
+          <strong>Predicate of Inna (خبر إن)</strong>
+        </span>
+        <span class="legend-chip" style="background:#fbeee6; color:#a04000; border-color:#edbb99;">
+          <span class="legend-dot" style="background:#d35400;"></span>
+          <strong>Excepted Entity (مستثنى)</strong>
+        </span>
+        <span class="legend-chip" style="background:#e8f8f5; color:#117a65; border-color:#a3e4d7;">
+          <span class="legend-dot" style="background:#16a085;"></span>
+          <strong>Direct Object (مفعول به)</strong>
+        </span>
+        <span class="legend-chip" style="background:#fdedec; color:#922b21; border-color:#f5b7b1;">
+          <span class="legend-dot" style="background:#c0392b;"></span>
+          <strong>Form VI Reciprocal Verb (تفاعل)</strong>
         </span>
       `;
     } else if (this.activeColorMode === 'morpheme') {
@@ -233,15 +344,15 @@ class SurahQamarApp {
     if (this.searchQuery) {
       const q = this.searchQuery;
       filtered = filtered.filter(v => {
-        return v.text_uthmani.includes(q) ||
-               v.text_imlaei.includes(q) ||
-               v.translation.toLowerCase().includes(q) ||
+        return (v.text_uthmani && v.text_uthmani.includes(q)) ||
+               (v.text && v.text.uthmani && v.text.uthmani.includes(q)) ||
+               (v.translation && v.translation.toLowerCase().includes(q)) ||
                v.words.some(w => 
                  w.arabic_uthmani.includes(q) ||
-                 w.translation.toLowerCase().includes(q) ||
+                 (w.translation && w.translation.toLowerCase().includes(q)) ||
                  (w.sarf.root_ar && w.sarf.root_ar.includes(q)) ||
-                 (w.sarf.root && w.sarf.root.includes(q)) ||
-                 w.irab_and_case.why_this_ending.toLowerCase().includes(q)
+                 (w.sarf.root && typeof w.sarf.root === 'string' && w.sarf.root.includes(q)) ||
+                 (w.irab_and_case && w.irab_and_case.why_this_ending && w.irab_and_case.why_this_ending.toLowerCase().includes(q))
                );
       });
     }
@@ -271,14 +382,16 @@ class SurahQamarApp {
 
   renderVerseCard(v) {
     const wordsHtml = v.words.map(w => this.renderWordCard(w)).join('');
+    const verseText = v.text_uthmani || (v.text ? v.text.uthmani : '');
+    const themeColor = v.thematic_color || '#10b981';
 
     return `
       <article class="verse-card ${v.is_divine_refrain ? 'is-refrain' : ''}" id="verse-${v.ayah_number}">
         <div class="verse-header">
           <div class="verse-meta">
             <span class="ayah-badge">Ayah ${v.ayah_number}</span>
-            <span class="theme-pill" style="border-color:${v.thematic_color}; color:${v.thematic_color}; background:${v.thematic_color}10;">
-              ${v.thematic_section_title}
+            <span class="theme-pill" style="border-color:${themeColor}; color:${themeColor}; background:${themeColor}10;">
+              ${v.thematic_section_title || 'Sacred Text'}
             </span>
             ${v.is_divine_refrain ? `
               <span class="refrain-badge">
@@ -290,7 +403,7 @@ class SurahQamarApp {
 
         <div class="verse-body">
           <div class="verse-full-arabic">
-            «${v.text_uthmani}»
+            «${verseText}»
           </div>
 
           <div class="words-grid">
@@ -324,6 +437,51 @@ class SurahQamarApp {
       badgeBg = w.color_coding.pos_bg;
       badgeBorder = w.color_coding.pos_color;
       badgeColor = w.color_coding.pos_color;
+    } else if (this.activeColorMode === 'syntax') {
+      const role = w.irab_and_case.grammatical_role;
+      if (role.includes('muqsam_bihi')) {
+        wordColor = '#8e44ad';
+        badgeText = 'مقسم به (Oath)';
+        badgeBg = '#f4ecf7';
+        badgeBorder = '#8e44ad';
+        badgeColor = '#6c3483';
+      } else if (role.includes('ism_inna')) {
+        wordColor = '#e67e22';
+        badgeText = 'اسم إن (Subject)';
+        badgeBg = '#fef5e7';
+        badgeBorder = '#e67e22';
+        badgeColor = '#b9770e';
+      } else if (role.includes('khabar_inna') || role.includes('majroor_bi_fi')) {
+        wordColor = '#27ae60';
+        badgeText = 'خبر إن (Predicate)';
+        badgeBg = '#eafaf1';
+        badgeBorder = '#27ae60';
+        badgeColor = '#1e8449';
+      } else if (role.includes('mustathna')) {
+        wordColor = '#d35400';
+        badgeText = 'مستثنى (Excepted)';
+        badgeBg = '#fbeee6';
+        badgeBorder = '#d35400';
+        badgeColor = '#a04000';
+      } else if (role.includes('mafool_bihi')) {
+        wordColor = '#16a085';
+        badgeText = 'مفعول به (Object)';
+        badgeBg = '#e8f8f5';
+        badgeBorder = '#16a085';
+        badgeColor = '#117a65';
+      } else if (role.includes('reciprocal')) {
+        wordColor = '#c0392b';
+        badgeText = 'فعل تفاعلي (Form VI)';
+        badgeBg = '#fdedec';
+        badgeBorder = '#c0392b';
+        badgeColor = '#922b21';
+      } else {
+        wordColor = '#2980b9';
+        badgeText = 'صلة / عاطف';
+        badgeBg = '#ebf5fb';
+        badgeBorder = '#2980b9';
+        badgeColor = '#1f618d';
+      }
     } else if (this.activeColorMode === 'morpheme') {
       wordColor = '#2563eb';
       badgeText = `${w.lowest_level_breakdown.morphemes_count} morphemes`;
@@ -397,8 +555,107 @@ class SurahQamarApp {
       </tr>
     `).join('');
 
+    // Look for AI Explanation entry
+    const aiData = this.data.ai_explanations
+      ? this.data.ai_explanations.find(item => item.token_id === w.location)
+      : null;
+
+    let aiTutorHtml = '';
+    if (aiData) {
+      // Visual Syntax Tree Connections
+      const connectionsHtml = aiData.syntax_tree_connections ? aiData.syntax_tree_connections.map(c => `
+        <div class="syntax-connection-chip">
+          <span class="syntax-badge">${c.relation}</span>
+          <span>${c.node}</span>
+        </div>
+      `).join('') : '';
+
+      // Similar Quran Examples
+      const similarExamplesHtml = aiData.similar_quran_examples ? aiData.similar_quran_examples.map(ex => `
+        <div class="quran-example-card">
+          <div class="quran-example-meta">
+            <span>Surah ${ex.ayah}</span>
+          </div>
+          <div class="quran-example-ayah">${ex.text}</div>
+          <div class="quran-example-exp">${ex.explanation}</div>
+        </div>
+      `).join('') : '';
+
+      // Same Root Words
+      const sameRootHtml = aiData.same_root_words && aiData.same_root_words.length > 0 ? aiData.same_root_words.map(r => `
+        <span class="tag-pill">
+          <strong>${r.word}</strong>
+          <span>(${r.ayah}: ${r.meaning})</span>
+        </span>
+      `).join('') : '<span style="color:#64748b; font-size:0.85rem;">Non-inflected particle</span>';
+
+      // Same Pattern Words
+      const samePatternHtml = aiData.same_pattern_words && aiData.same_pattern_words.length > 0 ? aiData.same_pattern_words.map(p => `
+        <div style="font-size:0.85rem; color:#334155; margin-top:4px;">
+          <strong>Pattern ${p.pattern}:</strong>
+          <span class="tags-pills-row" style="display:inline-flex; margin-left:6px;">
+            ${p.words.map(pw => `<span class="tag-pill">${pw}</span>`).join('')}
+          </span>
+        </div>
+      `).join('') : '<span style="color:#64748b; font-size:0.85rem;">—</span>';
+
+      aiTutorHtml = `
+        <!-- AI Arabic Tutor Box -->
+        <div class="ai-tutor-box">
+          <div class="ai-tutor-header">
+            <div class="ai-tutor-title">
+              <span>🤖</span> AI Arabic Tutor
+            </div>
+            <div class="ai-level-tabs" id="ai-level-tabs">
+              <button class="ai-tab-btn active" data-level="beginner">🌱 Beginner</button>
+              <button class="ai-tab-btn" data-level="intermediate">📘 Intermediate</button>
+              <button class="ai-tab-btn" data-level="advanced">🔬 Advanced</button>
+            </div>
+          </div>
+          <div class="ai-explanation-content" id="modal-ai-content">
+            ${aiData.beginner.text}
+          </div>
+        </div>
+
+        <!-- Visual Syntax Tree Connections -->
+        ${connectionsHtml ? `
+          <div class="syntax-tree-box">
+            <div class="syntax-tree-title"><span>🌳</span> Visual Syntax Tree Connections</div>
+            <div class="syntax-connections-list">
+              ${connectionsHtml}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Similar Qur'an Examples -->
+        ${similarExamplesHtml ? `
+          <div class="syntax-tree-box" style="background:#ffffff;">
+            <div class="syntax-tree-title"><span>📖</span> Similar Qur'an Examples</div>
+            <div class="quran-cards-list">
+              ${similarExamplesHtml}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Same Root & Pattern Intelligence -->
+        <div class="syntax-tree-box" style="background:#ffffff;">
+          <div class="syntax-tree-title"><span>🌱</span> Words with Same Root in Qur'an</div>
+          <div class="tags-pills-row">
+            ${sameRootHtml}
+          </div>
+
+          <div class="syntax-tree-title" style="margin-top:14px;"><span>📐</span> Words on Same Pattern (Wazn)</div>
+          <div>
+            ${samePatternHtml}
+          </div>
+        </div>
+      `;
+    }
+
     modalBody.innerHTML = `
       ${audioBtn}
+
+      ${aiTutorHtml}
 
       <!-- Why This Ending Box (Golden Pedagogical Box) -->
       <div class="why-ending-box">
@@ -429,7 +686,7 @@ class SurahQamarApp {
         <div class="detail-card">
           <div class="detail-label">Root (الجذر)</div>
           <div class="detail-value">
-            ${w.sarf.root ? `<strong>${w.sarf.root}</strong> (${w.sarf.root_concept || ''})` : 'Uninflected / Non-triliteral'}
+            ${w.sarf.root ? `<strong>${typeof w.sarf.root === 'string' ? w.sarf.root : (w.sarf.root.normalized || '')}</strong>` : 'Uninflected / Non-triliteral'}
           </div>
         </div>
 
@@ -440,51 +697,6 @@ class SurahQamarApp {
           </div>
         </div>
       </div>
-
-      <!-- Extra Morphological Features -->
-      ${w.classification.primary_type === 'fi\'l' ? `
-        <div class="detail-grid">
-          <div class="detail-card">
-            <div class="detail-label">Verb Form (الباب)</div>
-            <div class="detail-value">${w.classification.details.form} (${w.classification.details.form_ar})</div>
-            <div style="font-size:0.75rem; color:#64748b; margin-top:2px;">${w.classification.details.form_meaning}</div>
-          </div>
-          <div class="detail-card">
-            <div class="detail-label">Tense & Voice (الزمن والبناء)</div>
-            <div class="detail-value">${w.classification.details.tense_ar} • ${w.classification.details.voice_ar}</div>
-          </div>
-          <div class="detail-card">
-            <div class="detail-label">Soundness (الصحة والاعتلال)</div>
-            <div class="detail-value">${w.classification.details.soundness_ar}</div>
-          </div>
-        </div>
-      ` : ''}
-
-      ${w.classification.primary_type === 'ism' ? `
-        <div class="detail-grid">
-          <div class="detail-card">
-            <div class="detail-label">Noun Derivation (الاشتقاق)</div>
-            <div class="detail-value">${w.classification.details.derivation_ar || w.classification.details.derivation}</div>
-          </div>
-          <div class="detail-card">
-            <div class="detail-label">Gender & Number</div>
-            <div class="detail-value">${w.classification.details.gender} • ${w.classification.details.number}</div>
-            <div style="font-size:0.75rem; color:#64748b; margin-top:2px;">Marker: ${w.classification.details.gender_marker}</div>
-          </div>
-          <div class="detail-card">
-            <div class="detail-label">Agreement Rule</div>
-            <div class="detail-value" style="${w.classification.details.is_non_human_plural ? 'color:#dc2626;' : ''}">
-              ${w.classification.details.agreement_rule || 'Standard agreement'}
-            </div>
-          </div>
-        </div>
-      ` : ''}
-
-      ${w.irab_and_case.idafa.role !== 'none' ? `
-        <div style="background:#f1f5f9; padding:12px; border-radius:6px; font-size:0.85rem; color:#334155; border-left:4px solid #7c3aed;">
-          <strong>Idafa Construction (إضافة):</strong> ${w.irab_and_case.idafa.notes}
-        </div>
-      ` : ''}
 
       <!-- Lowest Level Morpheme Table -->
       <div>
@@ -508,6 +720,22 @@ class SurahQamarApp {
       </div>
     `;
 
+    // Tab level switcher logic
+    if (aiData) {
+      const tabBtns = modalBody.querySelectorAll('.ai-tab-btn');
+      const contentBox = document.getElementById('modal-ai-content');
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const level = btn.dataset.level;
+          if (contentBox && aiData[level]) {
+            contentBox.textContent = aiData[level].text;
+          }
+        });
+      });
+    }
+
     // Audio listener
     const playAudioBtn = document.getElementById('play-modal-audio-btn');
     if (playAudioBtn && w.audio_url) {
@@ -530,36 +758,12 @@ class SurahQamarApp {
     container.innerHTML = `
       <div class="pedagogy-section">
         <h3><span>1.</span> The Trilateral Classification (ثلاثية الكلمة: اسم / فعل / حرف)</h3>
-        <p><strong>Ism (اسم):</strong> ${framework.trilateral_word_classification.ism}</p>
-        <p><strong>Fi'l (فعل):</strong> ${framework.trilateral_word_classification.fil}</p>
-        <p><strong>Harf (حرف):</strong> ${framework.trilateral_word_classification.harf}</p>
+        <p>${framework.trilateral_word_classification ? (framework.trilateral_word_classification.ism || JSON.stringify(framework.trilateral_word_classification)) : 'Encompasses nouns, verbs, and particles.'}</p>
       </div>
 
       <div class="pedagogy-section">
-        <h3><span>2.</span> Case Endings & Vowel Marking (أسرار حركات الإعراب)</h3>
-        <p><strong style="color:var(--raf-blue);">Dhumma / Raf' (الرفع / الضمة):</strong> ${framework.case_endings_irab_rationale.dhumma_raf}</p>
-        <p><strong style="color:var(--nasb-green);">Fatha / Nasb (النصب / الفتحة):</strong> ${framework.case_endings_irab_rationale.fatha_nasb}</p>
-        <p><strong style="color:var(--jarr-purple);">Kasra / Jarr (الجر / الكسرة):</strong> ${framework.case_endings_irab_rationale.kasra_jarr}</p>
-        <p><strong style="color:var(--jazm-amber);">Sukun / Jazm (الجزم / السكون):</strong> ${framework.case_endings_irab_rationale.sukun_jazm}</p>
-      </div>
-
-      <div class="pedagogy-section">
-        <h3><span>3.</span> The Idafa Construction (قواعد الإضافة)</h3>
-        <p><strong>Mudhaf (المضاف):</strong> ${framework.idafa_construction_rules.mudhaf}</p>
-        <p><strong>Mudhaf Ilayhi (المضاف إليه):</strong> ${framework.idafa_construction_rules.mudhaf_ilayhi}</p>
-      </div>
-
-      <div class="pedagogy-section">
-        <h3><span>4.</span> Non-Human Plurals Agreement (قاعدة جمع غير العاقل)</h3>
-        <p><strong>Golden Rule:</strong> ${framework.gender_number_agreement_and_non_human_plurals.golden_rule}</p>
-        <p><strong>Broken Plurals (جموع التكسير):</strong> ${framework.gender_number_agreement_and_non_human_plurals.broken_plurals}</p>
-      </div>
-
-      <div class="pedagogy-section">
-        <h3><span>5.</span> Eleven-Step Systematic Morphology Sequence</h3>
-        <ol>
-          ${framework.eleven_step_sarf_progression.map(step => `<li>${step}</li>`).join('')}
-        </ol>
+        <h3><span>2.</span> Surah Architectural Thesis (الأطروحة التربوية للسورة)</h3>
+        <p>${framework.core_surah_thesis || framework.historical_maxim || 'A concise constitution of human deliverance.'}</p>
       </div>
     `;
   }
@@ -567,5 +771,5 @@ class SurahQamarApp {
 
 // Instantiate on load
 document.addEventListener('DOMContentLoaded', () => {
-  window.qamarApp = new SurahQamarApp();
+  window.quranApp = new QuranGrammarApp();
 });

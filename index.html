@@ -14,13 +14,17 @@
   <header class="app-header">
     <div class="header-container">
       <div class="brand">
-        <div class="brand-icon">🌙</div>
+        <div class="brand-icon" id="brand-icon">⏳</div>
         <div class="brand-titles">
-          <h1>Surah Al-Qamar <span class="arabic-title">سورة القمر</span></h1>
-          <p class="subtitle">Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I'rab color coding</p>
+          <h1 id="brand-title">Surah Al-Asr <span class="arabic-title" id="brand-title-ar">سورة العصر</span></h1>
+          <p class="subtitle" id="brand-subtitle">Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Root Intelligence</p>
         </div>
       </div>
       <div class="header-actions">
+        <select id="surah-select" class="surah-select" title="Switch Surah">
+          <option value="surah-al-asr.json" selected>Surah Al-Asr (103) — AI Tutor</option>
+          <option value="surah-al-qamar.json">Surah Al-Qamar (54)</option>
+        </select>
         <button class="btn btn-outline" id="open-pedagogy-btn">
           <span class="btn-icon">📖</span> Grammar Guide
         </button>
@@ -35,27 +39,27 @@
   <section class="stats-bar">
     <div class="stats-container">
       <div class="stat-item">
-        <span class="stat-number">55</span>
+        <span class="stat-number" id="stat-ayahs">3</span>
         <span class="stat-label">Ayahs (Verses)</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-number">342</span>
+        <span class="stat-number" id="stat-words">14</span>
         <span class="stat-label">Words Analyzed</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-number">579</span>
+        <span class="stat-number" id="stat-morphemes">32</span>
         <span class="stat-label">Lowest-Level Morphemes</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-number">140</span>
+        <span class="stat-number" id="stat-roots">9</span>
         <span class="stat-label">Unique Triliteral Roots</span>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-number">4</span>
+      <div class="stat-divider" id="stat-refrains-divider" style="display:none;"></div>
+      <div class="stat-item" id="stat-refrains-item" style="display:none;">
+        <span class="stat-number" id="stat-refrains">4</span>
         <span class="stat-label">Divine Refrains (يَسَّرْنَا الْقُرْآنَ)</span>
       </div>
     </div>
@@ -73,6 +77,9 @@
           </button>
           <button class="segment" data-mode="pos">
             <span class="seg-icon">🏷️</span> Word Class (Ism / Fi'l / Harf)
+          </button>
+          <button class="segment" data-mode="syntax">
+            <span class="seg-icon">🌳</span> Syntax Roles
           </button>
           <button class="segment" data-mode="morpheme">
             <span class="seg-icon">🧩</span> Morpheme Tiers
@@ -173,7 +180,7 @@
       </div>
       <div class="footer-right">
         <div class="version-tag" id="footer-version-tag">
-          v1.0.2 (updated 2026-09-03 00:43)
+          v1.0.3 (updated 2026-09-03 00:48)
         </div>
         <div class="footer-links">
           <a href="#top">Back to top ↑</a>
