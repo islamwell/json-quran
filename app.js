@@ -1,6 +1,6 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.0.6 (updated 2026-09-03 01:15)
+ * Version: v1.0.7 (updated 2026-09-03 01:17)
  */
 
 class QuranGrammarApp {
@@ -15,11 +15,18 @@ class QuranGrammarApp {
     this.searchQuery = '';
     this.currentAudio = null;
     this.settings = {
+      // Arabic Typography
       fontFamily: 'me_quran',
       ayahFontSize: 2.15,
       wordFontSize: 1.55,
       lineHeight: 2.4,
-      scale: 1.0
+      arabicScale: 1.0,
+
+      // English Typography
+      englishTranslationSize: 0.95,
+      englishWordSize: 0.80,
+      englishNotesSize: 0.90,
+      englishScale: 1.0
     };
     this.loadSettings();
     this.applySettings();
@@ -338,7 +345,7 @@ class QuranGrammarApp {
 
   loadSettings() {
     try {
-      const saved = localStorage.getItem('quran_reader_settings');
+      const saved = localStorage.getItem('quran_reader_settings_v2');
       if (saved) {
         const parsed = JSON.parse(saved);
         this.settings = { ...this.settings, ...parsed };
@@ -350,7 +357,7 @@ class QuranGrammarApp {
 
   saveSettings() {
     try {
-      localStorage.setItem('quran_reader_settings', JSON.stringify(this.settings));
+      localStorage.setItem('quran_reader_settings_v2', JSON.stringify(this.settings));
     } catch (e) {
       console.warn('Could not save settings to localStorage', e);
     }
@@ -359,20 +366,37 @@ class QuranGrammarApp {
   applySettings() {
     const root = document.documentElement;
     const font = this.settings.fontFamily || 'me_quran';
-    const ayahSize = (this.settings.ayahFontSize * this.settings.scale).toFixed(2);
-    const wordSize = (this.settings.wordFontSize * this.settings.scale).toFixed(2);
+    const arScale = this.settings.arabicScale || 1.0;
+    const enScale = this.settings.englishScale || 1.0;
+
+    const ayahSize = (this.settings.ayahFontSize * arScale).toFixed(2);
+    const wordSize = (this.settings.wordFontSize * arScale).toFixed(2);
     const lineH = this.settings.lineHeight.toFixed(1);
+
+    const enTrans = (this.settings.englishTranslationSize * enScale).toFixed(2);
+    const enWord = (this.settings.englishWordSize * enScale).toFixed(2);
+    const enNotes = (this.settings.englishNotesSize * enScale).toFixed(2);
 
     // Apply CSS variables
     root.style.setProperty('--quran-font-family', `'${font}', 'UthmanicHafs', 'UthmanTN', 'Amiri Quran', serif`);
     root.style.setProperty('--ayah-font-size', `${ayahSize}rem`);
     root.style.setProperty('--word-font-size', `${wordSize}rem`);
     root.style.setProperty('--ayah-line-height', lineH);
+    root.style.setProperty('--arabic-scale', arScale);
 
-    // Update UI Elements
-    const quickDisplay = document.getElementById('quick-font-display');
-    if (quickDisplay) quickDisplay.textContent = `${Math.round(this.settings.scale * 100)}%`;
+    root.style.setProperty('--english-translation-size', `${enTrans}rem`);
+    root.style.setProperty('--english-word-size', `${enWord}rem`);
+    root.style.setProperty('--english-notes-size', `${enNotes}rem`);
+    root.style.setProperty('--english-scale', enScale);
 
+    // Update Quick Steppers Displays
+    const arDisplay = document.getElementById('quick-ar-display');
+    if (arDisplay) arDisplay.textContent = `${Math.round(arScale * 100)}%`;
+
+    const enDisplay = document.getElementById('quick-en-display');
+    if (enDisplay) enDisplay.textContent = `${Math.round(enScale * 100)}%`;
+
+    // Update Arabic Sliders & Badges
     const ayahVal = document.getElementById('ayah-size-val');
     if (ayahVal) ayahVal.textContent = `${ayahSize}rem`;
 
@@ -391,6 +415,26 @@ class QuranGrammarApp {
     const sliderLine = document.getElementById('slider-line-height');
     if (sliderLine) sliderLine.value = this.settings.lineHeight;
 
+    // Update English Sliders & Badges
+    const enTransVal = document.getElementById('en-translation-size-val');
+    if (enTransVal) enTransVal.textContent = `${enTrans}rem`;
+
+    const enWordVal = document.getElementById('en-word-size-val');
+    if (enWordVal) enWordVal.textContent = `${enWord}rem`;
+
+    const enNotesVal = document.getElementById('en-notes-size-val');
+    if (enNotesVal) enNotesVal.textContent = `${enNotes}rem`;
+
+    const sliderEnTrans = document.getElementById('slider-en-trans');
+    if (sliderEnTrans) sliderEnTrans.value = this.settings.englishTranslationSize;
+
+    const sliderEnWord = document.getElementById('slider-en-word');
+    if (sliderEnWord) sliderEnWord.value = this.settings.englishWordSize;
+
+    const sliderEnNotes = document.getElementById('slider-en-notes');
+    if (sliderEnNotes) sliderEnNotes.value = this.settings.englishNotesSize;
+
+    // Update Font Badge
     const fontBadge = document.getElementById('current-font-name');
     const fontNames = {
       'me_quran': 'Madina Othmani (Tanzil)',
@@ -400,22 +444,32 @@ class QuranGrammarApp {
     };
     if (fontBadge) fontBadge.textContent = fontNames[font] || font;
 
-    // Update active font cards
+    // Update Font Cards Active state
     document.querySelectorAll('.font-card').forEach(card => {
       card.classList.toggle('active', card.dataset.font === font);
     });
 
-    // Update live preview in modal
-    const preview = document.getElementById('settings-preview-text');
-    if (preview) {
-      preview.style.fontFamily = `'${font}', serif`;
-      preview.style.fontSize = `${ayahSize}rem`;
-      preview.style.lineHeight = lineH;
+    // Update Live Dual Preview in Modal
+    const previewAr = document.getElementById('settings-preview-ar');
+    if (previewAr) {
+      previewAr.style.fontFamily = `'${font}', serif`;
+      previewAr.style.fontSize = `${ayahSize}rem`;
+      previewAr.style.lineHeight = lineH;
+    }
+
+    const previewTranslit = document.getElementById('settings-preview-translit');
+    if (previewTranslit) {
+      previewTranslit.style.fontSize = `${enWord}rem`;
+    }
+
+    const previewEn = document.getElementById('settings-preview-en');
+    if (previewEn) {
+      previewEn.style.fontSize = `${enTrans}rem`;
     }
   }
 
   setupSettingsListeners() {
-    // Open/Close Settings Modal
+    // Open/Close Modal
     const openBtn = document.getElementById('open-settings-btn');
     const closeBtn = document.getElementById('settings-close-btn');
     const saveBtn = document.getElementById('save-settings-btn');
@@ -440,7 +494,29 @@ class QuranGrammarApp {
       });
     }
 
-    // Font card selection
+    // Tab Switching (Arabic vs English)
+    const tabBtnAr = document.getElementById('tab-btn-ar');
+    const tabBtnEn = document.getElementById('tab-btn-en');
+    const panelAr = document.getElementById('settings-panel-ar');
+    const panelEn = document.getElementById('settings-panel-en');
+
+    if (tabBtnAr && tabBtnEn && panelAr && panelEn) {
+      tabBtnAr.addEventListener('click', () => {
+        tabBtnAr.classList.add('active');
+        tabBtnEn.classList.remove('active');
+        panelAr.style.display = 'block';
+        panelEn.style.display = 'none';
+      });
+
+      tabBtnEn.addEventListener('click', () => {
+        tabBtnEn.classList.add('active');
+        tabBtnAr.classList.remove('active');
+        panelEn.style.display = 'block';
+        panelAr.style.display = 'none';
+      });
+    }
+
+    // Font Face Selection
     document.querySelectorAll('.font-card').forEach(card => {
       card.addEventListener('click', () => {
         this.settings.fontFamily = card.dataset.font;
@@ -449,29 +525,51 @@ class QuranGrammarApp {
       });
     });
 
-    // Quick Stepper (A- / A+)
-    const quickDec = document.getElementById('quick-dec-font');
-    const quickInc = document.getElementById('quick-inc-font');
-    if (quickDec) {
-      quickDec.addEventListener('click', () => {
-        if (this.settings.scale > 0.7) {
-          this.settings.scale = Math.max(0.7, parseFloat((this.settings.scale - 0.1).toFixed(2)));
+    // 1. Quick Stepper — Arabic (عربي)
+    const quickDecAr = document.getElementById('quick-dec-ar');
+    const quickIncAr = document.getElementById('quick-inc-ar');
+    if (quickDecAr) {
+      quickDecAr.addEventListener('click', () => {
+        if (this.settings.arabicScale > 0.7) {
+          this.settings.arabicScale = Math.max(0.7, parseFloat((this.settings.arabicScale - 0.1).toFixed(2)));
           this.saveSettings();
           this.applySettings();
         }
       });
     }
-    if (quickInc) {
-      quickInc.addEventListener('click', () => {
-        if (this.settings.scale < 1.8) {
-          this.settings.scale = Math.min(1.8, parseFloat((this.settings.scale + 0.1).toFixed(2)));
+    if (quickIncAr) {
+      quickIncAr.addEventListener('click', () => {
+        if (this.settings.arabicScale < 1.8) {
+          this.settings.arabicScale = Math.min(1.8, parseFloat((this.settings.arabicScale + 0.1).toFixed(2)));
           this.saveSettings();
           this.applySettings();
         }
       });
     }
 
-    // Sliders
+    // 2. Quick Stepper — English (EN)
+    const quickDecEn = document.getElementById('quick-dec-en');
+    const quickIncEn = document.getElementById('quick-inc-en');
+    if (quickDecEn) {
+      quickDecEn.addEventListener('click', () => {
+        if (this.settings.englishScale > 0.7) {
+          this.settings.englishScale = Math.max(0.7, parseFloat((this.settings.englishScale - 0.1).toFixed(2)));
+          this.saveSettings();
+          this.applySettings();
+        }
+      });
+    }
+    if (quickIncEn) {
+      quickIncEn.addEventListener('click', () => {
+        if (this.settings.englishScale < 1.8) {
+          this.settings.englishScale = Math.min(1.8, parseFloat((this.settings.englishScale + 0.1).toFixed(2)));
+          this.saveSettings();
+          this.applySettings();
+        }
+      });
+    }
+
+    // Arabic Sliders
     const sliderAyah = document.getElementById('slider-ayah-size');
     if (sliderAyah) {
       sliderAyah.addEventListener('input', (e) => {
@@ -499,7 +597,7 @@ class QuranGrammarApp {
       });
     }
 
-    // Individual Slider Steppers (- / +)
+    // Arabic Steppers (- / +)
     const btnDecAyah = document.getElementById('btn-dec-ayah');
     const btnIncAyah = document.getElementById('btn-inc-ayah');
     if (btnDecAyah && sliderAyah) {
@@ -551,35 +649,143 @@ class QuranGrammarApp {
       });
     }
 
-    // Presets
+    // English Sliders
+    const sliderEnTrans = document.getElementById('slider-en-trans');
+    if (sliderEnTrans) {
+      sliderEnTrans.addEventListener('input', (e) => {
+        this.settings.englishTranslationSize = parseFloat(e.target.value);
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const sliderEnWord = document.getElementById('slider-en-word');
+    if (sliderEnWord) {
+      sliderEnWord.addEventListener('input', (e) => {
+        this.settings.englishWordSize = parseFloat(e.target.value);
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const sliderEnNotes = document.getElementById('slider-en-notes');
+    if (sliderEnNotes) {
+      sliderEnNotes.addEventListener('input', (e) => {
+        this.settings.englishNotesSize = parseFloat(e.target.value);
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    // English Steppers (- / +)
+    const btnDecEnTrans = document.getElementById('btn-dec-en-trans');
+    const btnIncEnTrans = document.getElementById('btn-inc-en-trans');
+    if (btnDecEnTrans && sliderEnTrans) {
+      btnDecEnTrans.addEventListener('click', () => {
+        this.settings.englishTranslationSize = Math.max(0.75, parseFloat((this.settings.englishTranslationSize - 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+    if (btnIncEnTrans && sliderEnTrans) {
+      btnIncEnTrans.addEventListener('click', () => {
+        this.settings.englishTranslationSize = Math.min(1.6, parseFloat((this.settings.englishTranslationSize + 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const btnDecEnWord = document.getElementById('btn-dec-en-word');
+    const btnIncEnWord = document.getElementById('btn-inc-en-word');
+    if (btnDecEnWord && sliderEnWord) {
+      btnDecEnWord.addEventListener('click', () => {
+        this.settings.englishWordSize = Math.max(0.65, parseFloat((this.settings.englishWordSize - 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+    if (btnIncEnWord && sliderEnWord) {
+      btnIncEnWord.addEventListener('click', () => {
+        this.settings.englishWordSize = Math.min(1.3, parseFloat((this.settings.englishWordSize + 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    const btnDecEnNotes = document.getElementById('btn-dec-en-notes');
+    const btnIncEnNotes = document.getElementById('btn-inc-en-notes');
+    if (btnDecEnNotes && sliderEnNotes) {
+      btnDecEnNotes.addEventListener('click', () => {
+        this.settings.englishNotesSize = Math.max(0.75, parseFloat((this.settings.englishNotesSize - 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+    if (btnIncEnNotes && sliderEnNotes) {
+      btnIncEnNotes.addEventListener('click', () => {
+        this.settings.englishNotesSize = Math.min(1.4, parseFloat((this.settings.englishNotesSize + 0.05).toFixed(2)));
+        this.saveSettings();
+        this.applySettings();
+      });
+    }
+
+    // Presets (Arabic and English)
     document.querySelectorAll('.preset-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        const type = btn.dataset.type; // 'ar' or 'en'
         const preset = btn.dataset.preset;
-        if (preset === 'compact') {
-          this.settings.scale = 0.8;
-          this.settings.ayahFontSize = 1.85;
-          this.settings.wordFontSize = 1.35;
-        } else if (preset === 'normal') {
-          this.settings.scale = 1.0;
-          this.settings.ayahFontSize = 2.15;
-          this.settings.wordFontSize = 1.55;
-        } else if (preset === 'large') {
-          this.settings.scale = 1.25;
-          this.settings.ayahFontSize = 2.45;
-          this.settings.wordFontSize = 1.75;
-        } else if (preset === 'xlarge') {
-          this.settings.scale = 1.5;
-          this.settings.ayahFontSize = 2.75;
-          this.settings.wordFontSize = 1.95;
+
+        document.querySelectorAll(`.preset-btn[data-type="${type}"]`).forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (type === 'ar') {
+          if (preset === 'compact') {
+            this.settings.arabicScale = 0.8;
+            this.settings.ayahFontSize = 1.85;
+            this.settings.wordFontSize = 1.35;
+          } else if (preset === 'normal') {
+            this.settings.arabicScale = 1.0;
+            this.settings.ayahFontSize = 2.15;
+            this.settings.wordFontSize = 1.55;
+          } else if (preset === 'large') {
+            this.settings.arabicScale = 1.2;
+            this.settings.ayahFontSize = 2.45;
+            this.settings.wordFontSize = 1.75;
+          } else if (preset === 'xlarge') {
+            this.settings.arabicScale = 1.4;
+            this.settings.ayahFontSize = 2.75;
+            this.settings.wordFontSize = 1.95;
+          }
+        } else if (type === 'en') {
+          if (preset === 'compact') {
+            this.settings.englishScale = 0.8;
+            this.settings.englishTranslationSize = 0.85;
+            this.settings.englishWordSize = 0.70;
+            this.settings.englishNotesSize = 0.80;
+          } else if (preset === 'normal') {
+            this.settings.englishScale = 1.0;
+            this.settings.englishTranslationSize = 0.95;
+            this.settings.englishWordSize = 0.80;
+            this.settings.englishNotesSize = 0.90;
+          } else if (preset === 'large') {
+            this.settings.englishScale = 1.2;
+            this.settings.englishTranslationSize = 1.15;
+            this.settings.englishWordSize = 0.95;
+            this.settings.englishNotesSize = 1.05;
+          } else if (preset === 'xlarge') {
+            this.settings.englishScale = 1.4;
+            this.settings.englishTranslationSize = 1.35;
+            this.settings.englishWordSize = 1.10;
+            this.settings.englishNotesSize = 1.20;
+          }
         }
+
         this.saveSettings();
         this.applySettings();
       });
     });
 
-    // Reset settings
+    // Reset All Defaults
     const resetBtn = document.getElementById('reset-settings-btn');
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
@@ -588,7 +794,11 @@ class QuranGrammarApp {
           ayahFontSize: 2.15,
           wordFontSize: 1.55,
           lineHeight: 2.4,
-          scale: 1.0
+          arabicScale: 1.0,
+          englishTranslationSize: 0.95,
+          englishWordSize: 0.80,
+          englishNotesSize: 0.90,
+          englishScale: 1.0
         };
         this.saveSettings();
         this.applySettings();

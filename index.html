@@ -128,10 +128,20 @@
             <option value="mabni">Mabni (Fixed Base)</option>
           </select>
 
-                    <div class="quick-font-controls" title="Quick Adjust Arabic Font Size">
-            <button class="font-stepper-btn" id="quick-dec-font" title="Decrease Font Size (A-)">A-</button>
-            <span class="font-stepper-display" id="quick-font-display">100%</span>
-            <button class="font-stepper-btn" id="quick-inc-font" title="Increase Font Size (A+)">A+</button>
+          <!-- Arabic Font Size Quick Stepper -->
+          <div class="quick-font-controls" title="Quick Adjust Arabic Quranic Font Size">
+            <span class="font-stepper-label">عربي</span>
+            <button class="font-stepper-btn" id="quick-dec-ar" title="Decrease Arabic Size (A-)">A-</button>
+            <span class="font-stepper-display" id="quick-ar-display">100%</span>
+            <button class="font-stepper-btn" id="quick-inc-ar" title="Increase Arabic Size (A+)">A+</button>
+          </div>
+
+          <!-- English Translation & Transliteration Quick Stepper -->
+          <div class="quick-font-controls" title="Quick Adjust English Translation & Notes Font Size">
+            <span class="font-stepper-label">EN</span>
+            <button class="font-stepper-btn" id="quick-dec-en" title="Decrease English Size (A-)">A-</button>
+            <span class="font-stepper-display" id="quick-en-display">100%</span>
+            <button class="font-stepper-btn" id="quick-inc-en" title="Increase English Size (A+)">A+</button>
           </div>
           <button class="btn btn-sm btn-ghost" id="reset-filters-btn">Reset Filters</button>
         </div>
@@ -194,122 +204,196 @@
       </div>
       <div class="modal-body">
         
-        <!-- Live Preview Box -->
+        <!-- Tab Switcher: Arabic vs English -->
+        <div class="settings-tab-bar">
+          <button class="settings-tab-btn active" id="tab-btn-ar" data-tab="ar">
+            <span>🇸🇦</span> Arabic Typography (العربية)
+          </button>
+          <button class="settings-tab-btn" id="tab-btn-en" data-tab="en">
+            <span>🇬🇧</span> English Translation & Notes (الإنجليزية)
+          </button>
+        </div>
+
+        <!-- Live Dual Preview Box -->
         <div class="settings-preview-box">
-          <div class="settings-preview-label">Live Typography Preview (معاينة الخط)</div>
-          <div class="settings-preview-text" id="settings-preview-text">
+          <div class="settings-preview-label">Live Typography Preview (معاينة حية للنص والترجمة)</div>
+          <div class="settings-preview-text" id="settings-preview-ar">
             « ٱقْتَرَبَتِ ٱلسَّاعَةُ وَٱنشَقَّ ٱلْقَمَرُ »
           </div>
-        </div>
-
-        <!-- Font Family Selector -->
-        <div class="settings-section">
-          <div class="settings-section-title">
-            <span>🔤 Quranic Font Typeface</span>
-            <span class="settings-badge" id="current-font-name">Madina Othmani</span>
+          <div style="font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 6px;" id="settings-preview-translit">
+            iq'tarabati l-sā'atu wa-nshaqqa l-qamaru
           </div>
-          <div class="font-cards-grid">
-            <div class="font-card active" data-font="me_quran">
-              <div class="font-card-header">
-                <span class="font-card-title">Madina Othmani</span>
-                <span class="font-card-tag">Tanzil.net</span>
-              </div>
-              <div class="font-card-sample" style="font-family: 'me_quran', serif;">
-                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
-              </div>
-              <small style="font-size: 0.72rem; color: #64748b;">Authentic Tanzil Medina Mushaf with sequential tanweens</small>
-            </div>
-
-            <div class="font-card" data-font="UthmanicHafs">
-              <div class="font-card-header">
-                <span class="font-card-title">Madina Mushaf</span>
-                <span class="font-card-tag">KFGQPC</span>
-              </div>
-              <div class="font-card-sample" style="font-family: 'UthmanicHafs', serif;">
-                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
-              </div>
-              <small style="font-size: 0.72rem; color: #64748b;">King Fahd Glorious Quran Printing Complex official font</small>
-            </div>
-
-            <div class="font-card" data-font="UthmanTN">
-              <div class="font-card-header">
-                <span class="font-card-title">Uthman Taha Naskh</span>
-                <span class="font-card-tag">Classical</span>
-              </div>
-              <div class="font-card-sample" style="font-family: 'UthmanTN', serif;">
-                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
-              </div>
-              <small style="font-size: 0.72rem; color: #64748b;">Classical calligraphic Naskh script by Uthman Taha</small>
-            </div>
-
-            <div class="font-card" data-font="Amiri Quran">
-              <div class="font-card-header">
-                <span class="font-card-title">Amiri Quran</span>
-                <span class="font-card-tag">Web Font</span>
-              </div>
-              <div class="font-card-sample" style="font-family: 'Amiri Quran', serif;">
-                بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
-              </div>
-              <small style="font-size: 0.72rem; color: #64748b;">Bulaq Press revival typeface with broad digital compatibility</small>
-            </div>
+          <div style="font-size: 0.95rem; color: #334155; margin-top: 6px; font-weight: 500;" id="settings-preview-en">
+            "The Hour has come near, and the moon has split."
           </div>
         </div>
 
-        <!-- Quick Size Presets -->
-        <div class="settings-section">
-          <div class="settings-section-title">
-            <span>⚡ Size Presets</span>
+        <!-- PANEL 1: ARABIC SETTINGS -->
+        <div id="settings-panel-ar">
+          <!-- Font Family Selector -->
+          <div class="settings-section">
+            <div class="settings-section-title">
+              <span>🔤 Quranic Font Typeface</span>
+              <span class="settings-badge" id="current-font-name">Madina Othmani</span>
+            </div>
+            <div class="font-cards-grid">
+              <div class="font-card active" data-font="me_quran">
+                <div class="font-card-header">
+                  <span class="font-card-title">Madina Othmani</span>
+                  <span class="font-card-tag">Tanzil.net</span>
+                </div>
+                <div class="font-card-sample" style="font-family: 'me_quran', serif;">
+                  بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                </div>
+                <small style="font-size: 0.72rem; color: #64748b;">Authentic Tanzil Medina Mushaf with sequential tanweens</small>
+              </div>
+
+              <div class="font-card" data-font="UthmanicHafs">
+                <div class="font-card-header">
+                  <span class="font-card-title">Madina Mushaf</span>
+                  <span class="font-card-tag">KFGQPC</span>
+                </div>
+                <div class="font-card-sample" style="font-family: 'UthmanicHafs', serif;">
+                  بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                </div>
+                <small style="font-size: 0.72rem; color: #64748b;">King Fahd Glorious Quran Printing Complex official font</small>
+              </div>
+
+              <div class="font-card" data-font="UthmanTN">
+                <div class="font-card-header">
+                  <span class="font-card-title">Uthman Taha Naskh</span>
+                  <span class="font-card-tag">Classical</span>
+                </div>
+                <div class="font-card-sample" style="font-family: 'UthmanTN', serif;">
+                  بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                </div>
+                <small style="font-size: 0.72rem; color: #64748b;">Classical calligraphic Naskh script by Uthman Taha</small>
+              </div>
+
+              <div class="font-card" data-font="Amiri Quran">
+                <div class="font-card-header">
+                  <span class="font-card-title">Amiri Quran</span>
+                  <span class="font-card-tag">Web Font</span>
+                </div>
+                <div class="font-card-sample" style="font-family: 'Amiri Quran', serif;">
+                  بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                </div>
+                <small style="font-size: 0.72rem; color: #64748b;">Bulaq Press revival typeface with broad digital compatibility</small>
+              </div>
+            </div>
           </div>
-          <div class="presets-row">
-            <button class="preset-btn" data-preset="compact">Compact (80%)</button>
-            <button class="preset-btn active" data-preset="normal">Default (100%)</button>
-            <button class="preset-btn" data-preset="large">Large (125%)</button>
-            <button class="preset-btn" data-preset="xlarge">Extra Large (150%)</button>
+
+          <!-- Arabic Size Presets -->
+          <div class="settings-section">
+            <div class="settings-section-title">
+              <span>⚡ Arabic Size Presets</span>
+            </div>
+            <div class="presets-row">
+              <button class="preset-btn" data-type="ar" data-preset="compact">Compact (80%)</button>
+              <button class="preset-btn active" data-type="ar" data-preset="normal">Default (100%)</button>
+              <button class="preset-btn" data-type="ar" data-preset="large">Large (120%)</button>
+              <button class="preset-btn" data-type="ar" data-preset="xlarge">Extra Large (140%)</button>
+            </div>
+          </div>
+
+          <!-- Arabic Sliders -->
+          <div class="settings-section">
+            <div class="slider-control-group">
+              <div class="slider-label-row">
+                <span>Full Ayah Arabic Size (حجم خط الآية)</span>
+                <span class="slider-val-badge" id="ayah-size-val">2.15rem</span>
+              </div>
+              <div class="range-slider-wrap">
+                <button class="range-stepper-btn" id="btn-dec-ayah">-</button>
+                <input type="range" class="range-slider" id="slider-ayah-size" min="1.4" max="3.4" step="0.05" value="2.15">
+                <button class="range-stepper-btn" id="btn-inc-ayah">+</button>
+              </div>
+            </div>
+
+            <div class="slider-control-group">
+              <div class="slider-label-row">
+                <span>Word Card Arabic Size (حجم خط الكلمات)</span>
+                <span class="slider-val-badge" id="word-size-val">1.55rem</span>
+              </div>
+              <div class="range-slider-wrap">
+                <button class="range-stepper-btn" id="btn-dec-word">-</button>
+                <input type="range" class="range-slider" id="slider-word-size" min="1.1" max="2.5" step="0.05" value="1.55">
+                <button class="range-stepper-btn" id="btn-inc-word">+</button>
+              </div>
+            </div>
+
+            <div class="slider-control-group">
+              <div class="slider-label-row">
+                <span>Arabic Line Spacing & Tashkeel Headroom (تباعد الأسطر)</span>
+                <span class="slider-val-badge" id="line-height-val">2.4</span>
+              </div>
+              <div class="range-slider-wrap">
+                <button class="range-stepper-btn" id="btn-dec-line">-</button>
+                <input type="range" class="range-slider" id="slider-line-height" min="1.8" max="3.4" step="0.1" value="2.4">
+                <button class="range-stepper-btn" id="btn-inc-line">+</button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Size Sliders -->
-        <div class="settings-section">
-          <div class="slider-control-group">
-            <div class="slider-label-row">
-              <span>Full Ayah Text Size (حجم خط الآية)</span>
-              <span class="slider-val-badge" id="ayah-size-val">2.15rem</span>
+        <!-- PANEL 2: ENGLISH SETTINGS -->
+        <div id="settings-panel-en" style="display: none;">
+          <!-- English Size Presets -->
+          <div class="settings-section">
+            <div class="settings-section-title">
+              <span>⚡ English Size Presets</span>
             </div>
-            <div class="range-slider-wrap">
-              <button class="range-stepper-btn" id="btn-dec-ayah">-</button>
-              <input type="range" class="range-slider" id="slider-ayah-size" min="1.4" max="3.4" step="0.05" value="2.15">
-              <button class="range-stepper-btn" id="btn-inc-ayah">+</button>
-            </div>
-          </div>
-
-          <div class="slider-control-group">
-            <div class="slider-label-row">
-              <span>Word Cards Arabic Size (حجم خط الكلمات)</span>
-              <span class="slider-val-badge" id="word-size-val">1.55rem</span>
-            </div>
-            <div class="range-slider-wrap">
-              <button class="range-stepper-btn" id="btn-dec-word">-</button>
-              <input type="range" class="range-slider" id="slider-word-size" min="1.1" max="2.5" step="0.05" value="1.55">
-              <button class="range-stepper-btn" id="btn-inc-word">+</button>
+            <div class="presets-row">
+              <button class="preset-btn" data-type="en" data-preset="compact">Compact (80%)</button>
+              <button class="preset-btn active" data-type="en" data-preset="normal">Default (100%)</button>
+              <button class="preset-btn" data-type="en" data-preset="large">Large (120%)</button>
+              <button class="preset-btn" data-type="en" data-preset="xlarge">Extra Large (140%)</button>
             </div>
           </div>
 
-          <div class="slider-control-group">
-            <div class="slider-label-row">
-              <span>Line Spacing (تباعد الأسطر)</span>
-              <span class="slider-val-badge" id="line-height-val">2.4</span>
+          <!-- English Sliders -->
+          <div class="settings-section">
+            <div class="slider-control-group">
+              <div class="slider-label-row">
+                <span>Verse English Translation (ترجمة الآية)</span>
+                <span class="slider-val-badge" id="en-translation-size-val">0.95rem</span>
+              </div>
+              <div class="range-slider-wrap">
+                <button class="range-stepper-btn" id="btn-dec-en-trans">-</button>
+                <input type="range" class="range-slider" id="slider-en-trans" min="0.75" max="1.6" step="0.05" value="0.95">
+                <button class="range-stepper-btn" id="btn-inc-en-trans">+</button>
+              </div>
             </div>
-            <div class="range-slider-wrap">
-              <button class="range-stepper-btn" id="btn-dec-line">-</button>
-              <input type="range" class="range-slider" id="slider-line-height" min="1.8" max="3.4" step="0.1" value="2.4">
-              <button class="range-stepper-btn" id="btn-inc-line">+</button>
+
+            <div class="slider-control-group">
+              <div class="slider-label-row">
+                <span>Word Meaning & Transliteration (معاني وبطاقات الكلمات)</span>
+                <span class="slider-val-badge" id="en-word-size-val">0.80rem</span>
+              </div>
+              <div class="range-slider-wrap">
+                <button class="range-stepper-btn" id="btn-dec-en-word">-</button>
+                <input type="range" class="range-slider" id="slider-en-word" min="0.65" max="1.3" step="0.05" value="0.80">
+                <button class="range-stepper-btn" id="btn-inc-en-word">+</button>
+              </div>
+            </div>
+
+            <div class="slider-control-group">
+              <div class="slider-label-row">
+                <span>Pedagogical Notes & "Why This Ending?" (الشروحات النحوية)</span>
+                <span class="slider-val-badge" id="en-notes-size-val">0.90rem</span>
+              </div>
+              <div class="range-slider-wrap">
+                <button class="range-stepper-btn" id="btn-dec-en-notes">-</button>
+                <input type="range" class="range-slider" id="slider-en-notes" min="0.75" max="1.4" step="0.05" value="0.90">
+                <button class="range-stepper-btn" id="btn-inc-en-notes">+</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Action Footer -->
         <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 8px;">
-          <button class="btn btn-sm btn-ghost" id="reset-settings-btn">Reset to Defaults</button>
+          <button class="btn btn-sm btn-ghost" id="reset-settings-btn">Reset All Defaults</button>
           <button class="btn btn-sm btn-primary" id="save-settings-btn">Done</button>
         </div>
       </div>
@@ -325,7 +409,7 @@
       </div>
       <div class="footer-right">
         <div class="version-tag" id="footer-version-tag">
-          v1.0.6 (updated 2026-09-03 01:15)
+          v1.0.7 (updated 2026-09-03 01:17)
         </div>
         <div class="footer-links">
           <a href="#top">Back to top ↑</a>

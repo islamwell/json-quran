@@ -89,12 +89,19 @@
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  /* Quranic Typography Tokens (Configurable via Settings Menu) */
+  /* Quranic Typography Tokens (Separate Arabic & English Controls) */
   --quran-font-family: 'me_quran', 'UthmanicHafs', 'UthmanTN', 'Amiri Quran', serif;
   --ayah-font-size: 2.15rem;
   --word-font-size: 1.55rem;
   --ayah-line-height: 2.4;
   --word-line-height: 1.6;
+  --arabic-scale: 1.0;
+
+  --english-translation-size: 0.95rem;
+  --english-word-size: 0.8rem;
+  --english-translit-size: 0.75rem;
+  --english-notes-size: 0.9rem;
+  --english-scale: 1.0;
 }
 
 * {
@@ -623,7 +630,7 @@ body {
 }
 
 .word-translit {
-  font-size: 0.75rem;
+  font-size: calc(var(--english-translit-size, 0.75rem) * var(--english-scale, 1.0));
   color: var(--text-muted);
   font-style: italic;
   margin-bottom: 4px;
@@ -631,7 +638,7 @@ body {
 }
 
 .word-meaning {
-  font-size: 0.8rem;
+  font-size: calc(var(--english-word-size, 0.8rem) * var(--english-scale, 1.0));
   font-weight: 600;
   color: #1e293b;
   text-align: center;
@@ -677,10 +684,10 @@ body {
   border-top: 1px solid var(--border-light);
   padding: 14px 24px;
   background: #fafafa;
-  font-size: 0.95rem;
+  font-size: calc(var(--english-translation-size, 0.95rem) * var(--english-scale, 1.0));
   color: #334155;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .translation-label {
@@ -804,7 +811,7 @@ body {
 }
 
 .why-ending-text {
-  font-size: 0.9rem;
+  font-size: calc(var(--english-notes-size, 0.9rem) * var(--english-scale, 1.0));
   color: #78350f;
   line-height: 1.55;
 }
@@ -1529,4 +1536,46 @@ body {
   line-height: var(--ayah-line-height);
   direction: rtl;
   color: #0f172a;
+}
+
+
+.font-stepper-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  padding: 0 4px;
+  letter-spacing: 0.04em;
+}
+
+.settings-tab-bar {
+  display: flex;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 14px;
+}
+
+.settings-tab-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.settings-tab-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: var(--shadow-sm);
 }

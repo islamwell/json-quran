@@ -10,12 +10,12 @@
     "total_verses": 55,
     "total_words": 342,
     "total_morphemes": 584,
-    "version": "1.0.6",
-    "updated_at": "2026-09-03 01:15",
+    "version": "1.0.7",
+    "updated_at": "2026-09-03 01:17",
     "compiler": "Antigravity Arabic Grammar Intelligence System",
     "guideline_basis": "Arabic grammar teaching system: A comprehensive guide to classification, morphology, pedagogy, and i'rab vowel color-coding",
     "license": "Open Data for Quranic Education (incorporating Quranic Arabic Corpus annotations by Kais Dukes under GPL)",
-    "footer_version": "v1.0.6 (updated 2026-09-03 01:15)"
+    "footer_version": "v1.0.7 (updated 2026-09-03 01:17)"
   },
   "color_coding_system": {
     "description": "Pedagogical color-coding matrix mapping phonetic vowels, grammatical cases (i'rab), word classes (ism/fi'l/harf), and morpheme tiers to visual color tokens.",
