@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'SIQ_icomoon';
+    src:    url('/wp-content/plugins/searchiq/assets/5.1/fonts/SIQ_icomoon.eot');
+    src:    url('/wp-content/plugins/searchiq/assets/5.1/fonts/SIQ_icomoon.eot') format('embedded-opentype'),
+        url('/wp-content/plugins/searchiq/assets/5.1/fonts/SIQ_icomoon.ttf') format('truetype'),
+        url('/wp-content/plugins/searchiq/assets/5.1/fonts/SIQ_icomoon.woff') format('woff'),
+        url('https://nq-international.com/wp-content/plugins/searchiq/assets/5.1/fonts/SIQ_icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -542,16 +542,7 @@ class WPStaticConverter:
             f.write(content)
         self.log("Created Cloudflare Pages _headers file.", "🛡️")
 
-        # Generate _routes.json for Cloudflare Pages (Scenario B)
-        routes_file = os.path.join(self.output_dir, "_routes.json")
-        routes_content = {
-            "version": 1,
-            "include": ["/wp-content/uploads/*"],
-            "exclude": []
-        }
-        with open(routes_file, "w", encoding="utf-8") as f:
-            json.dump(routes_content, f, indent=2)
-        self.log("Created Cloudflare Pages _routes.json (Scenario B route config).", "🛣️")
+
 
         # Copy _worker.js into output_dir
         worker_src = os.path.join(os.path.dirname(__file__), "_worker.js")
