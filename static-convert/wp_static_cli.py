@@ -23,7 +23,7 @@ import urllib.error
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-VERSION = "1.0.2"
+VERSION = "1.0.4"
 
 # Default extensions to keep remote (not downloaded into Cloudflare Pages static bundle)
 DEFAULT_REMOTE_MEDIA_EXTENSIONS = {
@@ -360,63 +360,67 @@ class WPStaticConverter:
         if self.search_index_enabled:
             self.extract_search_record(html_content, current_page_url)
 
-        # 7. Process tags with src or href
-        def replace_tag_src_href(match):
-            tag = match.group(1)
-            attr = match.group(2)
-            quote = match.group(3)
-            val = match.group(4)
+        # 7. Process tags with src or href while PRESERVING all other attributes (rel, class, id, media, alt)
+        def replace_tag_element(tag_match):
+            full_tag = tag_match.group(0)
+            tag_name = tag_match.group(1).lower()
 
-            if val.startswith(("mailto:", "tel:", "javascript:", "#", "data:")):
-                return match.group(0)
+            def replace_attr_val(attr_match):
+                attr = attr_match.group(1)
+                quote = attr_match.group(2)
+                val = attr_match.group(3)
 
-            val_no_hash = val.split("#")[0]
-            fragment = "#" + val.split("#")[1] if "#" in val else ""
-            val_clean = val_no_hash.split("?")[0]
-            ext = self.get_extension(val_clean)
-            abs_url = urllib.parse.urljoin(current_page_url, val_no_hash)
+                if val.startswith(("mailto:", "tel:", "javascript:", "#", "data:")):
+                    return attr_match.group(0)
 
-            # CASE A: Media file (MP3, PPT, JPG, PNG, PDF) -> Point to remote origin
-            if self.is_remote_media(abs_url):
-                remote_media_url = self.rewrite_to_media_domain(abs_url)
-                return f'<{tag} {attr}={quote}{remote_media_url}{fragment}{quote}'
+                val_no_hash = val.split("#")[0]
+                fragment = "#" + val.split("#")[1] if "#" in val else ""
+                val_clean = val_no_hash.split("?")[0]
+                ext = self.get_extension(val_clean)
+                abs_url = urllib.parse.urljoin(current_page_url, val_no_hash)
 
-            # CASE B: Bundled static asset (CSS, JS, Fonts) -> Download and serve locally
-            if ext in BUNDLED_ASSET_EXTENSIONS:
-                if self.is_internal_url(abs_url):
-                    local_asset_url = self.download_and_localize_asset(abs_url)
-                    return f'<{tag} {attr}={quote}{local_asset_url}{fragment}{quote}'
-                return match.group(0)
-
-            # CASE C: Internal navigation links (<a href="...">)
-            if attr.lower() == "href" and tag.lower() == "a":
-                if self.is_internal_url(abs_url):
+                # Canonical link
+                if tag_name == "link" and 'rel="canonical"' in full_tag.lower():
+                    target_host = self.custom_domain or ""
                     parsed = urllib.parse.urlparse(abs_url)
-                    clean_path = parsed.path
-                    if self.base_path and clean_path.startswith(self.base_path):
-                        clean_path = clean_path[len(self.base_path):]
-                    if not clean_path.startswith("/"):
-                        clean_path = "/" + clean_path
+                    return f'{attr}={quote}{target_host}{parsed.path}{quote}'
 
-                    if clean_path != "/" and not clean_path.endswith((".html", ".xml", ".txt", ".json", "/")):
-                        clean_path += "/"
+                # CASE A: Media file (MP3, PPT, JPG, PNG, PDF) -> Point to remote origin
+                if self.is_remote_media(abs_url):
+                    remote_media_url = self.rewrite_to_media_domain(abs_url)
+                    return f'{attr}={quote}{remote_media_url}{fragment}{quote}'
 
-                    new_url = clean_path
-                    if parsed.query:
-                        new_url += f"?{parsed.query}"
-                    new_url += fragment
-                    return f'<{tag} {attr}={quote}{new_url}{quote}'
+                # CASE B: Bundled static asset (CSS, JS, Fonts) -> Download and serve locally
+                if ext in BUNDLED_ASSET_EXTENSIONS:
+                    if self.is_internal_url(abs_url):
+                        local_asset_url = self.download_and_localize_asset(abs_url)
+                        return f'{attr}={quote}{local_asset_url}{fragment}{quote}'
+                    return attr_match.group(0)
 
-            # CASE D: Canonical links
-            if tag.lower() == "link" and 'rel="canonical"' in match.group(0).lower():
-                target_host = self.custom_domain or ""
-                parsed = urllib.parse.urlparse(abs_url)
-                return f'<{tag} {attr}={quote}{target_host}{parsed.path}{quote}'
+                # CASE C: Internal navigation links (<a href="...">)
+                if attr.lower() == "href" and tag_name == "a":
+                    if self.is_internal_url(abs_url):
+                        parsed = urllib.parse.urlparse(abs_url)
+                        clean_path = parsed.path
+                        if self.base_path and clean_path.startswith(self.base_path):
+                            clean_path = clean_path[len(self.base_path):]
+                        if not clean_path.startswith("/"):
+                            clean_path = "/" + clean_path
 
-            return match.group(0)
+                        if clean_path != "/" and not clean_path.endswith((".html", ".xml", ".txt", ".json", "/")):
+                            clean_path += "/"
 
-        pattern = r'<([a-zA-Z0-9]+)\s+[^>]*?\b(src|href)=(["\'])(.*?)\3'
-        html_content = re.sub(pattern, replace_tag_src_href, html_content, flags=re.IGNORECASE)
+                        new_url = clean_path
+                        if parsed.query:
+                            new_url += f"?{parsed.query}"
+                        new_url += fragment
+                        return f'{attr}={quote}{new_url}{quote}'
+
+                return attr_match.group(0)
+
+            return re.sub(r'\b(src|href)=(["\'])(.*?)\2', replace_attr_val, full_tag, flags=re.IGNORECASE)
+
+        html_content = re.sub(r'<([a-zA-Z0-9]+)\b[^>]*>', replace_tag_element, html_content, flags=re.IGNORECASE)
 
         # 8. Rewrite srcset attributes for responsive images
         def replace_srcset(match):
