@@ -1,0 +1,13 @@
+# Cloudflare Pages Redirects & Rewrites (Option C)
+# 200 Rewrites proxy locally to ensure case-insensitive & Unicode routes match seamlessly
+/audios/emaaniyat-%d8%a7%db%8c%d9%85%d8%a7%d9%86%db%8c%d8%a7%d8%aa/* /audios/emaaniyat-%D8%A7%DB%8C%D9%85%D8%A7%D9%86%DB%8C%D8%A7%D8%AA/:splat 200
+/audios/emaaniyat-ایمانیات/* /audios/emaaniyat-%D8%A7%DB%8C%D9%85%D8%A7%D9%86%DB%8C%D8%A7%D8%AA/:splat 200
+
+/audios/islamic-months/rabi-ul-awwal-%d8%b1%d8%a8%db%8c%d8%b9-%d8%a7%d9%84%d8%a7%d9%88%d9%91%d9%84/* /audios/islamic-months/rabi-ul-awwal-%D8%B1%D8%A8%DB%8C%D8%B9-%D8%A7%D9%84%D8%A7%D9%88%D9%91%D9%84/:splat 200
+/audios/islamic-months/rabi-ul-awwal-ربیع-الاوّل/* /audios/islamic-months/rabi-ul-awwal-%D8%B1%D8%A8%DB%8C%D8%B9-%D8%A7%D9%84%D8%A7%D9%88%D9%91%D9%84/:splat 200
+
+/audios/islamic-months/muharram-%d9%85%d8%ad%d8%b1%d9%91%d9%85/* /audios/islamic-months/muharram-%D9%85%D8%AD%D8%B1%D9%91%D9%85/:splat 200
+/audios/islamic-months/muharram-محرّم/* /audios/islamic-months/muharram-%D9%85%D8%AD%D8%B1%D9%91%D9%85/:splat 200
+
+/audios/worships/zakat-%d8%b2%da%a9%d8%a7%db%83/* /audios/worships/zakat-%D8%B2%DA%A9%D8%A7%DB%83/:splat 200
+/audios/worships/zakat-زکاۃ/* /audios/worships/zakat-%D8%B2%DA%A9%D8%A7%DB%83/:splat 200

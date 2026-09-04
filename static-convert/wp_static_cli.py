@@ -23,7 +23,7 @@ import urllib.error
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 
 # Default extensions to keep remote (not downloaded into Cloudflare Pages static bundle)
 DEFAULT_REMOTE_MEDIA_EXTENSIONS = {
@@ -177,6 +177,8 @@ class WPStaticConverter:
             return ""
         parsed = urllib.parse.urlparse(url)
         path = parsed.path or "/"
+        # Always uppercase percent-encoded escape sequences per RFC 3986
+        path = re.sub(r'%[0-9a-fA-F]{2}', lambda m: m.group(0).upper(), path)
         query = parsed.query
         if query:
             q_pairs = [p for p in query.split("&") if not p.startswith(("utm_", "fbclid", "ref="))]
@@ -212,6 +214,8 @@ class WPStaticConverter:
     def get_local_path_for_page(self, page_url):
         """Convert page URL to Cloudflare Pages directory structure (folder/index.html)."""
         path = urllib.parse.urlparse(page_url).path
+        # Normalize percent-encoded sequences to uppercase (RFC 3986)
+        path = re.sub(r'%[0-9a-fA-F]{2}', lambda m: m.group(0).upper(), path)
         rel_path = path.lstrip("/")
         if self.base_path and rel_path.startswith(self.base_path.lstrip("/")):
             rel_path = rel_path[len(self.base_path.lstrip("/")):].lstrip("/")
@@ -226,11 +230,14 @@ class WPStaticConverter:
         return os.path.join(self.output_dir, rel_path, "index.html")
 
     def rewrite_to_media_domain(self, url):
-        """Rewrite media asset URL to point to origin or dedicated media domain with proper slashes."""
+        """Rewrite media asset URL to point to origin or dedicated media domain with proper slashes and safe percent-encoding."""
         parsed = urllib.parse.urlparse(url)
         path = parsed.path
         if not path.startswith("/"):
             path = "/" + path
+
+        # Safely quote any non-ASCII / Unicode characters (e.g. Urdu filenames) using RFC 3986 uppercase hex
+        path = urllib.parse.quote(urllib.parse.unquote(path), safe="/:?=&@")
 
         if self.media_domain:
             media_parsed = urllib.parse.urlparse(self.media_domain)
@@ -244,7 +251,14 @@ class WPStaticConverter:
                 parsed.query,
                 ""
             ))
-        return url
+        return urllib.parse.urlunparse((
+            parsed.scheme or self.base_scheme,
+            parsed.netloc or self.base_domain,
+            path,
+            "",
+            parsed.query,
+            ""
+        ))
 
     def download_and_localize_asset(self, asset_url):
         """Download CSS, JS, and UI fonts, storing them in local static structure."""
@@ -321,6 +335,9 @@ class WPStaticConverter:
 
     def clean_wordpress_html(self, html_content, current_page_url):
         """Remove dynamic bloat, preserve media on origin, localize CSS/JS/fonts, fix links."""
+        # 0. Fix missing slash typo in WP customizer (e.g. nq-international.comwp-content)
+        html_content = re.sub(r'(https?://[^/"\'\s>]+)wp-content', r'\1/wp-content', html_content)
+
         # 1. Strip WP Emoji scripts, loader, JSON settings, and inline styles (covers all WP versions up to 6.7+)
         html_content = re.sub(r'<script[^>]*id=["\']wp-emoji-settings["\'][^>]*>.*?</script>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
         html_content = re.sub(r'<script[^>]*wp-emoji-release\.min\.js[^>]*>.*?</script>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
@@ -343,18 +360,25 @@ class WPStaticConverter:
         # 4. Remove WP Admin Bar markup
         html_content = re.sub(r'<div id="wpadminbar"[^>]*>.*?</div>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
 
-        # 5. Fix inline background-image url("...") styles with improper paths
-        def fix_inline_styles(match):
-            style_content = match.group(1)
+        # 5. Fix inline background-image url("...") styles and <style> blocks with improper paths
+        def fix_css_urls(text):
             def replace_style_url(u_match):
-                u = u_match.group(1).strip("'\"")
+                u = u_match.group(1).strip("'\" \t\r\n")
+                if u.startswith("data:") or u.startswith("#"):
+                    return u_match.group(0)
                 abs_u = urllib.parse.urljoin(current_page_url, u)
                 if self.is_remote_media(abs_u):
                     return f'url("{self.rewrite_to_media_domain(abs_u)}")'
                 return u_match.group(0)
-            fixed = re.sub(r'url\((.*?)\)', replace_style_url, style_content)
-            return f'style="{fixed}"'
+            return re.sub(r'url\s*\(\s*([^\)]+)\s*\)', replace_style_url, text)
+
+        def fix_inline_styles(match):
+            return f'style="{fix_css_urls(match.group(1))}"'
         html_content = re.sub(r'style="([^"]*background[^"]*)"', fix_inline_styles, html_content, flags=re.IGNORECASE)
+
+        def fix_style_tag(match):
+            return f'<style{match.group(1)}>{fix_css_urls(match.group(2))}</style>'
+        html_content = re.sub(r'<style\b([^>]*)>(.*?)</style>', fix_style_tag, html_content, flags=re.DOTALL | re.IGNORECASE)
 
         # 6. Extract search data
         if self.search_index_enabled:
@@ -383,7 +407,8 @@ class WPStaticConverter:
                 if tag_name == "link" and 'rel="canonical"' in full_tag.lower():
                     target_host = self.custom_domain or ""
                     parsed = urllib.parse.urlparse(abs_url)
-                    return f'{attr}={quote}{target_host}{parsed.path}{quote}'
+                    path = re.sub(r'%[0-9a-fA-F]{2}', lambda m: m.group(0).upper(), parsed.path)
+                    return f'{attr}={quote}{target_host}{path}{quote}'
 
                 # CASE A: Media file (MP3, PPT, JPG, PNG, PDF) -> Point to remote origin
                 if self.is_remote_media(abs_url):
@@ -407,6 +432,9 @@ class WPStaticConverter:
                         if not clean_path.startswith("/"):
                             clean_path = "/" + clean_path
 
+                        # Always uppercase percent-encoded sequences for Cloudflare Pages (RFC 3986)
+                        clean_path = re.sub(r'%[0-9a-fA-F]{2}', lambda m: m.group(0).upper(), clean_path)
+
                         if clean_path != "/" and not clean_path.endswith((".html", ".xml", ".txt", ".json", "/")):
                             clean_path += "/"
 
@@ -415,6 +443,14 @@ class WPStaticConverter:
                             new_url += f"?{parsed.query}"
                         new_url += fragment
                         return f'{attr}={quote}{new_url}{quote}'
+
+                # Fallback: If src contains non-ASCII characters, safely quote them
+                if attr.lower() == "src":
+                    try:
+                        val.encode("ascii")
+                    except UnicodeEncodeError:
+                        val_quoted = urllib.parse.quote(urllib.parse.unquote(val), safe="/:?=&@")
+                        return f'{attr}={quote}{val_quoted}{quote}'
 
                 return attr_match.group(0)
 
@@ -546,13 +582,50 @@ class WPStaticConverter:
             f.write(content)
         self.log("Created Cloudflare Pages _headers file.", "🛡️")
 
+        # Generate Cloudflare Pages _redirects file for resilient URL handling
+        redirects_file = os.path.join(self.output_dir, "_redirects")
+        redirects_content = """# Cloudflare Pages Redirects & Rewrites (Option C)
+# 200 Rewrites proxy locally to ensure case-insensitive & Unicode routes match seamlessly
+/audios/emaaniyat-%d8%a7%db%8c%d9%85%d8%a7%d9%86%db%8c%d8%a7%d8%aa/* /audios/emaaniyat-%D8%A7%DB%8C%D9%85%D8%A7%D9%86%DB%8C%D8%A7%D8%AA/:splat 200
+/audios/emaaniyat-ایمانیات/* /audios/emaaniyat-%D8%A7%DB%8C%D9%85%D8%A7%D9%86%DB%8C%D8%A7%D8%AA/:splat 200
 
+/audios/islamic-months/rabi-ul-awwal-%d8%b1%d8%a8%db%8c%d8%b9-%d8%a7%d9%84%d8%a7%d9%88%d9%91%d9%84/* /audios/islamic-months/rabi-ul-awwal-%D8%B1%D8%A8%DB%8C%D8%B9-%D8%A7%D9%84%D8%A7%D9%88%D9%91%D9%84/:splat 200
+/audios/islamic-months/rabi-ul-awwal-ربیع-الاوّل/* /audios/islamic-months/rabi-ul-awwal-%D8%B1%D8%A8%DB%8C%D8%B9-%D8%A7%D9%84%D8%A7%D9%88%D9%91%D9%84/:splat 200
+
+/audios/islamic-months/muharram-%d9%85%d8%ad%d8%b1%d9%91%d9%85/* /audios/islamic-months/muharram-%D9%85%D8%AD%D8%B1%D9%91%D9%85/:splat 200
+/audios/islamic-months/muharram-محرّم/* /audios/islamic-months/muharram-%D9%85%D8%AD%D8%B1%D9%91%D9%85/:splat 200
+
+/audios/worships/zakat-%d8%b2%da%a9%d8%a7%db%83/* /audios/worships/zakat-%D8%B2%DA%A9%D8%A7%DB%83/:splat 200
+/audios/worships/zakat-زکاۃ/* /audios/worships/zakat-%D8%B2%DA%A9%D8%A7%DB%83/:splat 200
+"""
+        with open(redirects_file, "w", encoding="utf-8") as f:
+            f.write(redirects_content)
+        self.log("Created Cloudflare Pages _redirects file.", "🔀")
 
         # Copy _worker.js into output_dir
         worker_src = os.path.join(os.path.dirname(__file__), "_worker.js")
         if os.path.exists(worker_src):
             shutil.copy2(worker_src, os.path.join(self.output_dir, "_worker.js"))
             self.log("Installed Cloudflare Pages _worker.js (Scenario B media reverse proxy).", "⚡")
+
+    def generate_unicode_route_mirrors(self):
+        """Create dual directory mirrors for decoded Unicode characters (e.g. emaaniyat-ایمانیات alongside emaaniyat-%D8...)."""
+        mirrored_count = 0
+        for root, dirs, files in os.walk(self.output_dir):
+            for d in list(dirs):
+                if "%" in d:
+                    decoded = urllib.parse.unquote(d)
+                    if decoded != d:
+                        src_dir = os.path.join(root, d)
+                        dest_dir = os.path.join(root, decoded)
+                        if not os.path.exists(dest_dir):
+                            try:
+                                shutil.copytree(src_dir, dest_dir)
+                                mirrored_count += 1
+                            except Exception as e:
+                                self.log(f"Could not mirror Unicode route {decoded}: {e}", "⚠️")
+        if mirrored_count > 0:
+            self.log(f"Mirrored {mirrored_count} decoded Unicode route directories for universal browser compatibility.", "🌐")
 
     def generate_static_404(self):
         """Generate a clean 404.html page for Cloudflare Pages."""
@@ -630,6 +703,7 @@ class WPStaticConverter:
                     print(f"[{completed}/{total}] ❌ {url} -> Exception: {e}")
 
         self.generate_cloudflare_headers()
+        self.generate_unicode_route_mirrors()
         self.generate_static_404()
         if self.search_index_enabled:
             self.save_search_index()

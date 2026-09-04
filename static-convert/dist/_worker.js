@@ -50,7 +50,32 @@ export default {
       });
     }
 
-    // Serve static files from Cloudflare Pages
-    return env.ASSETS.fetch(request);
+    // Serve static files from Cloudflare Pages with resilient fallback for Urdu/encoded URLs
+    let response = await env.ASSETS.fetch(request);
+    if (response.status === 404) {
+      // 1. Try uppercase percent-encoding (RFC 3986 canonical)
+      const upperPath = url.pathname.replace(/%[0-9a-f]{2}/gi, (m) => m.toUpperCase());
+      if (upperPath !== url.pathname) {
+        const retryUrl = new URL(request.url);
+        retryUrl.pathname = upperPath;
+        const retryRes = await env.ASSETS.fetch(new Request(retryUrl.toString(), request));
+        if (retryRes.status !== 404) return retryRes;
+      }
+
+      // 2. Try decoded UTF-8 path (for raw Arabic/Urdu unicode routes)
+      try {
+        const decodedPath = decodeURIComponent(url.pathname);
+        if (decodedPath !== url.pathname) {
+          const retryUrl = new URL(request.url);
+          retryUrl.pathname = decodedPath;
+          const retryRes = await env.ASSETS.fetch(new Request(retryUrl.toString(), request));
+          if (retryRes.status !== 404) return retryRes;
+        }
+      } catch (e) {
+        // URI malformed, continue
+      }
+    }
+
+    return response;
   },
 };
