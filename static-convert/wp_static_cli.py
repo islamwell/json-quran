@@ -542,6 +542,23 @@ class WPStaticConverter:
             f.write(content)
         self.log("Created Cloudflare Pages _headers file.", "🛡️")
 
+        # Generate _routes.json for Cloudflare Pages (Scenario B)
+        routes_file = os.path.join(self.output_dir, "_routes.json")
+        routes_content = {
+            "version": 1,
+            "include": ["/wp-content/uploads/*"],
+            "exclude": []
+        }
+        with open(routes_file, "w", encoding="utf-8") as f:
+            json.dump(routes_content, f, indent=2)
+        self.log("Created Cloudflare Pages _routes.json (Scenario B route config).", "🛣️")
+
+        # Copy _worker.js into output_dir
+        worker_src = os.path.join(os.path.dirname(__file__), "_worker.js")
+        if os.path.exists(worker_src):
+            shutil.copy2(worker_src, os.path.join(self.output_dir, "_worker.js"))
+            self.log("Installed Cloudflare Pages _worker.js (Scenario B media reverse proxy).", "⚡")
+
     def generate_static_404(self):
         """Generate a clean 404.html page for Cloudflare Pages."""
         dest_404 = os.path.join(self.output_dir, "404.html")

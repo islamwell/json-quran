@@ -21,7 +21,7 @@
         </div>
         <div class="header-badges">
           <span class="badge badge-cf">☁️ Cloudflare Pages</span>
-          <span class="badge badge-static">🛡️ 100% Static HTML</span>
+          <span class="badge badge-static">🛡️ Scenario B Proxy Active</span>
         </div>
       </div>
     </div>
@@ -39,18 +39,18 @@
     <!-- Architecture Visualizer Card -->
     <section class="arch-card">
       <div class="arch-card-header">
-        <h3 class="arch-title">🏗️ Hybrid Static Architecture</h3>
-        <span class="badge badge-static">Bypasses Cloudflare 25MB Limit</span>
+        <h3 class="arch-title">🏗️ Scenario B: Transparent Media Reverse Proxy</h3>
+        <span class="badge badge-static">100% Free Tier Cloudflare</span>
       </div>
       <p style="font-size:0.9rem; color:#475569;">
-        Cloudflare Pages restricts individual asset uploads to 25MB. Audio files and PPT decks easily exceed this. Our converter separates page code from media files:
+        With <strong>Scenario B</strong>, your visitor sees only one domain (<code>nq-international.com</code>). Cloudflare Pages directly serves all static HTML and styles, while transparently streaming MP3s and images from your origin Plesk server via edge proxying.
       </p>
       <div class="arch-flow">
         <div class="flow-box flow-cf">
-          <div class="flow-title">☁️ Cloudflare Pages (Static Edge)</div>
+          <div class="flow-title">☁️ Cloudflare Pages (Edge Delivery)</div>
           <div class="flow-desc">Served from 300+ global edge locations with 0ms server execution:</div>
           <ul class="flow-list">
-            <li>✅ Pre-rendered <code>index.html</code> files for all pages</li>
+            <li>✅ Pre-rendered <code>index.html</code> files for all 249 pages</li>
             <li>✅ Minified Theme & Plugin CSS stylesheets</li>
             <li>✅ UI JavaScript libraries and scripts</li>
             <li>✅ Web fonts (<code>.woff2</code>, <code>.woff</code>)</li>
@@ -58,14 +58,14 @@
           </ul>
         </div>
         <div class="flow-box flow-origin">
-          <div class="flow-title">🗄️ Origin Server (nq-international.com)</div>
-          <div class="flow-desc">Remains untouched on your server or dedicated media subdomain:</div>
+          <div class="flow-title">🗄️ Origin Server (via origin.nq-international.com)</div>
+          <div class="flow-desc">Transparently fetched by <code>_worker.js</code> with 30-day edge caching:</div>
           <ul class="flow-list">
             <li>🎧 Audio lectures & Recitations (<code>.mp3</code>, <code>.m4a</code>)</li>
             <li>📊 Slide presentations (<code>.ppt</code>, <code>.pptx</code>)</li>
             <li>🖼️ Uploaded photos & galleries (<code>.jpg</code>, <code>.png</code>)</li>
             <li>📑 Document attachments (<code>.pdf</code>, <code>.docx</code>)</li>
-            <li>📦 Direct links point to origin with zero re-uploading</li>
+            <li>⏩ Full HTTP Range support for audio player seeking</li>
           </ul>
         </div>
       </div>
@@ -73,15 +73,79 @@
 
     <!-- Tabs Navigation -->
     <nav class="tabs-nav">
-      <button class="tab-btn active" data-tab="tab-cli">💻 CLI Converter</button>
+      <button class="tab-btn active" data-tab="tab-scenario-b">🛡️ Scenario B Setup (Proxy)</button>
+      <button class="tab-btn" data-tab="tab-cli">💻 CLI Converter</button>
       <button class="tab-btn" data-tab="tab-pitfalls">🧩 Hidden Problems & Solutions</button>
       <button class="tab-btn" data-tab="tab-cleaner">🧪 In-Browser HTML Cleaner</button>
       <button class="tab-btn" data-tab="tab-deploy">🚀 Cloudflare Deployment Guide</button>
       <button class="tab-btn" data-tab="tab-plugin">🔌 WordPress Plugin</button>
     </nav>
 
-    <!-- TAB 1: CLI Converter -->
-    <div id="tab-cli" class="tab-content active">
+    <!-- TAB 1: Scenario B Setup -->
+    <div id="tab-scenario-b" class="tab-content active">
+      <div class="card">
+        <h3 class="card-title">🛡️ Scenario B Complete Setup Instructions</h3>
+        <p class="card-subtitle">Keep your main domain <code>nq-international.com</code> for both static HTML and media without breaking URLs:</p>
+
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <!-- Step 1 -->
+          <div style="padding:16px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px;">
+            <strong style="color:#1e40af; font-size:1rem;">Step 1: Create Origin DNS Record in Cloudflare</strong>
+            <p style="font-size:0.88rem; color:#334155; margin-top:6px;">
+              In your Cloudflare Dashboard &gt; <strong>DNS</strong> &gt; <strong>Records</strong> for <code>nq-international.com</code>:
+            </p>
+            <table class="form-table" style="margin-top:10px; font-size:0.85rem; background:#fff; border:1px solid #dbeafe; border-radius:6px; width:100%;">
+              <tr style="border-bottom:1px solid #eee;">
+                <th style="padding:8px 12px; text-align:left;">Type</th>
+                <th style="padding:8px 12px; text-align:left;">Name</th>
+                <th style="padding:8px 12px; text-align:left;">IPv4 Address</th>
+                <th style="padding:8px 12px; text-align:left;">Proxy Status</th>
+              </tr>
+              <tr>
+                <td style="padding:8px 12px; font-family:monospace; font-weight:bold;">A</td>
+                <td style="padding:8px 12px; font-family:monospace;">origin</td>
+                <td style="padding:8px 12px; font-family:monospace; color:#2563eb;">YOUR_PLESK_SERVER_IP</td>
+                <td style="padding:8px 12px; color:#059669;">DNS only (Grey Cloud) or Proxied</td>
+              </tr>
+            </table>
+            <p style="font-size:0.82rem; color:#64748b; margin-top:6px;">
+              💡 <em>This points <code>origin.nq-international.com</code> directly to your Plesk server so the Cloudflare Worker knows where to stream the MP3s and images from.</em>
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div style="padding:16px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
+            <strong style="font-size:1rem;">Step 2: Run the Static Converter</strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:6px;">
+              The converter automatically generates the static pages AND packages the Scenario B proxy files (<code>_worker.js</code> and <code>_routes.json</code>) directly into <code>dist/</code>:
+            </p>
+            <div class="code-box">
+              <div class="code-content">python3 wp_static_cli.py --url https://nq-international.com --output ./dist</div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="padding:16px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
+            <strong style="font-size:1rem;">Step 3: Deploy <code>dist/</code> to Cloudflare Pages</strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:6px;">
+              Upload the <code>dist/</code> folder to Cloudflare Pages. Cloudflare automatically activates the <code>_worker.js</code> proxy for <code>/wp-content/uploads/*</code> while serving all HTML, CSS, and JS from the edge!
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div style="padding:16px; background:#fdf4ff; border:1px solid #f5d0fe; border-radius:8px;">
+            <strong style="color:#86198f; font-size:1rem;">Step 4: Connect Domain <code>nq-international.com</code></strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:6px;">
+              In your Cloudflare Pages project &gt; <strong>Custom domains</strong> &gt; Add <code>nq-international.com</code> (and <code>www.nq-international.com</code>).
+              Now visits to your site hit Cloudflare Pages, and audio files stream seamlessly!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: CLI Converter -->
+    <div id="tab-cli" class="tab-content">
       <div class="card">
         <h3 class="card-title">⚙️ Interactive CLI Command Generator</h3>
         <p class="card-subtitle">Configure your conversion parameters. The terminal command updates in real time.</p>
@@ -129,11 +193,12 @@
         <div style="margin-top: 18px; display:flex; gap:12px; flex-wrap:wrap;">
           <a href="wp_static_cli.py" download="wp_static_cli.py" class="btn btn-outline">📥 Download wp_static_cli.py</a>
           <a href="convert.sh" download="convert.sh" class="btn btn-outline">📥 Download convert.sh</a>
+          <a href="cloudflare-worker/worker.js" download="worker.js" class="btn btn-outline">📥 Download worker.js</a>
         </div>
       </div>
     </div>
 
-    <!-- TAB 2: Hidden Problems & Solutions -->
+    <!-- TAB 3: Hidden Problems & Solutions -->
     <div id="tab-pitfalls" class="tab-content">
       <div class="card">
         <h3 class="card-title">🧩 Hidden Problems in WordPress Static Conversion</h3>
@@ -149,7 +214,7 @@
           <div class="pitfall-item">
             <div class="pitfall-header">2. 📦 25MB Asset Limits for Audio/PPT</div>
             <div class="pitfall-body">Cloudflare Pages rejects any single file over 25MB, blocking Quran MP3s and PPT slide decks.</div>
-            <div class="pitfall-solution"><strong>Our Fix:</strong> Media offloading keeps MP3, PPT, and JPG links pointing directly to the origin server, zero uploads needed.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> Scenario B reverse proxy streams MP3, PPT, and JPG files from the origin server, bypassing all file size limits!</div>
           </div>
 
           <div class="pitfall-item">
@@ -179,7 +244,7 @@
       </div>
     </div>
 
-    <!-- TAB 3: In-Browser HTML Cleaner -->
+    <!-- TAB 4: In-Browser HTML Cleaner -->
     <div id="tab-cleaner" class="tab-content">
       <div class="card">
         <h3 class="card-title">🧪 Live WordPress HTML Cleaner & Tester</h3>
@@ -203,7 +268,7 @@
       </div>
     </div>
 
-    <!-- TAB 4: Cloudflare Deployment Guide -->
+    <!-- TAB 5: Cloudflare Deployment Guide -->
     <div id="tab-deploy" class="tab-content">
       <div class="card">
         <h3 class="card-title">🚀 How to Deploy to Cloudflare Pages (Step-by-Step)</h3>
@@ -227,16 +292,16 @@
           </div>
 
           <div style="padding:14px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
-            <strong>Step 4: Connect Custom Domain (Optional)</strong>
+            <strong>Step 4: Connect Custom Domain</strong>
             <p style="font-size:0.88rem; color:#475569; margin-top:4px;">
-              Under <strong>Custom domains</strong>, link <code>www.nq-international.com</code> or your chosen domain. If you point the main domain to Cloudflare Pages, keep a DNS A-record like <code>origin.nq-international.com</code> pointing to your existing server IP so MP3s and images load seamlessly!
+              Under <strong>Custom domains</strong>, link <code>nq-international.com</code> and <code>www.nq-international.com</code>.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- TAB 5: WordPress Plugin -->
+    <!-- TAB 6: WordPress Plugin -->
     <div id="tab-plugin" class="tab-content">
       <div class="card">
         <h3 class="card-title">🔌 Optional Drop-In WordPress Plugin</h3>
@@ -260,10 +325,10 @@
     <div class="container">
       <div class="footer-row">
         <div class="footer-left">
-          <strong>WordPress to Static Converter</strong> &bull; Zero PHP, Zero DB, Cloudflare Hybrid Architecture
+          <strong>WordPress to Static Converter</strong> &bull; Zero PHP, Zero DB, Cloudflare Scenario B Proxy
         </div>
         <div class="version-tag" id="footer-version-tag">
-          v1.0.0 (updated 2026-09-04 18:51)
+          v1.0.1 (updated 2026-09-04 19:03)
         </div>
         <div class="footer-links">
           <a href="#top">Back to top ↑</a>
