@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress to Static Converter — Cloudflare Pages with Remote Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="app-header">
+    <div class="container">
+      <div class="header-row">
+        <div class="brand">
+          <div class="brand-icon">⚡</div>
+          <div>
+            <h1 class="brand-title">WordPress to Static Converter</h1>
+            <p class="brand-subtitle">Zero PHP • Zero MySQL • Cloudflare Pages Ready</p>
+          </div>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-cf">☁️ Cloudflare Pages</span>
+          <span class="badge badge-static">🛡️ 100% Static HTML</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section class="hero">
+      <h2 class="hero-title">Convert WordPress to <span>Cloudflare Static</span></h2>
+      <p class="hero-lead">
+        Move your HTML, CSS, JavaScript, and UI fonts to Cloudflare Pages for instant global delivery, while leaving heavy audio lectures (<code>.mp3</code>), presentation slides (<code>.ppt</code>), and images hosted safely on your origin server (<code>nq-international.com</code>).
+      </p>
+    </section>
+
+    <!-- Architecture Visualizer Card -->
+    <section class="arch-card">
+      <div class="arch-card-header">
+        <h3 class="arch-title">🏗️ Hybrid Static Architecture</h3>
+        <span class="badge badge-static">Bypasses Cloudflare 25MB Limit</span>
+      </div>
+      <p style="font-size:0.9rem; color:#475569;">
+        Cloudflare Pages restricts individual asset uploads to 25MB. Audio files and PPT decks easily exceed this. Our converter separates page code from media files:
+      </p>
+      <div class="arch-flow">
+        <div class="flow-box flow-cf">
+          <div class="flow-title">☁️ Cloudflare Pages (Static Edge)</div>
+          <div class="flow-desc">Served from 300+ global edge locations with 0ms server execution:</div>
+          <ul class="flow-list">
+            <li>✅ Pre-rendered <code>index.html</code> files for all pages</li>
+            <li>✅ Minified Theme & Plugin CSS stylesheets</li>
+            <li>✅ UI JavaScript libraries and scripts</li>
+            <li>✅ Web fonts (<code>.woff2</code>, <code>.woff</code>)</li>
+            <li>✅ Client-side search index (<code>search-index.json</code>)</li>
+          </ul>
+        </div>
+        <div class="flow-box flow-origin">
+          <div class="flow-title">🗄️ Origin Server (nq-international.com)</div>
+          <div class="flow-desc">Remains untouched on your server or dedicated media subdomain:</div>
+          <ul class="flow-list">
+            <li>🎧 Audio lectures & Recitations (<code>.mp3</code>, <code>.m4a</code>)</li>
+            <li>📊 Slide presentations (<code>.ppt</code>, <code>.pptx</code>)</li>
+            <li>🖼️ Uploaded photos & galleries (<code>.jpg</code>, <code>.png</code>)</li>
+            <li>📑 Document attachments (<code>.pdf</code>, <code>.docx</code>)</li>
+            <li>📦 Direct links point to origin with zero re-uploading</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs Navigation -->
+    <nav class="tabs-nav">
+      <button class="tab-btn active" data-tab="tab-cli">💻 CLI Converter</button>
+      <button class="tab-btn" data-tab="tab-pitfalls">🧩 Hidden Problems & Solutions</button>
+      <button class="tab-btn" data-tab="tab-cleaner">🧪 In-Browser HTML Cleaner</button>
+      <button class="tab-btn" data-tab="tab-deploy">🚀 Cloudflare Deployment Guide</button>
+      <button class="tab-btn" data-tab="tab-plugin">🔌 WordPress Plugin</button>
+    </nav>
+
+    <!-- TAB 1: CLI Converter -->
+    <div id="tab-cli" class="tab-content active">
+      <div class="card">
+        <h3 class="card-title">⚙️ Interactive CLI Command Generator</h3>
+        <p class="card-subtitle">Configure your conversion parameters. The terminal command updates in real time.</p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="cli-url">WordPress Origin URL</label>
+            <input type="text" id="cli-url" class="form-input" value="https://nq-international.com">
+            <span class="form-help">The dynamic WordPress site to scrape</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cli-output">Output Directory</label>
+            <input type="text" id="cli-output" class="form-input" value="./dist">
+            <span class="form-help">Destination folder for static files</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cli-media">Media Domain (Origin)</label>
+            <input type="text" id="cli-media" class="form-input" value="https://nq-international.com">
+            <span class="form-help">Leave matching origin, or use media.nq-international.com</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cli-limit">Page Limit (Optional)</label>
+            <input type="number" id="cli-limit" class="form-input" placeholder="Leave empty for all pages">
+            <span class="form-help">Set e.g. 5 or 10 to run a quick test crawl</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cli-concurrency">Concurrent Workers</label>
+            <input type="number" id="cli-concurrency" class="form-input" value="6" min="1" max="16">
+            <span class="form-help">Number of download threads</span>
+          </div>
+          <div class="form-group" style="justify-content: center;">
+            <label class="checkbox-row">
+              <input type="checkbox" id="cli-search" checked>
+              <span>Build Client-Side Search Index</span>
+            </label>
+            <span class="form-help">Compiles search-index.json for client-side search</span>
+          </div>
+        </div>
+
+        <div class="code-box">
+          <button class="copy-btn" id="copy-cli-btn">📋 Copy Command</button>
+          <div class="code-content" id="generated-command">python3 wp_static_cli.py --url "https://nq-international.com" --output "./dist"</div>
+        </div>
+
+        <div style="margin-top: 18px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="wp_static_cli.py" download="wp_static_cli.py" class="btn btn-outline">📥 Download wp_static_cli.py</a>
+          <a href="convert.sh" download="convert.sh" class="btn btn-outline">📥 Download convert.sh</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Hidden Problems & Solutions -->
+    <div id="tab-pitfalls" class="tab-content">
+      <div class="card">
+        <h3 class="card-title">🧩 Hidden Problems in WordPress Static Conversion</h3>
+        <p class="card-subtitle">Why traditional scrapers fail and how our tool specifically solves each problem:</p>
+
+        <div class="pitfall-grid">
+          <div class="pitfall-item">
+            <div class="pitfall-header">1. 🚫 Dynamic Search (No Database)</div>
+            <div class="pitfall-body">WordPress search relies on <code>/?s=query</code> hitting MySQL. In a static site, this returns 404.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> Automatically builds <code>/search-index.json</code> from page titles and excerpts, injecting a 3KB client-side vanilla JS search engine.</div>
+          </div>
+
+          <div class="pitfall-item">
+            <div class="pitfall-header">2. 📦 25MB Asset Limits for Audio/PPT</div>
+            <div class="pitfall-body">Cloudflare Pages rejects any single file over 25MB, blocking Quran MP3s and PPT slide decks.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> Media offloading keeps MP3, PPT, and JPG links pointing directly to the origin server, zero uploads needed.</div>
+          </div>
+
+          <div class="pitfall-item">
+            <div class="pitfall-header">3. 🔗 Broken URLs & Trailing Slashes</div>
+            <div class="pitfall-body">WordPress relies on Apache <code>.htaccess</code> to route <code>/about/</code>. Static web servers need physical files.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> Every page is stored as <code>/slug/index.html</code> so Cloudflare Pages resolves clean permalinks naturally.</div>
+          </div>
+
+          <div class="pitfall-item">
+            <div class="pitfall-header">4. 🧹 WordPress Bloat & Dynamic Heartbeat</div>
+            <div class="pitfall-body">Scripts like <code>wp-emoji-release.min.js</code>, <code>heartbeat.js</code>, and <code>wp-embed</code> poll dynamic endpoints.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> Automatically strips emoji scripts, heartbeat, RSD links, and generator meta tags from HTML output.</div>
+          </div>
+
+          <div class="pitfall-item">
+            <div class="pitfall-header">5. 🎨 CSS Font & Background URL Paths</div>
+            <div class="pitfall-body"><code>url(...)</code> references in CSS files often have query strings (<code>?ver=6.4</code>) or broken relative paths.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> CSS parser downloads UI fonts locally, strips version query strings, and redirects background media to origin.</div>
+          </div>
+
+          <div class="pitfall-item">
+            <div class="pitfall-header">6. 🛡️ Contact Forms & Submissions</div>
+            <div class="pitfall-body">Contact forms submit to <code>admin-post.php</code>, which requires PHP to process.</div>
+            <div class="pitfall-solution"><strong>Our Fix:</strong> Point form <code>action</code> to serverless endpoints like Formspree, Web3Forms, or Formkeep with zero code changes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: In-Browser HTML Cleaner -->
+    <div id="tab-cleaner" class="tab-content">
+      <div class="card">
+        <h3 class="card-title">🧪 Live WordPress HTML Cleaner & Tester</h3>
+        <p class="card-subtitle">Paste raw WordPress HTML below to see how our converter strips bloat and rewrites links while preserving remote media.</p>
+
+        <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+          <button id="cleaner-run-btn" class="btn btn-primary">⚡ Clean & Rewrite HTML</button>
+          <button id="cleaner-sample-btn" class="btn btn-outline">🔄 Load Sample WP HTML</button>
+        </div>
+
+        <div class="cleaner-split">
+          <div>
+            <label class="form-label" style="margin-bottom:6px; display:block;">Input: Raw WordPress HTML</label>
+            <textarea id="cleaner-input" class="cleaner-textarea" placeholder="Paste WordPress HTML here..."></textarea>
+          </div>
+          <div>
+            <label class="form-label" style="margin-bottom:6px; display:block;">Output: Clean Static HTML</label>
+            <textarea id="cleaner-output" class="cleaner-textarea" readonly></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: Cloudflare Deployment Guide -->
+    <div id="tab-deploy" class="tab-content">
+      <div class="card">
+        <h3 class="card-title">🚀 How to Deploy to Cloudflare Pages (Step-by-Step)</h3>
+        <p class="card-subtitle">Publish your static site globally in under 2 minutes:</p>
+
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div style="padding:14px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
+            <strong>Step 1: Run the CLI Converter</strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:4px;">Execute the converter to generate the <code>./dist</code> folder:</p>
+            <div class="code-box" style="margin-top:8px;"><div class="code-content">python3 wp_static_cli.py --url https://nq-international.com --output ./dist</div></div>
+          </div>
+
+          <div style="padding:14px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
+            <strong>Step 2: Log into Cloudflare Dashboard</strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:4px;">Navigate to <strong>Workers &amp; Pages</strong> &gt; <strong>Create application</strong> &gt; <strong>Pages</strong> tab &gt; <strong>Upload assets</strong>.</p>
+          </div>
+
+          <div style="padding:14px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
+            <strong>Step 3: Drag &amp; Drop the <code>dist</code> Folder</strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:4px;">Name your project (e.g. <code>nq-static</code>) and drag the <code>dist</code> folder into the upload box. Click <strong>Deploy site</strong>.</p>
+          </div>
+
+          <div style="padding:14px; background:#f8fafc; border:1px solid var(--border); border-radius:8px;">
+            <strong>Step 4: Connect Custom Domain (Optional)</strong>
+            <p style="font-size:0.88rem; color:#475569; margin-top:4px;">
+              Under <strong>Custom domains</strong>, link <code>www.nq-international.com</code> or your chosen domain. If you point the main domain to Cloudflare Pages, keep a DNS A-record like <code>origin.nq-international.com</code> pointing to your existing server IP so MP3s and images load seamlessly!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: WordPress Plugin -->
+    <div id="tab-plugin" class="tab-content">
+      <div class="card">
+        <h3 class="card-title">🔌 Optional Drop-In WordPress Plugin</h3>
+        <p class="card-subtitle">If you prefer converting directly from the WordPress admin panel:</p>
+        <p style="font-size:0.9rem; color:#475569; margin-bottom:14px;">
+          The plugin is located in <code>wp-static-converter/</code> and can be uploaded to your WordPress site under <code>/wp-content/plugins/</code>.
+        </p>
+        <ul style="margin-left:20px; font-size:0.88rem; color:#334155; line-height:1.8;">
+          <li>1. Upload <code>wp-static-converter/</code> folder to <code>wp-content/plugins/</code>.</li>
+          <li>2. Activate the plugin in <strong>WP Admin &gt; Plugins</strong>.</li>
+          <li>3. Navigate to <strong>Tools &gt; Static Converter</strong>.</li>
+          <li>4. Check <em>"Keep heavy media hosted remotely"</em> and click <strong>Start Static Conversion</strong>.</li>
+          <li>5. Download the complete static ZIP archive ready for Cloudflare Pages!</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer with Required Versioning (Rule 1) -->
+  <footer class="app-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-left">
+          <strong>WordPress to Static Converter</strong> &bull; Zero PHP, Zero DB, Cloudflare Hybrid Architecture
+        </div>
+        <div class="version-tag" id="footer-version-tag">
+          v1.0.0 (updated 2026-09-04 18:51)
+        </div>
+        <div class="footer-links">
+          <a href="#top">Back to top ↑</a>
+          <a href="wp_static_cli.py" target="_blank">wp_static_cli.py</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
