@@ -1,30 +1,30 @@
 /**
- * Cloudflare Pages Function: Transparent Media Reverse Proxy
- * Automatically routes all /wp-content/uploads/* requests to origin Plesk server.
+ * Cloudflare Pages Function: Option C Media Reverse Proxy
+ * Automatically forces Host: nq-international.com so Plesk serves files with zero changes.
  */
 
 export async function onRequest(context) {
   const { request, env } = context;
-  const url = new URL(request.url);
-
-  // Origin server hostname where your WordPress Plesk server is accessible
-  const originHostname = env.ORIGIN_HOSTNAME || 'origin.nq-international.com';
+  const originHost = env.ORIGIN_HOSTNAME || 'origin.nq-international.com';
 
   const targetUrl = new URL(request.url);
-  targetUrl.hostname = originHostname;
+  targetUrl.hostname = originHost;
   targetUrl.protocol = 'https:';
 
-  // Forward request preserving Range headers (crucial for MP3 audio streaming & seeking)
+  // Option C: Force Host header so Plesk recognizes the virtual host
+  const forwardHeaders = new Headers(request.headers);
+  forwardHeaders.set('Host', 'nq-international.com');
+
   const originRequest = new Request(targetUrl.toString(), {
     method: request.method,
-    headers: request.headers,
+    headers: forwardHeaders,
     redirect: 'follow',
   });
 
   const response = await fetch(originRequest, {
     cf: {
       cacheEverything: true,
-      cacheTtl: 2592000, // 30 days
+      cacheTtl: 2592000,
       cacheKey: request.url,
     },
   });
@@ -32,7 +32,7 @@ export async function onRequest(context) {
   const headers = new Headers(response.headers);
   headers.set('Access-Control-Allow-Origin', '*');
   headers.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
-  headers.set('X-Proxied-By', 'Cloudflare-Pages-Function');
+  headers.set('X-Proxied-By', 'Cloudflare-Pages-Function (Option C)');
 
   return new Response(response.body, {
     status: response.status,

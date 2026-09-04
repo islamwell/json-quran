@@ -23,7 +23,7 @@ import urllib.error
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-VERSION = "1.0.0"
+VERSION = "1.0.2"
 
 # Default extensions to keep remote (not downloaded into Cloudflare Pages static bundle)
 DEFAULT_REMOTE_MEDIA_EXTENSIONS = {

@@ -1,29 +1,34 @@
 /**
- * Cloudflare Pages _worker.js (Scenario B Media Proxy)
+ * Cloudflare Pages _worker.js (Option C: Zero Plesk Changes)
  * 
- * Intercepts /wp-content/uploads/* and streams media from the origin Plesk server.
- * All other routes are served directly from Cloudflare Pages static edge.
+ * Intercepts /wp-content/uploads/* and proxies to origin.nq-international.com,
+ * forcing Host: nq-international.com so Plesk serves files without requiring any alias!
+ * 
+ * All other routes are served directly from Cloudflare Pages edge at 0ms latency.
  */
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // If request is for media / uploads, proxy to origin server
+    // Only intercept /wp-content/uploads/ requests (MP3s, PPTs, images, PDFs)
     if (url.pathname.startsWith('/wp-content/uploads/')) {
-      const originHostname = env.ORIGIN_HOSTNAME || 'origin.nq-international.com';
+      const originHost = env.ORIGIN_HOSTNAME || 'origin.nq-international.com';
+      const targetUrl = new URL(request.url);
+      targetUrl.hostname = originHost;
+      targetUrl.protocol = 'https:';
 
-      const originUrl = new URL(request.url);
-      originUrl.hostname = originHostname;
-      originUrl.protocol = 'https:';
+      // Clone headers and force Host: nq-international.com (Option C - Zero Plesk Changes)
+      const forwardHeaders = new Headers(request.headers);
+      forwardHeaders.set('Host', 'nq-international.com');
 
-      const originRequest = new Request(originUrl.toString(), {
+      const originRequest = new Request(targetUrl.toString(), {
         method: request.method,
-        headers: request.headers,
-        body: request.body,
+        headers: forwardHeaders,
         redirect: 'follow',
       });
 
+      // Fetch from origin with Cloudflare Edge Caching and Range support
       const response = await fetch(originRequest, {
         cf: {
           cacheEverything: true,
@@ -32,18 +37,20 @@ export default {
         },
       });
 
-      const headers = new Headers(response.headers);
-      headers.set('Access-Control-Allow-Origin', '*');
-      headers.set('X-Proxied-By', 'NQ-Pages-Worker');
+      // Pass through response with CORS headers for audio streaming
+      const responseHeaders = new Headers(response.headers);
+      responseHeaders.set('Access-Control-Allow-Origin', '*');
+      responseHeaders.set('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+      responseHeaders.set('X-Proxied-By', 'NQ-Cloudflare-Media-Proxy (Option C)');
 
       return new Response(response.body, {
         status: response.status,
         statusText: response.statusText,
-        headers: headers,
+        headers: responseHeaders,
       });
     }
 
-    // Default: serve static assets from Cloudflare Pages
+    // Serve static files from Cloudflare Pages
     return env.ASSETS.fetch(request);
   },
 };
