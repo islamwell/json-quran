@@ -1552,10 +1552,15 @@
           <style>{styles}</style>
 
           <header className="app-header">
-            <a href="index.html" className="back-nav-link">
-              ← Return to Main Quran Explorer (Surah 54 & 103)
-            </a>
-            <br />
+            <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
+              <a href="index.html" className="back-nav-link">
+                ← Return to Main Quran Explorer
+              </a>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
+              <a href="editor.html" className="back-nav-link" style={{ color: '#34d399' }}>
+                🛠️ Open Cloudflare JSON Studio & Editor
+              </a>
+            </div>
             <div className="badge-pill">✨ Surah 108 — Master Multi-Layer Pilot</div>
             <div className="surah-title-row">
               <h1 className="surah-title">Surah Al-Kawthar</h1>
@@ -1940,7 +1945,7 @@
 
           <footer className="app-footer">
             <p className="footer-text">Surah Al-Kawthar — Grammar Intelligence & AI Tutor</p>
-            <p className="footer-version">v1.0.9 (updated 2026-09-08 16:22)</p>
+            <p className="footer-version">v1.1.0 (updated 2026-09-10 07:30)</p>
           </footer>
         </div>
       );
