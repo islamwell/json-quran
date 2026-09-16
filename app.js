@@ -8,7 +8,13 @@ class QuranGrammarApp {
     this.data = null;
     const urlParams = new URLSearchParams(window.location.search);
     const surahParam = urlParams.get('surah');
-    this.currentSurahFile = (surahParam === 'asr' || surahParam === '103') ? 'surah-al-asr.json' : 'surah-al-qamar.json';
+    if (surahParam === 'kawthar' || surahParam === '108') {
+      this.currentSurahFile = 'surah-al-kawthar.json';
+    } else if (surahParam === 'asr' || surahParam === '103') {
+      this.currentSurahFile = 'surah-al-asr.json';
+    } else {
+      this.currentSurahFile = 'surah-al-qamar.json';
+    }
     this.activeColorMode = 'case'; // 'case' | 'pos' | 'syntax' | 'morpheme'
     this.activeThemeFilter = 'all';
     this.activeCaseFilter = 'all';
@@ -39,6 +45,110 @@ class QuranGrammarApp {
     await this.loadSurah(this.currentSurahFile);
   }
 
+  normalizeData() {
+    if (!this.data) return;
+    if (!this.data.metadata) {
+      this.data.metadata = {
+        surah_number: this.data.surah_id || 108,
+        surah_name_en: this.data.surah_name_en || 'Al-Kawthar',
+        surah_name_ar: this.data.surah_name_ar || this.data.surah_name || 'الكوثر',
+        total_verses: this.data.total_verses || (this.data.verses ? this.data.verses.length : 3),
+        total_words: this.data.total_words || 10,
+        total_morphemes: 24
+      };
+    }
+    if (!this.data.thematic_sections) {
+      this.data.thematic_sections = [
+        { section_id: 1, title_en: "Divine Gift & Gratitude", ayah_range: "108:1-2", start_ayah: 1, end_ayah: 2 },
+        { section_id: 2, title_en: "The Enemy Cut Off", ayah_range: "108:3", start_ayah: 3, end_ayah: 3 }
+      ];
+    }
+    let globalWordId = (this.data.metadata.surah_number || 108) * 1000000;
+    this.data.verses.forEach(v => {
+      if (!v.ayah_number) v.ayah_number = v.number || 1;
+      if (!v.thematic_section_id) v.thematic_section_id = v.ayah_number <= 2 ? 1 : 2;
+      if (!v.thematic_section_title) v.thematic_section_title = v.ayah_number <= 2 ? "Divine Gift & Gratitude" : "The Enemy Cut Off";
+      
+      if (!v.words && v.tokens) {
+        v.words = v.tokens.map((t, idx) => {
+          globalWordId++;
+          const posMap = {
+            'verb-past': { color: '#0D47A1', bg: '#eff6ff', border: '#bfdbfe', label: "Fi'l Madi (Past Verb)" },
+            'verb-present': { color: '#2196F3', bg: '#f0f9ff', border: '#bae6fd', label: "Fi'l Mudari (Present Verb)" },
+            'verb-imperative': { color: '#00BCD4', bg: '#ecfeff', border: '#a5f3fc', label: "Fi'l Amr (Imperative)" },
+            'noun': { color: '#4CAF50', bg: '#f0fdf4', border: '#bbf7d0', label: "Ism (Noun)" },
+            'particle': { color: '#7B1FA2', bg: '#faf5ff', border: '#e9d5ff', label: "Harf (Particle)" },
+            'preposition': { color: '#9C27B0', bg: '#fdf4ff', border: '#f5d0fe', label: "Harf Jarr (Preposition)" },
+            'negative': { color: '#E53935', bg: '#fef2f2', border: '#fecaca', label: "Harf Nafy (Negative)" },
+            'pronoun': { color: '#F57C00', bg: '#fffbeb', border: '#fde68a', label: "Damir (Pronoun)" }
+          };
+          const posInfo = posMap[t.pos_class] || posMap['noun'];
+          const caseName = (t.case_class || 'case-mabni').replace('case-', '');
+          const caseColors = {
+            'marfoo': { color: '#2563eb', bg: '#eff6ff', border: '#bfdbfe', label: 'Marfoo (Nominative)' },
+            'mansoob': { color: '#059669', bg: '#f0fdf4', border: '#bbf7d0', label: 'Mansoob (Accusative)' },
+            'majroor': { color: '#7c3aed', bg: '#faf5ff', border: '#e9d5ff', label: 'Majroor (Genitive)' },
+            'mabni': { color: '#64748b', bg: '#f8fafc', border: '#e2e8f0', label: 'Mabni (Fixed)' }
+          };
+          const caseInfo = caseColors[caseName] || caseColors['mabni'];
+
+          return {
+            id: globalWordId,
+            position: idx + 1,
+            word_position: idx + 1,
+            location: t.id || `${v.ayah_number}:${idx+1}`,
+            surah: this.data.metadata.surah_number,
+            ayah: v.ayah_number,
+            token: t.text,
+            token_clean: t.text.replace(/[\u0617-\u061A\u064B-\u0652]/g, ''),
+            arabic_uthmani: t.text,
+            arabic_clean: t.text.replace(/[\u0617-\u061A\u064B-\u0652]/g, ''),
+            translation: t.display_text || t.tooltip || t.lemma,
+            lemma: t.lemma,
+            sarf: {
+              root: t.root || '—',
+              root_ar: t.root || '—',
+              wazn: t.wazn || '—',
+              verb_form: t.verb_form ? `Form ${t.verb_form}` : '—',
+              part_of_speech: t.pos_label || posInfo.label
+            },
+            nahw: {
+              grammatical_role: t.syntax_class || 'Linguistic Node',
+              case_or_mood: caseInfo.label,
+              irab: t.irab || ''
+            },
+            irab_and_case: {
+              case_or_mood: caseName,
+              why_this_ending: t.irab || t.tooltip,
+              ending_vowel: caseInfo.label
+            },
+            color_coding: {
+              pos_color: posInfo.color,
+              pos_bg: posInfo.bg,
+              pos_border: posInfo.border,
+              case_color: caseInfo.color,
+              case_bg: caseInfo.bg,
+              case_border: caseInfo.border,
+              syntax_color: '#3b82f6',
+              syntax_bg: '#eff6ff',
+              syntax_border: '#bfdbfe'
+            },
+            pedagogy_notes: (t.ai_explanations && t.ai_explanations.beginner) || t.irab,
+            ai_explanations: t.ai_explanations,
+            morphemes: [
+              {
+                text: t.text,
+                transliteration: t.lemma,
+                type: t.pos_label || posInfo.label,
+                meaning: t.display_text || t.tooltip || ''
+              }
+            ]
+          };
+        });
+      }
+    });
+  }
+
   async loadSurah(filename) {
     this.currentSurahFile = filename;
     const sel = document.getElementById('surah-select');
@@ -56,6 +166,7 @@ class QuranGrammarApp {
     try {
       const response = await fetch(filename);
       this.data = await response.json();
+      this.normalizeData();
       this.updateHeaderAndStats();
       this.populateThemeFilter();
       this.renderLegend();
@@ -84,11 +195,19 @@ class QuranGrammarApp {
 
     if (brandTitle) brandTitle.childNodes[0].textContent = meta.surah_name_en + ' ';
     if (brandTitleAr) brandTitleAr.textContent = meta.surah_name_ar;
-    if (brandIcon) brandIcon.textContent = meta.surah_number === 103 ? '⏳' : '🌙';
+    if (brandIcon) {
+      if (meta.surah_number === 108) brandIcon.textContent = '⚡';
+      else if (meta.surah_number === 103) brandIcon.textContent = '⏳';
+      else brandIcon.textContent = '🌙';
+    }
     if (brandSubtitle) {
-      brandSubtitle.textContent = meta.surah_number === 103
-        ? 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Root Intelligence'
-        : 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding';
+      if (meta.surah_number === 108) {
+        brandSubtitle.textContent = 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Abundance Intelligence';
+      } else if (meta.surah_number === 103) {
+        brandSubtitle.textContent = 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Root Intelligence';
+      } else {
+        brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding';
+      }
     }
 
     // Stats

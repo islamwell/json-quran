@@ -525,7 +525,88 @@
       const [showTooltips, setShowTooltips] = useState(true);
       const [colorMode, setColorMode] = useState("pos"); // 'pos' | 'case' | 'syntax'
       const [selectedToken, setSelectedToken] = useState(KAWTHAR_DATA.verses[0].tokens[1]); // Default to أَعْطَيْنَاكَ
-      const [aiLevel, setAiLevel] = useState("beginner"); // 'beginner' | 'intermediate' | 'advanced'
+      const [aiLevel, setAiLevel] = useState(beginner); // 'beginner' | 'intermediate' | 'advanced'
+      const [playingAyah, setPlayingAyah] = useState(null);
+      const [isPlayingSurah, setIsPlayingSurah] = useState(false);
+      const [audioRef, setAudioRef] = useState(null);
+      const [quizAnswers, setQuizAnswers] = useState({});
+      const [showQuiz, setShowQuiz] = useState(false);
+      const [copyToast, setCopyToast] = useState(null);
+
+      const QUIZ_QUESTIONS = [
+        {
+          id: 'q1',
+          question: "In Ayah 1, what verb form and tense is 'أَعْطَيْنَاكَ'?",
+          options: [
+            { id: 'a', text: "Form I past tense with singular doer", correct: false, explanation: "Form I is عَطَا. Here the initial hamza (أَعْطَى) marks Form IV (أَفْعَلَ)." },
+            { id: 'b', text: "Form IV past tense with Royal Plural subject ('We') and 2nd person recipient ('you')", correct: true, explanation: "Spot on! Form IV past tense (أَفْعَلَ). 'نَا' is the royal plural subject (Fā'il) referring to Allah, and 'كَ' is the recipient direct object referring to the Prophet ﷺ." },
+            { id: 'c', text: "Form II imperative command", correct: false, explanation: "Form II imperative is like صَلِّ (Ayah 2), not أَعْطَيْنَاكَ." },
+            { id: 'd', text: "Present tense verb with future particle", correct: false, explanation: "It is a past tense verb indicating absolute certainty and permanence of the divine grant." }
+          ]
+        },
+        {
+          id: 'q2',
+          question: "What morphological pattern (وزن) is 'الْكَوْثَرَ' and what is its semantic effect?",
+          options: [
+            { id: 'a', text: "فَعِيل (Faeel) — simple descriptive adjective", correct: false, explanation: "Faeel is كَثِير (Katheer). Al-Kawthar is on a far more intensive morphological weight." },
+            { id: 'b', text: "فَوْعَل (Faw'al) — hyper-intensive pattern denoting limitless, overflowing abundance", correct: true, explanation: "Correct! In classical morphology, Faw'al (فَوْعَل) denotes abundance multiplied beyond measure: the heavenly river, intercession, supreme wisdom, and an everlasting legacy." },
+            { id: 'c', text: "مَفْعُول (Maf'ool) — standard passive participle", correct: false, explanation: "Maf'ool would be مَكْثُور. Al-Kawthar is an intrinsic superlative noun on pattern Faw'al." },
+            { id: 'd', text: "أَفْعَل (Af'al) — comparative superlative", correct: false, explanation: "Af'al would be أَكْثَر. Faw'al is unique and specifically chosen here." }
+          ]
+        },
+        {
+          id: 'q3',
+          question: "In Ayah 3, what grammatical role does the pronoun 'هُوَ' perform in 'إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ'?",
+          options: [
+            { id: 'a', text: "Fa'il (Subject of an action)", correct: false, explanation: "There is no verb in this sentence; it is a nominal sentence governed by Inna." },
+            { id: 'b', text: "Ism Inna (The noun of Inna)", correct: false, explanation: "Ism Inna is شَانِئَكَ (shāni'aka), which is in the accusative (Mansub) state." },
+            { id: 'c', text: "Damir Fasl (Pronoun of Separation) that restricts the condemnation exclusively to the mocker", correct: true, explanation: "Brilliant! 'هُوَ' is a Damir Fasl (ضمير فصل). It creates rhetorical restriction (Hasr / Qasr): 'It is HE and HE ALONE who is cut off', turning the enemy's insult completely upon their own head." },
+            { id: 'd', text: "Prepositional connector", correct: false, explanation: "'Huwa' is a personal pronoun, never a preposition." }
+          ]
+        }
+      ];
+
+      const playAyahAudio = (ayahNumber, onEnd) => {
+        if (audioRef) {
+          audioRef.pause();
+        }
+        const ayahPadded = String(ayahNumber).padStart(3, '0');
+        const url = 'https://everyayah.com/data/Alafasy_128kbps/108' + ayahPadded + '.mp3';
+        const audio = new Audio(url);
+        setAudioRef(audio);
+        setPlayingAyah(ayahNumber);
+
+        audio.play().catch(e => console.log('Audio playback prevented by browser', e));
+        audio.onended = () => {
+          setPlayingAyah(null);
+          if (onEnd) onEnd();
+        };
+      };
+
+      const togglePlaySurah = () => {
+        if (isPlayingSurah) {
+          if (audioRef) audioRef.pause();
+          setIsPlayingSurah(false);
+          setPlayingAyah(null);
+        } else {
+          setIsPlayingSurah(true);
+          playAyahAudio(1, () => {
+            playAyahAudio(2, () => {
+              playAyahAudio(3, () => {
+                setIsPlayingSurah(false);
+                setPlayingAyah(null);
+              });
+            });
+          });
+        }
+      };
+
+      const copyAyahText = (verse) => {
+        const text = '«' + verse.text_uthmani + '»\n' + verse.transliteration + '\n"' + verse.translation + '"\n(Surah Al-Kawthar 108:' + verse.number + ')';
+        navigator.clipboard.writeText(text);
+        setCopyToast('Copied Ayah ' + verse.number + ' to clipboard!');
+        setTimeout(() => setCopyToast(null), 2500);
+      };
 
       const styles = `
         /* ═══════════════════════════════════════════════════
@@ -776,6 +857,13 @@
           flex-direction: column;
           gap: 1.5rem;
           margin-bottom: 2.5rem;
+        }
+
+        
+        .verse-box.is-playing {
+          border-color: #3b82f6 !important;
+          box-shadow: 0 0 25px rgba(59, 130, 246, 0.25) !important;
+          background: #f8fbff !important;
         }
 
         .verse-box {
@@ -1539,7 +1627,14 @@
             margin: -1rem 1rem 1.5rem 1rem;
             padding: 0.85rem 1rem;
           }
-          .verse-box { padding: 1.5rem; border-radius: 16px; }
+          
+        .verse-box.is-playing {
+          border-color: #3b82f6 !important;
+          box-shadow: 0 0 25px rgba(59, 130, 246, 0.25) !important;
+          background: #f8fbff !important;
+        }
+
+        .verse-box { padding: 1.5rem; border-radius: 16px; }
           .detail-inspector-inner { padding: 1.5rem; border-radius: 16px; }
           .word-arabic-hero { font-size: 2.8rem; }
           .stats-row { gap: 0.75rem; flex-wrap: wrap; }
@@ -1632,9 +1727,46 @@
 
           <main className="verses-canvas">
             {KAWTHAR_DATA.verses.map((verse) => (
-              <article key={verse.id} className="verse-box">
+              <article key={verse.id} className={}>
                 <div className="verse-meta-row">
-                  <span className="ayah-pill">Ayah {verse.number}</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    <span className="ayah-pill">Ayah {verse.number}</span>
+                    <button
+                      onClick={() => playAyahAudio(verse.number)}
+                      title={}
+                      style={{
+                        background: playingAyah === verse.number ? '#2563eb' : '#eff6ff',
+                        color: playingAyah === verse.number ? '#ffffff' : '#1d4ed8',
+                        border: '1px solid #bfdbfe',
+                        borderRadius: '6px',
+                        padding: '0.2rem 0.55rem',
+                        fontSize: '0.75rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.3rem'
+                      }}
+                    >
+                      <span>{playingAyah === verse.number ? '🔊 Playing...' : '▶️ Play'}</span>
+                    </button>
+                    <button
+                      onClick={() => copyAyahText(verse)}
+                      title="Copy Ayah text and translation"
+                      style={{
+                        background: '#f8fafc',
+                        color: '#475569',
+                        border: '1px solid #e2e8f0',
+                        borderRadius: '6px',
+                        padding: '0.2rem 0.55rem',
+                        fontSize: '0.75rem',
+                        fontWeight: 600,
+                        cursor: 'pointer'
+                      }}
+                    >
+                      📋 Copy
+                    </button>
+                  </div>
                   <span className="instruction-hint">Click any word to inspect in AI Tutor</span>
                 </div>
 
@@ -1943,9 +2075,127 @@
             </section>
           )}
 
+          {showQuiz && (
+            <section style={{
+              width: '100%',
+              maxWidth: '1080px',
+              margin: '2rem auto 0',
+              padding: '2rem',
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderRadius: '20px',
+              boxShadow: '0 10px 25px -5px rgba(0,0,0,0.05)'
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', borderBottom: '1px solid #f1f5f9', paddingBottom: '1rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <div>
+                  <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span>🎓</span> Surah Al-Kawthar Master Linguistic Challenge
+                  </h2>
+                  <p style={{ fontSize: '0.82rem', color: '#64748b', margin: '4px 0 0' }}>
+                    Test your understanding of Sarf patterns, Nahw roles, and rhetorical secrets.
+                  </p>
+                </div>
+                <div style={{
+                  background: '#eff6ff',
+                  color: '#2563eb',
+                  padding: '0.35rem 0.85rem',
+                  borderRadius: '9999px',
+                  fontWeight: 700,
+                  fontSize: '0.82rem',
+                  fontFamily: "'JetBrains Mono', monospace"
+                }}>
+                  Score: {Object.values(quizAnswers).filter(a => a.correct).length} / {QUIZ_QUESTIONS.length}
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                {QUIZ_QUESTIONS.map((q, idx) => {
+                  const selectedOpt = quizAnswers[q.id];
+                  return (
+                    <div key={q.id} style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '1.25rem' }}>
+                      <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#1e293b', marginBottom: '1rem' }}>
+                        Question {idx + 1}: {q.question}
+                      </div>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.65rem' }}>
+                        {q.options.map(opt => {
+                          const isChosen = selectedOpt?.id === opt.id;
+                          let btnStyle = {
+                            background: '#ffffff',
+                            border: '1px solid #cbd5e1',
+                            color: '#334155'
+                          };
+                          if (selectedOpt) {
+                            if (opt.correct) {
+                              btnStyle = { background: '#ecfdf5', border: '2px solid #10b981', color: '#065f46', fontWeight: 700 };
+                            } else if (isChosen && !opt.correct) {
+                              btnStyle = { background: '#fef2f2', border: '2px solid #ef4444', color: '#991b1b', fontWeight: 700 };
+                            }
+                          }
+                          return (
+                            <button
+                              key={opt.id}
+                              onClick={() => {
+                                if (!selectedOpt) {
+                                  setQuizAnswers(prev => ({ ...prev, [q.id]: opt }));
+                                }
+                              }}
+                              style={{
+                                padding: '0.75rem 1rem',
+                                borderRadius: '8px',
+                                fontSize: '0.85rem',
+                                cursor: selectedOpt ? 'default' : 'pointer',
+                                textAlign: 'left',
+                                transition: 'all 0.15s ease',
+                                ...btnStyle
+                              }}
+                            >
+                              {opt.text}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      {selectedOpt && (
+                        <div style={{
+                          marginTop: '0.85rem',
+                          padding: '0.75rem 1rem',
+                          borderRadius: '8px',
+                          background: selectedOpt.correct ? '#f0fdf4' : '#fff1f2',
+                          border: selectedOpt.correct ? '1px solid #bbf7d0' : '1px solid #fecdd3',
+                          fontSize: '0.82rem',
+                          lineHeight: 1.5,
+                          color: selectedOpt.correct ? '#166534' : '#9f1239'
+                        }}>
+                          <strong>{selectedOpt.correct ? '✓ Correct!' : '✕ Note:'}</strong> {selectedOpt.explanation}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {copyToast && (
+            <div style={{
+              position: 'fixed',
+              bottom: '2rem',
+              right: '2rem',
+              background: '#059669',
+              color: '#ffffff',
+              padding: '0.65rem 1.25rem',
+              borderRadius: '8px',
+              fontWeight: 600,
+              fontSize: '0.85rem',
+              boxShadow: '0 10px 20px rgba(0,0,0,0.15)',
+              zIndex: 999
+            }}>
+              {copyToast}
+            </div>
+          )}
+
           <footer className="app-footer">
             <p className="footer-text">Surah Al-Kawthar — Grammar Intelligence & AI Tutor</p>
-            <p className="footer-version">v1.1.0 (updated 2026-09-10 07:30)</p>
+            <p className="footer-version">v1.2.0 (updated 2026-09-16 07:30)</p>
           </footer>
         </div>
       );
