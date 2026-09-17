@@ -1727,13 +1727,13 @@
 
           <main className="verses-canvas">
             {KAWTHAR_DATA.verses.map((verse) => (
-              <article key={verse.id} className={}>
+              <article key={verse.id} className={`verse-box ${playingAyah === verse.number ? 'is-playing' : ''}`}>
                 <div className="verse-meta-row">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                     <span className="ayah-pill">Ayah {verse.number}</span>
                     <button
                       onClick={() => playAyahAudio(verse.number)}
-                      title={}
+                      title={'Listen to Ayah ' + verse.number}
                       style={{
                         background: playingAyah === verse.number ? '#2563eb' : '#eff6ff',
                         color: playingAyah === verse.number ? '#ffffff' : '#1d4ed8',
@@ -2195,7 +2195,7 @@
 
           <footer className="app-footer">
             <p className="footer-text">Surah Al-Kawthar — Grammar Intelligence & AI Tutor</p>
-            <p className="footer-version">v1.2.0 (updated 2026-09-16 07:30)</p>
+            <p className="footer-version">v1.2.1 (updated 2026-09-17 07:00)</p>
           </footer>
         </div>
       );
