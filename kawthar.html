@@ -525,7 +525,7 @@
       const [showTooltips, setShowTooltips] = useState(true);
       const [colorMode, setColorMode] = useState("pos"); // 'pos' | 'case' | 'syntax'
       const [selectedToken, setSelectedToken] = useState(KAWTHAR_DATA.verses[0].tokens[1]); // Default to أَعْطَيْنَاكَ
-      const [aiLevel, setAiLevel] = useState(beginner); // 'beginner' | 'intermediate' | 'advanced'
+      const [aiLevel, setAiLevel] = useState('beginner'); // 'beginner' | 'intermediate' | 'advanced'
       const [playingAyah, setPlayingAyah] = useState(null);
       const [isPlayingSurah, setIsPlayingSurah] = useState(false);
       const [audioRef, setAudioRef] = useState(null);
@@ -1711,6 +1711,20 @@
 
             <div className="control-group">
               <button
+                className={`toggle-btn ${isPlayingSurah ? 'is-active' : ''}`}
+                onClick={togglePlaySurah}
+                title="Play continuous recitation by Sheikh Mishary Rashid Alafasy"
+              >
+                <span>{isPlayingSurah ? '⏸️' : '▶️'}</span> {isPlayingSurah ? 'Pause Recitation' : 'Play Full Surah'}
+              </button>
+              <button
+                className={`toggle-btn ${showQuiz ? 'is-active' : ''}`}
+                onClick={() => setShowQuiz(!showQuiz)}
+                title="Test your knowledge of Surah 108"
+              >
+                <span>🎓</span> {showQuiz ? 'Close Challenge' : 'Linguistic Challenge'}
+              </button>
+              <button
                 className={`toggle-btn ${showAnimations ? 'is-active' : ''}`}
                 onClick={() => setShowAnimations(!showAnimations)}
               >
@@ -2195,7 +2209,7 @@
 
           <footer className="app-footer">
             <p className="footer-text">Surah Al-Kawthar — Grammar Intelligence & AI Tutor</p>
-            <p className="footer-version">v1.2.1 (updated 2026-09-17 07:00)</p>
+            <p className="footer-version">v1.2.2 (updated 2026-10-04 00:09)</p>
           </footer>
         </div>
       );
