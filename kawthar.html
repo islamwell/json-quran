@@ -46,6 +46,8 @@
           tokens: [
             {
               id: "108:1:1",
+              beneficial_meaning: "Indeed, We — A divine guarantee of absolute certainty from Allah. Using the Royal 'We' (Plural of Majesty) highlights Allah's supreme power, grandeur, and closeness to the Prophet ﷺ before revealing the magnificent gift.",
+              simplified_role: "Divine Guarantee of Certainty",
               word_id: "108:1:w1",
               word_order: "1",
               word_part: "single",
@@ -84,6 +86,8 @@
             },
             {
               id: "108:1:2",
+              beneficial_meaning: "We have granted you — Allah is the Bestower, and Prophet Muhammad ﷺ is the honored recipient. It is stated in the past tense ('We gave') to announce that this boundless divine favor is already decreed, sealed, and permanent forever.",
+              simplified_role: "Action: Divine Bestowal",
               word_id: "108:1:w2",
               word_order: "2",
               word_part: "single",
@@ -130,6 +134,8 @@
             },
             {
               id: "108:1:3",
+              beneficial_meaning: "The Ultimate Abundance (Al-Kawthar) — Endless divine goodness in this world and the next, including the glorious river and pearlescent fountain in Paradise reserved for the Prophet ﷺ and his followers.",
+              simplified_role: "The Boundless Gift Received",
               word_id: "108:1:w3",
               word_order: "3",
               word_part: "single",
@@ -181,6 +187,8 @@
           tokens: [
             {
               id: "108:2:1",
+              beneficial_meaning: "So / Therefore — Connects divine favor directly to grateful action: 'Because Allah has blessed you with limitless abundance in Verse 1, the natural, grateful response is to turn to your Lord in prayer!'",
+              simplified_role: "Consequence Link (Gift → Gratitude)",
               word_id: "108:2:w1",
               word_order: "1 (Part 1)",
               word_part: "prefix",
@@ -210,6 +218,8 @@
             },
             {
               id: "108:2:2",
+              beneficial_meaning: "Pray! — A direct loving command to establish prayer with sincere heart and steadfast devotion as the purest expression of thankfulness to Allah.",
+              simplified_role: "Action: Command to Worship",
               word_id: "108:2:w1",
               word_order: "1 (Part 2)",
               word_part: "stem",
@@ -250,6 +260,8 @@
             },
             {
               id: "108:2:3",
+              beneficial_meaning: "For your Lord alone — Direct every prayer and act of worship exclusively to your Creator and Cherisher, rejecting all false idols and seeking no human praise.",
+              simplified_role: "Dedication: Exclusively to Allah",
               word_id: "108:2:w2",
               word_order: "2",
               word_part: "single",
@@ -290,6 +302,8 @@
             },
             {
               id: "108:2:4",
+              beneficial_meaning: "And sacrifice! — Offer charity and feed the hungry in Allah's name alone, uniting bodily devotion (prayer) with selfless charity and sacrifice.",
+              simplified_role: "Action: Command to Give & Feed",
               word_id: "108:2:w3",
               word_order: "3",
               word_part: "single",
@@ -340,6 +354,8 @@
           tokens: [
             {
               id: "108:3:1",
+              beneficial_meaning: "Indeed — An absolute divine declaration of truth to comfort the Prophet ﷺ: the reality that follows is guaranteed by Allah Himself.",
+              simplified_role: "Divine Guarantee of Truth",
               word_id: "108:3:w1",
               word_order: "1",
               word_part: "single",
@@ -375,6 +391,8 @@
             },
             {
               id: "108:3:2",
+              beneficial_meaning: "The one who hates you — The arrogant enemies who mocked the Prophet ﷺ when his infant son passed away, spitefully claiming his legacy was finished.",
+              simplified_role: "Subject: The Enemy / Mocker",
               word_id: "108:3:w2",
               word_order: "2",
               word_part: "single",
@@ -417,6 +435,8 @@
             },
             {
               id: "108:3:3",
+              beneficial_meaning: "He is the one — A sharp divine reversal: Allah turns the insult right back onto the mockers—they alone are the ones forgotten and ruined, while Muhammad ﷺ is beloved and remembered forever.",
+              simplified_role: "Focus & Reversal ('He alone')",
               word_id: "108:3:w3",
               word_order: "3",
               word_part: "single",
@@ -453,6 +473,8 @@
             },
             {
               id: "108:3:4",
+              beneficial_meaning: "Cut off from all legacy — The mockers are completely severed from goodness, erased from honorable memory, while the Prophet's name ﷺ and message are praised by billions of believers across every land and era.",
+              simplified_role: "The Outcome: Permanently Cut Off",
               word_id: "108:3:w4",
               word_order: "4",
               word_part: "single",
@@ -519,6 +541,40 @@
       }
       return groups;
     }
+
+        const COLOR_DIMENSIONS_INFO = {
+      pos: {
+        title: "🏷️ Word Class (Building Blocks)",
+        benefit: "Why this helps: In Arabic, every single word is built from one of three categories: an Action (Verb), an Entity/Thing (Noun), or a Connector (Particle). Colors let your eyes immediately identify what kind of building block each word is without guessing.",
+        legends: [
+          { color: "#1e40af", label: "Action (Verb)", desc: "Commands and past deeds ('We gave', 'Pray', 'Sacrifice')" },
+          { color: "#059669", label: "Entity (Noun)", desc: "People, places, qualities, and gifts ('Al-Kawthar', 'Lord', 'Enemy')" },
+          { color: "#6d28d9", label: "Connector (Particle)", desc: "Glue holding words together ('Indeed', 'So/Therefore', 'For', 'And')" },
+          { color: "#d97706", label: "Pointer (Pronoun)", desc: "Words pointing to people ('He', 'We', 'You')" }
+        ]
+      },
+      case: {
+        title: "⚖️ Case & Mood (Word Endings)",
+        benefit: "Why this helps: In Arabic, the final vowel sound (u, a, i) shows what job the word is doing in the sentence—who did the action, who received it, and who is attached to a connector. Colors reveal these roles at a glance without memorizing charts.",
+        legends: [
+          { color: "#2563eb", label: "Actor / Primary (Raf')", desc: "The main topic or subject of the sentence (usually ends with 'u')" },
+          { color: "#059669", label: "Receiver / Detail (Nasb)", desc: "The direct recipient of the action (usually ends with 'a')" },
+          { color: "#7c3aed", label: "Attached (Jarr)", desc: "Connected after a preposition like 'for' or 'in' (usually ends with 'i')" },
+          { color: "#64748b", label: "Fixed (Mabni)", desc: "Permanent building block that never changes its ending sound" }
+        ]
+      },
+      syntax: {
+        title: "🌳 Syntax Roles (Sentence Structure)",
+        benefit: "Why this helps: Shows how complete thoughts and ideas connect—from divine promises to actions, objects, and conclusions. You see how every word contributes to the overarching message of the Surah.",
+        legends: [
+          { color: "#d97706", label: "Divine Guarantee (Inna)", desc: "Words of divine certainty anchoring the promise" },
+          { color: "#dc2626", label: "Topic / Subject", desc: "Who the sentence is addressing or condemning" },
+          { color: "#059669", label: "Gift / Receiver", desc: "What is being given or affected ('Al-Kawthar')" },
+          { color: "#0284c7", label: "Action Command", desc: "The deeds demanded ('Pray', 'Sacrifice')" },
+          { color: "#7c3aed", label: "Dedication Phrase", desc: "Exclusively for your Lord" }
+        ]
+      }
+    };
 
     function Surah108App() {
       const [showAnimations, setShowAnimations] = useState(true);
@@ -983,17 +1039,530 @@
           border-end-start-radius: 0;
         }
 
+        
+        /* ── Remove internal outline border when clicking FA before SALI ── */
+        .gram-word.joined-prefix.is-selected,
+        .gram-word.joined-stem.is-selected {
+          outline: none !important;
+          box-shadow: none !important;
+        }
+
         .gram-word.joined-prefix.is-selected {
-          border-start-end-radius: 0;
-          border-end-end-radius: 0;
-          box-shadow: -2px 0 0 0 #3b82f6;
+          background: rgba(59, 130, 246, 0.16);
+          border-top: 2.5px solid #3b82f6;
+          border-bottom: 2.5px solid #3b82f6;
+          border-inline-start: 2.5px solid #3b82f6;
+          border-inline-end: none !important;
+          border-left: none !important;
+          border-start-end-radius: 0 !important;
+          border-end-end-radius: 0 !important;
         }
 
         .gram-word.joined-stem.is-selected {
-          border-start-start-radius: 0;
-          border-end-start-radius: 0;
-          box-shadow: 2px 0 0 0 #3b82f6;
+          background: rgba(59, 130, 246, 0.16);
+          border-top: 2.5px solid #3b82f6;
+          border-bottom: 2.5px solid #3b82f6;
+          border-inline-end: 2.5px solid #3b82f6;
+          border-inline-start: none !important;
+          border-right: none !important;
+          border-start-start-radius: 0 !important;
+          border-end-start-radius: 0 !important;
         }
+
+        /* ── Color Dimension Explainer Guide & Legends ── */
+        .color-dimension-guide-wrapper {
+          width: 100%;
+          max-width: 1080px;
+          margin: 0 auto 1.75rem auto;
+          padding: 0 1.5rem;
+        }
+
+        .color-guide-card {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+          box-shadow: 0 2px 10px -2px rgba(0,0,0,0.04);
+        }
+
+        .color-guide-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-bottom: 0.65rem;
+        }
+
+        .color-guide-title {
+          font-size: 0.92rem;
+          font-weight: 800;
+          color: #0f172a;
+          display: flex;
+          align-items: center;
+          gap: 0.45rem;
+        }
+
+        .color-guide-active-tag {
+          font-size: 0.72rem;
+          font-weight: 700;
+          background: #eff6ff;
+          color: #1d4ed8;
+          border: 1px solid #bfdbfe;
+          padding: 0.2rem 0.6rem;
+          border-radius: 6px;
+        }
+
+        .color-guide-benefit {
+          font-size: 0.86rem;
+          color: #475569;
+          line-height: 1.6;
+          margin: 0 0 1rem 0;
+          background: #f8fafc;
+          padding: 0.75rem 1rem;
+          border-radius: 10px;
+          border-left: 3px solid #3b82f6;
+        }
+
+        .legend-chips-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.6rem;
+        }
+
+        .legend-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          padding: 0.35rem 0.75rem;
+          border-radius: 8px;
+          font-size: 0.76rem;
+          transition: all 0.15s ease;
+        }
+
+        .legend-chip:hover {
+          border-color: #cbd5e1;
+          background: #f8fafc;
+        }
+
+        .legend-color-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          flex-shrink: 0;
+        }
+
+        .legend-chip-title {
+          font-weight: 700;
+          color: #1e293b;
+        }
+
+        .legend-chip-desc {
+          color: #64748b;
+        }
+
+        /* ── Single Continuous Mushaf Flow ── */
+        .mushaf-card {
+          width: 100%;
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          border-radius: 24px;
+          padding: 2rem 2.25rem;
+          box-shadow: 0 4px 20px -4px rgba(0,0,0,0.04);
+          transition: all 0.3s ease;
+        }
+
+        .mushaf-card-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1rem;
+          padding-bottom: 1.25rem;
+          border-bottom: 1px solid #f1f5f9;
+          margin-bottom: 1.5rem;
+        }
+
+        .mushaf-header-left {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+        }
+
+        .surah-mushaf-title {
+          font-family: 'Amiri Quran', 'Amiri', serif;
+          font-size: 1.7rem;
+          color: #1e3a8a;
+          direction: rtl;
+        }
+
+        .surah-mushaf-badge {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.72rem;
+          font-weight: 700;
+          background: #eff6ff;
+          color: #2563eb;
+          padding: 0.25rem 0.65rem;
+          border-radius: 6px;
+          border: 1px solid #dbeafe;
+        }
+
+        .mushaf-header-actions {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .mushaf-audio-btn {
+          background: #eff6ff;
+          color: #1d4ed8;
+          border: 1px solid #bfdbfe;
+          border-radius: 8px;
+          padding: 0.4rem 0.85rem;
+          font-size: 0.78rem;
+          font-weight: 700;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          transition: all 0.2s ease;
+        }
+        .mushaf-audio-btn:hover {
+          background: #dbeafe;
+        }
+        .mushaf-audio-btn.is-active {
+          background: #2563eb;
+          color: #ffffff;
+          border-color: #1d4ed8;
+        }
+
+        .mushaf-copy-btn {
+          background: #f8fafc;
+          color: #475569;
+          border: 1px solid #e2e8f0;
+          border-radius: 8px;
+          padding: 0.4rem 0.8rem;
+          font-size: 0.78rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        .mushaf-copy-btn:hover {
+          background: #f1f5f9;
+        }
+
+        /* ── Inline Grammar Reveal Card (Pushes Quranic Arabic Down) ── */
+        .inline-grammar-reveal-card {
+          margin-bottom: 2rem;
+          background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+          border: 2px solid #93c5fd;
+          border-radius: 18px;
+          padding: 1.5rem 1.75rem;
+          box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.12);
+          animation: revealSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes revealSlideDown {
+          from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .reveal-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid #dbeafe;
+          margin-bottom: 1.25rem;
+        }
+
+        .reveal-word-badge {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .reveal-ar-text {
+          font-family: 'Amiri Quran', 'Amiri', serif;
+          font-size: 2.5rem;
+          color: #1d4ed8;
+          line-height: 1;
+          background: #eff6ff;
+          padding: 0.25rem 0.85rem;
+          border-radius: 12px;
+          border: 1.5px solid #bfdbfe;
+          direction: rtl;
+        }
+
+        .reveal-meta {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+        }
+
+        .reveal-lemma {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1.05rem;
+          color: #0f172a;
+        }
+
+        .reveal-role-tag {
+          font-size: 0.72rem;
+          font-weight: 700;
+          background: #f1f5f9;
+          color: #475569;
+          padding: 0.15rem 0.5rem;
+          border-radius: 6px;
+        }
+
+        .reveal-location-tag {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.72rem;
+          font-weight: 700;
+          color: #3b82f6;
+        }
+
+        .reveal-header-right {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+        }
+
+        .reveal-deep-btn {
+          background: #eff6ff;
+          border: 1px solid #bfdbfe;
+          color: #1d4ed8;
+          font-size: 0.78rem;
+          font-weight: 700;
+          padding: 0.45rem 0.9rem;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        .reveal-deep-btn:hover {
+          background: #dbeafe;
+        }
+
+        .close-reveal-btn {
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #64748b;
+          font-size: 0.85rem;
+          font-weight: 700;
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+        }
+        .close-reveal-btn:hover {
+          background: #e2e8f0;
+          color: #0f172a;
+        }
+
+        /* Beneficial Meaning Card (Plain English, NO Jargon) */
+        .beneficial-meaning-card {
+          background: #f0fdf4;
+          border: 1px solid #bbf7d0;
+          border-left: 4px solid #16a34a;
+          border-radius: 12px;
+          padding: 1.1rem 1.35rem;
+          margin-bottom: 1.1rem;
+        }
+
+        .meaning-header {
+          font-size: 0.82rem;
+          font-weight: 800;
+          color: #15803d;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          margin-bottom: 0.45rem;
+        }
+
+        .meaning-text {
+          font-size: 1.02rem;
+          line-height: 1.7;
+          color: #14532d;
+          margin: 0;
+          font-weight: 500;
+        }
+
+        .reveal-quick-facts {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.65rem;
+        }
+
+        .reveal-chip {
+          background: #ffffff;
+          border: 1px solid #e2e8f0;
+          padding: 0.4rem 0.85rem;
+          border-radius: 8px;
+          font-size: 0.78rem;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .reveal-chip .chip-label {
+          color: #64748b;
+          font-weight: 600;
+        }
+
+        .reveal-chip .chip-val {
+          color: #0f172a;
+          font-weight: 700;
+        }
+
+        .reveal-chip .chip-val.ar-font {
+          font-family: 'Amiri', serif;
+          font-size: 1.1rem;
+          color: #2563eb;
+        }
+
+        /* ── Continuous Mushaf Paragraph (Flowing Naturally) ── */
+        .mushaf-paragraph {
+          direction: rtl;
+          unicode-bidi: embed;
+          font-family: 'Amiri Quran', 'Amiri', serif;
+          font-size: 3.5rem;
+          line-height: 2.3;
+          text-align: center;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          gap: 1.25rem 1.8rem;
+          padding: 1.5rem 0.5rem;
+          margin-bottom: 2rem;
+          border-bottom: 1px solid #f1f5f9;
+        }
+
+        .ayah-end-medallion {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          cursor: pointer;
+          font-family: 'Amiri Quran', 'Amiri', serif;
+          font-size: 3rem;
+          color: #d97706;
+          margin: 0 0.5rem;
+          line-height: 1;
+          user-select: none;
+          transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .ayah-end-medallion:hover {
+          transform: scale(1.15);
+          color: #2563eb;
+        }
+
+        .ayah-end-medallion.is-playing {
+          color: #2563eb;
+          animation: pulseAyah 1.5s infinite;
+        }
+
+        @keyframes pulseAyah {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.18); }
+        }
+
+        .medallion-symbol {
+          line-height: 1;
+        }
+
+        .medallion-num {
+          position: absolute;
+          top: 52%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: 'Amiri', serif;
+          font-size: 1.15rem;
+          font-weight: 700;
+          color: #92400e;
+          pointer-events: none;
+        }
+
+        .ayah-end-medallion:hover .medallion-num {
+          color: #1e40af;
+        }
+
+        /* ── Translations Below Continuous Flow ── */
+        .mushaf-translations-container {
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+        }
+
+        .trans-header {
+          font-size: 0.85rem;
+          font-weight: 800;
+          color: #334155;
+          margin-bottom: 0.85rem;
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+        }
+
+        .translations-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .trans-line-item {
+          display: flex;
+          align-items: baseline;
+          gap: 0.75rem;
+          padding: 0.65rem 0.85rem;
+          border-radius: 10px;
+          transition: all 0.2s ease;
+        }
+
+        .trans-line-item.is-highlighted-verse {
+          background: #eff6ff;
+          border-left: 3px solid #3b82f6;
+        }
+
+        .trans-badge {
+          font-family: 'JetBrains Mono', monospace;
+          font-size: 0.72rem;
+          font-weight: 700;
+          background: #e2e8f0;
+          color: #475569;
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          white-space: nowrap;
+        }
+
+        .trans-line-item.is-highlighted-verse .trans-badge {
+          background: #3b82f6;
+          color: #ffffff;
+        }
+
+        .trans-quote {
+          margin: 0;
+          font-size: 0.98rem;
+          color: #334155;
+          line-height: 1.6;
+        }
+
 
         /* ── Instant Inline Inspector (Zero Scrolling Required!) ── */
         .instant-inline-inspector {
@@ -1739,159 +2308,203 @@
             </div>
           </section>
 
-          <main className="verses-canvas">
-            {KAWTHAR_DATA.verses.map((verse) => (
-              <article key={verse.id} className={`verse-box ${playingAyah === verse.number ? 'is-playing' : ''}`}>
-                <div className="verse-meta-row">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                    <span className="ayah-pill">Ayah {verse.number}</span>
-                    <button
-                      onClick={() => playAyahAudio(verse.number)}
-                      title={'Listen to Ayah ' + verse.number}
-                      style={{
-                        background: playingAyah === verse.number ? '#2563eb' : '#eff6ff',
-                        color: playingAyah === verse.number ? '#ffffff' : '#1d4ed8',
-                        border: '1px solid #bfdbfe',
-                        borderRadius: '6px',
-                        padding: '0.2rem 0.55rem',
-                        fontSize: '0.75rem',
-                        fontWeight: 600,
-                        cursor: 'pointer',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '0.3rem'
-                      }}
-                    >
-                      <span>{playingAyah === verse.number ? '🔊 Playing...' : '▶️ Play'}</span>
-                    </button>
-                    <button
-                      onClick={() => copyAyahText(verse)}
-                      title="Copy Ayah text and translation"
-                      style={{
-                        background: '#f8fafc',
-                        color: '#475569',
-                        border: '1px solid #e2e8f0',
-                        borderRadius: '6px',
-                        padding: '0.2rem 0.55rem',
-                        fontSize: '0.75rem',
-                        fontWeight: 600,
-                        cursor: 'pointer'
-                      }}
-                    >
-                      📋 Copy
-                    </button>
-                  </div>
-                  <span className="instruction-hint">Click any word to inspect in AI Tutor</span>
+          {/* ── Down-to-Earth Color Dimension Explainer Guide & Legends ── */}
+          <section className="color-dimension-guide-wrapper">
+            <div className="color-guide-card">
+              <div className="color-guide-header">
+                <div className="color-guide-title">
+                  <span>🎨</span> 
+                  <strong>Why do we color-code Arabic?</strong>
                 </div>
+                <span className="color-guide-active-tag">
+                  {COLOR_DIMENSIONS_INFO[colorMode].title}
+                </span>
+              </div>
+              <p className="color-guide-benefit">
+                {COLOR_DIMENSIONS_INFO[colorMode].benefit}
+              </p>
+              <div className="legend-chips-row">
+                {COLOR_DIMENSIONS_INFO[colorMode].legends.map((item, idx) => (
+                  <div key={idx} className="legend-chip">
+                    <span className="legend-color-dot" style={{ backgroundColor: item.color }}></span>
+                    <span className="legend-chip-title">{item.label}:</span>
+                    <span className="legend-chip-desc">{item.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-                <div className="sentence" aria-label={`Surah Al-Kawthar Ayah ${verse.number}`}>
-                  {getWordGroups(verse.tokens).map((group) => {
-                    const isCompound = group.length > 1;
-                    return (
-                      <span
-                        key={group[0].word_id || group[0].id}
-                        className={`word-cluster ${isCompound ? 'compound-word' : ''}`}
+          <main className="verses-canvas single-mushaf-layout">
+            <div className="mushaf-card">
+              <div className="mushaf-card-header">
+                <div className="mushaf-header-left">
+                  <span className="surah-mushaf-title">سُورَةُ الْكَوْثَرِ</span>
+                  <span className="surah-mushaf-badge">Full Continuous Flow • 3 Ayāt</span>
+                </div>
+                <div className="mushaf-header-actions">
+                  <button
+                    onClick={togglePlaySurah}
+                    className={`mushaf-audio-btn ${isPlayingSurah ? 'is-active' : ''}`}
+                    title="Play continuous recitation of Surah Al-Kawthar"
+                  >
+                    <span>{isPlayingSurah ? '⏹ Stop' : '▶️ Play Recitation'}</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      const allText = KAWTHAR_DATA.verses.map(v => v.text_uthmani + ' ۝' + (v.number === 1 ? '١' : v.number === 2 ? '٢' : '٣')).join(' ');
+                      navigator.clipboard.writeText(allText);
+                      setCopyToast('Copied full Surah to clipboard!');
+                      setTimeout(() => setCopyToast(null), 2500);
+                    }}
+                    className="mushaf-copy-btn"
+                    title="Copy full Surah text"
+                  >
+                    📋 Copy Surah
+                  </button>
+                </div>
+              </div>
+
+              {/* WHEN A WORD IS CLICKED: Grammar card appears right here, PUSHING the Quranic Arabic paragraph down! */}
+              {selectedToken && (
+                <div className="inline-grammar-reveal-card" id="grammar-reveal-card">
+                  <div className="reveal-header">
+                    <div className="reveal-word-badge">
+                      <span className="reveal-ar-text">{selectedToken.text}</span>
+                      <div className="reveal-meta">
+                        <div className="reveal-lemma">
+                          <strong>{selectedToken.lemma || selectedToken.text}</strong>
+                          <span className="reveal-role-tag">{selectedToken.pos_label}</span>
+                        </div>
+                        <div className="reveal-location-tag">
+                          Ayah {selectedToken.id.split(':')[1]} • Word {selectedToken.word_order || selectedToken.id.split(':')[2]}
+                        </div>
+                      </div>
+                    </div>
+                    <div className="reveal-header-right">
+                      <button 
+                        className="reveal-deep-btn"
+                        onClick={() => {
+                          const el = document.getElementById('deep-inspector');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        title="Scroll down to deep morphology, patterns, and Quranic examples"
                       >
-                        {group.map((token) => {
-                          const isSelected = selectedToken && selectedToken.id === token.id;
-                          let animClass = "";
-                          if (showAnimations && token.pos_class === "verb-past") animClass = "pulse-past";
-                          const joinedClass = token.word_part ? `joined-${token.word_part}` : "";
-
-                          return (
-                            <span
-                              key={token.id}
-                              className={`gram-word ${token.pos_class} ${token.case_class} ${token.syntax_class} ${joinedClass} ${animClass} ${isSelected ? 'is-selected' : ''}`}
-                              data-tooltip={token.tooltip}
-                              onClick={() => setSelectedToken(token)}
-                            >
-                              {token.display_text || token.text}
-                            </span>
-                          );
-                        })}
-                      </span>
-                    );
-                  })}
-                </div>
-
-                {/* Instant Inline Inspector (No Scrolling Required!) */}
-                {selectedToken && selectedToken.id.startsWith(verse.id + ":") && (
-                  <div className="instant-inline-inspector">
-                    <div className="instant-header">
-                      <div className="instant-word-badge">
-                        <span className="instant-ar-text">{selectedToken.text}</span>
-                        <div className="instant-sub-meta">
-                          <span className="instant-sub-title">
-                            <strong>{selectedToken.lemma}</strong> • {selectedToken.pos_label}
-                          </span>
-                          <span className="instant-location-pill">
-                            Ayah {verse.number} • Word {selectedToken.word_order || selectedToken.id.split(':')[2]}
-                          </span>
-                        </div>
-                      </div>
-                      <div className="instant-actions">
-                        <button 
-                          className="instant-scroll-btn" 
-                          onClick={() => {
-                            const el = document.getElementById('deep-inspector');
-                            if (el) el.scrollIntoView({ behavior: 'smooth' });
-                          }}
-                          title="Scroll down to deep AI Tutor, Wazn & Syntax Tree"
-                        >
-                          <span>🔬</span> Deep AI Tutor ↓
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* The Authentic Arabic I'rab */}
-                    <div className="instant-irab-box">
-                      <div className="instant-irab-label">الإعراب النحوي الدقيق:</div>
-                      <div className="instant-irab-arabic">
-                        {selectedToken.irab}
-                      </div>
-                    </div>
-
-                    {/* Super Easy English Translation */}
-                    <div className="instant-easy-english-box">
-                      <div className="instant-easy-label">
-                        <span>💡</span> Super Easy English:
-                      </div>
-                      <p className="instant-easy-text">
-                        {selectedToken.irab_easy_english || selectedToken.ai_explanations.beginner}
-                      </p>
-                    </div>
-
-                    {/* Key Morphological / Syntax Facts */}
-                    <div className="instant-facts-row">
-                      <div className="instant-fact-chip">
-                        <span className="fact-title">Category:</span>
-                        <span className="fact-val">{selectedToken.pos_label}</span>
-                      </div>
-                      <div className="instant-fact-chip">
-                        <span className="fact-title">Grammar State:</span>
-                        <span className="fact-val">{selectedToken.case_class ? selectedToken.case_class.replace('case-', '') : 'mabni'}</span>
-                      </div>
-                      {selectedToken.wazn && selectedToken.wazn !== '—' && (
-                        <div className="instant-fact-chip">
-                          <span className="fact-title">Pattern:</span>
-                          <span className="fact-val ar-font">{selectedToken.wazn}</span>
-                        </div>
-                      )}
-                      {selectedToken.root && (
-                        <div className="instant-fact-chip">
-                          <span className="fact-title">Root (الجذر):</span>
-                          <span className="fact-val ar-font">{selectedToken.root}</span>
-                        </div>
-                      )}
+                        🔬 Deep Linguistic Tutor ↓
+                      </button>
+                      <button 
+                        className="close-reveal-btn"
+                        onClick={() => setSelectedToken(null)}
+                        title="Close breakdown"
+                      >
+                        ✕
+                      </button>
                     </div>
                   </div>
-                )}
 
-                <div className="verse-translation">
-                  <em>"{verse.translation}"</em>
+                  {/* SIMPLE BENEFICIAL MEANING (NO TECHNICAL JARGON, NO ARABIC GRAMMAR TEXT) */}
+                  <div className="beneficial-meaning-card">
+                    <div className="meaning-header">
+                      <span>✨</span> <strong>Simple Meaning & Job in this Sentence:</strong>
+                    </div>
+                    <p className="meaning-text">
+                      {selectedToken.beneficial_meaning || selectedToken.irab_easy_english || selectedToken.ai_explanations.beginner}
+                    </p>
+                  </div>
+
+                  {/* Down-to-Earth Quick Facts */}
+                  <div className="reveal-quick-facts">
+                    <div className="reveal-chip">
+                      <span className="chip-label">Building Block:</span>
+                      <span className="chip-val">{selectedToken.pos_label}</span>
+                    </div>
+                    <div className="reveal-chip">
+                      <span className="chip-label">Simple Role:</span>
+                      <span className="chip-val">{selectedToken.simplified_role || selectedToken.case_class.replace('case-', '')}</span>
+                    </div>
+                    {selectedToken.root && (
+                      <div className="reveal-chip">
+                        <span className="chip-label">Root Idea:</span>
+                        <span className="chip-val ar-font">{selectedToken.root}</span>
+                      </div>
+                    )}
+                    {selectedToken.wazn && selectedToken.wazn !== '—' && (
+                      <div className="reveal-chip">
+                        <span className="chip-label">Rhythm Pattern:</span>
+                        <span className="chip-val ar-font">{selectedToken.wazn}</span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </article>
-            ))}
+              )}
+
+              {/* SINGLE CONTINUOUS MUSHAF PARAGRAPH (NO LINE BREAKS BETWEEN AYATS!) */}
+              <div className="mushaf-paragraph" aria-label="Surah Al-Kawthar continuous text">
+                {KAWTHAR_DATA.verses.map((verse) => {
+                  const wordGroups = getWordGroups(verse.tokens);
+                  return (
+                    <React.Fragment key={verse.id}>
+                      {wordGroups.map((group) => {
+                        const isCompound = group.length > 1;
+                        return (
+                          <span
+                            key={group[0].word_id || group[0].id}
+                            className={`word-cluster ${isCompound ? 'compound-word' : ''}`}
+                          >
+                            {group.map((token) => {
+                              const isSelected = selectedToken && selectedToken.id === token.id;
+                              let animClass = "";
+                              if (showAnimations && token.pos_class === "verb-past") animClass = "pulse-past";
+                              const joinedClass = token.word_part ? `joined-${token.word_part}` : "";
+
+                              return (
+                                <span
+                                  key={token.id}
+                                  className={`gram-word ${token.pos_class} ${token.case_class} ${token.syntax_class} ${joinedClass} ${animClass} ${isSelected ? 'is-selected' : ''}`}
+                                  data-tooltip={token.tooltip}
+                                  onClick={() => setSelectedToken(token)}
+                                >
+                                  {token.display_text || token.text}
+                                </span>
+                              );
+                            })}
+                          </span>
+                        );
+                      })}
+                      {/* Ayah End Medallion (The ONLY interruption between ayats!) */}
+                      <span
+                        className={`ayah-end-medallion ${playingAyah === verse.number ? 'is-playing' : ''}`}
+                        title={`Ayah ${verse.number} • Click to listen`}
+                        onClick={() => playAyahAudio(verse.number)}
+                      >
+                        <span className="medallion-symbol">۝</span>
+                        <span className="medallion-num">
+                          {verse.number === 1 ? '١' : verse.number === 2 ? '٢' : '٣'}
+                        </span>
+                      </span>
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+
+              {/* Clean English Translation of the 3 Verses */}
+              <div className="mushaf-translations-container">
+                <div className="trans-header">
+                  <span>📖</span> <strong>English Meaning of the Ayāt:</strong>
+                </div>
+                <div className="translations-list">
+                  {KAWTHAR_DATA.verses.map((v) => (
+                    <div 
+                      key={v.id} 
+                      className={`trans-line-item ${selectedToken && selectedToken.id.startsWith(v.id + ':') ? 'is-highlighted-verse' : ''}`}
+                    >
+                      <span className="trans-badge">Ayah {v.number}</span>
+                      <p className="trans-quote">"{v.translation}"</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </main>
 
           {selectedToken && (
@@ -1910,10 +2523,12 @@
                   </div>
                 </div>
 
-                <div className="irab-text">
-                  <div style={{ fontWeight: 700, marginBottom: '6px' }}>{selectedToken.irab}</div>
-                  <div style={{ fontSize: '0.82rem', color: '#1e40af', fontWeight: 500, direction: 'ltr', textAlign: 'left', borderTop: '1px solid #bfdbfe', paddingTop: '6px' }}>
-                    💡 <strong>Easy English:</strong> {selectedToken.irab_easy_english || selectedToken.ai_explanations.beginner}
+                <div className="irab-text" style={{ textAlign: 'left', direction: 'ltr' }}>
+                  <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#15803d', textTransform: 'uppercase', marginBottom: '4px' }}>
+                    ✨ Simple Beneficial Meaning:
+                  </div>
+                  <div style={{ fontSize: '0.98rem', color: '#1e3a8a', lineHeight: 1.6, fontWeight: 500 }}>
+                    {selectedToken.beneficial_meaning || selectedToken.irab_easy_english}
                   </div>
                 </div>
               </div>
@@ -2209,7 +2824,7 @@
 
           <footer className="app-footer">
             <p className="footer-text">Surah Al-Kawthar — Grammar Intelligence & AI Tutor</p>
-            <p className="footer-version">v1.2.2 (updated 2026-10-04 00:09)</p>
+            <p className="footer-version">v1.1.0 (updated 2026-10-05 22:20)</p>
           </footer>
         </div>
       );
