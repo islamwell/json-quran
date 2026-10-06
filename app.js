@@ -1,6 +1,6 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.0.7 (updated 2026-09-03 01:17)
+ * Version: v1.1.1 (updated 2026-10-06 23:45)
  */
 
 class QuranGrammarApp {
@@ -198,6 +198,8 @@ class QuranGrammarApp {
     if (brandIcon) {
       if (meta.surah_number === 108) brandIcon.textContent = '⚡';
       else if (meta.surah_number === 103) brandIcon.textContent = '⏳';
+      else if (meta.surah_number === 63) brandIcon.textContent = '🛡️';
+      else if (meta.surah_number === 64) brandIcon.textContent = '⚖️';
       else brandIcon.textContent = '🌙';
     }
     if (brandSubtitle) {
@@ -205,6 +207,10 @@ class QuranGrammarApp {
         brandSubtitle.textContent = 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Abundance Intelligence';
       } else if (meta.surah_number === 103) {
         brandSubtitle.textContent = 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Root Intelligence';
+      } else if (meta.surah_number === 63) {
+        brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding for Surah Al-Munafiqun (63:1-11)';
+      } else if (meta.surah_number === 64) {
+        brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding for Surah At-Taghabun (64:1-18)';
       } else {
         brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding';
       }
