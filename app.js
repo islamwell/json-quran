@@ -1,6 +1,6 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.1.4 (updated 2026-10-07 01:00)
+ * Version: v1.1.5 (updated 2026-10-07 01:15)
  */
 
 window.GLOBAL_WORD_QUIZZES = {
@@ -410,6 +410,21 @@ class QuranGrammarApp {
         });
       }
     });
+
+    // Build word index for O(1) instantaneous lookups
+    this.wordIndex = new Map();
+    if (this.data.verses) {
+      for (const v of this.data.verses) {
+        if (v.words) {
+          for (const w of v.words) {
+            this.wordIndex.set(w.id, w);
+            if (w.location) {
+              this.wordIndex.set(w.location, w);
+            }
+          }
+        }
+      }
+    }
   }
 
   async loadSurah(filename) {
@@ -506,7 +521,7 @@ class QuranGrammarApp {
 
     const footerVer = document.getElementById('footer-version-tag');
     if (footerVer) {
-      footerVer.textContent = 'v1.1.4 (updated 2026-10-07 01:00)';
+      footerVer.textContent = 'v1.1.5 (updated 2026-10-07 01:15)';
     }
 
     if (refrainsDivider && refrainsItem) {
@@ -555,23 +570,43 @@ class QuranGrammarApp {
       });
     });
 
-    // Search input
+    // Search input (debounced 150ms for buttery-smooth typing in large Surahs)
     const searchInput = document.getElementById('search-input');
     const clearBtn = document.getElementById('clear-search');
+    let searchDebounceTimer = null;
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {
-        this.searchQuery = e.target.value.trim().toLowerCase();
-        if (clearBtn) clearBtn.style.display = this.searchQuery ? 'block' : 'none';
-        this.renderVerses();
+        clearTimeout(searchDebounceTimer);
+        const query = e.target.value.trim().toLowerCase();
+        searchDebounceTimer = setTimeout(() => {
+          this.searchQuery = query;
+          if (clearBtn) clearBtn.style.display = this.searchQuery ? 'block' : 'none';
+          this.renderVerses();
+        }, 150);
       });
     }
 
     if (clearBtn) {
       clearBtn.addEventListener('click', () => {
+        clearTimeout(searchDebounceTimer);
         if (searchInput) searchInput.value = '';
         this.searchQuery = '';
         clearBtn.style.display = 'none';
         this.renderVerses();
+      });
+    }
+
+    // High-performance delegated click listener for all word cards
+    const versesContainer = document.getElementById('verses-container');
+    if (versesContainer) {
+      versesContainer.addEventListener('click', (e) => {
+        const card = e.target.closest('.word-card');
+        if (!card) return;
+        const wordId = parseInt(card.dataset.wordId, 10);
+        const wordData = this.findWordById(wordId);
+        if (wordData) {
+          this.openWordModal(wordData);
+        }
       });
     }
 
@@ -1254,17 +1289,6 @@ class QuranGrammarApp {
     }
 
     container.innerHTML = filtered.map(v => this.renderVerseCard(v)).join('');
-
-    // Attach click handlers to words
-    container.querySelectorAll('.word-card').forEach(card => {
-      card.addEventListener('click', (e) => {
-        const wordId = parseInt(e.currentTarget.dataset.wordId);
-        const wordData = this.findWordById(wordId);
-        if (wordData) {
-          this.openWordModal(wordData);
-        }
-      });
-    });
   }
 
   renderVerseCard(v) {
@@ -1402,9 +1426,15 @@ class QuranGrammarApp {
   }
 
   findWordById(id) {
+    if (this.wordIndex && this.wordIndex.has(id)) {
+      return this.wordIndex.get(id);
+    }
+    if (!this.data || !this.data.verses) return null;
     for (const v of this.data.verses) {
-      for (const w of v.words) {
-        if (w.id === id) return w;
+      if (v.words) {
+        for (const w of v.words) {
+          if (w.id === id || w.location === id) return w;
+        }
       }
     }
     return null;
