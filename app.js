@@ -1,6 +1,6 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.1.1 (updated 2026-10-06 23:45)
+ * Version: v1.1.2 (updated 2026-10-07 00:36)
  */
 
 class QuranGrammarApp {
@@ -12,6 +12,12 @@ class QuranGrammarApp {
       this.currentSurahFile = 'surah-al-kawthar.json';
     } else if (surahParam === 'asr' || surahParam === '103') {
       this.currentSurahFile = 'surah-al-asr.json';
+    } else if (surahParam === 'munafiqun' || surahParam === '63') {
+      this.currentSurahFile = 'surah-al-munafiqun.json';
+    } else if (surahParam === 'taghabun' || surahParam === '64') {
+      this.currentSurahFile = 'surah-at-taghabun.json';
+    } else if (surahParam === 'nisa' || surahParam === 'an-nisa' || surahParam === '4') {
+      this.currentSurahFile = 'surah-an-nisa.json';
     } else {
       this.currentSurahFile = 'surah-al-qamar.json';
     }
@@ -58,11 +64,112 @@ class QuranGrammarApp {
       };
     }
     if (!this.data.thematic_sections) {
-      this.data.thematic_sections = [
-        { section_id: 1, title_en: "Divine Gift & Gratitude", ayah_range: "108:1-2", start_ayah: 1, end_ayah: 2 },
-        { section_id: 2, title_en: "The Enemy Cut Off", ayah_range: "108:3", start_ayah: 3, end_ayah: 3 }
-      ];
+      if (this.data.metadata && this.data.metadata.surah_number === 4) {
+        this.data.thematic_sections = [
+          { section_id: 1, title_en: "Family, Orphans & Matrimonial Justice", ayah_range: "4:1-35", start_ayah: 1, end_ayah: 35 },
+          { section_id: 2, title_en: "Trusts, Authority & Faithful Obedience", ayah_range: "4:36-87", start_ayah: 36, end_ayah: 87 },
+          { section_id: 3, title_en: "Hypocrisy, Defense & Legal Safeguards", ayah_range: "4:88-134", start_ayah: 88, end_ayah: 134 },
+          { section_id: 4, title_en: "Theological Truth, People of the Book & Inheritance", ayah_range: "4:135-176", start_ayah: 135, end_ayah: 176 }
+        ];
+      } else {
+        this.data.thematic_sections = [
+          { section_id: 1, title_en: "Divine Gift & Gratitude", ayah_range: "108:1-2", start_ayah: 1, end_ayah: 2 },
+          { section_id: 2, title_en: "The Enemy Cut Off", ayah_range: "108:3", start_ayah: 3, end_ayah: 3 }
+        ];
+      }
     }
+
+    if (!this.data.verses && this.data.ayahs) {
+      const wordMap = {};
+      if (this.data.words) {
+        this.data.words.forEach(w => {
+          wordMap[w.word_id] = w;
+        });
+      }
+      this.data.verses = this.data.ayahs.map(a => {
+        const secId = a.ayah_number <= 35 ? 1 : (a.ayah_number <= 87 ? 2 : (a.ayah_number <= 134 ? 3 : 4));
+        const secTitle = a.ayah_number <= 35 ? "Family, Orphans & Matrimonial Justice" : (a.ayah_number <= 87 ? "Trusts, Authority & Faithful Obedience" : (a.ayah_number <= 134 ? "Hypocrisy, Defense & Legal Safeguards" : "Theological Truth, People of the Book & Inheritance"));
+        return {
+          ayah_number: a.ayah_number,
+          surah_number: this.data.metadata.surah_number || 4,
+          text_uthmani: a.text_uthmani,
+          text_imlaei: a.text_normalized,
+          translation: typeof a.translation === 'object' ? a.translation.natural : (a.translation || ''),
+          thematic_section_id: secId,
+          thematic_section_title: secTitle,
+          thematic_color: "#7c3aed",
+          words_count: a.word_ids ? a.word_ids.length : 0,
+          words: a.word_ids ? a.word_ids.map(wid => {
+            const rawW = wordMap[wid] || {};
+            const isVerb = rawW.token_type === 'verb';
+            const isPart = ['preposition', 'conjunction', 'particle', 'interrogative', 'conditional', 'vocative'].includes(rawW.token_type);
+            const pClass = isVerb ? 'fi\'l' : (isPart ? 'harf' : 'ism');
+            const pClassAr = isVerb ? 'فعل' : (isPart ? 'حرف' : 'اسم');
+            const cCase = (rawW.irab && rawW.irab.grammatical_case) || 'indeclinable';
+            const cColor = cCase === 'nominative' ? '#2563eb' : (cCase === 'accusative' ? '#059669' : (cCase === 'genitive' ? '#7c3aed' : (cCase === 'jussive' ? '#d97706' : '#64748b')));
+            const pColor = isVerb ? '#e11d48' : (isPart ? '#d97706' : '#1d4ed8');
+            const pBg = isVerb ? '#ffe4e6' : (isPart ? '#fef3c7' : '#dbeafe');
+
+            return {
+              id: wid,
+              location: wid,
+              surah: 4,
+              ayah: a.ayah_number,
+              word_position: rawW.word_position || 1,
+              arabic_uthmani: rawW.surface_uthmani || '',
+              arabic_clean: rawW.surface_plain || '',
+              translation: rawW.translation || '',
+              classification: {
+                primary_type: pClass,
+                primary_type_ar: pClassAr
+              },
+              sarf: {
+                root: rawW.root ? rawW.root.root_ar : '—',
+                root_ar: rawW.root ? rawW.root.root_normalized : '—',
+                root_meaning: rawW.root ? rawW.root.root_meaning : '—',
+                root_concept: rawW.root ? rawW.root.root_family : '—',
+                lemma: rawW.lemma_ar || '—',
+                wazn: (rawW.sarf_verb_analysis && rawW.sarf_verb_analysis.pattern_wazn) || (rawW.noun_morphology && rawW.noun_morphology.lexical_pattern_wazn) || '—',
+                verb_form: rawW.sarf_verb_analysis ? `Form ${rawW.sarf_verb_analysis.form_number}` : '—'
+              },
+              irab_and_case: {
+                case_or_mood: cCase,
+                case_or_mood_ar: (rawW.irab && rawW.irab.case_ar) || 'مبني',
+                case_concept: (rawW.irab && rawW.irab.grammatical_state) || 'fixed',
+                ending_vowel: (rawW.irab && rawW.irab.case_ending) || 'fixed',
+                grammatical_role: (rawW.irab && rawW.irab.syntactic_role) || 'node',
+                grammatical_role_ar: (rawW.syntactic_role && rawW.syntactic_role.role_ar) || 'مبني',
+                why_this_ending: (rawW.irab && rawW.irab.grammatical_explanation && rawW.irab.grammatical_explanation.beginner) || '',
+                beneficial_meaning: (rawW.irab && rawW.irab.grammatical_explanation && rawW.irab.grammatical_explanation.intermediate) || '',
+                simplified_role: rawW.token_type || 'Word'
+              },
+              lowest_level_breakdown: {
+                morphemes_count: rawW.components ? rawW.components.length : 1,
+                morphemes: rawW.components ? rawW.components.map(c => ({
+                  segment_index: c.component_index,
+                  arabic: c.arabic,
+                  type: c.type,
+                  pos_tag: c.pos_tag,
+                  role: c.role,
+                  vowel: "base",
+                  color_code: "#2563eb",
+                  color_name: c.type
+                })) : []
+              },
+              color_coding: {
+                pos_color: pColor,
+                pos_bg: pBg,
+                case_color: cColor,
+                case_bg: '#f8fafc',
+                vowel_badge: (rawW.irab && rawW.irab.case_ar) || 'مبني',
+                pedagogical_badge: rawW.token_type
+              }
+            };
+          }) : []
+        };
+      });
+    }
+
     let globalWordId = (this.data.metadata.surah_number || 108) * 1000000;
     this.data.verses.forEach(v => {
       if (!v.ayah_number) v.ayah_number = v.number || 1;
@@ -200,6 +307,7 @@ class QuranGrammarApp {
       else if (meta.surah_number === 103) brandIcon.textContent = '⏳';
       else if (meta.surah_number === 63) brandIcon.textContent = '🛡️';
       else if (meta.surah_number === 64) brandIcon.textContent = '⚖️';
+      else if (meta.surah_number === 4) brandIcon.textContent = '📜';
       else brandIcon.textContent = '🌙';
     }
     if (brandSubtitle) {
@@ -211,6 +319,8 @@ class QuranGrammarApp {
         brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding for Surah Al-Munafiqun (63:1-11)';
       } else if (meta.surah_number === 64) {
         brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding for Surah At-Taghabun (64:1-18)';
+      } else if (meta.surah_number === 4) {
+        brandSubtitle.textContent = 'Machine-Readable Linguistic Database: 176 Ayahs, 3,747 Words, Verbal Ṣarf (Forms I–X), Noun Morphology, Iʿrāb (3 Levels), Roots & Word Relationships';
       } else {
         brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding';
       }
@@ -224,12 +334,17 @@ class QuranGrammarApp {
     const refrainsDivider = document.getElementById('stat-refrains-divider');
     const refrainsItem = document.getElementById('stat-refrains-item');
 
-    if (statAyahs) statAyahs.textContent = meta.total_verses;
+    if (statAyahs) statAyahs.textContent = meta.total_verses || meta.total_ayahs || (this.data.ayahs ? this.data.ayahs.length : 0);
     if (statWords) statWords.textContent = meta.total_words;
     if (statMorphemes) statMorphemes.textContent = meta.total_morphemes || 32;
     if (statRoots) {
-      const rootCount = this.data.root_network ? Object.keys(this.data.root_network).length : (this.data.root_index ? this.data.root_index.length : 9);
+      const rootCount = this.data.root_network ? Object.keys(this.data.root_network).length : (this.data.root_index ? (Array.isArray(this.data.root_index) ? this.data.root_index.length : Object.keys(this.data.root_index).length) : 9);
       statRoots.textContent = rootCount;
+    }
+
+    const footerVer = document.getElementById('footer-version-tag');
+    if (footerVer) {
+      footerVer.textContent = 'v1.1.2 (updated 2026-10-07 00:36)';
     }
 
     if (refrainsDivider && refrainsItem) {

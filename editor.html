@@ -521,6 +521,7 @@
         <option value="surah-al-qamar.json">Surah Al-Qamar (54) — 55 Ayahs</option>
         <option value="surah-al-munafiqun.json">Surah Al-Munafiqun (63) — 11 Ayahs</option>
         <option value="surah-at-taghabun.json">Surah At-Taghabun (64) — 18 Ayahs</option>
+        <option value="surah-an-nisa.json">Surah An-Nisa (4) — Full 176 Ayahs Database</option>
       </select>
       <button class="nav-btn" id="btn-reset-default" title="Revert to original file content">
         <i class="fa-solid fa-rotate-left"></i> Reset
@@ -712,7 +713,7 @@
 
   <footer>
     <div>Quranic JSON Studio on Cloudflare Pages</div>
-    <div class="version-tag" id="footer-version-tag">v1.2.2 (updated 2026-10-04 00:09)</div>
+    <div class="version-tag" id="footer-version-tag">v1.1.2 (updated 2026-10-07 00:36)</div>
   </footer>
 
   <div id="toast">Action Complete</div>
@@ -834,7 +835,29 @@
       const surahName = data.surah_name_en || (data.metadata ? data.metadata.surah_name_en : 'Surah');
       activeSurahTag.textContent = `${surahNum}: ${surahName}`;
 
-      const verses = data.verses || [];
+      const wordMap = {};
+      if (data.words) {
+        data.words.forEach(w => { wordMap[w.word_id] = w; });
+      }
+
+      const verses = data.verses || (data.ayahs ? data.ayahs.map(a => {
+        const aWords = a.word_ids ? a.word_ids.map(id => wordMap[id]).filter(Boolean) : [];
+        return {
+          ayah_number: a.ayah_number,
+          translation: typeof a.translation === 'object' ? a.translation.natural : (a.translation || ''),
+          tokens: aWords.map(w => ({
+            id: w.word_id,
+            text: w.surface_uthmani,
+            pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle', 'interrogative', 'conditional'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
+            pos_label: w.token_type,
+            root: w.root ? w.root.root_ar : '—',
+            wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || (w.noun_morphology && w.noun_morphology.lexical_pattern_wazn) || '—',
+            meaning: w.translation || '',
+            tooltip: w.translation || ''
+          }))
+        };
+      }) : []);
+
       statVerses.textContent = verses.length;
 
       let allTokens = [];
@@ -857,14 +880,28 @@
         }
       });
 
+      if (allTokens.length === 0 && data.words) {
+        allTokens = data.words.map(w => ({
+          id: w.word_id,
+          text: w.surface_uthmani,
+          pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
+          pos_label: w.token_type,
+          case_class: 'case-mabni',
+          root: w.root ? w.root.root_ar : '—',
+          wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || '—',
+          meaning: w.translation || '',
+          ayahNumber: parseInt(w.word_id.split(':')[1], 10) || 1
+        }));
+      }
+
       parsedTokensCache = allTokens;
       statTokens.textContent = allTokens.length;
       tokensCountBadge.textContent = `${allTokens.length} items`;
 
-      const syntaxCount = data.syntax?.relationships ? data.syntax.relationships.length : (data.syntax_tree ? data.syntax_tree.length : 0);
+      const syntaxCount = data.word_relationships ? data.word_relationships.length : (data.syntax?.relationships ? data.syntax.relationships.length : (data.syntax_tree ? data.syntax_tree.length : 0));
       statSyntax.textContent = syntaxCount;
 
-      const ontologyCount = data.ontology ? data.ontology.length : (data.knowledge_graph ? data.knowledge_graph.length : 0);
+      const ontologyCount = data.lexicon ? data.lexicon.length : (data.ontology ? data.ontology.length : (data.knowledge_graph ? data.knowledge_graph.length : (data.root_index ? Object.keys(data.root_index).length : 0)));
       statOntology.textContent = ontologyCount;
 
       // Render verses
@@ -926,8 +963,9 @@
 
     // Form Editor Population
     function populateFormSelectors() {
-      if (!currentData || !currentData.verses) return;
-      const verses = currentData.verses;
+      if (!currentData) return;
+      const verses = currentData.verses || currentData.ayahs;
+      if (!verses) return;
 
       formAyahSelect.innerHTML = verses.map((v, idx) => {
         const num = v.number || v.ayah_number || (idx + 1);
@@ -938,12 +976,25 @@
     }
 
     function populateTokenSelector() {
-      if (!currentData || !currentData.verses) return;
+      if (!currentData) return;
+      const verses = currentData.verses || currentData.ayahs;
+      if (!verses) return;
       const vIdx = parseInt(formAyahSelect.value) || 0;
-      const verse = currentData.verses[vIdx];
+      const verse = verses[vIdx];
       if (!verse) return;
 
-      const tokens = verse.tokens || verse.words || [];
+      const tokens = verse.tokens || verse.words || (verse.word_ids ? (currentData.words || []).filter(w => w.ayah_id === verse.ayah_id).map(w => ({
+        id: w.word_id,
+        text: w.surface_uthmani,
+        translation: w.translation,
+        root: w.root ? w.root.root_ar : '—',
+        wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || (w.noun_morphology && w.noun_morphology.lexical_pattern_wazn) || '—',
+        pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
+        case_class: 'case-mabni',
+        ai_explanations: w.irab ? w.irab.grammatical_explanation : {}
+      })) : []);
+      verse._cachedTokens = tokens;
+
       formTokenSelect.innerHTML = tokens.map((t, idx) => {
         const txt = t.text || t.arabic_uthmani || `Token ${idx+1}`;
         return `<option value="${idx}">${idx + 1}. ${txt}</option>`;
@@ -953,13 +1004,15 @@
     }
 
     function loadTokenIntoForm() {
-      if (!currentData || !currentData.verses) return;
+      if (!currentData) return;
+      const verses = currentData.verses || currentData.ayahs;
+      if (!verses) return;
       const vIdx = parseInt(formAyahSelect.value) || 0;
       const tIdx = parseInt(formTokenSelect.value) || 0;
-      const verse = currentData.verses[vIdx];
+      const verse = verses[vIdx];
       if (!verse) return;
 
-      const tokens = verse.tokens || verse.words || [];
+      const tokens = verse._cachedTokens || verse.tokens || verse.words || [];
       const token = tokens[tIdx];
       if (!token) return;
 
