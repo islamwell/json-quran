@@ -1,6 +1,6 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.1.2 (updated 2026-10-07 00:36)
+ * Version: v1.1.3 (updated 2026-10-07 00:45)
  */
 
 class QuranGrammarApp {
@@ -18,6 +18,10 @@ class QuranGrammarApp {
       this.currentSurahFile = 'surah-at-taghabun.json';
     } else if (surahParam === 'nisa' || surahParam === 'an-nisa' || surahParam === '4') {
       this.currentSurahFile = 'surah-an-nisa.json';
+    } else if (surahParam === 'baqarah' || surahParam === 'al-baqarah' || surahParam === '2') {
+      this.currentSurahFile = 'surah-al-baqarah.json';
+    } else if (surahParam === 'imran' || surahParam === 'ali-imran' || surahParam === 'aal-imran' || surahParam === '3') {
+      this.currentSurahFile = 'surah-ali-imran.json';
     } else {
       this.currentSurahFile = 'surah-al-qamar.json';
     }
@@ -64,7 +68,26 @@ class QuranGrammarApp {
       };
     }
     if (!this.data.thematic_sections) {
-      if (this.data.metadata && this.data.metadata.surah_number === 4) {
+      if (this.data.metadata && this.data.metadata.surah_number === 2) {
+        this.data.thematic_sections = [
+          { section_id: 1, title_en: "Prologue, Three Human Types & Creation of Adam", ayah_range: "2:1-39", start_ayah: 1, end_ayah: 39 },
+          { section_id: 2, title_en: "Covenant with Bani Isra'il & The Golden Calf / Heifer", ayah_range: "2:40-123", start_ayah: 40, end_ayah: 123 },
+          { section_id: 3, title_en: "Legacy of Ibrahim, The Ka'bah & The New Ummah", ayah_range: "2:124-162", start_ayah: 124, end_ayah: 162 },
+          { section_id: 4, title_en: "Constitutional Ordinances: Food, Fasting & Warfare", ayah_range: "2:163-214", start_ayah: 163, end_ayah: 214 },
+          { section_id: 5, title_en: "Social Jurisprudence: Marriage, Divorce & Orphanhood", ayah_range: "2:215-242", start_ayah: 215, end_ayah: 242 },
+          { section_id: 6, title_en: "Historical Striving, Talut & Dawud", ayah_range: "2:243-253", start_ayah: 243, end_ayah: 253 },
+          { section_id: 7, title_en: "Ayat al-Kursi, Divine Sovereignty & Invalidation of Riba", ayah_range: "2:254-281", start_ayah: 254, end_ayah: 281 },
+          { section_id: 8, title_en: "Commercial Contracts (2:282) & The Epilogue of Faith", ayah_range: "2:282-286", start_ayah: 282, end_ayah: 286 }
+        ];
+      } else if (this.data.metadata && this.data.metadata.surah_number === 3) {
+        this.data.thematic_sections = [
+          { section_id: 1, title_en: "Muhkam vs. Mutashabih & Divine Unity", ayah_range: "3:1-32", start_ayah: 1, end_ayah: 32 },
+          { section_id: 2, title_en: "The Family of Imran: Maryam, Zakariyya & 'Isa", ayah_range: "3:33-63", start_ayah: 33, end_ayah: 63 },
+          { section_id: 3, title_en: "Dialogue & Challenge with the People of the Book", ayah_range: "3:64-120", start_ayah: 64, end_ayah: 120 },
+          { section_id: 4, title_en: "Lessons of Uhud & Badr: Resilience & Divine Mercy", ayah_range: "3:121-179", start_ayah: 121, end_ayah: 179 },
+          { section_id: 5, title_en: "Cosmic Reflection of the Wise (Ulul-Albab) & Epilogue", ayah_range: "3:180-200", start_ayah: 180, end_ayah: 200 }
+        ];
+      } else if (this.data.metadata && this.data.metadata.surah_number === 4) {
         this.data.thematic_sections = [
           { section_id: 1, title_en: "Family, Orphans & Matrimonial Justice", ayah_range: "4:1-35", start_ayah: 1, end_ayah: 35 },
           { section_id: 2, title_en: "Trusts, Authority & Faithful Obedience", ayah_range: "4:36-87", start_ayah: 36, end_ayah: 87 },
@@ -87,8 +110,17 @@ class QuranGrammarApp {
         });
       }
       this.data.verses = this.data.ayahs.map(a => {
-        const secId = a.ayah_number <= 35 ? 1 : (a.ayah_number <= 87 ? 2 : (a.ayah_number <= 134 ? 3 : 4));
-        const secTitle = a.ayah_number <= 35 ? "Family, Orphans & Matrimonial Justice" : (a.ayah_number <= 87 ? "Trusts, Authority & Faithful Obedience" : (a.ayah_number <= 134 ? "Hypocrisy, Defense & Legal Safeguards" : "Theological Truth, People of the Book & Inheritance"));
+        let secId = 1;
+        let secTitle = "Divine Guidance";
+        if (this.data.thematic_sections) {
+          for (const s of this.data.thematic_sections) {
+            if (a.ayah_number >= s.start_ayah && a.ayah_number <= s.end_ayah) {
+              secId = s.section_id;
+              secTitle = s.title_en;
+              break;
+            }
+          }
+        }
         return {
           ayah_number: a.ayah_number,
           surah_number: this.data.metadata.surah_number || 4,
@@ -308,6 +340,8 @@ class QuranGrammarApp {
       else if (meta.surah_number === 63) brandIcon.textContent = '🛡️';
       else if (meta.surah_number === 64) brandIcon.textContent = '⚖️';
       else if (meta.surah_number === 4) brandIcon.textContent = '📜';
+      else if (meta.surah_number === 2) brandIcon.textContent = '📖';
+      else if (meta.surah_number === 3) brandIcon.textContent = '🏛️';
       else brandIcon.textContent = '🌙';
     }
     if (brandSubtitle) {
@@ -321,6 +355,10 @@ class QuranGrammarApp {
         brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding for Surah At-Taghabun (64:1-18)';
       } else if (meta.surah_number === 4) {
         brandSubtitle.textContent = 'Machine-Readable Linguistic Database: 176 Ayahs, 3,747 Words, Verbal Ṣarf (Forms I–X), Noun Morphology, Iʿrāb (3 Levels), Roots & Word Relationships';
+      } else if (meta.surah_number === 2) {
+        brandSubtitle.textContent = 'Exhaustive Machine-Readable Linguistic Database: 286 Ayahs, 6,116 Words, Verbal Ṣarf (Forms I–X), Noun Morphology, Iʿrāb (3 Levels), Roots & Word Relationships';
+      } else if (meta.surah_number === 3) {
+        brandSubtitle.textContent = 'Exhaustive Machine-Readable Linguistic Database: 200 Ayahs, 3,481 Words, Verbal Ṣarf (Forms I–X), Noun Morphology, Iʿrāb (3 Levels), Roots & Word Relationships';
       } else {
         brandSubtitle.textContent = 'Word-by-word lowest-level morpheme breakdown, Sarf morphology, and I\'rab color coding';
       }
@@ -344,7 +382,7 @@ class QuranGrammarApp {
 
     const footerVer = document.getElementById('footer-version-tag');
     if (footerVer) {
-      footerVer.textContent = 'v1.1.2 (updated 2026-10-07 00:36)';
+      footerVer.textContent = 'v1.1.3 (updated 2026-10-07 00:45)';
     }
 
     if (refrainsDivider && refrainsItem) {
