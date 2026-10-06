@@ -1,6 +1,6 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.1.5 (updated 2026-10-07 01:15)
+ * Version: v1.1.6 (updated 2026-10-07 01:25)
  */
 
 window.GLOBAL_WORD_QUIZZES = {
@@ -124,6 +124,202 @@ window.GLOBAL_WORD_QUIZZES = {
       { id: "d", text: "A genitive noun dependent on an invisible preposition", correct: false, explanation: "It ends with ḍammah, which is the mark of the nominative (Rafʿ), not genitive." }
     ],
     why_this_is_a_good_question: "This question completes the syntactic loop of Inna (identifying Khabar Inna with its nominative ḍammah) and tests the recognition that nouns starting with 'الـ' cannot be verbs. Furthermore, it highlights the fulfilled historical prophecy contained inside a single Qur'anic word."
+  }
+};
+
+window.GLOBAL_NAK_GEMS = {
+  "108:1:1": {
+    "gem_title": "The Royal Plural & Breaking Through Doubt (إِنَّ + نَا)",
+    "summary": "Why does Allah begin with 'Inna' and use the Royal 'We' instead of 'I'?",
+    "deep_dive": "Ustadh Nouman Ali Khan explains that Surah Al-Kawthar was revealed at a moment of profound personal heartbreak: the Prophet ﷺ had just buried his infant sons (Al-Qasim and Abdullah). The Qurayshi elite (led by Al-ʿĀṣ ibn Wāʾil) were publicly celebrating, sneering that Muhammad ﷺ was 'abtar' (a man whose lineage is severed and who will be forgotten). At this agonizing moment, Allah does not begin with an argument or debate. He begins with 'إِنَّ' (Inna) — a particle of 100% categorical certainty, annihilating all enemy gossip. Furthermore, Allah uses the Royal Plural 'نَا' (We) rather than 'أَعْطَيْتُكَ' (I gave you). In Arabic Balāghah, the stature of a gift is judged by the stature of the Giver: when the King of kings announces a bestowal with the Royal Plural of Majesty (نون العظمة), it signals that what is being bestowed is astronomical beyond human imagination.",
+    "sub_morphemes": [
+      {
+        "morpheme": "إِنَّ",
+        "type": "حرف توكيد ونصب",
+        "meaning": "Indeed / Verily — Particle of absolute conviction and sentence inception"
+      },
+      {
+        "morpheme": "نَا",
+        "type": "ضمير متصل (نون العظمة)",
+        "meaning": "We (Royal Plural of Majesty) — Highlighting divine omnipotence and supreme dignity"
+      }
+    ],
+    "balaghah_secret": "Divine consolation begins by elevating the Giver so the recipient realizes how unimaginably massive the upcoming gift truly is."
+  },
+  "108:1:2": {
+    "gem_title": "The Master Contrast: 'أَعْطَى' (A'ṭā) vs 'آتَى' (Ātā)",
+    "summary": "Why did Allah choose 'A'tayna' instead of the commonly used 'Aatayna'?",
+    "deep_dive": "This is one of Ustadh Nouman Ali Khan's most celebrated linguistic gems. Throughout the Qur'an, Allah uses two verbs for giving: 'إِيتَاء' (Ītāʾ from آتَى) and 'إِعْطَاء' (Iʿṭāʾ from أَعْطَى). 'آتَى' is used when something is given conditionally, temporarily, or as a trust that can be revoked (e.g., 'تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ' — power is given, then stripped away; 'آتَيْنَاهُمُ الْكِتَابَ' — scripture given to trustees). In contrast, 'أَعْطَى' in classical Arabic is used exclusively for an absolute, unconditional, eternal gift that is permanently owned by the recipient and will NEVER be revoked or taken away! By saying 'أَعْطَيْنَاكَ', Allah comforts the Prophet ﷺ: 'The sons you lost belonged to Me, but the Kawthar I have granted you is yours forever — no enemy, no death, and no tragedy can ever diminish it.' Additionally, Allah uses the past tense ('أَعْطَيْنَا' - We gave) for future rewards (the river, the Hawd, the intercession) to indicate 'Taḥaqquq al-Wuqūʿ' — treated as already accomplished fact in divine reality.",
+    "sub_morphemes": [
+      {
+        "morpheme": "أَعْطَى",
+        "type": "فعل ماضٍ (مزيد بحرف - وزن أَفْعَلَ)",
+        "meaning": "Form IV doubly-transitive verb: to grant unconditionally and permanently"
+      },
+      {
+        "morpheme": "نَا",
+        "type": "ضمير متصل فاعل",
+        "meaning": "We (the Divine Doer / Bestower)"
+      },
+      {
+        "morpheme": "كَ",
+        "type": "ضمير متصل مفعول به أول",
+        "meaning": "You, [O Muhammad ﷺ] — Direct personal recipient, positioned adjacent for divine intimacy"
+      }
+    ],
+    "balaghah_secret": "The word 'A'ṭā' conveys permanent ownership, ensuring that the divine gift can never be touched by the vicissitudes of time or enemy malice."
+  },
+  "108:1:3": {
+    "gem_title": "Why 'Al-Kawthar' over 'Katheer' or 'Akthar'? (فَوْعَل vs فَعِيل)",
+    "summary": "The morphological distinction between ordinary abundance and ever-multiplying celestial abundance.",
+    "deep_dive": "Nouman Ali Khan highlights the progression of Arabic abundance words: 'كَثِير' (Katheer) means much or plentiful. 'أَكْثَر' (Akthar) is comparative/superlative ('more' or 'most'). But Allah chose neither! He chose 'الْكَوْثَرَ' (Al-Kawthar), on the exceedingly rare hyperbolic pattern 'فَوْعَل' (Fawʿal). In Arabic morphology, the weight Fawʿal denotes an abundance that is dynamic and ceaseless — it continuously multiplies, overflows, and expands without ceiling! The definite article 'الـ' (Al-) signifies ultimate specificity: not just generic abundance, but THE Abundance — the heavenly river whose banks are made of gold and hollow pearls, the Hawḍ basin on the Day of Judgment, the Holy Qur'an, supreme wisdom, the highest station of intercession (Al-Maqām al-Maḥmūd), and billions of believers blessing his name across every corner of the earth.",
+    "sub_morphemes": [
+      {
+        "morpheme": "ٱلْـ",
+        "type": "لام التعريف",
+        "meaning": "The definite article — denoting supreme exclusivity and preeminence"
+      },
+      {
+        "morpheme": "كَوْثَرَ",
+        "type": "مفعول به ثانٍ (وزن فَوْعَل)",
+        "meaning": "Ever-multiplying, inexhaustible abundance from root ك-ث-ر"
+      }
+    ],
+    "balaghah_secret": "The enemies claimed the Prophet ﷺ was left with nothing; Allah declared He gave him the abundance from which all other abundances pale in comparison."
+  },
+  "108:2:1": {
+    "gem_title": "The Logical Connector of Loving Gratitude (فَـ)",
+    "summary": "How 'Fā' al-Sababiyyah' transforms our understanding of Islamic worship.",
+    "deep_dive": "Ustadh Nouman emphasizes that the single prefix 'فَـ' (Fa-) is the logical backbone of the entire Surah. It is 'Fā' al-Sababiyyah' (causal) and 'Fā' al-Faṣīḥah' (revealing an implied premise). It bridges Ayah 1 (divine gift) directly into Ayah 2 (human worship). This teaches a revolutionary concept in Islamic theology: worship is NOT framed as an oppressive penalty or paying off a divine debt. Rather, worship is the natural, loving, spontaneous reflex of a grateful heart overflowing with gratitude (شُكْر) for boundless blessings (نِعْمَة). 'Because We have showered you with such infinite abundance, therefore dedicate your entire being in prayer and sacrifice!'",
+    "sub_morphemes": [
+      {
+        "morpheme": "فَـ",
+        "type": "الفاء السببية / الفصيحة",
+        "meaning": "So / Therefore — Causal connector linking divine grace to grateful worship"
+      }
+    ],
+    "balaghah_secret": "Particles in Arabic are logical hinges: the 'Fā' teaches us to worship Allah out of gratitude, not out of burden."
+  },
+  "108:2:2": {
+    "gem_title": "Bodily Devotion & The Form II Command (صَلِّ)",
+    "summary": "The grammatical omission of the weak letter and the intensification of prayer.",
+    "deep_dive": "Nouman Ali Khan highlights the pairing of worship types in Ayah 2: 'صَلِّ' represents bodily worship (عبادة بدنية). Morphologically, it is a Form II imperative verb (صَلَّى / يُصَلِّي / صَلِّ). Form II (فَعَّلَ) denotes intensification, dedication, and regularity: don't just perform occasional prayers, establish prayer as an unwavering pillar of your life. Grammatically, because root ص-ل-و is defective (ends in a weak letter), the imperative is formed by deleting the final weak letter (حذف حرف العلة), leaving the kasrah on the lām: 'صَلِّ' (addressing a prevalent spelling error where people mistakenly add a yā' 'صلي').",
+    "sub_morphemes": [
+      {
+        "morpheme": "صَلِّ",
+        "type": "فعل أمر (مزيد مضعف العين - وزن فَعِّلْ)",
+        "meaning": "Pray / Establish prayer steadfastly — Built on deleting the weak vowel letter"
+      },
+      {
+        "morpheme": "(أَنْتَ)",
+        "type": "ضمير مستتر وجوباً",
+        "meaning": "You [O Prophet] — Implied doer"
+      }
+    ],
+    "balaghah_secret": "The Form II imperative demands consistent, elevated prayer as the primary anchor against grief and slander."
+  },
+  "108:2:3": {
+    "gem_title": "The Nurturing Master & Exclusive Devotion (لِرَبِّكَ)",
+    "summary": "Why did Allah say 'Pray to your Rabb' rather than 'Pray to Allah'?",
+    "deep_dive": "One of the most touching insights from Ustadh Nouman Ali Khan: why didn't Allah say 'فَصَلِّ لِلَّهِ' (Pray to Allah)? He chose 'لِرَبِّكَ' (to YOUR Lord). The word 'رَبّ' (Rabb) comes from the same root as 'تَرْبِيَة' (Tarbiyah) — the one who lovingly nurtures, feeds, fosters, protects, and raises someone step-by-step to their highest potential. When the Prophet ﷺ was in grief over losing his infant child, Allah did not invoke the awe-inspiring, majestic name 'Allah', but the intimate, comforting attribute 'Rabb'. And He added 'كَ' ('YOUR Rabb'): 'He is YOUR loving Sustainer; He hasn't abandoned you to the enemies.' The preposition 'لِـ' (Lām al-Ikhtiṣāṣ) establishes pure monotheism (إخلاص): the pagans prayed to idols and sacrificed for self-glory; your worship must be pure and exclusive to your Nurturing Master.",
+    "sub_morphemes": [
+      {
+        "morpheme": "لِـ",
+        "type": "حرف جر للاختصاص والإخلاص",
+        "meaning": "For / To ... alone — Denoting exclusive dedication and pure monotheism"
+      },
+      {
+        "morpheme": "رَبِّ",
+        "type": "اسم مجرور ومضاف",
+        "meaning": "Lord / Sustainer — The caring Nurturer who provides loving Tarbiyah"
+      },
+      {
+        "morpheme": "كَ",
+        "type": "ضمير متصل مضاف إليه",
+        "meaning": "Your — 2nd person singular pronoun creating intimate personal solace"
+      }
+    ],
+    "balaghah_secret": "The word 'Rabbika' acts as a warm divine embrace for a grieving father, reminding him of his Master's personal care."
+  },
+  "108:2:4": {
+    "gem_title": "Financial Sacrifice & The Camel Ritual (وَٱنْحَرْ)",
+    "summary": "Why 'Nahr' instead of 'Dhabh', and the pairing of body and wealth.",
+    "deep_dive": "Ayah 2 pairs bodily devotion ('صَلِّ' - prayer) with the pinnacle of financial charity ('وَٱنْحَرْ' - sacrifice). Nouman Ali Khan draws attention to the lexical choice: Arabic has words for animal slaughter, the most common being 'ذَبَحَ' (Dhabaha - used for sheep and goats). But Allah used 'نَحَرَ' (Nahara)! In classical Arabic, 'Naḥr' specifically refers to the sacrifice of **camels** by piercing the hollow at the base of the throat while standing. Camels were the prized crown jewels of Arabian wealth — the equivalent of luxury estates. By commanding 'Naḥr', Allah tells the Prophet ﷺ and believers: offer your most valuable wealth for the sake of Allah and feed the hungry, orphan, and impoverished en masse. True gratitude is proven through radical generosity.",
+    "sub_morphemes": [
+      {
+        "morpheme": "وَ",
+        "type": "حرف عطف",
+        "meaning": "And — Coupling bodily prayer with financial charity"
+      },
+      {
+        "morpheme": "ٱنْحَرْ",
+        "type": "فعل أمر (مبني على السكون)",
+        "meaning": "Sacrifice camels / Give supreme wealth to feed the poor — Root ن-ح-ر"
+      }
+    ],
+    "balaghah_secret": "The pairing of Salah and Nahr unites internal spiritual purity with external humanitarian charity."
+  },
+  "108:3:1": {
+    "gem_title": "The Divine Verdict Against the Mockers (إِنَّ)",
+    "summary": "Responding to slander not with defensive debate, but with sovereign decree.",
+    "deep_dive": "Nouman Ali Khan highlights how Ayah 3 mirrors Ayah 1: both open with 'إِنَّ' (Inna). In Ayah 1, 'Inna' confirmed the Prophet's ﷺ eternal gift. In Ayah 3, 'Inna' seals the doom of his enemies. The mockers were shouting insults in the public markets of Makkah. Allah does not tell the Prophet ﷺ to argue back or defend himself. Allah silences the mockery with an incontrovertible divine decree that has echoed across 14 centuries.",
+    "sub_morphemes": [
+      {
+        "morpheme": "إِنَّ",
+        "type": "حرف توكيد ونصب ناسخ",
+        "meaning": "Indeed / Verily — Annulling particle affirming absolute decree"
+      }
+    ],
+    "balaghah_secret": "When Allah speaks in defense of His beloved Prophet ﷺ, He does not negotiate — He issues definitive verdicts."
+  },
+  "108:3:2": {
+    "gem_title": "The Psychology of 'Shan'ān' & Divine Anonymity (شَانِئَكَ)",
+    "summary": "Why 'Shani'aka' instead of 'Aduwwuka' (enemy) or 'Karihuka' (disliker)?",
+    "deep_dive": "Nouman Ali Khan analyzes the word root: Arabic has 'كُرْه' (Kurh - simple dislike) and 'بُغْض' (Bughd - hatred). But 'شَنَآن' (Shan'ān) from root ش-ن-أ is a malicious, venomous hatred born out of jealousy — hating someone purely because of their goodness and success, finding joy in their pain. 'شَانِئ' is an Active Participle (اسم فاعل on وزن فَاعِل), indicating someone who has allowed hatred to become their primary habit and identity. Furthermore, Allah does not name the specific culprits (like Al-ʿĀṣ ibn Wāʾil or Abu Jahl). By keeping it general as 'شَانِئَكَ' (YOUR hater), Allah establishes an eternal, universal law: anyone who harbors malicious hatred against the Prophet ﷺ until the Day of Judgment will inevitably meet the same humiliated fate.",
+    "sub_morphemes": [
+      {
+        "morpheme": "شَانِئَ",
+        "type": "اسم فاعل (اسم إن منصوب ومضاف)",
+        "meaning": "The malicious hater consumed by spiteful jealousy — Root ش-ن-أ"
+      },
+      {
+        "morpheme": "كَ",
+        "type": "ضمير متصل مضاف إليه",
+        "meaning": "Your — Pronominal marker maintaining personal divine protection"
+      }
+    ],
+    "balaghah_secret": "Divine anonymity strips the enemy of fame: Allah reduces them to a despised archetype rather than honoring them with a name in the eternal Book."
+  },
+  "108:3:3": {
+    "gem_title": "The Rhetorical Reversal: 'Huwa' as a Divine Shield (هُوَ)",
+    "summary": "How the Pronoun of Separation turns the enemy's insult back upon their head.",
+    "deep_dive": "This is one of the most stunning rhetorical masterstrokes highlighted by Ustadh Nouman Ali Khan. The Qurayshi mockers pointed their finger at the Prophet ﷺ and proclaimed: 'Muhammad is abtar!' When Allah responds, He inserts the independent pronoun 'هُوَ' (Huwa - Damīr al-Faṣl / Pronoun of Separation) right before 'Al-Abtar'. Grammatically, Damīr al-Faṣl produces 'Ḥaṣr' (exclusive restriction). Rhetorically, it acts as a divine shield that catches the enemy's spear and hurls it straight back: 'No! That hater of yours — HE AND HE ALONE is the one cut off!'",
+    "sub_morphemes": [
+      {
+        "morpheme": "هُوَ",
+        "type": "ضمير فصل لا محل له من الإعراب",
+        "meaning": "He [alone] — Generates exclusive restriction (حصر / قصر) and dramatic semantic reversal"
+      }
+    ],
+    "balaghah_secret": "The word 'Huwa' acts like an impenetrable mirror: whatever insult the enemy launched is magnified and reflected back upon them."
+  },
+  "108:3:4": {
+    "gem_title": "The Fulfilled Historical Miracle (ٱلْأَبْتَرُ)",
+    "summary": "How a 7th-century linguistic condemnation became an ongoing historical prophecy.",
+    "deep_dive": "Ustadh Nouman reflects on the historical miracle of 'Al-Abtar'. In pre-Islamic Arabia, 'Abtar' was an animal with its tail cut off, idiomatically used for a man with no male descendants whose name would die with him. The Quraysh thought physical sons were the only immortality. But what happened? The mockers died, their lineages scattered, and their memories are either completely forgotten or remembered with curse. Meanwhile, Muhammad ﷺ has a spiritual family of over 1.9 billion people who revere him like their own souls. In every second of every day, on minarets from Tokyo to Morocco, his name is called alongside Allah's name: 'Ashhadu anna Muhammadan Rasulullah'. The declaration 'He is the one cut off' was an impossible historical prophecy that stands verified before the eyes of the entire world.",
+    "sub_morphemes": [
+      {
+        "morpheme": "ٱلْـ",
+        "type": "لام التعريف",
+        "meaning": "The definite article — Indicating complete, absolute reality"
+      },
+      {
+        "morpheme": "أَبْتَرُ",
+        "type": "خبر إن مرفوع (وزن أَفْعَل)",
+        "meaning": "The one completely severed from all legacy, goodness, and honorable remembrance"
+      }
+    ],
+    "balaghah_secret": "True legacy is not physical DNA — it is truth, righteous character, and the legacy bestowed by the Almighty."
   }
 };
 
@@ -521,7 +717,7 @@ class QuranGrammarApp {
 
     const footerVer = document.getElementById('footer-version-tag');
     if (footerVer) {
-      footerVer.textContent = 'v1.1.5 (updated 2026-10-07 01:15)';
+      footerVer.textContent = 'v1.1.6 (updated 2026-10-07 01:25)';
     }
 
     if (refrainsDivider && refrainsItem) {
@@ -1569,6 +1765,35 @@ class QuranGrammarApp {
       `;
     }
 
+    // Ustadh Nouman Ali Khan Linguistic Deep-Dive Gem
+    const nakData = w.nouman_ali_khan_analysis || (window.GLOBAL_NAK_GEMS && window.GLOBAL_NAK_GEMS[w.location]);
+    let nakHtml = '';
+    if (nakData) {
+      nakHtml = `
+        <div class="nak-gem-box" style="margin-top:16px; background:linear-gradient(135deg, #fffbeb 0%, #fef3c7 40%, #ffffff 100%); border:1px solid #fde68a; border-left:5px solid #d97706; border-radius:14px; padding:16px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap;">
+            <span style="background:#78350f; color:#fef3c7; font-size:0.75rem; font-weight:800; padding:3px 10px; border-radius:9999px;">🎙️ Ustadh Nouman Ali Khan • Bayyinah</span>
+            <span style="background:#fef3c7; color:#92400e; border:1px solid #fde68a; font-size:0.72rem; font-weight:700; padding:2px 8px; border-radius:9999px;">Linguistic Gem</span>
+          </div>
+          <h4 style="margin:0 0 6px; font-size:1.05rem; font-weight:800; color:#78350f;">
+            ${nakData.gem_title}
+          </h4>
+          <p style="margin:0 0 10px; font-size:0.86rem; color:#92400e; font-weight:600; line-height:1.45;">
+            ${nakData.summary}
+          </p>
+          <div style="font-size:0.92rem; color:#334155; line-height:1.7; background:rgba(255,255,255,0.8); padding:12px 14px; border-radius:10px; border:1px solid rgba(253,230,138,0.6); margin-bottom:10px;">
+            ${nakData.deep_dive}
+          </div>
+          ${nakData.balaghah_secret ? `
+            <div style="background:#ecfdf5; border:1px solid #a7f3d0; border-left:4px solid #059669; border-radius:8px; padding:10px 12px; font-size:0.84rem; color:#047857; line-height:1.5;">
+              <strong style="display:block; margin-bottom:2px; font-size:0.76rem; text-transform:uppercase; color:#065f46;">✨ Rhetorical Secret (السِّرُّ البَلاغِي):</strong>
+              ${nakData.balaghah_secret}
+            </div>
+          ` : ''}
+        </div>
+      `;
+    }
+
     // Word-by-Word Pedagogical Quiz
     const wordQuiz = w.quiz || (window.GLOBAL_WORD_QUIZZES && window.GLOBAL_WORD_QUIZZES[w.location]);
     let quizHtml = '';
@@ -1614,6 +1839,8 @@ class QuranGrammarApp {
       ${audioBtn}
 
       ${aiTutorHtml}
+
+      ${nakHtml}
 
       <!-- Why This Ending Box (Golden Pedagogical Box) -->
       <div class="why-ending-box">
