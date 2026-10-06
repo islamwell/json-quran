@@ -1,7 +1,131 @@
 /**
  * Quran Word-by-Word Grammatical Intelligence & AI Tutor Application
- * Version: v1.1.3 (updated 2026-10-07 00:45)
+ * Version: v1.1.4 (updated 2026-10-07 01:00)
  */
+
+window.GLOBAL_WORD_QUIZZES = {
+  "108:1:1": {
+    id: "q108_1_1",
+    question: "What is the grammatical construction and rhetorical significance of 'إِنَّآ' (Innā)?",
+    options: [
+      { id: "a", text: "A simple conditional particle meaning 'if' with a present tense marker", correct: false, explanation: "Conditional 'if' is 'إِنْ' (in) with sukun. 'إِنَّآ' is Inna with shaddah + attached pronoun." },
+      { id: "b", text: "A compound of 'إِنَّ' (particle of absolute emphasis & inception) + 'نَا' (Royal Plural pronoun of majesty 'We'), conveying supreme divine honor and certainty", correct: true, explanation: "Spot on! 'إِنَّآ' is an elision of 'إِنَّ + نَا'. 'إِنَّ' is a Harf Tawkeed wa Nasb, and 'نَا' is the Attached Pronoun acting as Ism Inna in the accusative state (محل نصب). The Royal Plural (نُون العظمة) expresses divine majesty and absolute decree." },
+      { id: "c", text: "A preposition denoting 'from' with an attached second-person pronoun", correct: false, explanation: "That would be 'مِنَّا' (minnā) from 'مِنْ', which is a preposition, unlike 'إِنَّ'." },
+      { id: "d", text: "A vocative exclamation particle addressed to mankind", correct: false, explanation: "Vocative particles are like 'يَا' (Yā) or 'أَيُّهَا', not 'إِنَّ'." }
+    ],
+    why_this_is_a_good_question: "Beginners often mistake 'إِنَّا' for a simple indivisible particle or confuse plural pronouns with numerical plurality. This question rigorously tests morphological elision (إِنَّ + نَا = إِنَّا), case governance (Ism Inna in the accusative state), and theological balāghah (how the Royal Plural 'We' in Semitic languages expresses supreme divine majesty)."
+  },
+  "108:1:2": {
+    id: "q108_1_2",
+    question: "How many grammatical arguments are packed inside 'أَعْطَيْنَـٰكَ' (aʿṭaynāka), and why is a past tense verb used for a divine grant?",
+    options: [
+      { id: "a", text: "Two elements; past tense expresses an uncertain wish", correct: false, explanation: "Divine speech contains no uncertainty; the word contains three distinct grammatical elements." },
+      { id: "b", text: "Three elements: Form IV verb root (أَعْطَى), subject pronoun (نَا - We), and 1st direct object (كَ - you); the past tense denotes that the decree is so certain it is treated as already accomplished fact", correct: true, explanation: "Excellent! 'أَعْطَيْنَاكَ' is a complete syntactic sentence in a single word: Verb (أَعْطَى, Form IV) + Subject (نَا, the Royal Plural Doer) + 1st Object (كَ, referring to the Prophet ﷺ). Using the past tense (Māḍī) for divine bestowal expresses absolute certainty (تحقق الوقوع) — an irrevocable reality." },
+      { id: "c", text: "Four elements; the verb is present tense denoting ongoing negotiation", correct: false, explanation: "It is not present tense (imperfect would be يُعْطِي / نُعْطِي), and there is no negotiation." },
+      { id: "d", text: "A derived noun with two attached possessive adjectives", correct: false, explanation: "'أَعْطَى' is unequivocally a verb, not a noun." }
+    ],
+    why_this_is_a_good_question: "This question highlights the profound synthetic nature of Arabic morphology, where a verb, its doer, and its recipient are seamlessly fused into one token. Additionally, it addresses the key rhetorical principle of 'Taḥaqquq al-Wuqūʿ' (تحقق الوقوع) — why Allah uses the past tense for future divine promises to signify unshakeable certainty."
+  },
+  "108:1:3": {
+    id: "q108_1_3",
+    question: "What is the syntactic role of 'ٱلْكَوْثَرَ' (al-Kawthar) and what distinguishes its morphological weight (فَوْعَل) from ordinary words for 'much' (كَثِير)?",
+    options: [
+      { id: "a", text: "It is the 2nd direct object (مفعول به ثان); its weight 'فَوْعَل' (Fawʿal) is a hyper-intensive pattern signifying inexhaustible, limitless abundance", correct: true, explanation: "Brilliant! The verb 'أَعْطَى' is doubly-transitive (ينصب مفعولين): the 1st object is 'كَ' and the 2nd is 'ٱلْكَوْثَرَ' (mansūb with fatḥah). Morphologically, 'فَوْعَل' from root ك-ث-ر denotes abundance multiplied without ceiling or end — including the celestial river, supreme wisdom, and perpetual legacy." },
+      { id: "b", text: "It is an adjective (صفة) modifying the Prophet ﷺ on the pattern فَعِيل", correct: false, explanation: "'فَعِيل' would be كَثِير. Al-Kawthar is a noun functioning as the direct object, not an adjective." },
+      { id: "c", text: "It is a circumstantial adverb (حال) indicating speed on pattern مَفْعُول", correct: false, explanation: "It is not a Ḥāl, nor is it on the passive participle pattern Maf'ool." },
+      { id: "d", text: "It is a delayed subject (فاعل مؤخر) on the pattern أَفْعَل", correct: false, explanation: "The subject is already 'نَا' inside the verb; 'أَفْعَل' would be 'أَكْثَر'." }
+    ],
+    why_this_is_a_good_question: "Many Arabic students believe sentences only have one direct object; this question tests the syntactic valency of doubly-transitive verbs (أفعال المنح والعطاء). Morphologically, it reveals why the Qur'an chose the rare, superlative weight 'فَوْعَل' over everyday words like 'كَثِير' or 'أَكْثَر' to describe infinite celestial abundance."
+  },
+  "108:2:1": {
+    id: "q108_2_1",
+    question: "What specific type of particle is the prefix 'فَـ' (Fa-) here, and what logical relationship does it forge between Ayah 1 and Ayah 2?",
+    options: [
+      { id: "a", text: "An interrogative particle asking a rhetorical question", correct: false, explanation: "Interrogative particles are 'هَلْ' or 'أَ', not 'فَـ'." },
+      { id: "b", text: "Fāʾ al-Faṣīḥah / al-Sababiyyah (causative connector): establishing that because you have received boundless favor, therefore dedicate pure worship in gratitude", correct: true, explanation: "Exactly! The 'فَـ' is Fā' al-Faṣīḥah (الفاء الفصيحة) or Sababiyyah: it introduces the inevitable response to an unstated premise: 'Since We have granted you such immense abundance, then dedicate all your prayer and sacrifice to your Lord alone!'" },
+      { id: "c", text: "A negative conjunction indicating exception", correct: false, explanation: "Particles of exception are 'إِلَّا' or 'غَيْر', not 'فَـ'." },
+      { id: "d", text: "A decorative poetic letter with no logical or syntactic function", correct: false, explanation: "In Qur'anic Arabic, every particle carries precise logical, grammatical, and theological architecture." }
+    ],
+    why_this_is_a_good_question: "Students routinely dismiss single-letter prefixes as generic 'and's. This question demonstrates how 'Fāʾ al-Faṣīḥah' operates as a logical pivot, teaching students that Islamic worship (Shukr) is structurally presented as a loving, grateful response to divine grace (Niʿmah)."
+  },
+  "108:2:2": {
+    id: "q108_2_2",
+    question: "Why does the imperative verb 'صَلِّ' (ṣalli) end with a kasrah on the lām rather than a long vowel yāʾ ('صلي'), and what is its grammatical rule?",
+    options: [
+      { id: "a", text: "It is a feminine command addressed to a woman", correct: false, explanation: "The feminine command is 'صَلِّي' with a yā' (Yā' al-Mukhāṭabah). The masculine command drops the weak letter." },
+      { id: "b", text: "It is an imperative of a defective verb (مُعْتَلّ الآخِر), built upon omitting the final weak letter (حَذْف حَرْف العِلَّة)", correct: true, explanation: "Precisely! The root is ص-ل-و (Form II: صَلَّى / يُصَلِّي). The imperative of a defective verb is built on what makes its imperfect jussive: deleting the final weak letter (حذف حرف العلة), leaving only the kasrah on the lām: صَلِّ." },
+      { id: "c", text: "The kasrah is a dialectal variation with no grammatical significance", correct: false, explanation: "It is the standard, strict rule of classical Arabic Nahw and Sarf." },
+      { id: "d", text: "It is a past tense verb in the genitive case", correct: false, explanation: "Verbs never take the genitive case (Jarr is exclusive to nouns), and this is an imperative command." }
+    ],
+    why_this_is_a_good_question: "This addresses one of the most widespread spelling and grammatical errors across the Arabic-speaking world — writing 'اللهم صلي' with a yā' instead of 'اللهم صلِّ'. Testing this cements the fundamental morphological rule governing defective imperative verbs."
+  },
+  "108:2:3": {
+    id: "q108_2_3",
+    question: "What does the combination of the preposition 'لِـ' and the noun 'رَبِّكَ' (li-Rabbika) establish grammatically and theologically?",
+    options: [
+      { id: "a", text: "The preposition 'لِـ' indicates exclusivity and dedication (الاخْتِصَاص والإِخْلاص); worship must be devoted purely to your Sustainer, contrasting with pagan polytheism", correct: true, explanation: "Right on point! Grammatically, 'لِـ' is a Harf Jarr producing the genitive (مجرور بالكسرة: رَبِّ), followed by the attached pronoun 'كَ' as Muḍāf Ilayh. Semantically, Lām al-Ikhtiṣāṣ signifies that prayer is reserved exclusively for Allah, dismantling the pagan practice of praying to idols." },
+      { id: "b", text: "The 'لِـ' is an oath particle meaning 'I swear by your Lord'", correct: false, explanation: "Oath particles are Wāw, Bā', or Tā' (وَاللهِ، بِاللهِ، تَاللهِ), not Lām." },
+      { id: "c", text: "The word 'رَبِّ' is nominative because it is the grammatical subject", correct: false, explanation: "It is preceded by a preposition, making it genitive (Majrūr with kasrah), not nominative." },
+      { id: "d", text: "It indicates physical movement towards a spatial destination", correct: false, explanation: "Physical movement is denoted by 'إِلَى' (ilā). Here 'لِـ' expresses purpose and exclusive dedication." }
+    ],
+    why_this_is_a_good_question: "This question bridges grammar (Jarr wa Majrūr + Iḍāfah) directly into the Qur'an's core theological objective: Tawḥīd al-ʿIbādah (directing worship exclusively to the Creator). It shows how a single prefix particle can deliver pure monotheism."
+  },
+  "108:2:4": {
+    id: "q108_2_4",
+    question: "What is the lexical root of 'وَٱنْحَرْ' (wan-ḥar), and why is 'نَحَرَ' used here instead of common slaughter verbs like 'ذَبَحَ'?",
+    options: [
+      { id: "a", text: "Root ح-ر-ر meaning 'to liberate captives'", correct: false, explanation: "The root is ن-ح-ر, not ح-ر-ر." },
+      { id: "b", text: "Root ن-ح-ر specifically denoting the sacrifice of camels at the base of the throat (نَحْر), representing the most prized and generous of all offerings in Arabia", correct: true, explanation: "Spot on! In classical Arabic, 'ذَبَحَ' is used for smaller livestock (sheep, goats), whereas 'نَحَرَ' is exclusively used for camels (piercing the hollow at the base of the neck). Camels were the pinnacle of Arabian wealth; commanding Naḥr symbolizes the ultimate sacrifice and massive distribution of food to the needy." },
+      { id: "c", text: "Root ن-ح-ل meaning 'to give gifts of honey'", correct: false, explanation: "The root is clearly ن-ح-ر." },
+      { id: "d", text: "Root ح-ر-ب meaning 'to wage war'", correct: false, explanation: "This is completely unrelated to warfare." }
+    ],
+    why_this_is_a_good_question: "Arabic possesses astonishing lexical precision: synonyms are never truly interchangeable. This question trains the learner in root discernment and illuminates why the Qur'an chose the specific verb for camel sacrifice to command maximum sacrificial generosity."
+  },
+  "108:3:1": {
+    id: "q108_3_1",
+    question: "What grammatical role does 'إِنَّ' (Inna) play in Ayah 3, and how does it govern the case endings of the subsequent words?",
+    options: [
+      { id: "a", text: "It is a negative particle that negates the verb", correct: false, explanation: "Inna confirms and emphasizes; it never negates." },
+      { id: "b", text: "It is an annulling particle of emphasis (حرف توكيد ونصب) that puts its subject into the accusative (منصوب) and its predicate into the nominative (مرفوع)", correct: true, explanation: "Correct! 'إِنَّ' enters upon a nominal sentence: it puts its noun (Ism Inna: شَانِئَكَ) into the accusative (منصوب بالفتحة) and keeps its predicate (Khabar Inna: ٱلْأَبْتَرُ) in the nominative (مرفوع بالضمة)." },
+      { id: "c", text: "It is a preposition that causes all following words to end with a kasrah", correct: false, explanation: "Inna is a particle of emphasis (Ḥarf Nāsikh), not a preposition (Ḥarf Jarr)." },
+      { id: "d", text: "It is an interrogative particle asking if the enemy will perish", correct: false, explanation: "It is an assertion of fact, not a question." }
+    ],
+    why_this_is_a_good_question: "This tests the most fundamental rule of sentence government in classical Arabic: 'Inna and its sisters' (إنّ وأخواتها). Understanding how Inna changes the case of the subject from nominative to accusative while keeping the predicate nominative is critical for parsing Qur'anic syntax."
+  },
+  "108:3:2": {
+    id: "q108_3_2",
+    question: "What morphological derivative (Ism Mushtaqq) is 'شَانِئَ' (shāni'a), and what psychological attitude does its root 'ش-ن-أ' specifically signify?",
+    options: [
+      { id: "a", text: "Passive participle (اسم مفعول) meaning 'the one who is pitied'", correct: false, explanation: "The passive participle would be مَشْنُوء (mashnū')." },
+      { id: "b", text: "Active participle (اسم فاعل on pattern فَاعِل) denoting someone actively filled with deep-seated, malicious hatred and spite", correct: true, explanation: "Exactly! 'شَانِئ' is an Active Participle (اسم فاعل) from root ش-ن-أ (Shan'ān). In Arabic linguistics, Shan'ān is not mild dislike; it is intense, festering, spiteful malice. Joined with 'كَ', it refers specifically to the detractor harboring bitter malice against the Prophet ﷺ." },
+      { id: "c", text: "Superlative noun (اسم تفضيل) on pattern أَفْعَل meaning 'the least'", correct: false, explanation: "Superlative would be أَشْنَأ, not شَانِئ." },
+      { id: "d", text: "Verbal noun (مصدر) meaning 'calmness and reconciliation'", correct: false, explanation: "The root means hatred and spite, the opposite of reconciliation." }
+    ],
+    why_this_is_a_good_question: "This question reinforces recognition of the Active Participle pattern (اسم فاعل: فَاعِل) while exposing the student to the psychological depth of Qur'anic vocabulary. It shows how morphology communicates active, ongoing human malice."
+  },
+  "108:3:3": {
+    id: "q108_3_3",
+    question: "What is the specialized rhetorical and syntactic function of the independent pronoun 'هُوَ' (huwa) situated between 'شَانِئَكَ' and 'ٱلْأَبْتَرُ'?",
+    options: [
+      { id: "a", text: "It is a Pronoun of Separation (ضَمِير فَصْل) that creates exclusive restriction (حَصْر / قَصْر): 'HE ALONE is the one cut off'", correct: true, explanation: "Brilliant! 'هُوَ' functions as Ḍamīr al-Faṣl (ضمير فصل). Syntactically, it separates the noun from the predicate to prevent it being read as an adjective. Rhetorically, it generates restriction (Ḥaṣr): turning the enemy's insult back on them: 'No, HE and HE ALONE is the one cut off from all good!'" },
+      { id: "b", text: "It is a direct object of an elided verb", correct: false, explanation: "Independent personal pronouns (هُوَ) do not serve as direct objects in this construction." },
+      { id: "c", text: "It is a preposition connecting the two clauses", correct: false, explanation: "'هُوَ' is a personal pronoun, never a preposition." },
+      { id: "d", text: "An accidental pronoun inserted for syllable count with no meaning", correct: false, explanation: "There are no accidental words in the Qur'an; every token carries immense rhetorical and syntactic weight." }
+    ],
+    why_this_is_a_good_question: "Many students think pronouns only serve as standard subjects. This question introduces 'Ḍamīr al-Faṣl', a sophisticated tool in Arabic syntax and Balāghah that creates dramatic semantic reversal and exclusive restriction (Ḥaṣr)."
+  },
+  "108:3:4": {
+    id: "q108_3_4",
+    question: "What is the syntactic role and case ending of 'ٱلْأَبْتَرُ' (al-abtar), and what historical reality did this word prophesy?",
+    options: [
+      { id: "a", text: "Khabar Inna (خبر إنّ) in the nominative case with ḍammah; it prophesied that the enemies' lineage and memory would be extinguished while the Prophet's ﷺ remembrance would endure forever", correct: true, explanation: "Outstanding! 'ٱلْأَبْتَرُ' is Khabar Inna, taking the nominative case (مرفوع بالضمة). Lexically, 'Abtar' refers to being amputated or cut off without legacy. The verse prophesied that the mockers (like al-ʿĀṣ ibn Wāʾil) would be utterly forgotten or despised, while the Prophet ﷺ would be honored by billions across all generations." },
+      { id: "b", text: "An accusative adjective describing a battle weapon", correct: false, explanation: "It has a ḍammah (marfūʿ), not fatḥah, and it describes a person cut off from good." },
+      { id: "c", text: "A past tense verb meaning 'he severed'", correct: false, explanation: "It has the definite article 'الـ', which only attaches to nouns, never verbs." },
+      { id: "d", text: "A genitive noun dependent on an invisible preposition", correct: false, explanation: "It ends with ḍammah, which is the mark of the nominative (Rafʿ), not genitive." }
+    ],
+    why_this_is_a_good_question: "This question completes the syntactic loop of Inna (identifying Khabar Inna with its nominative ḍammah) and tests the recognition that nouns starting with 'الـ' cannot be verbs. Furthermore, it highlights the fulfilled historical prophecy contained inside a single Qur'anic word."
+  }
+};
 
 class QuranGrammarApp {
   constructor() {
@@ -382,7 +506,7 @@ class QuranGrammarApp {
 
     const footerVer = document.getElementById('footer-version-tag');
     if (footerVer) {
-      footerVer.textContent = 'v1.1.3 (updated 2026-10-07 00:45)';
+      footerVer.textContent = 'v1.1.4 (updated 2026-10-07 01:00)';
     }
 
     if (refrainsDivider && refrainsItem) {
@@ -1415,6 +1539,47 @@ class QuranGrammarApp {
       `;
     }
 
+    // Word-by-Word Pedagogical Quiz
+    const wordQuiz = w.quiz || (window.GLOBAL_WORD_QUIZZES && window.GLOBAL_WORD_QUIZZES[w.location]);
+    let quizHtml = '';
+    if (wordQuiz) {
+      quizHtml = `
+        <div class="word-quiz-box" style="margin-top:20px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:18px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:6px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:1.2rem;">🎯</span>
+              <strong style="font-size:1rem; color:#0f172a;">Word Mastery Challenge</strong>
+              <span class="badge" style="background:#dbeafe; color:#1e40af; font-size:0.75rem; padding:2px 8px; border-radius:9999px;">${w.location}</span>
+            </div>
+            <span style="font-size:0.78rem; color:#64748b; font-weight:600;">High-Yield Pedagogical Quiz</span>
+          </div>
+
+          <div style="font-size:0.95rem; font-weight:700; color:#1e293b; margin-bottom:14px; line-height:1.5;">
+            ${wordQuiz.question}
+          </div>
+
+          <div class="quiz-options-list" style="display:grid; grid-template-columns:1fr; gap:8px;">
+            ${wordQuiz.options.map(opt => `
+              <button class="quiz-opt-btn" data-qid="${wordQuiz.id}" data-optid="${opt.id}" data-correct="${opt.correct}" data-exp="${encodeURIComponent(opt.explanation)}" style="padding:10px 14px; border-radius:8px; border:1px solid #cbd5e1; background:#ffffff; text-align:left; font-size:0.86rem; color:#334155; cursor:pointer; transition:all 0.15s ease; display:flex; gap:8px;">
+                <span style="font-weight:700; color:#64748b;">${opt.id.toUpperCase()}.</span>
+                <span>${opt.text}</span>
+              </button>
+            `).join('')}
+          </div>
+
+          <div class="quiz-feedback-box" style="display:none; margin-top:12px; flex-direction:column; gap:10px;">
+            <div class="quiz-answer-alert" style="padding:10px 14px; border-radius:8px; font-size:0.84rem; line-height:1.5;"></div>
+            <div class="quiz-rationale-alert" style="padding:10px 14px; border-radius:8px; background:#eff6ff; border:1px solid #bfdbfe; color:#1e40af; font-size:0.84rem; line-height:1.5;">
+              <strong style="display:flex; align-items:center; gap:4px; margin-bottom:4px; color:#1d4ed8;">
+                <span>💡</span> Why this is a good question (Pedagogical Rationale):
+              </strong>
+              ${wordQuiz.why_this_is_a_good_question}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     modalBody.innerHTML = `
       ${audioBtn}
 
@@ -1481,7 +1646,52 @@ class QuranGrammarApp {
           </tbody>
         </table>
       </div>
+
+      ${quizHtml}
     `;
+
+    // Hook up quiz option clicks
+    if (wordQuiz) {
+      const optButtons = modalBody.querySelectorAll('.quiz-opt-btn');
+      const feedbackBox = modalBody.querySelector('.quiz-feedback-box');
+      const alertBox = modalBody.querySelector('.quiz-answer-alert');
+
+      optButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isCorrect = btn.dataset.correct === 'true';
+          const exp = decodeURIComponent(btn.dataset.exp);
+
+          optButtons.forEach(b => {
+            b.disabled = true;
+            b.style.cursor = 'default';
+            if (b.dataset.correct === 'true') {
+              b.style.background = '#ecfdf5';
+              b.style.borderColor = '#10b981';
+              b.style.color = '#065f46';
+              b.style.fontWeight = '700';
+            }
+          });
+
+          if (!isCorrect) {
+            btn.style.background = '#fef2f2';
+            btn.style.borderColor = '#ef4444';
+            btn.style.color = '#991b1b';
+            btn.style.fontWeight = '700';
+          }
+
+          if (alertBox) {
+            alertBox.style.background = isCorrect ? '#f0fdf4' : '#fff1f2';
+            alertBox.style.border = isCorrect ? '1px solid #bbf7d0' : '1px solid #fecdd3';
+            alertBox.style.color = isCorrect ? '#166534' : '#9f1239';
+            alertBox.innerHTML = `<strong>${isCorrect ? '✓ Correct!' : '✕ Note:'}</strong> ${exp}`;
+          }
+
+          if (feedbackBox) {
+            feedbackBox.style.display = 'flex';
+          }
+        });
+      });
+    }
 
     // Tab level switcher logic
     if (aiData) {
