@@ -1,0 +1,2719 @@
+[
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 1,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+      "text_simple": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "orthographic_word_count": 4,
+      "morpheme_count": 8,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+        "natural": "In the name of Allah, the Most Gracious, the Most Merciful.",
+        "easy": "In the name of Allah, who is full of mercy and always merciful."
+      },
+      "norwegian": {
+        "natural": "I Guds navn, den Barmhjertige, den Nåderike."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "Beginning every action, recitation, and endeavor under the sacred name of Allah, whose mercy is both overwhelmingly intense and perpetually enduring.",
+      "simple_explanation": "We begin with the name of Allah, seeking His blessing, remembering that He is the Source of all grace and unending compassion.",
+      "key_message": "Every human deed achieves lasting value and divine blessing only when initiated through conscious reliance on Allah and His infinite mercy.",
+      "practical_takeaway": "Form the conscious habit of saying Bismillah before speaking, eating, working, or embarking on any task to align your intention with divine grace."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "Al-Isti'adhah (Supplication for Protection)",
+        "connection": "After seeking divine refuge from the whispering distractions of the devil, the servant begins the sacred recitation directly with Allah's name.",
+        "lesson": "Purifying the spiritual state from negative distractions precedes stepping into divine remembrance."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+        "connection": "Commencing under the divine name immediately leads into overflowing praise and gratitude for His universal nurture.",
+        "lesson": "Invoking the divine name naturally fills the heart with gratitude toward the Lord of all realms."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "بِسْمِ",
+        "surface_simple": "بِسْمِ",
+        "lemma": "ٱسْم",
+        "root": "س م و",
+        "has_root": true,
+        "word_type": "preposition_and_noun",
+        "pos": "jar_wa_majrur",
+        "subtype": "preposition_phrase",
+        "english_gloss": [
+          "In the name",
+          "With the name"
+        ],
+        "meaning_in_context": "With / In the name of",
+        "morphemes": [
+          {
+            "morpheme_id": "1:1:1:1",
+            "text": "بِـ",
+            "type": "prefix",
+            "pos_ar": "حرف جر (للاستعانة والمصاحبة والتبرك)",
+            "meaning": "with / through / by (seeking aid, companionship, and blessing)"
+          },
+          {
+            "morpheme_id": "1:1:1:2",
+            "text": "سْمِ",
+            "type": "stem",
+            "pos_ar": "اسم مجرور بحرف الجر وعلامة جره الكسرة، وهو مضاف",
+            "meaning": "name"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فِعْل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_idafah",
+          "grammatical_state": "majrur",
+          "phonological_note": "The initial alif of (اسم) is elided in script and pronunciation exclusively in the full Bismillah due to extreme frequency of use (لكثرة الاستعمال), symbolizing seamless, barrier-free access to divine remembrance."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "preceded by preposition ba; mudaf to the divine name",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "الباء حرف جر، و(اسم) اسم مجرور بالكسرة وهو مضاف، والجار والمجرور متعلقان بفعل محذوف تقديره (أبدأُ أو أقرأُ)"
+          },
+          "syntactic_role": "prepositional_phrase_modifier",
+          "sentence_role": "serves as the opening sanctifying modifier"
+        },
+        "rhetoric": {
+          "device": "حذف العامل وتقديمه للاختصاص والتبرك",
+          "device_en": "elision and deferral of the governing verb for exclusivity and blessing",
+          "ordinary_order": "أَبْدَأُ بِاسْمِ اللَّهِ",
+          "quranic_order": "بِسْمِ ٱللَّهِ (أَبْدَأُ)",
+          "effect": "Deferring the human action ('I begin / I recite') puts Allah's name first. This creates grammatical restriction (حصر): 'With Allah's name alone I begin, not with any other name or ego.'",
+          "contrast": {
+            "ordinary_meaning": "I begin my recitation with the name of Allah. (puts human action first)",
+            "quranic_meaning": "With the name of Allah [I begin]. (subordinates the human ego and puts the divine name first)"
+          }
+        },
+        "visual": {
+          "category": "preposition",
+          "color_group": "particle_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "ٱللَّهِ",
+        "surface_simple": "اللَّهِ",
+        "lemma": "ٱللَّه",
+        "root": "أ ل ه",
+        "has_root": true,
+        "word_type": "proper_noun",
+        "pos": "ism_jalalah",
+        "subtype": "divine_proper_name",
+        "english_gloss": [
+          "Allah",
+          "God Almighty"
+        ],
+        "meaning_in_context": "Allah",
+        "morphemes": [
+          {
+            "morpheme_id": "1:1:2:1",
+            "text": "ٱللَّهِ",
+            "type": "stem",
+            "pos_ar": "اسم الجلالة مضاف إليه مجرور وعلامة جره الكسرة",
+            "meaning": "Allah (The uniquely worshipped Lord)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "definiteness": "inherently_definite",
+          "grammatical_state": "majrur",
+          "etymology_insight": "Root (أ-ل-ه) conveys the One who is desperately sought in times of intense longing and hardship (الولَه), and the One who is worshipped out of combined love, awe, and veneration (المألوه)."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "mudaf ilayh to بِسْمِ",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "اسم الجلالة مضاف إليه مجرور وعلامة جره الكسرة الظاهرة على آخره تعظيماً"
+          },
+          "syntactic_role": "possessive_annexee_mudaf_ilayh",
+          "sentence_role": "identifies the sacred source of all existence and authority"
+        },
+        "rhetoric": {
+          "device": "الإضافة للتعظيم والتشريف",
+          "device_en": "annexation for supreme glorification",
+          "ordinary_order": "بِاسْمِ رَبٍّ",
+          "quranic_order": "بِسْمِ ٱللَّهِ",
+          "effect": "Directly links the human action to the supreme all-encompassing proper name of God that gathers all majestic and beautiful attributes."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 3,
+        "position": 3,
+        "surface_uthmani": "ٱلرَّحْمَـٰنِ",
+        "surface_simple": "الرَّحْمَٰنِ",
+        "lemma": "رَحْمَـٰن",
+        "root": "ر ح م",
+        "has_root": true,
+        "word_type": "adjective",
+        "pos": "sifah_mushabbahah",
+        "subtype": "hyperbolic_attribute_noun",
+        "english_gloss": [
+          "the Entirely Merciful",
+          "the Most Gracious"
+        ],
+        "meaning_in_context": "The Bursting, Intensely Merciful",
+        "morphemes": [
+          {
+            "morpheme_id": "1:1:3:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:1:3:2",
+            "text": "رَّحْمَـٰنِ",
+            "type": "stem",
+            "pos_ar": "نعت مجرور وعلامة جره الكسرة",
+            "meaning": "the Intensely Merciful (on pattern Fa'lan)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعْلَان",
+          "derived_form": "صفة مشبهة تدل على الامتلاء والفيضان والحدوث العاجل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "majrur",
+          "pattern_insight": "The morphological scale Fa'lān (فَعْلَان) indicates extraordinary intensity, full saturation, and bursting immediacy in the present moment (analogous to غَضْبَان for filled with rage, or عَطْشَان for parched with thirst). It signifies a mercy so intense that it overflows to embrace every created thing."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "first epithet / adjective (نعت أول) modifying the divine name",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت أول لاسم الجلالة مجرور وعلامة جره الكسرة الظاهرة على آخره"
+          },
+          "syntactic_role": "adjective_epithet",
+          "sentence_role": "reveals the overflowing immediate nature of divine mercy"
+        },
+        "rhetoric": {
+          "device": "صيغة فَعْلَان للدلالة على السعة والامتلاء العاجل",
+          "device_en": "morphological intensifier of overflowing present mercy",
+          "ordinary_order": "الرَّاحِمِ",
+          "quranic_order": "ٱلرَّحْمَـٰنِ",
+          "effect": "Expresses an infinite, overwhelming ocean of mercy that is actively cascading over all creation right now.",
+          "contrast": {
+            "ordinary_meaning": "The one showing mercy.",
+            "quranic_meaning": "The One whose very essence bursts with overwhelming, non-stop mercy covering believers and non-believers alike."
+          }
+        },
+        "visual": {
+          "category": "adjective",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 4,
+        "position": 4,
+        "surface_uthmani": "ٱلرَّحِيمِ",
+        "surface_simple": "الرَّحِيمِ",
+        "lemma": "رَحِيم",
+        "root": "ر ح م",
+        "has_root": true,
+        "word_type": "adjective",
+        "pos": "sifah_mushabbahah",
+        "subtype": "permanent_attribute_noun",
+        "english_gloss": [
+          "the Especially Merciful",
+          "the Constantly Merciful"
+        ],
+        "meaning_in_context": "The Continuously, Perpetually Merciful",
+        "morphemes": [
+          {
+            "morpheme_id": "1:1:4:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:1:4:2",
+            "text": "رَّحِيمِ",
+            "type": "stem",
+            "pos_ar": "نعت ثانٍ مجرور وعلامة جره الكسرة",
+            "meaning": "the Continuously Merciful (on pattern Fa'il)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعِيل",
+          "derived_form": "صفة مشبهة تدل على الثبوت والدوام والاستمرار",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "majrur",
+          "pattern_insight": "The morphological scale Fa'īl (فَعِيل) denotes permanent continuity, stable enduring quality, and perpetual duration (analogous to عَلِيم for all-knowing, or كَرِيم for ever-generous). It signifies a mercy that never runs dry or fades over time."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "second epithet / adjective (نعت ثانٍ) modifying the divine name",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت ثانٍ لاسم الجلالة مجرور وعلامة جره الكسرة الظاهرة على آخره"
+          },
+          "syntactic_role": "adjective_epithet",
+          "sentence_role": "reveals the unending, permanent fidelity of divine mercy"
+        },
+        "rhetoric": {
+          "device": "الجمع بين فَعْلَان وفَعِيل لكمال الرحمة",
+          "device_en": "dual morphological pairing of intensity and permanence",
+          "ordinary_order": "الرَّحْمَـٰنِ وَحْدَهُ أَوْ الرَّحِيمِ وَحْدَهُ",
+          "quranic_order": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+          "effect": "In human experience, an emotion that is bursting and intense (like hunger or anger) quickly dies down, while a permanent state lacks bursting excitement. Allah pairs Raḥmān with Raḥīm to declare that His mercy is both infinitely intense right now AND perpetually unbreakable forever.",
+          "contrast": {
+            "ordinary_meaning": "Merciful in one temporal dimension.",
+            "quranic_meaning": "Merciful with maximum explosive intensity in the immediate present, and absolute permanent constancy into eternal infinity."
+          }
+        },
+        "visual": {
+          "category": "adjective",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "We start everything in life with Allah's name, reminding ourselves that He loves to give mercy.",
+        "grammar": "بِسْمِ means 'In the name', اللَّهِ is 'Allah', and الرَّحْمَٰن الرَّحِيم describe His vast kindness.",
+        "sarf": "Both Raḥmān and Raḥīm share the root ر-ح-م, which means womb (an environment of complete safety, nourishment, and unconditional care)."
+      },
+      "intermediate": {
+        "lesson": "Bismillah is a prepositional phrase with an intentionally elided verb, training the believer to place the divine name ahead of their personal actions.",
+        "grammar": "بِسْمِ is jār wa majrūr connected to an elided verb (أبدأُ). اللَّهِ is mudāf ilayh. Both attributes follow in genitive case as adjectives.",
+        "sarf": "Raḥmān on pattern Fa'lān denotes bursting intensity; Raḥīm on pattern Fa'īl denotes permanent continuity."
+      },
+      "advanced": {
+        "lesson": "The pairing of Raḥmān and Raḥīm solves a profound philosophical dilemma regarding emotional intensity versus temporal endurance.",
+        "grammar": "The omission of the governing verb serves exclusivity (ḥaṣr). Al-Ukbari and Ibn Hisham note that eliding the verb at the beginning elevates the sentence to universal applicability for any noble deed.",
+        "rhetoric": "The elision of the alif in script highlights closeness, ease of access, and constant recitation in daily spiritual life."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "ayah_status_of_basmalah",
+        "analysis": "Regarded as a full independent first ayah of Surah Al-Fatihah in the Kufan and Makkan reading traditions (including Hafs 'an 'Asim and al-Shafi'i school), while considered an unnumbered opening blessing banner in the Madinan reading tradition (Maliki school).",
+        "scholars_or_schools": [
+          "Kufan Readers",
+          "Al-Shafi'i",
+          "Ahmad",
+          "Ibn Abbas"
+        ],
+        "source": "Al-Bahr al-Muhit li Abi Hayyan; Tafsir al-Qurtubi",
+        "confidence": "high"
+      },
+      {
+        "topic": "muta'allaq_of_basmalah",
+        "analysis": "The prepositional phrase (بِسْمِ) relates either to a deferred verb representing the specific act (e.g., أقرأُ / أبدأُ) or a general verbal noun (ابتدائي باسم الله). The majority prefer the deferred specific verb to establish exclusivity and personal alignment.",
+        "scholars_or_schools": [
+          "Al-Zamakhshari",
+          "Ibn Kathir",
+          "Sibawayh"
+        ],
+        "source": "Al-Kashshaf; Tafsir al-Tabari",
+        "confidence": "high"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi",
+        "I'rab al-Qur'an li al-Ukbari"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Tabari",
+        "Tafsir Ibn Kathir",
+        "Al-Kashshaf li al-Zamakhshari"
+      ],
+      "source_verification_status": "verified"
+    }
+  },
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 2,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+      "text_simple": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+      "orthographic_word_count": 4,
+      "morpheme_count": 8,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "[All] praise is [due] to Allah, Lord of the worlds.",
+        "natural": "All praise and gratitude belong to Allah, Lord of all realms.",
+        "easy": "All praise belongs to Allah, the caring Lord and Sustainer of everything that exists."
+      },
+      "norwegian": {
+        "natural": "All lovprisning tilhører Gud, all verdens Herre."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "Absolute, unreserved praise and deepest gratitude belong exclusively and permanently to Allah, who nurtures, sustains, and guides all created worlds stage by stage.",
+      "simple_explanation": "We declare that Allah deserves all appreciation for who He is, and all thanks for every blessing He gives across every universe.",
+      "key_message": "True gratitude combines recognizing God's intrinsic moral perfection with acknowledging our total dependence upon His nurturing care.",
+      "practical_takeaway": "Approach life with foundational gratitude: complain less, recognize divine blessings in daily moments, and acknowledge Allah's loving oversight behind every circumstance."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+        "connection": "Having commenced in the name of the intensely and perpetually merciful God, the servant's spontaneous, overwhelming response is all-encompassing praise.",
+        "lesson": "Recognizing divine mercy naturally unlocks genuine gratitude in the human heart."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+        "connection": "After describing Allah's immense lordship over all worlds, the text immediately reassures the worshipper that His authority is rooted in compassion, not tyranny.",
+        "lesson": "Awe of God's universal sovereignty is instantly softened by the comforting reality of His mercy."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "ٱلْحَمْدُ",
+        "surface_simple": "الْحَمْدُ",
+        "lemma": "حَمْد",
+        "root": "ح م د",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "mubtada",
+        "subtype": "verbal_noun",
+        "english_gloss": [
+          "All praise",
+          "Every gratitude and appreciation"
+        ],
+        "meaning_in_context": "All Praise and Gratitude",
+        "morphemes": [
+          {
+            "morpheme_id": "1:2:1:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام الاستغراق والجنس",
+            "meaning": "the all-encompassing definite article (every imaginable praise)"
+          },
+          {
+            "morpheme_id": "1:2:1:2",
+            "text": "حَمْدُ",
+            "type": "stem",
+            "pos_ar": "مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة",
+            "meaning": "praise combined with gratitude"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعْل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_al",
+          "grammatical_state": "marfu",
+          "semantic_fusion": "In classical Arabic, Ḥamd is unique because it perfectly fuses Madḥ (praise for beauty, majesty, and intrinsic excellence) with Shukr (gratitude for received favors). You admire a magnificent mountain without thanking it, and you thank a doctor who gave you medicine without declaring their eternal moral perfection. Only Allah is simultaneously praised for who He is and thanked for what He bestows."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "marfu",
+            "case_reason": "subject / topic (مبتدأ) initiating the nominal sentence",
+            "visible_marker": "ḍammah (الضمة الظاهرة)",
+            "i3rab_ar": "مبتدأ مرفوع بالابتداء وعلامة رفعه الضمة الظاهرة على آخره"
+          },
+          "syntactic_role": "subject_mubtada",
+          "sentence_role": "establishes universal praise as an independent, permanent reality"
+        },
+        "rhetoric": {
+          "device": "العدول عن الجملة الفعلية إلى الجملة الاسمية",
+          "device_en": "stylistic shift from verbal to nominal sentence",
+          "ordinary_order": "نَحْمَدُ اللَّهَ",
+          "quranic_order": "ٱلْحَمْدُ لِلَّهِ",
+          "effect": "A verbal sentence ('We praise Allah') is tied to time and the human actor: if humans sleep, forget, or sin, the praise halts. By choosing a nominal sentence ('All praise belongs to Allah'), the Qur'an establishes that praise is an objective, timeless, permanent fact of reality that belongs to Allah even before humanity existed and long after all creation ends.",
+          "contrast": {
+            "ordinary_meaning": "We offer our praise to Allah. (conditional upon human effort)",
+            "quranic_meaning": "All praise intrinsically belongs to Allah. (timeless, absolute, unshakeable reality)"
+          }
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "لِلَّهِ",
+        "surface_simple": "لِلَّهِ",
+        "lemma": "ٱللَّه",
+        "root": "أ ل ه",
+        "has_root": true,
+        "word_type": "preposition_and_proper_noun",
+        "pos": "khabar_shibh_jumlah",
+        "subtype": "prepositional_predicate",
+        "english_gloss": [
+          "is for Allah",
+          "belongs exclusively to Allah"
+        ],
+        "meaning_in_context": "Belongs Exclusively to Allah",
+        "morphemes": [
+          {
+            "morpheme_id": "1:2:2:1",
+            "text": "لِـ",
+            "type": "prefix",
+            "pos_ar": "لام الاختصاص والاستحقاق والملك",
+            "meaning": "preposition of exclusive entitlement and absolute ownership"
+          },
+          {
+            "morpheme_id": "1:2:2:2",
+            "text": "لَّهِ",
+            "type": "stem",
+            "pos_ar": "اسم الجلالة مجرور باللام والجار والمجرور في محل رفع خبر المبتدأ",
+            "meaning": "Allah"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur_in_place_of_marfu",
+            "case_reason": "prepositional phrase forming the semi-sentence predicate (شبه جملة خبر)",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "اللام حرف جر للاختصاص والاستحقاق، واسم الجلالة مجرور بالكسرة، والجار والمجرور متعلقان بمحذوف تقديره (مستقر أو كائن) في محل رفع خبر المبتدأ"
+          },
+          "syntactic_role": "predicate_khabar",
+          "sentence_role": "identifies the sole legitimate owner of ultimate praise"
+        },
+        "rhetoric": {
+          "device": "لام الاستحقاق والاختصاص",
+          "device_en": "preposition of exclusive entitlement",
+          "ordinary_order": "الْحَمْدُ فِي اللَّهِ",
+          "quranic_order": "ٱلْحَمْدُ لِلَّهِ",
+          "effect": "Strictly restricts all praise to Allah alone. Every compliment paid to a teacher, artist, or invention ultimately redirects to Allah, who fashioned the talent and inspired the mind."
+        },
+        "visual": {
+          "category": "preposition",
+          "color_group": "particle_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 3,
+        "position": 3,
+        "surface_uthmani": "رَبِّ",
+        "surface_simple": "رَبِّ",
+        "lemma": "رَبّ",
+        "root": "ر ب ب",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism",
+        "subtype": "divine_attribute_noun",
+        "english_gloss": [
+          "Lord",
+          "Caretaker",
+          "Sustainer"
+        ],
+        "meaning_in_context": "The Nurturing Lord and Master",
+        "morphemes": [
+          {
+            "morpheme_id": "1:2:3:1",
+            "text": "رَبِّ",
+            "type": "stem",
+            "pos_ar": "نعت (أو بدل) مجرور وعلامة جره الكسرة، وهو مضاف",
+            "meaning": "The Master, Nurturer, and Sustainer"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعْل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_idafah",
+          "grammatical_state": "majrur",
+          "etymological_richness": "The classical Arabic concept of Rabb encompasses five inseparable dimensions: 1) Mālik (Absolute Owner), 2) Murabbī (Loving Caretaker who fosters growth stage by stage until perfection), 3) Mun'im (Generous Provider), 4) Qayyim (Guardian and Protector), and 5) Sayyid (Sovereign Authority). Reducing Rabb to 'Lord' loses the profound tenderness of Tarbiyah (nurturing care)."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "epithet / adjective (نعت) or apposition (بدل) following the divine name; mudaf to al-Alamin",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت لاسم الجلالة مجرور وعلامة جره الكسرة الظاهرة على آخره، وهو مضاف"
+          },
+          "syntactic_role": "modifier_and_mudaf_head",
+          "sentence_role": "specifies Allah's loving relational role toward all created existence"
+        },
+        "rhetoric": {
+          "device": "التعبير بالربوبية في معرض الامتنان",
+          "device_en": "invoking nurturing lordship in the context of gratitude",
+          "ordinary_order": "إِلَهِ الْعَالَمِينَ",
+          "quranic_order": "رَبِّ ٱلْعَـٰلَمِينَ",
+          "effect": "Allah could have chosen 'Ilāh al-‘Ālamīn' (God of the worlds) or 'Mālik al-‘Ālamīn' (Owner of the worlds). Choosing 'Rabb' immediately evokes personal tenderness, protection, and parental-like nurture, reminding every human that their existence is cradled in divine care."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 4,
+        "position": 4,
+        "surface_uthmani": "ٱلْعَـٰلَمِينَ",
+        "surface_simple": "الْعَالَمِينَ",
+        "lemma": "عَالَم",
+        "root": "ع ل م",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism",
+        "subtype": "plural_concept_noun",
+        "english_gloss": [
+          "of all worlds",
+          "of all creation and species"
+        ],
+        "meaning_in_context": "Of All Realms of Creation",
+        "morphemes": [
+          {
+            "morpheme_id": "1:2:4:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:2:4:2",
+            "text": "عَـٰلَمِينَ",
+            "type": "stem",
+            "pos_ar": "مضاف إليه مجرور وعلامة جره الياء لأنه ملحق بجمع المذكر السالم",
+            "meaning": "all conscious realms, generations, and worlds"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَاعَلِين",
+          "gender": "masculine",
+          "number": "plural (ملحق بجمع المذكر السالم)",
+          "definiteness": "definite",
+          "grammatical_state": "majrur",
+          "linguistic_significance": "Derived from 'Alam (عَلَم) meaning 'a sign'—because every single realm of creation is a living sign testifying to the existence, beauty, and wisdom of the Creator. It takes the sound masculine plural suffix (-īn) which is normally reserved for sentient, rational beings (ذوي العقول), emphasizing that Allah cares deeply for all conscious civilizations, angels, jinn, and human generations across all epochs."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "mudaf ilayh to رَبِّ",
+            "visible_marker": "yā’ (الياء لأنه ملحق بجمع المذكر السالم)",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الياء لأنه ملحق بجمع المذكر السالم، والنون عوض عن التنوين في الاسم المفرد"
+          },
+          "syntactic_role": "mudaf_ilayh",
+          "sentence_role": "expands the scope of divine nurture to encompass all cosmic realms"
+        },
+        "rhetoric": {
+          "device": "إلحاق غير العاقل بالعاقل للتكريم والاستيعاب",
+          "device_en": "sound masculine pluralizing to signify universal conscious scope",
+          "ordinary_order": "الْعَوَالِمِ (جمع تكسير)",
+          "quranic_order": "ٱلْعَـٰلَمِينَ (جمع مذكر سالم)",
+          "effect": "Elevates creation to sentient status, reminding the reader that every community on earth—from nations of humans to colonies of ants—is a conscious realm sustained under Allah's watchful care."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "We say Alhamdulillah to thank Allah for everything He created and for nurturing all beings.",
+        "grammar": "الْحَمْدُ is the subject ('All Praise'), and لِلَّهِ explains who owns it ('belongs to Allah').",
+        "sarf": "Rabb comes from the same root as Tarbiyah (loving, gradual upbringing)."
+      },
+      "intermediate": {
+        "lesson": "Alhamdulillah is a complete sentence that declares praise to be an unshakeable, universal reality.",
+        "grammar": "A nominal sentence (مبتدأ وخبر) provides stability and permanence over time, unlike a verbal sentence which is tied to human actions.",
+        "sarf": "Al-Alamin takes the suffix -īn (sound masculine plural), emphasizing that all conscious creations are recipients of divine care."
+      },
+      "advanced": {
+        "lesson": "Ḥamd synthesizes admiration for God's intrinsic perfection with heartfelt gratitude for His gifts, while Rabb combines ownership with tender nurture.",
+        "grammar": "The lam in Lillāh is Lām al-Istihqāq wa al-Ikhtiṣāṣ. Rabb is an epithet (na't) in genitive agreement, governing al-‘Ālamīn in an idafah construction.",
+        "rhetoric": "Contrasting 'Rabb' with alternative titles like 'Mālik' or 'Ilāh' establishes emotional security in the worshipper's relationship with the Divine."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "nature_of_hamd_definiteness",
+        "analysis": "The alif-lam in (الْحَمْدُ) is analyzed by the majority as Istighrāqiyyah (exhaustive, encompassing every single possible praise in existence), while some classical grammarians note it can also represent Jinsiyyah (the generic essence of praise).",
+        "scholars_or_schools": [
+          "Al-Zamakhshari",
+          "Ibn al-Anbari",
+          "Al-Razi"
+        ],
+        "source": "Al-Kashshaf; Mafatih al-Ghayb",
+        "confidence": "high"
+      },
+      {
+        "topic": "syntactic_agreement_of_rabbi",
+        "analysis": "Analyzed primarily as a following adjective/epithet (na't) to the divine name, or alternatively as a clarifying apposition (badal / 'atf bayan).",
+        "scholars_or_schools": [
+          "Al-Ukbari",
+          "Abu Hayyan"
+        ],
+        "source": "Al-Bahr al-Muhit; I'rab al-Qur'an li al-Ukbari",
+        "confidence": "high"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Tabari",
+        "Tafsir Ibn Kathir",
+        "Tafsir al-Sa'di"
+      ],
+      "source_verification_status": "verified"
+    }
+  },
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 3,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+      "text_simple": "الرَّحْمَٰنِ الرَّحِيمِ",
+      "orthographic_word_count": 2,
+      "morpheme_count": 4,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "The Entirely Merciful, the Especially Merciful.",
+        "natural": "The Most Gracious, the Most Merciful.",
+        "easy": "He is filled with overflowing mercy and His care never ends."
+      },
+      "norwegian": {
+        "natural": "Den Barmhjertige, den Nåderike."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "Reiterating that the universal Lord of all worlds exercises His supreme authority exclusively through intense, immediate, and everlasting mercy.",
+      "simple_explanation": "Allah reminds us right after mentioning His vast power that He is deeply kind, forgiving, and constantly caring.",
+      "key_message": "Divine power is never cruel or oppressive; it is governed from start to finish by boundless compassion.",
+      "practical_takeaway": "Never lose hope in Allah's kindness, no matter how difficult your trials or how heavy your mistakes."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+        "connection": "Hearing that Allah is the Master of all worlds can cause intimidation. The ayah immediately repeats His compassion to balance awe with warmth.",
+        "lesson": "True faith maintains a harmonious equilibrium between reverent awe of God's majesty and total reliance on His tenderness."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+        "connection": "Mercy is immediately balanced by accountability: the Most Merciful is also the Master of the Day of Judgment.",
+        "lesson": "Mercy does not negate justice; accountability gives human moral struggles ultimate purpose."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "ٱلرَّحْمَـٰنِ",
+        "surface_simple": "الرَّحْمَٰنِ",
+        "lemma": "رَحْمَـٰن",
+        "root": "ر ح م",
+        "has_root": true,
+        "word_type": "adjective",
+        "pos": "sifah_mushabbahah",
+        "subtype": "hyperbolic_attribute_noun",
+        "english_gloss": [
+          "the Entirely Merciful",
+          "the Overflowing in Compassion"
+        ],
+        "meaning_in_context": "The Bursting, Intensely Merciful",
+        "morphemes": [
+          {
+            "morpheme_id": "1:3:1:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:3:1:2",
+            "text": "رَّحْمَـٰنِ",
+            "type": "stem",
+            "pos_ar": "نعت مجرور وعلامة جره الكسرة",
+            "meaning": "intensely merciful in essence and present scope"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعْلَان",
+          "derived_form": "صفة مشبهة تدل على الامتلاء والشمول",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "epithet / adjective (نعت) following the Majesty in verse 2",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت مجرور وعلامة جره الكسرة الظاهرة على آخره تابعة للفظ الجلالة السابق"
+          },
+          "syntactic_role": "adjective_epithet",
+          "sentence_role": "qualifies the nature of divine cosmic lordship"
+        },
+        "rhetoric": {
+          "device": "تكرار الصفة لدفع توهم الجبروت",
+          "device_en": "rhetorical repetition to preclude fear of harsh tyranny",
+          "ordinary_order": "رَبِّ الْعَالَمِينَ (دُونَ إِعَادَةِ الرَّحْمَنِ)",
+          "quranic_order": "رَبِّ ٱلْعَـٰلَمِينَ ٱلرَّحْمَـٰنِ",
+          "effect": "When a ruler has infinite power, subjects live in terror. Repeating Ar-Rahman assures creation that the Emperor of the Universe rules with boundless tenderness.",
+          "contrast": {
+            "ordinary_meaning": "A master who commands obedience.",
+            "quranic_meaning": "A Master who nurtures His subjects with an overflowing flood of compassion."
+          }
+        },
+        "visual": {
+          "category": "adjective",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "ٱلرَّحِيمِ",
+        "surface_simple": "الرَّحِيمِ",
+        "lemma": "رَحِيم",
+        "root": "ر ح م",
+        "has_root": true,
+        "word_type": "adjective",
+        "pos": "sifah_mushabbahah",
+        "subtype": "permanent_attribute_noun",
+        "english_gloss": [
+          "the Especially Merciful",
+          "the Continuously Loving"
+        ],
+        "meaning_in_context": "The Continuously, Perpetually Merciful",
+        "morphemes": [
+          {
+            "morpheme_id": "1:3:2:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:3:2:2",
+            "text": "رَّحِيمِ",
+            "type": "stem",
+            "pos_ar": "نعت ثانٍ مجرور وعلامة جره الكسرة",
+            "meaning": "perpetually and specifically merciful"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعِيل",
+          "derived_form": "صفة مشبهة تدل على الثبوت والخلود",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "second epithet / adjective (نعت ثانٍ) following the Majesty in verse 2",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت ثانٍ مجرور وعلامة جره الكسرة الظاهرة على آخره"
+          },
+          "syntactic_role": "adjective_epithet",
+          "sentence_role": "affirms the permanent durability of divine compassion"
+        },
+        "rhetoric": {
+          "device": "التأكيد الإيقاعي والمعنوي للرحمة الدائمة",
+          "device_en": "rhythmic and semantic affirmation of eternal care",
+          "ordinary_order": "الرَّحْمَـٰنِ (فَقَطْ)",
+          "quranic_order": "ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ",
+          "effect": "Assures the struggling believer that even when life feels painful or prayers seem unanswered, Allah's permanent underlying mercy (Raḥīm) is steadfastly working behind the scenes."
+        },
+        "visual": {
+          "category": "adjective",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "Allah repeats that He is the Most Merciful so we know His vast power is always gentle.",
+        "grammar": "Both words are descriptions of Allah with kasrah endings connecting back to verse 2.",
+        "sarf": "Raḥmān means full of mercy right now; Raḥīm means always merciful without ending."
+      },
+      "intermediate": {
+        "lesson": "The psychological placement of this ayah right after 'Rabb al-‘Ālamīn' converts fear of absolute authority into profound love.",
+        "grammar": "Syntactically functions as two consecutive adjectives (نعت) modifying Allah from verse 2.",
+        "sarf": "Morphological contrast between Fa'lān (intensity) and Fa'īl (duration) provides complete coverage of compassion."
+      },
+      "advanced": {
+        "lesson": "This independent ayah bridges universal lordship (v. 2) with the solemn terror of the Day of Judgment (v. 4), cushioning human vulnerability.",
+        "grammar": "May also be parsed as an independent cut clause (على القطع والمدح) in nominative or accusative apposition.",
+        "rhetoric": "The cadence creates musical parallelism with the opening Basmalah, establishing a comforting rhythmic refrain in the soul."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "syntactic_connection_to_previous_verse",
+        "analysis": "Analyzed as two consecutive adjectives (نعتان) modifying the divine name in (الْحَمْدُ لِلَّهِ), or parsed as a predicate to an implicit pronoun (هو الرحمن الرحيم) or direct object of praise (أمدحُ الرحمنَ الرحيمَ) via classical Qat' al-Na't.",
+        "scholars_or_schools": [
+          "Sibawayh",
+          "Ibn Hisham",
+          "Al-Ukbari"
+        ],
+        "source": "Mughni al-Labib; I'rab al-Qur'an li al-Ukbari",
+        "confidence": "high"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Tabari",
+        "Tafsir Ibn Kathir"
+      ],
+      "source_verification_status": "verified"
+    }
+  },
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 4,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+      "text_simple": "مَالِكِ يَوْمِ الدِّينِ",
+      "orthographic_word_count": 3,
+      "morpheme_count": 4,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "Owner / Master of the Day of Judgment.",
+        "natural": "Master of the Day of Judgment.",
+        "easy": "He is the Master of the Day of Judgment."
+      },
+      "norwegian": {
+        "natural": "Herskeren over Dommens dag."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "Allah is the Master, Sovereign King, and Owner of the Day of Judgment.",
+      "simple_explanation": "Allah has complete ownership, authority and jurisdiction over the Day when all beings will be resurrected and judged.",
+      "key_message": "Ultimate authority belongs unconditionally to Allah, especially on the Day when all worldly delusions of kingship vanish.",
+      "practical_takeaway": "Remembering the Day of Judgment transforms daily conscience, choices, and accountability before the Creator."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "الرَّحْمَـٰنِ الرَّحِيمِ",
+        "connection": "After describing Allah's all-encompassing mercy, the ayah reminds us that Allah is simultaneously the ultimate Judge and Sovereign.",
+        "lesson": "A balanced spiritual state combines deep hope in divine mercy with vigilant reverence for divine accountability."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+        "connection": "Recognizing Allah as the supreme Master of the Day of Judgment compels the soul to dedicate all worship and reliance solely to Him.",
+        "lesson": "Contemplating the Day of Reckoning elevates the servant into intimate audience to utter the covenant of servitude."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "مَـٰلِكِ",
+        "surface_simple": "مَالِكِ",
+        "lemma": "مَالِك",
+        "root": "م ل ك",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism",
+        "subtype": "active_participle_noun",
+        "english_gloss": [
+          "owner",
+          "master",
+          "sovereign possessor"
+        ],
+        "meaning_in_context": "Master / Owner",
+        "morphemes": [
+          {
+            "morpheme_id": "1:4:1:1",
+            "text": "مَـٰلِكِ",
+            "type": "stem",
+            "pos_ar": "اسم فاعل مجرور",
+            "meaning": "Owner / Sovereign Possessor",
+            "i3rab_ar": "نعت (أو بدل) مجرور بالكسرة الظاهرة، وهو مضاف"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "derived_form": "اسم فاعل",
+          "pattern": "فَاعِل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_idafah",
+          "masdar": "مِلْك / مُلْك",
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "epithet (نعت) or apposition (بدل) modifying the divine name 'Allah' in verse 2",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت مجرور وعلامة جره الكسرة الظاهرة على آخره، وهو مضاف"
+          },
+          "syntactic_role": "modifier_and_mudaf_head",
+          "sentence_role": "qualifies Allah's absolute dominion",
+          "case_ending": "ـِ"
+        },
+        "rhetoric": {
+          "device": "الوصف باسم الفاعل مع الإضافة",
+          "device_en": "active participle annexed to epoch of judgment",
+          "ordinary_order": "هُوَ مَالِكُ يَوْمِ الدِّينِ",
+          "quranic_order": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+          "effect": "Unbroken continuity of divine praise directly attached to the divine Majesty, merging the nuances of both canonical readings: Mālik (Owner of all entities) and Malik (Sovereign of all beings).",
+          "contrast": {
+            "ordinary_meaning": "He is the Master of the Day of Judgment. (independent sentence)",
+            "quranic_meaning": "Master of the Day of Judgment. (unbroken praise directly qualifying Allah)"
+          }
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "يَوْمِ",
+        "surface_simple": "يَوْمِ",
+        "lemma": "يَوْم",
+        "root": "ي و م",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism",
+        "subtype": "common_noun",
+        "english_gloss": [
+          "day",
+          "epoch"
+        ],
+        "meaning_in_context": "Day",
+        "morphemes": [
+          {
+            "morpheme_id": "1:4:2:1",
+            "text": "يَوْمِ",
+            "type": "stem",
+            "pos_ar": "مضاف إليه ومضاف",
+            "meaning": "Day / Appointed Epoch",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة، وهو مضاف"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعْل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_idafah",
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "mudaf ilayh to مَالِكِ, and mudaf to ٱلدِّينِ",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة، وهو مضاف إلى ما بعده"
+          },
+          "syntactic_role": "mudaf_ilayh_and_mudaf",
+          "sentence_role": "identifies the realm of ultimate divine jurisdiction",
+          "case_ending": "ـِ"
+        },
+        "rhetoric": {
+          "device": "التخصيص بالظرف والزمان",
+          "device_en": "temporal specialization",
+          "ordinary_order": "مَالِكُ كُلِّ شَيْءٍ",
+          "quranic_order": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+          "effect": "Singling out the Day of Judgment even though Allah owns all days, because on that Day all illusion of human ownership and claims of power completely disappear."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 3,
+        "position": 3,
+        "surface_uthmani": "ٱلدِّينِ",
+        "surface_simple": "الدِّينِ",
+        "lemma": "دِين",
+        "root": "د ي ن",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism",
+        "subtype": "verbal_noun_concept",
+        "english_gloss": [
+          "judgment",
+          "recompense",
+          "reckoning"
+        ],
+        "meaning_in_context": "Judgment / Recompense",
+        "morphemes": [
+          {
+            "morpheme_id": "1:4:3:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:4:3:2",
+            "text": "دِّينِ",
+            "type": "stem",
+            "pos_ar": "اسم مجرور بالإضافة",
+            "meaning": "recompense, judgment, reckoning",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فِعْل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "mudaf ilayh to يَوْمِ",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة على آخره"
+          },
+          "syntactic_role": "mudaf_ilayh",
+          "sentence_role": "defines the Day as the epoch of absolute recompense and accountability",
+          "case_ending": "ـِ"
+        },
+        "rhetoric": {
+          "device": "تعريف الجنس والعهد",
+          "device_en": "definite article of known reality",
+          "ordinary_order": "يَوْمِ جَزَاءٍ",
+          "quranic_order": "يَوْمِ ٱلدِّينِ",
+          "effect": "The definite article al- signifies the absolute, indisputable Day of Complete Justice known to all consciences."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "Allah is the supreme Owner and Master of the Day when everyone will be judged.",
+        "grammar": "مَالِك means Master/Owner, يَوْم means Day, and الدِّين means Judgment/Recompense.",
+        "sarf": "مَالِك is an active participle derived from the root م-ل-ك."
+      },
+      "intermediate": {
+        "lesson": "The phrase is a nested chain of possessive annexation (إضافة متداخلة): Master → of the Day → of Judgment.",
+        "grammar": "Each of the three words carries a kasrah: مَالِكِ is an epithet/adjective, and both يَوْمِ and الدِّينِ are majrūr as mudāf ilayh.",
+        "sarf": "Pattern فَاعِل represents the doer or permanent possessor of the action from root م-ل-ك."
+      },
+      "advanced": {
+        "lesson": "The phrase combines absolute ownership and supreme sovereign kingship across the canonical mutawātir readings.",
+        "grammar": "Can be analyzed syntactically as na‘t (adjective) to the divine name, badal (apposition), or predicate of an elided pronoun (هو مالكُ) in qat‘.",
+        "rhetoric": "Annexing ownership specifically to the Day of Judgment highlights that all temporal claims of power by kings and tyrants will be completely stripped away."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "syntactic_status_of_maalik",
+        "analysis": "Adjective/epithet (na't) modifying the Majesty 'Allah' in verse 2, or apposition (badal) / explicative adjunct ('atf bayan).",
+        "scholars_or_schools": [
+          "Sibawayh",
+          "Al-Zajjaj",
+          "Al-Ukbari",
+          "Majority Basran and Kufan Grammarians"
+        ],
+        "source": "Al-Bahr al-Muhit li Abi Hayyan; I'rab al-Qur'an li al-Ukbari",
+        "confidence": "high"
+      },
+      {
+        "topic": "qiraat_maalik_vs_malik",
+        "analysis": "Read as Mālik (with alif, active participle) by 'Asim, al-Kisa'i, Ya'qub, and Khalaf; read as Malik (without alif, assimilative adjective/noun) by Nafi', Ibn Kathir, Abu 'Amr, Ibn 'Amir, and Hamzah. Both readings are mutawatir: Mālik denotes comprehensive ownership of all things, while Malik denotes sovereign kingship and rule over all conscious beings.",
+        "scholars_or_schools": [
+          "Ten Canonical Readers of the Qur'an"
+        ],
+        "source": "Al-Nashr fi al-Qira'at al-'Ashr li Ibn al-Jazari; Tafsir al-Tabari",
+        "confidence": "mutawatir"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi",
+        "I'rab al-Qur'an li al-Ukbari"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Tabari (Jami' al-Bayan)",
+        "Tafsir Ibn Kathir",
+        "Al-Kashshaf li al-Zamakhshari"
+      ],
+      "source_verification_status": "verified"
+    }
+  },
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 5,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "text_simple": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "orthographic_word_count": 4,
+      "morpheme_count": 7,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "You alone we worship, and You alone we ask for help.",
+        "natural": "You alone we worship, and You alone we seek help from.",
+        "easy": "We worship You alone, and we ask You alone for help."
+      },
+      "norwegian": {
+        "natural": "Deg alene tilber vi, og Deg alene ber vi om hjelp."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "We direct our worship exclusively to Allah and seek His help exclusively.",
+      "simple_explanation": "The believer declares that worship belongs only to Allah and that Allah is the ultimate source of all help and success.",
+      "key_message": "Worship and dependence are both directed toward Allah alone.",
+      "practical_takeaway": "Make Allah the center of both your worship and your reliance, while still taking the practical, legitimate means available to you."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+        "connection": "After praising Allah in the 3rd person as Master of the Day of Judgment, the speech shifts intimately via Iltifāt (التفات) directly to Allah in the 2nd person.",
+        "lesson": "Recognizing who Allah is leads naturally to entering His divine presence and worshipping Him directly."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+        "connection": "After declaring worship and dependence upon Allah, the believer immediately asks Him for the greatest possible help: guidance.",
+        "lesson": "The person who worships Allah understands that guidance is the ultimate need requiring divine assistance."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "إِيَّاكَ",
+        "surface_simple": "إِيَّاكَ",
+        "lemma": "إِيَّا",
+        "root": null,
+        "has_root": false,
+        "word_type": "pronoun",
+        "pos": "damir",
+        "subtype": "detached_object_pronoun",
+        "english_gloss": [
+          "You alone",
+          "You specifically"
+        ],
+        "meaning_in_context": "You alone",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:1:1",
+            "text": "إِيَّا",
+            "type": "stem",
+            "pos_ar": "ضمير نصب منفصل",
+            "meaning": "You (accusative pronoun base)"
+          },
+          {
+            "morpheme_id": "1:5:1:2",
+            "text": "كَ",
+            "type": "suffix",
+            "pos_ar": "حرف خطاب للمفرد المذكر",
+            "meaning": "addressee marker (masculine singular)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": false,
+          "is_verb": false,
+          "pronoun_type": "detached_personal_pronoun_accusative",
+          "person": "second_person",
+          "gender": "masculine",
+          "number": "singular",
+          "grammatical_state": "mabni"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mansub_in_place",
+            "case_reason": "preposed direct object (مفعول به مقدم) of the verb نَعْبُدُ",
+            "visible_marker": "built on fatḥah (مبني على الفتح)",
+            "i3rab_ar": "ضمير منفصل مبني على الفتح في محل نصب مفعول به مقدم"
+          },
+          "syntactic_role": "fronted_direct_object",
+          "governor": {
+            "word_id": 2,
+            "surface": "نَعْبُدُ",
+            "role": "verb_governor"
+          }
+        },
+        "rhetoric": {
+          "device": "تقديم المفعول به",
+          "device_en": "fronting the object",
+          "ordinary_order": "نَعْبُدُكَ",
+          "quranic_order": "إِيَّاكَ نَعْبُدُ",
+          "effect": "الحصر والاختصاص",
+          "contrast": {
+            "ordinary_meaning": "We worship You. (Does not grammatically exclude others)",
+            "quranic_meaning": "You alone we worship. (Strictly negates worship of anyone else)"
+          }
+        },
+        "visual": {
+          "category": "pronoun",
+          "color_group": "pronoun_blue",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "نَعْبُدُ",
+        "surface_simple": "نَعْبُدُ",
+        "lemma": "عَبَدَ",
+        "root": "ع ب د",
+        "has_root": true,
+        "word_type": "verb",
+        "pos": "fi3l",
+        "subtype": "imperfect_verb",
+        "english_gloss": [
+          "we worship",
+          "we serve in complete devotion"
+        ],
+        "meaning_in_context": "we worship",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:2:1",
+            "text": "نَـ",
+            "type": "prefix",
+            "pos_ar": "حرف المضارعة",
+            "meaning": "imperfective first-person plural marker"
+          },
+          {
+            "morpheme_id": "1:5:2:2",
+            "text": "عْبُدُ",
+            "type": "stem",
+            "pos_ar": "فعل مضارع",
+            "meaning": "worship / serve"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": true,
+          "form": "Form I (ثلاثي مجرد)",
+          "pattern": "نَفْعُلُ",
+          "tense": "imperfect (مضارع)",
+          "mood": "indicative (مرفوع)",
+          "voice": "active (معلوم)",
+          "transitivity": "transitive (متعدٍ)",
+          "masdar": "عِبَادَة"
+        },
+        "conjugation": {
+          "past": "عَبَدَ",
+          "present": "يَعْبُدُ",
+          "imperative": "اُعْبُدْ",
+          "first_person_singular": "أَعْبُدُ",
+          "first_person_plural": "نَعْبُدُ",
+          "second_person_singular_m": "تَعْبُدُ",
+          "third_person_singular_m": "يَعْبُدُ"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "marfu",
+            "case_reason": "bare imperfect verb not preceded by naṣb or jazm particles",
+            "visible_marker": "ḍammah (الضمة الظاهرة)",
+            "i3rab_ar": "فعل مضارع مرفوع لتجرده من الناصب والجازم وعلامة رفعه الضمة الظاهرة على آخره"
+          },
+          "subject": {
+            "type": "ضمير مستتر وجوبا",
+            "taqdir": "نحن",
+            "person": "first",
+            "number": "plural",
+            "i3rab_ar": "والفاعل ضمير مستتر وجوباً تقديره نحن"
+          },
+          "syntactic_role": "main_verb"
+        },
+        "rhetoric": {
+          "device": "صيغة الجمع للمتكلم المعظم أو لجماعة المؤمنين",
+          "device_en": "communal first-person plural verb",
+          "ordinary_order": "أَعْبُدُ (بصيغة الإفراد)",
+          "quranic_order": "نَعْبُدُ (بصيغة الجمع)",
+          "effect": "التواضع وإخفاء العبد لعمله في جملة عبادات المؤمنين لترجى بها الإجابة، وتأكيد روح الجماعة"
+        },
+        "visual": {
+          "category": "verb",
+          "color_group": "verb_present",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 3,
+        "position": 3,
+        "surface_uthmani": "وَإِيَّاكَ",
+        "surface_simple": "وَإِيَّاكَ",
+        "lemma": "إِيَّا",
+        "root": null,
+        "has_root": false,
+        "word_type": "compound_particle_and_pronoun",
+        "pos": "harf_wa_damir",
+        "subtype": "conjunction_with_fronted_object_pronoun",
+        "english_gloss": [
+          "and You alone",
+          "and from You specifically"
+        ],
+        "meaning_in_context": "and You alone",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:3:1",
+            "text": "وَ",
+            "type": "prefix",
+            "pos_ar": "واو العطف",
+            "function": "conjunction linking the two verbal clauses",
+            "i3rab_ar": "حرف عطف مبني على الفتح لا محل له من الإعراب"
+          },
+          {
+            "morpheme_id": "1:5:3:2",
+            "text": "إِيَّا",
+            "type": "stem",
+            "pos_ar": "ضمير نصب منفصل",
+            "meaning": "You (accusative base)"
+          },
+          {
+            "morpheme_id": "1:5:3:3",
+            "text": "كَ",
+            "type": "suffix",
+            "pos_ar": "حرف خطاب للمفرد المذكر",
+            "meaning": "addressee marker"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": false,
+          "is_verb": false,
+          "grammatical_state": "mabni"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mansub_in_place",
+            "case_reason": "preposed direct object of نَسْتَعِينُ, linked via waw of coordination",
+            "visible_marker": "built on fatḥah (مبني على الفتح)",
+            "i3rab_ar": "الواو حرف عطف. إِيَّاكَ: ضمير منفصل مبني على الفتح في محل نصب مفعول به مقدم للفعل نَسْتَعِينُ"
+          },
+          "syntactic_role": "conjunction_and_fronted_object",
+          "governor": {
+            "word_id": 4,
+            "surface": "نَسْتَعِينُ",
+            "role": "verb_governor"
+          }
+        },
+        "rhetoric": {
+          "device": "تكرار الضمير المنفصل للحصر المستقل",
+          "device_en": "pronoun repetition for independent exclusivity",
+          "ordinary_order": "إِيَّاكَ نَعْبُدُ وَنَسْتَعِينُ",
+          "quranic_order": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "effect": "تأكيد أن الاستعانة بالله عبادة مستقلة قائمة برأسها تستوجب حصراً مقصوداً، ونفي مطلق للشريك في العون",
+          "contrast": {
+            "ordinary_meaning": "You alone we worship and ask for help. (subordinates help to worship)",
+            "quranic_meaning": "You alone we worship, and You alone we ask for help. (independently elevates reliance to an explicit pillar)"
+          }
+        },
+        "visual": {
+          "category": "pronoun",
+          "color_group": "pronoun_blue",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 4,
+        "position": 4,
+        "surface_uthmani": "نَسْتَعِينُ",
+        "surface_simple": "نَسْتَعِينُ",
+        "lemma": "ٱسْتَعَانَ",
+        "root": "ع و ن",
+        "has_root": true,
+        "word_type": "verb",
+        "pos": "fi3l",
+        "subtype": "imperfect_verb",
+        "english_gloss": [
+          "we seek help",
+          "we ask for assistance"
+        ],
+        "meaning_in_context": "we seek Your help",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:4:1",
+            "text": "نَـ",
+            "type": "prefix",
+            "pos_ar": "حرف المضارعة",
+            "meaning": "imperfective first-person plural marker"
+          },
+          {
+            "morpheme_id": "1:5:4:2",
+            "text": "سْتَعِينُ",
+            "type": "stem",
+            "pos_ar": "فعل مضارع مزيد بحروف الاستفعال من أجوف واوي",
+            "meaning": "seek assistance / aid"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": true,
+          "form": "Form X (استفعال)",
+          "root": "ع و ن",
+          "root_type": "hollow_wawi (معتل أجوف واوي)",
+          "pattern": "نَسْتَفْعِلُ",
+          "tense": "imperfect (مضارع)",
+          "mood": "indicative (مرفوع)",
+          "voice": "active (معلوم)",
+          "masdar": "ٱسْتِعَانَة"
+        },
+        "conjugation": {
+          "past": "اِسْتَعَانَ",
+          "present": "يَسْتَعِينُ",
+          "imperative": "اِسْتَعِنْ",
+          "first_person_singular": "أَسْتَعِينُ",
+          "first_person_plural": "نَسْتَعِينُ",
+          "second_person_singular_m": "تَسْتَعِينُ",
+          "third_person_singular_m": "يَسْتَعِينُ"
+        },
+        "sarf_advanced_derivation": {
+          "root": "ع و ن",
+          "theoretical_origin": "نَسْتَعْوِنُ",
+          "phonological_steps": [
+            "Transfer of vowel (نقل): The kasrah on the weak letter Wāw moved to the silent preceding consonant ‘Ayn (نَسْتَعِوْنُ).",
+            "Vowel mutation (قلب): The vowelless Wāw changed into a Yā’ due to the preceding kasrah (نَسْتَعِينُ)."
+          ],
+          "semantic_value_of_form": "The prefix (استـ) conveys ṭalab (petition/seeking): earnestly requesting aid."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "marfu",
+            "case_reason": "bare imperfect verb not preceded by naṣb or jazm particles",
+            "visible_marker": "ḍammah (الضمة الظاهرة)",
+            "i3rab_ar": "فعل مضارع مرفوع لتجرده من الناصب والجازم وعلامة رفعه الضمة الظاهرة على آخره"
+          },
+          "subject": {
+            "type": "ضمير مستتر وجوبا",
+            "taqdir": "نحن",
+            "person": "first",
+            "number": "plural",
+            "i3rab_ar": "والفاعل ضمير مستتر وجوباً تقديره نحن"
+          },
+          "syntactic_role": "main_verb"
+        },
+        "rhetoric": {
+          "device": "تقديم العبادة على الاستعانة",
+          "device_en": "prioritizing worship before requesting aid",
+          "ordinary_order": "إِيَّاكَ نَسْتَعِينُ وَإِيَّاكَ نَعْبُدُ",
+          "quranic_order": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "effect": "تقديم حق الله الخالص (العبادة) على حاجة العبد (المعونة)، وتقديم الغاية الكبرى على الوسيلة الموصلة إليها",
+          "contrast": {
+            "ordinary_meaning": "Asking for aid before declaring devotion.",
+            "quranic_meaning": "Fulfilling divine devotion as an act of gratitude before petitioning for divine help."
+          }
+        },
+        "visual": {
+          "category": "verb",
+          "color_group": "verb_present",
+          "highlight": true,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "Allah alone deserves worship, and from Him alone we ask for help.",
+        "grammar": "إِيَّاكَ means 'You alone' and نَعْبُدُ means 'we worship'.",
+        "sarf": "نَعْبُدُ is a present-tense verb from the root ع-ب-د."
+      },
+      "intermediate": {
+        "lesson": "The Qur'an places the object before the verb to create exclusivity (حصر): worship and reliance belong only to Allah.",
+        "grammar": "إِيَّاكَ is a fronted direct object. The subject is the hidden pronoun نحن inside the verb.",
+        "sarf": "نَسْتَعِينُ is a Form X verb (استفعل) indicating actively seeking assistance."
+      },
+      "advanced": {
+        "lesson": "The ayah couples absolute monotheism in ritual worship with absolute reliance in psychological dependence via parallel fronted-object constructions.",
+        "grammar": "Two balanced verbal sentences coordinated by waw, each featuring a fronted detached accusative pronoun and an imperfect verb with an obligatorily latent agent.",
+        "rhetoric": "The transition from third-person description (1:1-4) to second-person direct address (1:5) is a masterclass in Iltifāt, drawing the servant into direct divine audience."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "structure_of_iyyaaka",
+        "analysis": "إِيَّا is the substantive pronoun element, while the attached kāf is a particle of address (حرف خطاب) without independent case.",
+        "scholars_or_schools": [
+          "Al-Khalil",
+          "Sibawayh",
+          "Majority Basran Grammarians"
+        ],
+        "source": "Al-Kitab li Sibawayh; Al-Bahr al-Muhit li Abi Hayyan",
+        "confidence": "high"
+      },
+      {
+        "topic": "structure_of_iyyaaka_compound",
+        "analysis": "The entire compound word (إِيَّاكَ) functions as a single unified indeclinable pronoun in the place of naṣb.",
+        "scholars_or_schools": [
+          "Kufan Grammarians",
+          "Later Pedagogical Grammarians"
+        ],
+        "source": "I'rab al-Qur'an li al-Zajjaj; Mughni al-Labib li Ibn Hisham",
+        "confidence": "high"
+      },
+      {
+        "topic": "scope_of_coordination",
+        "analysis": "The waw in وَإِيَّاكَ coordinates the whole second clause (sentence-level coordination) onto the first, preserving independent clauses.",
+        "scholars_or_schools": [
+          "Abu Hayyan",
+          "Ibn Hisham"
+        ],
+        "source": "Al-Bahr al-Muhit; Tafsir Ibn Kathir",
+        "confidence": "high"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi",
+        "Mughni al-Labib li Ibn Hisham"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Sa'di (Taysir al-Karim al-Rahman)",
+        "Tafsir al-Qur'an al-'Azim li Ibn Kathir",
+        "Madarij al-Salikin li Ibn al-Qayyim"
+      ],
+      "source_verification_status": "verified"
+    }
+  },
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 6,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+      "text_simple": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+      "orthographic_word_count": 3,
+      "morpheme_count": 5,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "Guide us [to/upon] the straight path.",
+        "natural": "Guide us along the Straight Path.",
+        "easy": "Lead us and keep us on the straight, upright path."
+      },
+      "norwegian": {
+        "natural": "Led oss på den rette vei."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "The ultimate supplication: asking Allah not merely to show us the path from a distance, but to gently take us by the hand, plant our feet firmly upon it, guide our daily choices, and walk with us all the way to paradise.",
+      "simple_explanation": "Having praised Allah and promised to worship Him alone, we ask for life's greatest necessity: divine guidance along the true, straight road.",
+      "key_message": "Guidance is not a one-time intellectual realization; it is a moment-by-moment divine companionship required at every crossroad in life.",
+      "practical_takeaway": "Never rely solely on your intelligence or past good deeds; sincerely beg Allah for guidance in every decision, career move, relationship, and moral dilemma."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+        "connection": "After establishing that we worship Allah alone and seek His help alone, we immediately make our very first petition for help: asking for guidance.",
+        "lesson": "Out of all worldly treasures (wealth, health, fame, power), guidance is the single greatest necessity for the human soul."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ...",
+        "connection": "The Straight Path is immediately clarified not as an abstract, cold philosophy, but through the warm, living footsteps of righteous human beings.",
+        "lesson": "True guidance is lived through role models, not merely studied through theory."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "ٱهْدِنَا",
+        "surface_simple": "اهْدِنَا",
+        "lemma": "هَدَى",
+        "root": "ه د ي",
+        "has_root": true,
+        "word_type": "verb_and_pronoun",
+        "pos": "fi'l_wa_maf'ul",
+        "subtype": "imperative_supplication_verb",
+        "english_gloss": [
+          "Guide us",
+          "Lead us gently"
+        ],
+        "meaning_in_context": "Guide us lovingly and keep us firm",
+        "morphemes": [
+          {
+            "morpheme_id": "1:6:1:1",
+            "text": "ٱهْدِ",
+            "type": "stem",
+            "pos_ar": "فعل دعاء (بصيغة الأمر للتأدب) مبني على حذف حرف العلة (الياء)",
+            "meaning": "guide / lead gently (imperative of supplication)"
+          },
+          {
+            "morpheme_id": "1:6:1:2",
+            "text": "نَا",
+            "type": "suffix",
+            "pos_ar": "ضمير متصل مبني في محل نصب مفعول به أول",
+            "meaning": "us (first-person plural object pronoun)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": true,
+          "form": "Form I (ثلاثي مجرد)",
+          "pattern": "اِفْعِ",
+          "tense": "imperative_supplication (فعل أمر خرج مخرج الدعاء والطلب)",
+          "mood": "imperative (مبني على حذف حرف العلة)",
+          "voice": "active (معلوم)",
+          "root_type": "defective_ya'i (معتل ناقص يائي)",
+          "masdar": "هِدَايَة",
+          "etymological_secret": "The root H-D-Y is connected to Hadiyyah (هَدِيَّة) which means a loving gift presented with joy. Thus, true Hidāyah in Arabic is not a stern GPS command; it is leading someone gently and lovingly by the hand (الهداية بلطف). Furthermore, Hada can take prepositions (هدى إلى / هدى لـ - meaning showing the way from afar), but here it is doubly transitive directly without a preposition (تعدى بنفسه لمفعولين), meaning: 'Show us the path, place us upon it, keep our feet steady upon it, and walk with us until we arrive!'"
+        },
+        "conjugation": {
+          "past": "هَدَى",
+          "present": "يَهْدِي",
+          "imperative": "اِهْدِ",
+          "first_person_singular": "أَهْدِي",
+          "first_person_plural": "نَهْدِي"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mabni_on_elision_of_weak_letter",
+            "case_reason": "imperative verb of supplication; final weak radical ya is deleted",
+            "visible_marker": "deletion of final yā' indicated by kasrah (مبني على حذف الياء)",
+            "i3rab_ar": "فعل دعاء بصيغة الأمر مبني على حذف حرف العلة، والفاعل ضمير مستتر وجوباً تقديره (أنتَ)، و(نا) ضمير متصل مبني في محل نصب مفعول به أول"
+          },
+          "subject": {
+            "type": "ضمير مستتر وجوبا",
+            "taqdir": "أنتَ (الله تعالى)",
+            "person": "second",
+            "number": "singular",
+            "i3rab_ar": "والفاعل ضمير مستتر وجوباً تقديره أنتَ"
+          },
+          "syntactic_role": "supplication_verb_with_first_object",
+          "sentence_role": "the opening core petition of Surah Al-Fatihah"
+        },
+        "rhetoric": {
+          "device": "التعدي بنفسه دون حرف جر للدلالة على المعية والرعاية التامة",
+          "device_en": "direct double-transitivity denoting continuous divine escort",
+          "ordinary_order": "اهْدِنَا إِلَى الصِّرَاطِ",
+          "quranic_order": "ٱهْدِنَا ٱلصِّرَٰطَ",
+          "effect": "If it said 'Ihdinā ilā al-ṣirāṭ', it would mean 'Point us to the road and leave us to walk it.' By removing the preposition ('Ihdinā al-ṣirāṭ'), it implies: 'Take us by the hand, walk with us every step, protect us from stumbling, and never let us go until we enter Jannah.'",
+          "contrast": {
+            "ordinary_meaning": "Show us where the path is located.",
+            "quranic_meaning": "Guide us, accompany us, protect us, and sustain us upon the path continuously."
+          }
+        },
+        "visual": {
+          "category": "verb",
+          "color_group": "verb_imperative",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "ٱلصِّرَٰطَ",
+        "surface_simple": "الصِّرَاطَ",
+        "lemma": "صِرَٰط",
+        "root": "ص ر ط",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism",
+        "subtype": "specialized_pathway_noun",
+        "english_gloss": [
+          "the path",
+          "the highway"
+        ],
+        "meaning_in_context": "The Vast, Clear, Unobstructed Highway",
+        "morphemes": [
+          {
+            "morpheme_id": "1:6:2:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:6:2:2",
+            "text": "صِّرَٰطَ",
+            "type": "stem",
+            "pos_ar": "مفعول به ثانٍ منصوب وعلامة نصبه الفتحة",
+            "meaning": "the wide, straight highway"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فِعَال",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "mansub",
+          "vocabulary_contrast": "Arabic has multiple words for paths: 1) Ṭarīq (طريق) - any path, which can be bumpy, winding, or narrow; 2) Sabīl (سبيل) - a branched lane or tributary, which can split into many paths; 3) Zuqāq (زقاق) - a narrow alley. Ṣirāṭ (صراط) is uniquely a massive, wide, illuminated highway that is unobstructed, spacious enough for billions of travellers without overcrowding, and leads straight to the destination without dead-ends."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mansub",
+            "case_reason": "second direct object (مفعول به ثانٍ) of the verb اهْدِ",
+            "visible_marker": "fatḥah (الفتحة الظاهرة)",
+            "i3rab_ar": "مفعول به ثانٍ منصوب وعلامة نصبه الفتحة الظاهرة على آخره"
+          },
+          "syntactic_role": "second_direct_object",
+          "sentence_role": "specifies the precise trajectory of requested guidance"
+        },
+        "rhetoric": {
+          "device": "التعبير بالصراط دون السبيل أو الطريق",
+          "device_en": "selection of Sirat over ordinary pathway nouns",
+          "ordinary_order": "اهْدِنَا الطَّرِيقَ",
+          "quranic_order": "ٱهْدِنَا ٱلصِّرَٰطَ",
+          "effect": "Conveys that the path to Allah is not a confusing back-alley or treacherous footpath; it is a majestic royal highway open to all sincere seekers."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 3,
+        "position": 3,
+        "surface_uthmani": "ٱلْمُسْتَقِيمَ",
+        "surface_simple": "الْمُسْتَقِيمَ",
+        "lemma": "مُسْتَقِيم",
+        "root": "ق و م",
+        "has_root": true,
+        "word_type": "adjective",
+        "pos": "ism_fail",
+        "subtype": "derived_active_participle",
+        "english_gloss": [
+          "the straight",
+          "the upright",
+          "the steadfast"
+        ],
+        "meaning_in_context": "The Perfectly Straight, Upright and Ascending",
+        "morphemes": [
+          {
+            "morpheme_id": "1:6:3:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:6:3:2",
+            "text": "مُسْتَقِيمَ",
+            "type": "stem",
+            "pos_ar": "نعت منصوب وعلامة نصبه الفتحة",
+            "meaning": "perfectly straight and upright"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "form": "Form X (استفعال)",
+          "pattern": "مُسْتَفْعِل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "mansub",
+          "sarf_insight": "Active participle derived from Form X verb (اِسْتَقَامَ) from root Q-W-M (to stand upright / Qiyām). A path that is Mustaqīm is not only horizontal without bends; it stands upright, ascending upwards toward the highest heavens, and never collapses or buckles under pressure."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mansub",
+            "case_reason": "epithet / adjective (نعت) modifying الصِّرَاطَ",
+            "visible_marker": "fatḥah (الفتحة الظاهرة)",
+            "i3rab_ar": "نعت منصوب وعلامة نصبه الفتحة الظاهرة على آخره تابع للمنعوت"
+          },
+          "syntactic_role": "adjective_epithet",
+          "sentence_role": "qualifies the highway with perfection and upright integrity"
+        },
+        "rhetoric": {
+          "device": "الوصف بالمستقيم لبيان أقصر المسافات وأعدلها",
+          "device_en": "epithet of upright linearity as the shortest, most just distance",
+          "ordinary_order": "الصِّرَاطَ الْمُمْتَدَّ",
+          "quranic_order": "ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+          "effect": "In geometry and in moral truth, the shortest, fastest distance between two points is a single straight line. Any curve or compromise creates delay and dangerous detours."
+        },
+        "visual": {
+          "category": "adjective",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "We ask Allah to lead us on the straight and honest road of life.",
+        "grammar": "اهْدِنَا is a prayer asking 'Guide us', and الصِّرَاطَ الْمُسْتَقِيمَ means 'the Straight Path'.",
+        "sarf": "Ihdinā comes from the root ه-د-ي which also means a beautiful gift (Hadiyyah)."
+      },
+      "intermediate": {
+        "lesson": "Guidance is requested without prepositions, showing that we need Allah to walk with us all the way.",
+        "grammar": "The verb هدى is doubly transitive: نَا is the first object, and الصِّرَاطَ is the second object.",
+        "sarf": "Al-Mustaqīm is Form X from root ق-و-م, signifying an unbending path that stands upright."
+      },
+      "advanced": {
+        "lesson": "This ayah represents the absolute pinnacle of human petition: asking for continuous spiritual alignment over temporary material wealth.",
+        "grammar": "The imperative form functions pragmatically as du'ā' (supplication), with the subject elided wujūban referring to Allah.",
+        "rhetoric": "The lexical choice of Ṣirāṭ over Sabīl or Ṭarīq reflects an open, illuminated imperial highway capable of carrying all humanity without bottleneck."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "transitivity_of_ihdina",
+        "analysis": "The verb هدى can take objects directly (تعدية بنفسه) or through prepositions (إلى / لـ). Classical commentators note that when transitive directly, it carries the broader meaning of granting internal inspiration (توفيق وإلهام) and steadfastness, whereas with prepositions it denotes external explanation and signposting (إرشاد ودلالة).",
+        "scholars_or_schools": [
+          "Ibn al-Qayyim",
+          "Al-Razi",
+          "Al-Alusi"
+        ],
+        "source": "Madarij al-Salikin; Ruh al-Ma'ani",
+        "confidence": "high"
+      },
+      {
+        "topic": "qiraat_sirat_phonetics",
+        "analysis": "Read as Ṣirāṭ (الصِّرَاطَ with ṣād) by the majority of the Ten Readers; read as Sirāṭ (السِّرَاطَ with sīn) by Qunbul 'an Ibn Kathir and Ruways 'an Ya'qub; and read with Ishmām (blending ṣād with zāy sound) by Khalaf 'an Hamzah. All variants convey the same foundational meaning of the wide, easily traversed highway.",
+        "scholars_or_schools": [
+          "Ten Canonical Readers of the Qur'an"
+        ],
+        "source": "Al-Nashr fi al-Qira'at al-'Ashr li Ibn al-Jazari",
+        "confidence": "mutawatir"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Tabari",
+        "Tafsir Ibn Kathir",
+        "Madarij al-Salikin li Ibn al-Qayyim"
+      ],
+      "source_verification_status": "verified"
+    }
+  },
+  {
+    "schema_version": "2.0",
+    "ayah": {
+      "surah_number": 1,
+      "surah_name_ar": "الفاتحة",
+      "surah_name_en": "Al-Fatihah",
+      "ayah_number": 7,
+      "juz": 1,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
+      "revelation_place": "Makkah",
+      "revelation_order": 5,
+      "text_uthmani": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+      "text_simple": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+      "orthographic_word_count": 9,
+      "morpheme_count": 18,
+      "ayah_end_marker": true
+    },
+    "translations": {
+      "english": {
+        "literal": "The path of those You have bestowed favor upon, not of those who have evoked [Your] anger or of those who are astray.",
+        "natural": "The path of those You have blessed—not of those who incurred wrath, nor of those who are astray.",
+        "easy": "The path of those You have blessed with Your favor, not the path of those who earned anger, and not of those who lost their way."
+      },
+      "norwegian": {
+        "natural": "Deres vei, som Du har vist nåde, ikke deres, som har vakt Din vrede, og ikke de villfarendes."
+      }
+    },
+    "ayah_meaning": {
+      "main_meaning": "Defining the Straight Path through living human role models: the path of those blessed with divine favor, strictly steering clear of both arrogant disobedience with knowledge, and emotional devotion without truth.",
+      "simple_explanation": "We ask to follow the righteous people who were blessed by Allah (the prophets and their truthful companions), and we pray to avoid the two great traps: knowing the truth but defying it, or having sincerity but wandering in ignorance.",
+      "key_message": "Successful faith requires balancing sound knowledge with righteous action. Possessing knowledge without action brings divine displeasure; pursuing action without knowledge leads to delusion.",
+      "practical_takeaway": "Seek living righteous mentors to emulate, pair your religious learning with humble obedience, and protect yourself from intellectual arrogance and unguided emotionalism."
+    },
+    "context": {
+      "previous_ayah_connection": {
+        "previous_ayah": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+        "connection": "After asking for the Straight Highway in verse 6, verse 7 immediately defines its practical human reality and warns against the two major deviations.",
+        "lesson": "Knowing what to emulate is only half of wisdom; knowing what hazards to avoid completes protection."
+      },
+      "next_ayah_connection": {
+        "next_ayah": "Conclusion of Surah Al-Fatihah (Ameen)",
+        "connection": "The entire opening chapter concludes on this supreme moral map, prompting the listener to utter 'Ameen' ('O Allah, accept our prayer!').",
+        "lesson": "The prayer ends with a collective plea for preservation from moral decay."
+      }
+    },
+    "words": [
+      {
+        "word_id": 1,
+        "position": 1,
+        "surface_uthmani": "صِرَٰطَ",
+        "surface_simple": "صِرَاطَ",
+        "lemma": "صِرَٰط",
+        "root": "ص ر ط",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "badal",
+        "subtype": "apposition_pathway_noun",
+        "english_gloss": [
+          "The path of",
+          "The highway of"
+        ],
+        "meaning_in_context": "The Path of",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:1:1",
+            "text": "صِرَٰطَ",
+            "type": "stem",
+            "pos_ar": "بدل مطابق منصوب وعلامة نصبه الفتحة، وهو مضاف",
+            "meaning": "path / highway (in apposition)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فِعَال",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_idafah",
+          "grammatical_state": "mansub"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mansub",
+            "case_reason": "substitute / apposition (بدل كل من كل) matching الصِّرَاطَ from verse 6; mudaf to alladhīna",
+            "visible_marker": "fatḥah (الفتحة الظاهرة)",
+            "i3rab_ar": "بدل كل من كل من (الصراط) الأولى منصوب وعلامة نصبه الفتحة الظاهرة على آخره، وهو مضاف"
+          },
+          "syntactic_role": "appositive_substitute_badal",
+          "sentence_role": "grounds the abstract highway in concrete human role models"
+        },
+        "rhetoric": {
+          "device": "البدل لتجسيد المفهوم النظري في قدوة بشرية",
+          "device_en": "apposition to embody an abstract ideal in human role models",
+          "ordinary_order": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ صِرَاطَ الْحَقِّ",
+          "quranic_order": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ",
+          "effect": "Instead of saying 'the path of philosophical truth', Allah says 'the path of those You blessed'. Human beings cannot walk with abstract theories; we are social creatures who need living examples, footsteps in the sand, and companions on the journey.",
+          "contrast": {
+            "ordinary_meaning": "A theoretical path of principles.",
+            "quranic_meaning": "A proven, historical highway walked and demonstrated by real human heroes of faith."
+          }
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 2,
+        "position": 2,
+        "surface_uthmani": "ٱلَّذِينَ",
+        "surface_simple": "الَّذِينَ",
+        "lemma": "ٱلَّذِي",
+        "root": null,
+        "has_root": false,
+        "word_type": "relative_pronoun",
+        "pos": "ism_mawsul",
+        "subtype": "plural_relative_pronoun",
+        "english_gloss": [
+          "those who",
+          "the ones whom"
+        ],
+        "meaning_in_context": "Those Whom",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:2:1",
+            "text": "ٱلَّذِينَ",
+            "type": "stem",
+            "pos_ar": "اسم موصول مبني على الفتح في محل جر مضاف إليه",
+            "meaning": "those who (masculine plural relative pronoun)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": false,
+          "is_verb": false,
+          "gender": "masculine",
+          "number": "plural",
+          "grammatical_state": "mabni"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur_in_place",
+            "case_reason": "mudaf ilayh to صِرَاطَ",
+            "visible_marker": "built on fatḥah (مبني على الفتح في محل جر)",
+            "i3rab_ar": "اسم موصول مبني على الفتح في محل جر مضاف إليه"
+          },
+          "syntactic_role": "relative_pronoun_mudaf_ilayh",
+          "sentence_role": "introduces the righteous fellowship of believers"
+        },
+        "rhetoric": {
+          "device": "الجمع للتذكير بصحبة الصالحين",
+          "device_en": "plurality evoking righteous fellowship",
+          "ordinary_order": "صِرَاطَ مَنْ أَنْعَمْتَ عَلَيْهِ",
+          "quranic_order": "صِرَٰطَ ٱلَّذِينَ",
+          "effect": "Reassures the individual believer that you are not walking alone; millions of prophets, martyrs, and sincere souls have traversed this road before you."
+        },
+        "visual": {
+          "category": "pronoun",
+          "color_group": "pronoun_blue",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 3,
+        "position": 3,
+        "surface_uthmani": "أَنْعَمْتَ",
+        "surface_simple": "أَنْعَمْتَ",
+        "lemma": "أَنْعَمَ",
+        "root": "ن ع م",
+        "has_root": true,
+        "word_type": "verb_and_pronoun",
+        "pos": "fi'l_wa_fail",
+        "subtype": "perfect_verb_with_subject",
+        "english_gloss": [
+          "You have bestowed favor",
+          "You have blessed"
+        ],
+        "meaning_in_context": "You Have Favored and Blessed",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:3:1",
+            "text": "أَنْعَمْ",
+            "type": "stem",
+            "pos_ar": "فعل ماضٍ مبني على السكون لاتصاله بضمير الرفع المتحرك",
+            "meaning": "bestowed grace / favored (Form IV verb)"
+          },
+          {
+            "morpheme_id": "1:7:3:2",
+            "text": "تَ",
+            "type": "suffix",
+            "pos_ar": "ضمير متصل مبني على الفتح في محل رفع فاعل",
+            "meaning": "You [O Allah] (subject pronoun)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": true,
+          "form": "Form IV (أَفْعَلَ)",
+          "pattern": "أَفْعَلْتَ",
+          "tense": "past (ماضٍ)",
+          "voice": "active (معلوم)",
+          "masdar": "إِنْعَام",
+          "etymological_depth": "Derived from root N-'-M denoting softness, ease, luxury, and delight (النعمة). Form IV (أَنْعَمَ) signifies an active, deliberate outpouring of divine grace that softens life's harshness and elevates the soul."
+        },
+        "conjugation": {
+          "past": "أَنْعَمَ",
+          "present": "يُنْعِمُ",
+          "imperative": "أَنْعِمْ",
+          "second_person_past": "أَنْعَمْتَ"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mabni_on_sukun",
+            "case_reason": "past verb attached to subject pronoun tā; part of relative clause (صلة الموصول)",
+            "visible_marker": "sukūn on mīm (مبني على السكون)",
+            "i3rab_ar": "فعل ماضٍ مبني على السكون لاتصاله بتاء الفاعل، والتاء ضمير متصل مبني على الفتح في محل رفع فاعل، والجملة صلة الموصول لا محل لها من الإعراب"
+          },
+          "subject": {
+            "type": "ضمير متصل بارز",
+            "taqdir": "أنتَ (الله تعالى)",
+            "person": "second",
+            "number": "singular",
+            "i3rab_ar": "والتاء ضمير متصل مبني في محل رفع فاعل"
+          },
+          "syntactic_role": "relative_clause_verb",
+          "sentence_role": "directly attributes every favor and blessing to Allah's direct agency"
+        },
+        "rhetoric": {
+          "device": "الإسناد المباشر للنعمة إلى الله تعالى بصيغة الفاعل",
+          "device_en": "active direct attribution of favor to the divine Persona",
+          "ordinary_order": "الَّذِينَ نِيلَتْهُمُ النِّعْمَةُ",
+          "quranic_order": "أَنْعَمْتَ",
+          "effect": "Notice the supreme courtesy and theological precision: Favor is attributed directly, intimately, and actively to Allah ('You bestowed favor'). In contrast, when anger is mentioned later in the verse, it shifts to passive participle without naming the actor! All good is credited directly to God.",
+          "contrast": {
+            "ordinary_meaning": "Those who received good fortune.",
+            "quranic_meaning": "Those upon whom You personally and lovingly poured Your divine favor."
+          }
+        },
+        "visual": {
+          "category": "verb",
+          "color_group": "verb_past",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 4,
+        "position": 4,
+        "surface_uthmani": "عَلَيْهِمْ",
+        "surface_simple": "عَلَيْهِمْ",
+        "lemma": "عَلَى",
+        "root": null,
+        "has_root": false,
+        "word_type": "preposition_and_pronoun",
+        "pos": "jar_wa_majrur",
+        "subtype": "prepositional_recipient",
+        "english_gloss": [
+          "upon them",
+          "to them"
+        ],
+        "meaning_in_context": "Upon Them",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:4:1",
+            "text": "عَلَيْـ",
+            "type": "prefix",
+            "pos_ar": "حرف جر",
+            "meaning": "upon / onto"
+          },
+          {
+            "morpheme_id": "1:7:4:2",
+            "text": "هِمْ",
+            "type": "suffix",
+            "pos_ar": "ضمير متصل مبني على السكون في محل جر بحرف الجر",
+            "meaning": "them (3rd person masculine plural)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": false,
+          "is_verb": false,
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur_in_place",
+            "case_reason": "prepositional phrase related to the verb أَنْعَمْتَ",
+            "visible_marker": "sukūn (مبني على السكون في محل جر)",
+            "i3rab_ar": "على حرف جر، و(هم) ضمير متصل مبني على السكون في محل جر، والجار والمجرور متعلقان بالفعل (أنعمت)"
+          },
+          "syntactic_role": "prepositional_phrase_recipient",
+          "sentence_role": "identifies the receivers of divine blessing"
+        },
+        "rhetoric": {
+          "device": "التعبير بحرف (على) للاستعلاء والشمول",
+          "device_en": "preposition 'ala indicating overwhelming, cascading favor",
+          "ordinary_order": "أَنْعَمْتَ إِلَيْهِمْ",
+          "quranic_order": "أَنْعَمْتَ عَلَيْهِمْ",
+          "effect": "Using 'Alā (upon) rather than Ilā (to) indicates that the blessing does not merely arrive at them; it cascades down upon them from above, clothing and enveloping their entire existence."
+        },
+        "visual": {
+          "category": "preposition",
+          "color_group": "particle_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 5,
+        "position": 5,
+        "surface_uthmani": "غَيْرِ",
+        "surface_simple": "غَيْرِ",
+        "lemma": "غَيْر",
+        "root": "غ ي ر",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "badal",
+        "subtype": "exceptive_descriptive_noun",
+        "english_gloss": [
+          "not [of]",
+          "other than"
+        ],
+        "meaning_in_context": "Not Of / Other Than",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:5:1",
+            "text": "غَيْرِ",
+            "type": "stem",
+            "pos_ar": "بدل (أو نعت) مجرور وعلامة جره الكسرة، وهو مضاف",
+            "meaning": "not / other than"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "pattern": "فَعْل",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite_by_idafah",
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "apposition (بدل) from the pronoun in عَلَيْهِمْ, or epithet (نعت) modifying الَّذِينَ; mudaf to al-Maghdubi",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "بدل من الضمير في (عليهم) مجرور وعلامة جره الكسرة الظاهرة (أو نعت لـ الذين)، وهو مضاف"
+          },
+          "syntactic_role": "apposition_and_mudaf_head",
+          "sentence_role": "draws an unbending line of demarcation between truth and moral deviation"
+        },
+        "rhetoric": {
+          "device": "الوصف بالمغايرة للاحتراز التام",
+          "device_en": "differentiation to establish complete moral separation",
+          "ordinary_order": "إِلَّا الْمَغْضُوبَ عَلَيْهِمْ (استثناء)",
+          "quranic_order": "غَيْرِ ٱلْمَغْضُوبِ (وصف ومغايرة)",
+          "effect": "Using Ghayr as an adjective/apposition indicates that the favored servants never cross into the territory of those who incur wrath; their very identity is fundamentally distinct."
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 6,
+        "position": 6,
+        "surface_uthmani": "ٱلْمَغْضُوبِ",
+        "surface_simple": "الْمَغْضُوبِ",
+        "lemma": "مَغْضُوب",
+        "root": "غ ض ب",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism_maf'ul",
+        "subtype": "passive_participle_noun",
+        "english_gloss": [
+          "those who incurred anger",
+          "those who brought wrath upon themselves"
+        ],
+        "meaning_in_context": "Those Enveloped in Anger",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:6:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:7:6:2",
+            "text": "مَغْضُوبِ",
+            "type": "stem",
+            "pos_ar": "مضاف إليه مجرور وهو اسم مفعول يعمل عمل فعله المبني للمجهول",
+            "meaning": "the recipients of anger / wrath"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "derived_form": "اسم مفعول",
+          "pattern": "مَفْعُول",
+          "gender": "masculine",
+          "number": "singular",
+          "definiteness": "definite",
+          "grammatical_state": "majrur",
+          "spiritual_psychology": "Refers to the tragic spiritual pathology of having clear knowledge and certainty of the truth, but arrogance, ego, tribalism, or material greed leads to deliberate rebellion and refusal to submit. Because they know better, their moral culpability is supreme."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "mudaf ilayh to غَيْرِ; functions as passive participle acting on the following prepositional phrase",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة على آخره، وهو اسم مفعول"
+          },
+          "syntactic_role": "passive_participle_mudaf_ilayh",
+          "sentence_role": "identifies the category of knowing the truth but defying it"
+        },
+        "rhetoric": {
+          "device": "العدول إلى اسم المفعول المبني للمجهول تأدباً وشمولاً",
+          "device_en": "shift to passive participle for sacred decorum and universal condemnation",
+          "ordinary_order": "غَيْرِ الَّذِينَ غَضِبْتَ عَلَيْهِمْ",
+          "quranic_order": "غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ",
+          "effect": "1) Divine Adab: In verse 7, Allah attributed favor directly to Himself ('You bestowed favor'). But here, the Qur'an suppresses the active doer when mentioning wrath! Wrath is not attributed in direct first-person address, teaching worshippers sacred etiquette. 2) Universal Anger: By phrasing it passively, it indicates that anger descends upon them not only from Allah, but from the angels, the prophets, the believers, and all righteous existence!",
+          "contrast": {
+            "ordinary_meaning": "Those You became angry with.",
+            "quranic_meaning": "Those who have become surrounded by anger and disgust from all realms of creation because of their willful defiance of known truth."
+          }
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": true,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 7,
+        "position": 7,
+        "surface_uthmani": "عَلَيْهِمْ",
+        "surface_simple": "عَلَيْهِمْ",
+        "lemma": "عَلَى",
+        "root": null,
+        "has_root": false,
+        "word_type": "preposition_and_pronoun",
+        "pos": "naib_fail_shibh_jumlah",
+        "subtype": "prepositional_deputy_agent",
+        "english_gloss": [
+          "upon them"
+        ],
+        "meaning_in_context": "Upon Them",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:7:1",
+            "text": "عَلَيْـ",
+            "type": "prefix",
+            "pos_ar": "حرف جر",
+            "meaning": "upon"
+          },
+          {
+            "morpheme_id": "1:7:7:2",
+            "text": "هِمْ",
+            "type": "suffix",
+            "pos_ar": "ضمير متصل مبني على السكون في محل جر بحرف الجر",
+            "meaning": "them (3rd person masculine plural)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": false,
+          "is_verb": false,
+          "grammatical_state": "majrur"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "marfu_in_place",
+            "case_reason": "prepositional phrase acting as deputy agent (نائب فاعل) for the passive participle al-Maghdubi",
+            "visible_marker": "sukūn on mīm (شبه جملة في محل رفع نائب فاعل)",
+            "i3rab_ar": "على حرف جر، و(هم) ضمير متصل مبني في محل جر، وشبه الجملة في محل رفع نائب فاعل لاسم المفعول (المغضوب)"
+          },
+          "syntactic_role": "deputy_agent_naib_fail",
+          "sentence_role": "completes the passive participle argument structure"
+        },
+        "rhetoric": {
+          "device": "ثقل حرف الجر (على) في معرض العقوبة",
+          "device_en": "oppressive weight of 'ala in context of retribution",
+          "ordinary_order": "الْمَغْضُوبِ لَهُمْ",
+          "quranic_order": "ٱلْمَغْضُوبِ عَلَيْهِمْ",
+          "effect": "The preposition 'Alā conveys an inescapable downward crushing weight, signifying that wrath hangs over them like an inescapable storm cloud."
+        },
+        "visual": {
+          "category": "preposition",
+          "color_group": "particle_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 8,
+        "position": 8,
+        "surface_uthmani": "وَلَا",
+        "surface_simple": "وَلَا",
+        "lemma": "لَا",
+        "root": null,
+        "has_root": false,
+        "word_type": "conjunction_and_negative_particle",
+        "pos": "harf_atf_wa_nafy",
+        "subtype": "coordinated_negation",
+        "english_gloss": [
+          "and not",
+          "nor"
+        ],
+        "meaning_in_context": "And Nor",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:8:1",
+            "text": "وَ",
+            "type": "prefix",
+            "pos_ar": "واو العطف",
+            "meaning": "and"
+          },
+          {
+            "morpheme_id": "1:7:8:2",
+            "text": "لَا",
+            "type": "stem",
+            "pos_ar": "حرف نفي زائد لتوكيد النفي",
+            "meaning": "not / nor (emphatic negative particle)"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": false,
+          "is_verb": false,
+          "grammatical_state": "mabni"
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "mabni",
+            "case_reason": "coordinating conjunction followed by negative particle confirming negation",
+            "visible_marker": "sukūn (مبني على السكون)",
+            "i3rab_ar": "الواو حرف عطف، و(لا) حرف نفي زائد لتوكيد معنى النفي لا محل له من الإعراب"
+          },
+          "syntactic_role": "coordinating_negator",
+          "sentence_role": "connects the second deviation while guaranteeing distinct separation"
+        },
+        "rhetoric": {
+          "device": "تكرار النفي لمنع توهم الجمع والالتباس",
+          "device_en": "repeating negation to prevent blending of deviations",
+          "ordinary_order": "غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَالضَّالِّينَ (دُونَ لَا)",
+          "quranic_order": "وَلَا ٱلضَّآلِّينَ",
+          "effect": "If it said 'wa al-ḍāllīn' without 'lā', it might linguistically imply that the condemned path is only the single group that combines both anger and misguidance at once. Inserting 'lā' proves that these are two distinct, independent pitfalls, and the believer must escape both completely.",
+          "contrast": {
+            "ordinary_meaning": "Not of those who combine anger and loss.",
+            "quranic_meaning": "Not of those who earn anger, and equally not of those who wander astray."
+          }
+        },
+        "visual": {
+          "category": "particle",
+          "color_group": "particle_default",
+          "highlight": false,
+          "expandable": true
+        }
+      },
+      {
+        "word_id": 9,
+        "position": 9,
+        "surface_uthmani": "ٱلضَّآلِّينَ",
+        "surface_simple": "الضَّالِّينَ",
+        "lemma": "ضَالّ",
+        "root": "ض ل ل",
+        "has_root": true,
+        "word_type": "noun",
+        "pos": "ism_fail",
+        "subtype": "active_participle_plural",
+        "english_gloss": [
+          "those who are astray",
+          "those who lost the way"
+        ],
+        "meaning_in_context": "Those Who Wander Astray",
+        "morphemes": [
+          {
+            "morpheme_id": "1:7:9:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:7:9:2",
+            "text": "ضَّآلِّينَ",
+            "type": "stem",
+            "pos_ar": "معطوف على المغضوب مجرور وعلامة جره الياء",
+            "meaning": "those who wander astray in ignorance"
+          }
+        ],
+        "morphology": {
+          "sarf_applicable": true,
+          "is_verb": false,
+          "derived_form": "اسم فاعل (جمع مذكر سالم)",
+          "pattern": "فَاعِلِين",
+          "gender": "masculine",
+          "number": "plural",
+          "definiteness": "definite",
+          "grammatical_state": "majrur",
+          "phonological_feature": "Medd Lazim Kalimi Muthaqqal (مد لازم كلمي مثقل): A compulsory 6-vowel elongation on the alif followed by the doubled lām with shaddah.",
+          "spiritual_psychology": "Refers to the tragic spiritual pathology of having intense emotional zeal, sincerity, or passionate devotion, but completely lacking sound knowledge, leading to corruption of core theology, innovation, and wandering aimlessly off the highway. They think they are doing good while walking in complete darkness."
+        },
+        "grammar": {
+          "i3rab": {
+            "case": "majrur",
+            "case_reason": "conjoined via waw onto الْمَغْضُوبِ",
+            "visible_marker": "yā’ (الياء لأنه جمع مذكر سالم)",
+            "i3rab_ar": "اسم معطوف على (المغضوب) مجرور وعلامة جره الياء لأنه جمع مذكر سالم، والنون عوض عن التنوين"
+          },
+          "syntactic_role": "coordinated_active_participle",
+          "sentence_role": "identifies the category of sincere zeal corrupted by ignorance"
+        },
+        "rhetoric": {
+          "device": "الموازنة الثنائية بين آفات العلم وآفات العمل",
+          "device_en": "binary balance between corruption of action versus corruption of knowledge",
+          "ordinary_order": "الْهَالِكِينَ",
+          "quranic_order": "ٱلضَّآلِّينَ",
+          "effect": "Completes the grand map of human destiny: 1) The Blessed (Knowledge + Action), 2) The Object of Wrath (Knowledge without Action), 3) The Astray (Action without Knowledge). Surah Al-Fatihah ends with the ultimate prayer for intellectual and moral balance.",
+          "contrast": {
+            "ordinary_meaning": "Those who perished.",
+            "quranic_meaning": "Those who sincerely lost the highway because they substituted divine revelation with human conjecture."
+          }
+        },
+        "visual": {
+          "category": "noun",
+          "color_group": "noun_default",
+          "highlight": true,
+          "expandable": true
+        }
+      }
+    ],
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "We ask to follow good people who loved Allah, not people who knew the truth and refused it, and not people who made up their own religion in confusion.",
+        "grammar": "صِرَاطَ repeats the path. أَنْعَمْتَ means 'You blessed', and غَيْرِ means 'not of'.",
+        "sarf": "Al-Ḍāllīn comes from root ض-ل-ل, which describes a traveller who loses their way in the desert."
+      },
+      "intermediate": {
+        "lesson": "The path is defined by three categories of people: those with knowledge and action (blessed), those with knowledge without action (earned wrath), and those with action without knowledge (lost).",
+        "grammar": "صِرَاطَ is badal (apposition). أَنْعَمْتَ is active past verb with second-person tā. الْمَغْضُوبِ is a passive participle.",
+        "sarf": "Contrast between passive participle (المغضوب) and active participle (الضالين) reveals the differing moral roots of the two deviations."
+      },
+      "advanced": {
+        "lesson": "The grammatical architecture of this closing verse demonstrates divine adab: direct agency is claimed for grace, but passive voice is used for anger, preserving sacred decorum in supplication.",
+        "grammar": "غَيْرِ is majrūr as badal from the pronoun in ‘alayhim or na't for alladhīna. The lā in wa-lā-ḍāllīn is an emphatic negative particle preventing cumulative conjunction.",
+        "rhetoric": "The tripartite categorization establishes an exhaustive epistemological taxonomy of all human worldviews."
+      }
+    },
+    "alternative_analyses": [
+      {
+        "topic": "parsing_of_ghayri",
+        "analysis": "Analyzed as a badal (apposition) from the pronoun (هم) in (علَيْهِمْ), which is the preferred view of Sibawayh and the Basran school, or as an adjective (نعت) modifying the relative pronoun (الَّذِينَ) because it is non-specific in general meaning.",
+        "scholars_or_schools": [
+          "Sibawayh",
+          "Al-Zamakhshari",
+          "Ibn Hisham"
+        ],
+        "source": "Al-Kitab; Mughni al-Labib",
+        "confidence": "high"
+      },
+      {
+        "topic": "function_of_la_in_wa_la_al-dallin",
+        "analysis": "Analyzed as Zā'idah li-Ta'kīd al-Nafy (an emphatic additional negative particle) confirming the negation established by Ghayr, precluding the false assumption of a composite single group.",
+        "scholars_or_schools": [
+          "Abu Hayyan",
+          "Al-Ukbari"
+        ],
+        "source": "Al-Bahr al-Muhit; I'rab al-Qur'an li al-Ukbari",
+        "confidence": "high"
+      }
+    ],
+    "sources": {
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
+      "grammar_sources": [
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi",
+        "Mughni al-Labib li Ibn Hisham"
+      ],
+      "tafsir_sources": [
+        "Tafsir al-Tabari (Jami' al-Bayan)",
+        "Tafsir Ibn Kathir",
+        "Tafsir al-Baghawi"
+      ],
+      "source_verification_status": "verified"
+    }
+  }
+]
