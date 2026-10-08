@@ -515,6 +515,7 @@
     <div class="dataset-selector-group">
       <span class="select-label">Select Dataset:</span>
       <select class="dataset-dropdown" id="dataset-select">
+        <option value="surah-al-fatihah.json">Surah Al-Fatihah (1) — Full 7 Ayahs (Master v2.0)</option>
         <option value="surah-al-baqarah.json">Surah Al-Baqarah (2) — Full 286 Ayahs</option>
         <option value="surah-ali-imran.json">Surah Aal-i-Imran (3) — Full 200 Ayahs</option>
         <option value="surah-an-nisa.json">Surah An-Nisa (4) — Full 176 Ayahs</option>
@@ -714,7 +715,7 @@
 
   <footer>
     <div>Quranic JSON Studio on Cloudflare Pages</div>
-    <div class="version-tag" id="footer-version-tag">v1.1.9 (updated 2026-10-08 11:16)</div>
+    <div class="version-tag" id="footer-version-tag">v1.1.10 (updated 2026-10-08 13:25)</div>
   </footer>
 
   <div id="toast">Action Complete</div>
@@ -786,6 +787,7 @@
     async function loadDataset(filename) {
       try {
         activeDatasetFile = filename;
+        if (datasetSelect) datasetSelect.value = filename;
         const savedDraft = localStorage.getItem('quran_draft_' + filename);
         if (savedDraft) {
           try {
@@ -832,78 +834,91 @@
     function updatePreview(data) {
       if (!data) return;
 
-      const surahNum = data.surah_id || (data.metadata ? data.metadata.surah_number : '—');
-      const surahName = data.surah_name_en || (data.metadata ? data.metadata.surah_name_en : 'Surah');
-      activeSurahTag.textContent = `${surahNum}: ${surahName}`;
-
-      const wordMap = {};
-      if (data.words) {
-        data.words.forEach(w => { wordMap[w.word_id] = w; });
-      }
-
-      const verses = data.verses || (data.ayahs ? data.ayahs.map(a => {
-        const aWords = a.word_ids ? a.word_ids.map(id => wordMap[id]).filter(Boolean) : [];
-        return {
-          ayah_number: a.ayah_number,
-          translation: typeof a.translation === 'object' ? a.translation.natural : (a.translation || ''),
-          tokens: aWords.map(w => ({
-            id: w.word_id,
-            text: w.surface_uthmani,
-            pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle', 'interrogative', 'conditional'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
-            pos_label: w.token_type,
-            root: w.root ? w.root.root_ar : '—',
-            wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || (w.noun_morphology && w.noun_morphology.lexical_pattern_wazn) || '—',
-            meaning: w.translation || '',
-            tooltip: w.translation || ''
-          }))
-        };
-      }) : []);
-
-      statVerses.textContent = verses.length;
-
+      let surahNum = '—';
+      let surahName = 'Surah';
+      let verses = [];
       let allTokens = [];
-      verses.forEach((v, vIdx) => {
-        const vNum = v.number || v.ayah_number || (vIdx + 1);
-        if (v.tokens) {
-          allTokens.push(...v.tokens.map(t => ({ ...t, ayahNumber: vNum })));
-        } else if (v.words) {
-          allTokens.push(...v.words.map(w => ({
-            id: w.location || w.id,
-            text: w.arabic_uthmani || w.text,
-            pos_class: w.classification ? `token-pos-${w.classification.primary_type}` : 'token-pos-noun',
-            pos_label: w.classification ? w.classification.primary_type : 'noun',
-            case_class: 'case-mabni',
-            root: w.sarf ? (typeof w.sarf.root === 'string' ? w.sarf.root : w.sarf.root?.normalized) : '—',
-            wazn: w.sarf ? w.sarf.wazn : '—',
-            meaning: w.translation || '',
-            ayahNumber: vNum
-          })));
+      let syntaxCount = 0;
+      let ontologyCount = 0;
+
+      if (Array.isArray(data)) {
+        const first = data[0] || {};
+        surahNum = first.ayah?.surah_number || 1;
+        surahName = first.ayah?.surah_name_en || 'Al-Fatihah';
+        activeSurahTag.textContent = `${surahNum}: ${surahName}`;
+
+        verses = data.map((item, idx) => {
+          const a = item.ayah || {};
+          const num = a.ayah_number || (idx + 1);
+          const trans = (item.translations && (item.translations.english?.natural || item.translations.english?.literal || item.translations.norwegian?.natural)) || '';
+          const aWords = item.words || [];
+
+          return {
+            ayah_number: num,
+            number: num,
+            translation: trans,
+            tokens: aWords.map((w, wIdx) => {
+              const isVerb = w.pos === 'fil' || w.morphology?.is_verb;
+              const isPart = ['harf', 'particle', 'preposition', 'conjunction'].includes(w.pos) || (w.word_type && w.word_type.includes('prep'));
+              const posClass = isVerb ? 'token-pos-verb-past' : (isPart ? 'token-pos-particle' : 'token-pos-noun');
+              const posLabel = w.pos || w.word_type || 'ism';
+              const meaning = w.meaning_in_context || (w.english_gloss ? w.english_gloss.join(', ') : '');
+
+              return {
+                id: w.word_id || `${surahNum}:${num}:${wIdx + 1}`,
+                text: w.surface_uthmani || w.surface_simple || '',
+                pos_class: posClass,
+                pos_label: posLabel,
+                root: w.root || '—',
+                wazn: (w.morphology && (w.morphology.pattern || w.morphology.derived_form)) || '—',
+                meaning: meaning,
+                tooltip: meaning,
+                case_class: 'case-mabni',
+                ayahNumber: num
+              };
+            })
+          };
+        });
+
+        syntaxCount = data.reduce((acc, item) => acc + (item.sentence_structure ? 1 : 0), 0);
+        const rootSet = new Set();
+        data.forEach(item => {
+          (item.words || []).forEach(w => {
+            if (w.root && w.root !== '—') rootSet.add(w.root);
+          });
+        });
+        ontologyCount = rootSet.size;
+      } else {
+        surahNum = data.surah_id || (data.metadata ? data.metadata.surah_number : '—');
+        surahName = data.surah_name_en || (data.metadata ? data.metadata.surah_name_en : 'Surah');
+        activeSurahTag.textContent = `${surahNum}: ${surahName}`;
+
+        const wordMap = {};
+        if (data.words) {
+          data.words.forEach(w => { wordMap[w.word_id] = w; });
         }
-      });
 
-      if (allTokens.length === 0 && data.words) {
-        allTokens = data.words.map(w => ({
-          id: w.word_id,
-          text: w.surface_uthmani,
-          pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
-          pos_label: w.token_type,
-          case_class: 'case-mabni',
-          root: w.root ? w.root.root_ar : '—',
-          wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || '—',
-          meaning: w.translation || '',
-          ayahNumber: parseInt(w.word_id.split(':')[1], 10) || 1
-        }));
+        verses = data.verses || (data.ayahs ? data.ayahs.map(a => {
+          const aWords = a.word_ids ? a.word_ids.map(id => wordMap[id]).filter(Boolean) : [];
+          return {
+            ayah_number: a.ayah_number,
+            translation: typeof a.translation === 'object' ? a.translation.natural : (a.translation || ''),
+            tokens: aWords.map(w => ({
+              id: w.word_id,
+              text: w.surface_uthmani,
+              pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle', 'interrogative', 'conditional'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
+              pos_label: w.token_type,
+              root: w.root ? w.root.root_ar : '—',
+              wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || (w.noun_morphology && w.noun_morphology.lexical_pattern_wazn) || '—',
+              meaning: w.translation || '',
+              tooltip: w.translation || ''
+            }))
+          };
+        }) : []);
+
+        syntaxCount = data.word_relationships ? data.word_relationships.length : (data.syntax?.relationships ? data.syntax.relationships.length : (data.syntax_tree ? data.syntax_tree.length : 0));
+        ontologyCount = data.lexicon ? data.lexicon.length : (data.ontology ? data.ontology.length : (data.knowledge_graph ? data.knowledge_graph.length : (data.root_index ? (Array.isArray(data.root_index) ? data.root_index.length : Object.keys(data.root_index).length) : 0)));
       }
-
-      parsedTokensCache = allTokens;
-      statTokens.textContent = allTokens.length;
-      tokensCountBadge.textContent = `${allTokens.length} items`;
-
-      const syntaxCount = data.word_relationships ? data.word_relationships.length : (data.syntax?.relationships ? data.syntax.relationships.length : (data.syntax_tree ? data.syntax_tree.length : 0));
-      statSyntax.textContent = syntaxCount;
-
-      const ontologyCount = data.lexicon ? data.lexicon.length : (data.ontology ? data.ontology.length : (data.knowledge_graph ? data.knowledge_graph.length : (data.root_index ? Object.keys(data.root_index).length : 0)));
-      statOntology.textContent = ontologyCount;
 
       // Render verses
       versesContainer.innerHTML = verses.map(v => {
@@ -965,11 +980,11 @@
     // Form Editor Population
     function populateFormSelectors() {
       if (!currentData) return;
-      const verses = currentData.verses || currentData.ayahs;
-      if (!verses) return;
+      const verses = Array.isArray(currentData) ? currentData : (currentData.verses || currentData.ayahs);
+      if (!verses || verses.length === 0) return;
 
       formAyahSelect.innerHTML = verses.map((v, idx) => {
-        const num = v.number || v.ayah_number || (idx + 1);
+        const num = (v.ayah && v.ayah.ayah_number) || v.number || v.ayah_number || (idx + 1);
         return `<option value="${idx}">Ayah ${num}</option>`;
       }).join('');
 
@@ -978,22 +993,50 @@
 
     function populateTokenSelector() {
       if (!currentData) return;
-      const verses = currentData.verses || currentData.ayahs;
+      const verses = Array.isArray(currentData) ? currentData : (currentData.verses || currentData.ayahs);
       if (!verses) return;
       const vIdx = parseInt(formAyahSelect.value) || 0;
       const verse = verses[vIdx];
       if (!verse) return;
 
-      const tokens = verse.tokens || verse.words || (verse.word_ids ? (currentData.words || []).filter(w => w.ayah_id === verse.ayah_id).map(w => ({
-        id: w.word_id,
-        text: w.surface_uthmani,
-        translation: w.translation,
-        root: w.root ? w.root.root_ar : '—',
-        wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || (w.noun_morphology && w.noun_morphology.lexical_pattern_wazn) || '—',
-        pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
-        case_class: 'case-mabni',
-        ai_explanations: w.irab ? w.irab.grammatical_explanation : {}
-      })) : []);
+      let tokens = [];
+      if (Array.isArray(currentData)) {
+        const words = verse.words || [];
+        tokens = words.map((w, wIdx) => {
+          const isVerb = w.pos === 'fil' || w.morphology?.is_verb;
+          const isPart = ['harf', 'preposition', 'conjunction', 'particle'].includes(w.pos) || (w.word_type && w.word_type.includes('prep'));
+          const posClass = isVerb ? 'verb-past' : (isPart ? 'particle' : 'noun');
+          return {
+            id: w.word_id || `${verse.ayah?.surah_number || 1}:${verse.ayah?.ayah_number || (vIdx+1)}:${wIdx+1}`,
+            text: w.surface_uthmani || w.surface_simple || '',
+            arabic_uthmani: w.surface_uthmani || w.surface_simple || '',
+            display_text: w.meaning_in_context || (w.english_gloss ? w.english_gloss.join(', ') : ''),
+            translation: w.meaning_in_context || (w.english_gloss ? w.english_gloss.join(', ') : ''),
+            pos_class: posClass,
+            case_class: 'case-mabni',
+            root: w.root || '—',
+            wazn: (w.morphology && (w.morphology.pattern || w.morphology.derived_form)) || '—',
+            irab: (w.grammar && w.grammar.i3rab && (w.grammar.i3rab.i3rab_ar || w.grammar.i3rab.case_reason)) || '',
+            ai_explanations: {
+              beginner: verse.teaching_layers?.beginner?.main_takeaway || w.meaning_in_context || '',
+              intermediate: verse.teaching_layers?.intermediate?.grammatical_pivot || '',
+              advanced: verse.teaching_layers?.advanced?.syntactic_depth || (w.grammar && w.grammar.i3rab && w.grammar.i3rab.i3rab_ar) || ''
+            },
+            _rawWord: w
+          };
+        });
+      } else {
+        tokens = verse.tokens || verse.words || (verse.word_ids ? (currentData.words || []).filter(w => w.ayah_id === verse.ayah_id).map(w => ({
+          id: w.word_id,
+          text: w.surface_uthmani,
+          translation: w.translation,
+          root: w.root ? w.root.root_ar : '—',
+          wazn: (w.sarf_verb_analysis && w.sarf_verb_analysis.pattern_wazn) || (w.noun_morphology && w.noun_morphology.lexical_pattern_wazn) || '—',
+          pos_class: w.token_type === 'verb' ? 'token-pos-verb-past' : (['preposition', 'conjunction', 'particle'].includes(w.token_type) ? 'token-pos-particle' : 'token-pos-noun'),
+          case_class: 'case-mabni',
+          ai_explanations: w.irab ? w.irab.grammatical_explanation : {}
+        })) : []);
+      }
       verse._cachedTokens = tokens;
 
       formTokenSelect.innerHTML = tokens.map((t, idx) => {
@@ -1006,7 +1049,7 @@
 
     function loadTokenIntoForm() {
       if (!currentData) return;
-      const verses = currentData.verses || currentData.ayahs;
+      const verses = Array.isArray(currentData) ? currentData : (currentData.verses || currentData.ayahs);
       if (!verses) return;
       const vIdx = parseInt(formAyahSelect.value) || 0;
       const tIdx = parseInt(formTokenSelect.value) || 0;
@@ -1042,12 +1085,46 @@
     formTokenSelect.addEventListener('change', loadTokenIntoForm);
 
     btnApplyTokenChanges.addEventListener('click', () => {
-      if (!currentData || !currentData.verses) return;
+      if (!currentData) return;
       const vIdx = parseInt(formAyahSelect.value) || 0;
       const tIdx = parseInt(formTokenSelect.value) || 0;
-      const verse = currentData.verses[vIdx];
-      if (!verse) return;
 
+      if (Array.isArray(currentData)) {
+        const verse = currentData[vIdx];
+        if (!verse || !verse.words || !verse.words[tIdx]) return;
+        const w = verse.words[tIdx];
+
+        w.surface_uthmani = fieldArText.value;
+        w.surface_simple = fieldArText.value;
+        w.meaning_in_context = fieldMeaning.value;
+        if (w.english_gloss && w.english_gloss.length > 0) w.english_gloss[0] = fieldMeaning.value;
+        if (w.root !== undefined) w.root = fieldRoot.value;
+        if (!w.morphology) w.morphology = {};
+        w.morphology.pattern = fieldWazn.value;
+        if (!w.grammar) w.grammar = {};
+        if (!w.grammar.i3rab) w.grammar.i3rab = {};
+        w.grammar.i3rab.i3rab_ar = fieldIrab.value;
+
+        if (!verse.teaching_layers) verse.teaching_layers = { beginner: {}, intermediate: {}, advanced: {} };
+        if (verse.teaching_layers.beginner) verse.teaching_layers.beginner.main_takeaway = fieldAiBeginner.value;
+        if (verse.teaching_layers.intermediate) verse.teaching_layers.intermediate.grammatical_pivot = fieldAiIntermediate.value;
+        if (verse.teaching_layers.advanced) verse.teaching_layers.advanced.syntactic_depth = fieldAiAdvanced.value;
+
+        const updatedJson = JSON.stringify(currentData, null, 2);
+        codeEditor.value = updatedJson;
+        localStorage.setItem('quran_draft_' + activeDatasetFile, updatedJson);
+        updateStatus(true);
+        updatePreview(currentData);
+        populateTokenSelector();
+        setDraftStatus(true);
+        formTokenPreviewAr.textContent = fieldArText.value;
+        showToast('Token updated & synced into JSON schema!');
+        return;
+      }
+
+      const verses = currentData.verses || currentData.ayahs;
+      if (!verses || !verses[vIdx]) return;
+      const verse = verses[vIdx];
       const tokens = verse.tokens || verse.words;
       if (!tokens || !tokens[tIdx]) return;
       const token = tokens[tIdx];
@@ -1204,7 +1281,29 @@
       target.innerHTML = createTree(obj);
     }
 
-    loadDataset('surah-al-kawthar.json');
+    const urlParams = new URLSearchParams(window.location.search);
+    const surahParam = urlParams.get('surah') || urlParams.get('dataset');
+    let startFile = 'surah-al-fatihah.json';
+    if (surahParam === 'kawthar' || surahParam === '108') {
+      startFile = 'surah-al-kawthar.json';
+    } else if (surahParam === 'baqarah' || surahParam === '2') {
+      startFile = 'surah-al-baqarah.json';
+    } else if (surahParam === 'imran' || surahParam === 'ali-imran' || surahParam === '3') {
+      startFile = 'surah-ali-imran.json';
+    } else if (surahParam === 'nisa' || surahParam === '4') {
+      startFile = 'surah-an-nisa.json';
+    } else if (surahParam === 'qamar' || surahParam === '54') {
+      startFile = 'surah-al-qamar.json';
+    } else if (surahParam === 'munafiqun' || surahParam === '63') {
+      startFile = 'surah-al-munafiqun.json';
+    } else if (surahParam === 'taghabun' || surahParam === '64') {
+      startFile = 'surah-at-taghabun.json';
+    } else if (surahParam === 'asr' || surahParam === '103') {
+      startFile = 'surah-al-asr.json';
+    } else if (surahParam) {
+      startFile = surahParam.endsWith('.json') ? surahParam : `surah-al-${surahParam}.json`;
+    }
+    loadDataset(startFile);
   </script>
 </body>
 </html>

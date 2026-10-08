@@ -328,7 +328,9 @@ class QuranGrammarApp {
     this.data = null;
     const urlParams = new URLSearchParams(window.location.search);
     const surahParam = urlParams.get('surah');
-    if (surahParam === 'kawthar' || surahParam === '108') {
+    if (surahParam === 'fatihah' || surahParam === 'al-fatihah' || surahParam === '1') {
+      this.currentSurahFile = 'surah-al-fatihah.json';
+    } else if (surahParam === 'kawthar' || surahParam === '108') {
       this.currentSurahFile = 'surah-al-kawthar.json';
     } else if (surahParam === 'asr' || surahParam === '103') {
       this.currentSurahFile = 'surah-al-asr.json';
@@ -377,6 +379,119 @@ class QuranGrammarApp {
 
   normalizeData() {
     if (!this.data) return;
+    if (Array.isArray(this.data)) {
+      const rawAyahs = this.data;
+      const first = rawAyahs[0] || {};
+      const meta = {
+        surah_number: first.ayah?.surah_number || 1,
+        surah_name_ar: first.ayah?.surah_name_ar || "الفاتحة",
+        surah_name_en: first.ayah?.surah_name_en || "Al-Fatihah",
+        total_ayahs: rawAyahs.length,
+        total_verses: rawAyahs.length,
+        total_words: rawAyahs.reduce((acc, a) => acc + (a.words ? a.words.length : 0), 0),
+        total_morphemes: rawAyahs.reduce((acc, a) => acc + (a.words ? a.words.reduce((mAcc, w) => mAcc + (w.morphemes ? w.morphemes.length : 1), 0) : 0), 0)
+      };
+      const rootSet = new Set();
+      rawAyahs.forEach(a => {
+        (a.words || []).forEach(w => {
+          if (w.root && w.root !== '—') rootSet.add(w.root);
+        });
+      });
+
+      this.data = {
+        metadata: meta,
+        root_index: Array.from(rootSet),
+        thematic_sections: [
+          { section_id: 1, title_en: "Praise, Sovereignty & Divine Mercy", ayah_range: "1:1-4", start_ayah: 1, end_ayah: 4 },
+          { section_id: 2, title_en: "Exclusive Covenant & The Straight Path", ayah_range: "1:5-7", start_ayah: 5, end_ayah: 7 }
+        ],
+        verses: rawAyahs.map((a, aIdx) => {
+          const aNum = a.ayah?.ayah_number || (aIdx + 1);
+          const secId = aNum <= 4 ? 1 : 2;
+          const secTitle = aNum <= 4 ? "Praise, Sovereignty & Divine Mercy" : "Exclusive Covenant & The Straight Path";
+          const words = (a.words || []).map((w, wIdx) => {
+            const isVerb = w.pos === 'fil' || w.morphology?.is_verb;
+            const isPart = ['harf', 'preposition', 'conjunction', 'particle'].includes(w.pos) || (w.word_type && w.word_type.includes('prep'));
+            const pClass = isVerb ? "fi'l" : (isPart ? 'harf' : 'ism');
+            const pClassAr = isVerb ? 'فعل' : (isPart ? 'حرف' : 'اسم');
+            const cCase = (w.grammar && w.grammar.i3rab && w.grammar.i3rab.case) || 'indeclinable';
+            const cColor = (cCase === 'marfoo' || cCase === 'nominative') ? '#2563eb' : ((cCase === 'mansoob' || cCase === 'accusative') ? '#059669' : ((cCase === 'majrur' || cCase === 'genitive') ? '#7c3aed' : '#64748b'));
+            const pColor = isVerb ? '#e11d48' : (isPart ? '#d97706' : '#1d4ed8');
+            const pBg = isVerb ? '#ffe4e6' : (isPart ? '#fef3c7' : '#dbeafe');
+
+            return {
+              id: w.word_id || `1:${aNum}:${wIdx+1}`,
+              location: w.word_id || `1:${aNum}:${wIdx+1}`,
+              surah: 1,
+              ayah: aNum,
+              word_position: w.position || (wIdx + 1),
+              arabic_uthmani: w.surface_uthmani || w.surface_simple || '',
+              arabic_clean: w.surface_simple || '',
+              translation: w.meaning_in_context || (w.english_gloss ? w.english_gloss.join(', ') : ''),
+              classification: {
+                primary_type: pClass,
+                primary_type_ar: pClassAr
+              },
+              sarf: {
+                root: w.root || '—',
+                root_ar: w.root || '—',
+                root_meaning: (w.morphology && w.morphology.derived_from && w.morphology.derived_from.verb_meaning) || '',
+                root_concept: (w.morphology && w.morphology.derivation_type) || '',
+                lemma: w.lemma || '—',
+                wazn: (w.morphology && (w.morphology.pattern || w.morphology.derived_form)) || '—',
+                verb_form: (w.morphology && w.morphology.derived_form) || '—'
+              },
+              irab_and_case: {
+                case_or_mood: cCase,
+                case_or_mood_ar: (w.grammar && w.grammar.i3rab && w.grammar.i3rab.visible_marker) || 'مبني',
+                case_concept: (w.grammar && w.grammar.i3rab && w.grammar.i3rab.case) || 'fixed',
+                ending_vowel: (w.grammar && w.grammar.i3rab && w.grammar.i3rab.visible_marker) || 'fixed',
+                grammatical_role: (w.grammar && w.grammar.syntactic_role) || w.pos || 'node',
+                grammatical_role_ar: (w.grammar && w.grammar.i3rab && w.grammar.i3rab.i3rab_ar) || '',
+                why_this_ending: (w.grammar && w.grammar.i3rab && w.grammar.i3rab.case_reason) || '',
+                beneficial_meaning: a.teaching_layers?.beginner?.main_takeaway || '',
+                simplified_role: w.pos || 'Word'
+              },
+              lowest_level_breakdown: {
+                morphemes_count: w.morphemes ? w.morphemes.length : 1,
+                morphemes: (w.morphemes || []).map((m, mIdx) => ({
+                  segment_index: mIdx + 1,
+                  arabic: m.text || '',
+                  type: m.type || '',
+                  pos_tag: m.type || '',
+                  role: m.function || '',
+                  vowel: "base",
+                  color_code: "#2563eb",
+                  color_name: m.type || ''
+                }))
+              },
+              color_coding: {
+                pos_color: pColor,
+                pos_bg: pBg,
+                case_color: cColor,
+                case_bg: '#f8fafc',
+                vowel_badge: (w.grammar && w.grammar.i3rab && w.grammar.i3rab.visible_marker) || 'مبني',
+                pedagogical_badge: w.pos || 'ism'
+              }
+            };
+          });
+
+          return {
+            ayah_number: aNum,
+            surah_number: 1,
+            text_uthmani: a.ayah?.text_uthmani || '',
+            text_imlaei: a.ayah?.text_simple || '',
+            translation: (a.translations && (a.translations.english?.natural || a.translations.english?.literal || a.translations.norwegian?.natural)) || '',
+            thematic_section_id: secId,
+            thematic_section_title: secTitle,
+            thematic_color: secId === 1 ? "#2563eb" : "#059669",
+            words_count: words.length,
+            words: words
+          };
+        })
+      };
+      return;
+    }
     if (!this.data.metadata) {
       this.data.metadata = {
         surah_number: this.data.surah_id || 108,
@@ -670,7 +785,8 @@ class QuranGrammarApp {
     if (brandTitle) brandTitle.childNodes[0].textContent = meta.surah_name_en + ' ';
     if (brandTitleAr) brandTitleAr.textContent = meta.surah_name_ar;
     if (brandIcon) {
-      if (meta.surah_number === 108) brandIcon.textContent = '⚡';
+      if (meta.surah_number === 1) brandIcon.textContent = '🌟';
+      else if (meta.surah_number === 108) brandIcon.textContent = '⚡';
       else if (meta.surah_number === 103) brandIcon.textContent = '⏳';
       else if (meta.surah_number === 63) brandIcon.textContent = '🛡️';
       else if (meta.surah_number === 64) brandIcon.textContent = '⚖️';
@@ -680,7 +796,9 @@ class QuranGrammarApp {
       else brandIcon.textContent = '🌙';
     }
     if (brandSubtitle) {
-      if (meta.surah_number === 108) {
+      if (meta.surah_number === 1) {
+        brandSubtitle.textContent = 'Master Multi-Layer Dataset: Umm al-Kitab, AI Tutor Levels, Visual Syntax Trees, and Contrastive Balāghah';
+      } else if (meta.surah_number === 108) {
         brandSubtitle.textContent = 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Abundance Intelligence';
       } else if (meta.surah_number === 103) {
         brandSubtitle.textContent = 'Master Multi-Layer Dataset: AI Tutor Levels, Visual Syntax Trees, and Root Intelligence';
