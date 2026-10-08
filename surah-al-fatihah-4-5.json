@@ -1,19 +1,21 @@
 [
   {
-    "schema_version": "1.0",
+    "schema_version": "2.0",
     "ayah": {
       "surah_number": 1,
       "surah_name_ar": "الفاتحة",
       "surah_name_en": "Al-Fatihah",
       "ayah_number": 4,
       "juz": 1,
-      "hizb": null,
-      "rub": null,
-      "page_madinah_mushaf": null,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
       "revelation_place": "Makkah",
-      "revelation_order": null,
+      "revelation_order": 5,
       "text_uthmani": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
       "text_simple": "مَالِكِ يَوْمِ الدِّينِ",
+      "orthographic_word_count": 3,
+      "morpheme_count": 4,
       "ayah_end_marker": true
     },
     "translations": {
@@ -27,1749 +29,715 @@
       }
     },
     "ayah_meaning": {
-      "main_meaning": "Allah is the Master and Owner of the Day of Judgment.",
-      "simple_explanation": "Allah has complete ownership, authority and control over the Day when everyone will be judged.",
-      "key_message": "Ultimate authority belongs to Allah, especially on the Day when all people will return to Him.",
-      "practical_takeaway": "Remembering the Day of Judgment should change how a person lives, chooses and takes responsibility for their actions."
+      "main_meaning": "Allah is the Master, Sovereign King, and Owner of the Day of Judgment.",
+      "simple_explanation": "Allah has complete ownership, authority and jurisdiction over the Day when all beings will be resurrected and judged.",
+      "key_message": "Ultimate authority belongs unconditionally to Allah, especially on the Day when all worldly delusions of kingship vanish.",
+      "practical_takeaway": "Remembering the Day of Judgment transforms daily conscience, choices, and accountability before the Creator."
     },
     "context": {
       "previous_ayah_connection": {
-        "previous_ayah": "الرَّحْمَٰنِ الرَّحِيمِ",
-        "connection": "After mentioning Allah's mercy, the ayah reminds us that Allah is also the ultimate Master and Judge.",
-        "lesson": "A believer's relationship with Allah includes both hope in His mercy and awareness of accountability."
+        "previous_ayah": "الرَّحْمَـٰنِ الرَّحِيمِ",
+        "connection": "After describing Allah's all-encompassing mercy, the ayah reminds us that Allah is simultaneously the ultimate Judge and Sovereign.",
+        "lesson": "A balanced spiritual state combines deep hope in divine mercy with vigilant reverence for divine accountability."
       },
       "next_ayah_connection": {
         "next_ayah": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-        "connection": "Recognizing Allah as Master of the Day of Judgment naturally leads to worshipping Him and seeking His help."
+        "connection": "Recognizing Allah as the supreme Master of the Day of Judgment compels the soul to dedicate all worship and reliance solely to Him.",
+        "lesson": "Contemplating the Day of Reckoning elevates the servant into intimate audience to utter the covenant of servitude."
       }
     },
     "words": [
       {
+        "word_id": 1,
         "position": 1,
-        "surface": "مَـٰلِكِ",
-        "normalized": "مَالِكِ",
+        "surface_uthmani": "مَـٰلِكِ",
+        "surface_simple": "مَالِكِ",
         "lemma": "مَالِك",
         "root": "م ل ك",
+        "has_root": true,
         "word_type": "noun",
         "pos": "ism",
         "subtype": "active_participle_noun",
         "english_gloss": [
           "owner",
           "master",
-          "possessor"
+          "sovereign possessor"
         ],
         "meaning_in_context": "Master / Owner",
+        "morphemes": [
+          {
+            "morpheme_id": "1:4:1:1",
+            "text": "مَـٰلِكِ",
+            "type": "stem",
+            "pos_ar": "اسم فاعل مجرور",
+            "meaning": "Owner / Sovereign Possessor",
+            "i3rab_ar": "نعت (أو بدل) مجرور بالكسرة الظاهرة، وهو مضاف"
+          }
+        ],
         "morphology": {
           "sarf_applicable": true,
+          "is_verb": false,
           "derived_form": "اسم فاعل",
           "pattern": "فَاعِل",
-          "derived_from": {
-            "root": "م ل ك",
-            "verb": "مَلَكَ",
-            "verb_meaning": "to own, possess, have authority over"
-          },
           "gender": "masculine",
           "number": "singular",
-          "definiteness": "definite",
-          "derivation_type": "derived noun",
-          "is_verb": false
+          "definiteness": "definite_by_idafah",
+          "masdar": "مِلْك / مُلْك",
+          "grammatical_state": "majrur"
         },
         "grammar": {
           "i3rab": {
             "case": "majrur",
-            "case_reason": "grammatical attachment to the preceding description of Allah; commonly analyzed as an epithet/adjective (نعت) or apposition/substitute (بدل) following the divine name or preceding attributes",
-            "visible_marker": "kasrah",
-            "i3rab_ar": "مَالِكِ: نعت (أو بدل) مجرور وعلامة جره الكسرة الظاهرة على آخره، وهو مضاف"
+            "case_reason": "epithet (نعت) or apposition (بدل) modifying the divine name 'Allah' in verse 2",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "نعت مجرور وعلامة جره الكسرة الظاهرة على آخره، وهو مضاف"
           },
-          "syntactic_role": [
-            "modifier/apposition connected to Allah",
-            "head of an idafah construction (مضاف)"
-          ],
-          "sentence_role": "describes Allah's absolute authority and eternal ownership",
-          "case_ending": "ـِ",
-          "alternative_analyses": [
-            {
-              "scholar_view": "جمهور النحاة (Majority grammarians)",
-              "analysis_ar": "نعت (صفة) للفظ الجلالة ﴿لِلَّهِ﴾ في الآية الثانية، أو نعت لـ ﴿الرَّحْمَٰنِ الرَّحِيمِ﴾",
-              "analysis_en": "Adjective/epithet (na't) modifying the Majesty 'Allah' in verse 2, or modifying the preceding attributes."
-            },
-            {
-              "scholar_view": "البصريون وبعض المعربين (Basran & other classical commentators)",
-              "analysis_ar": "بدل من لفظ الجلالة، أو عطف بيان",
-              "analysis_en": "Apposition / substitute (badal) or explicative adjunct ('atf bayan) for the divine name."
-            },
-            {
-              "scholar_view": "أوجه الإعراب التقديرية (Suppressed sentence elements)",
-              "analysis_ar": "خبر لمبتدأ محذوف تقديره (هو مالكُ) بالرفع، أو مفعول به لفعل محذوف تقديره (أعني/أمدح مالكَ) بالنصب على المدح والقطع",
-              "analysis_en": "Predicate of an implied subject ('He is the Master') in nominative cut (qat'), or direct object of an implied verb of praise ('I praise/mean the Master') in accusative cut."
-            },
-            {
-              "scholar_view": "القراءات المتواترة (Canonical Qira'at)",
-              "analysis_ar": "قرأ عاصم والكسائي ويعقوب وخلف ﴿مَـٰلِكِ﴾ بالألف اسم فاعل من مَلَكَ، وقرأ باقي السبعة (نافع، ابن كثير، أبو عمرو، ابن عامر، حمزة) ﴿مَلِكِ﴾ بغير ألف صفة مشبهة من مَلَكَ. كلاهما حق وثابت: مَالِك تفيد عموم الملكية للأعيان، ومَلِك تفيد تمام السلطان والتدبير والحكم في الرعايا",
-              "analysis_en": "'Mālik' (Asim, al-Kisa'i, Ya'qub, Khalaf) emphasizes ownership and possession of all things, while 'Malik' (the rest of the Ten) emphasizes sovereign kingship and royal authority over all subjects."
-            }
-          ]
+          "syntactic_role": "modifier_and_mudaf_head",
+          "sentence_role": "qualifies Allah's absolute dominion",
+          "case_ending": "ـِ"
         },
-        "relations": {
-          "governs": [
-            {
-              "from": 1,
-              "to": 2,
-              "relation": "mudaf",
-              "relation_ar": "مضاف",
-              "explanation": "مَالِكِ is mudaf to يَوْمِ."
-            }
-          ],
-          "related_to": [
-            {
-              "from": 1,
-              "to": 2,
-              "relation": "idafah",
-              "relation_ar": "إضافة",
-              "explanation": "مَالِكِ forms an idafah construction with يَوْمِ."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "مَالِك means the one who owns or has authority over something.",
-          "intermediate": "مَالِك is an اسم فاعل derived from مَلَكَ and follows the فَاعِل pattern.",
-          "advanced": "The word combines the semantic fields of ownership, authority and control. Its placement before يَوْمِ establishes an idafah construction: مَالِكِ يَوْمِ الدِّينِ."
+        "rhetoric": {
+          "device": "الوصف باسم الفاعل مع الإضافة",
+          "device_en": "active participle annexed to epoch of judgment",
+          "ordinary_order": "هُوَ مَالِكُ يَوْمِ الدِّينِ",
+          "quranic_order": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+          "effect": "Unbroken continuity of divine praise directly attached to the divine Majesty, merging the nuances of both canonical readings: Mālik (Owner of all entities) and Malik (Sovereign of all beings).",
+          "contrast": {
+            "ordinary_meaning": "He is the Master of the Day of Judgment. (independent sentence)",
+            "quranic_meaning": "Master of the Day of Judgment. (unbroken praise directly qualifying Allah)"
+          }
         },
         "visual": {
           "category": "noun",
-          "color_group": "noun",
+          "color_group": "noun_default",
           "highlight": false,
           "expandable": true
-        },
-        "insights": [
-          "The word does not merely indicate possession in a worldly sense; it conveys sovereign divine dominion.",
-          "In this context it conveys ultimate authority and dominion on the Day when all worldly ownership vanishes.",
-          "The following idafah specifies what Allah is Master of: the Day of Judgment."
-        ]
+        }
       },
       {
+        "word_id": 2,
         "position": 2,
-        "surface": "يَوْمِ",
-        "normalized": "يَوْمِ",
+        "surface_uthmani": "يَوْمِ",
+        "surface_simple": "يَوْمِ",
         "lemma": "يَوْم",
         "root": "ي و م",
+        "has_root": true,
         "word_type": "noun",
         "pos": "ism",
         "subtype": "common_noun",
         "english_gloss": [
-          "day"
+          "day",
+          "epoch"
         ],
         "meaning_in_context": "Day",
+        "morphemes": [
+          {
+            "morpheme_id": "1:4:2:1",
+            "text": "يَوْمِ",
+            "type": "stem",
+            "pos_ar": "مضاف إليه ومضاف",
+            "meaning": "Day / Appointed Epoch",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة، وهو مضاف"
+          }
+        ],
         "morphology": {
           "sarf_applicable": true,
-          "derived_form": null,
-          "pattern": null,
+          "is_verb": false,
+          "pattern": "فَعْل",
           "gender": "masculine",
           "number": "singular",
-          "definiteness": "definite_through_idafah",
-          "derivation_type": "basic_noun",
-          "is_verb": false
+          "definiteness": "definite_by_idafah",
+          "grammatical_state": "majrur"
         },
         "grammar": {
           "i3rab": {
             "case": "majrur",
-            "case_reason": "mudaf ilayh in the construction مَالِكِ يَوْمِ",
-            "visible_marker": "kasrah",
-            "i3rab_ar": "يَوْمِ: مضاف إليه مجرور وعلامة جره الكسرة الظاهرة، وهو في نفس الوقت مضاف إلى ما بعده"
+            "case_reason": "mudaf ilayh to مَالِكِ, and mudaf to ٱلدِّينِ",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة، وهو مضاف إلى ما بعده"
           },
-          "syntactic_role": "mudaf ilayh and mudaf (مضاف إليه ومضاف)",
-          "sentence_role": "specifies what is possessed/controlled by مَالِكِ",
+          "syntactic_role": "mudaf_ilayh_and_mudaf",
+          "sentence_role": "identifies the realm of ultimate divine jurisdiction",
           "case_ending": "ـِ"
         },
-        "idafah": {
-          "construction_id": "idafah_1",
-          "role": "mudaf",
-          "connected_to": "الدين",
-          "phrase": "يَوْمِ الدِّينِ"
-        },
-        "relations": {
-          "head": {
-            "from": 2,
-            "to": 1,
-            "relation": "mudaf_ilayh",
-            "relation_ar": "مضاف إليه",
-            "explanation": "يَوْمِ is mudaf ilayh to مَالِكِ."
-          },
-          "governs": [
-            {
-              "from": 2,
-              "to": 3,
-              "relation": "mudaf",
-              "relation_ar": "مضاف",
-              "explanation": "يَوْمِ is mudaf to الدِّينِ."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "يَوْم means day.",
-          "intermediate": "Here it is part of a nested idafah construction: it is mudaf ilayh to the word before it, and mudaf to the word after it.",
-          "advanced": "The word is definite through its annexation to الدِّينِ even though it does not itself carry the definite article ال."
+        "rhetoric": {
+          "device": "التخصيص بالظرف والزمان",
+          "device_en": "temporal specialization",
+          "ordinary_order": "مَالِكُ كُلِّ شَيْءٍ",
+          "quranic_order": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
+          "effect": "Singling out the Day of Judgment even though Allah owns all days, because on that Day all illusion of human ownership and claims of power completely disappear."
         },
         "visual": {
           "category": "noun",
-          "color_group": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
           "expandable": true
         }
       },
       {
+        "word_id": 3,
         "position": 3,
-        "surface": "ٱلدِّينِ",
-        "normalized": "الدِّينِ",
+        "surface_uthmani": "ٱلدِّينِ",
+        "surface_simple": "الدِّينِ",
         "lemma": "دِين",
         "root": "د ي ن",
+        "has_root": true,
         "word_type": "noun",
         "pos": "ism",
-        "subtype": "verbal_noun_or_concept_noun",
+        "subtype": "verbal_noun_concept",
         "english_gloss": [
           "judgment",
           "recompense",
-          "religion",
-          "way"
+          "reckoning"
         ],
         "meaning_in_context": "Judgment / Recompense",
+        "morphemes": [
+          {
+            "morpheme_id": "1:4:3:1",
+            "text": "ٱلْـ",
+            "type": "prefix",
+            "pos_ar": "لام التعريف",
+            "meaning": "the definite article"
+          },
+          {
+            "morpheme_id": "1:4:3:2",
+            "text": "دِّينِ",
+            "type": "stem",
+            "pos_ar": "اسم مجرور بالإضافة",
+            "meaning": "recompense, judgment, reckoning",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة"
+          }
+        ],
         "morphology": {
           "sarf_applicable": true,
-          "derived_form": null,
+          "is_verb": false,
           "pattern": "فِعْل",
           "gender": "masculine",
           "number": "singular",
           "definiteness": "definite",
-          "article": "ال",
-          "is_verb": false
+          "grammatical_state": "majrur"
         },
         "grammar": {
           "i3rab": {
             "case": "majrur",
-            "case_reason": "mudaf ilayh after يَوْمِ",
-            "visible_marker": "kasrah",
-            "i3rab_ar": "الدِّينِ: مضاف إليه مجرور وعلامة جره الكسرة الظاهرة على آخره"
+            "case_reason": "mudaf ilayh to يَوْمِ",
+            "visible_marker": "kasrah (الكسرة الظاهرة)",
+            "i3rab_ar": "مضاف إليه مجرور وعلامة جره الكسرة الظاهرة على آخره"
           },
-          "syntactic_role": "mudaf ilayh (مضاف إليه)",
-          "sentence_role": "defines the specific nature of the Day as the Day of Recompense and Ultimate Accountability",
+          "syntactic_role": "mudaf_ilayh",
+          "sentence_role": "defines the Day as the epoch of absolute recompense and accountability",
           "case_ending": "ـِ"
         },
-        "idafah": {
-          "construction_id": "idafah_1",
-          "role": "mudaf_ilayh",
-          "parent": "يَوْمِ",
-          "phrase": "يَوْمِ الدِّينِ"
-        },
-        "relations": {
-          "related_to": [
-            {
-              "from": 3,
-              "to": 2,
-              "relation": "mudaf_ilayh",
-              "relation_ar": "مضاف إليه",
-              "explanation": "الدِّينِ is mudaf ilayh to يَوْمِ."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "الدِّين refers here to the Day of Judgment and recompense (الجزاء والحساب).",
-          "intermediate": "Its meaning must be determined from context; here it is not simply referring to the religion as a system, but to accountability (كَمَا تَدِينُ تُدَان).",
-          "advanced": "The root د ي ن carries semantic associations with judgment, debt/repayment, recompense, and submission, making the contextual meaning especially profound."
+        "rhetoric": {
+          "device": "تعريف الجنس والعهد",
+          "device_en": "definite article of known reality",
+          "ordinary_order": "يَوْمِ جَزَاءٍ",
+          "quranic_order": "يَوْمِ ٱلدِّينِ",
+          "effect": "The definite article al- signifies the absolute, indisputable Day of Complete Justice known to all consciences."
         },
         "visual": {
           "category": "noun",
-          "color_group": "noun",
+          "color_group": "noun_default",
+          "highlight": false,
           "expandable": true
         }
       }
     ],
-    "grammar_overview": {
-      "sentence_type": "nominal_description / continuation of the preceding description of Allah",
-      "main_structure": "مَالِكِ يَوْمِ الدِّينِ",
-      "core_construction": "nested idafah",
-      "i3rab_chain": [
-        {
-          "word": "مَالِكِ",
-          "case": "majrur",
-          "reason": "syntactic attachment as na't or badal to Allah in the preceding context"
-        },
-        {
-          "word": "يَوْمِ",
-          "case": "majrur",
-          "reason": "mudaf ilayh to مَالِكِ"
-        },
-        {
-          "word": "الدِّينِ",
-          "case": "majrur",
-          "reason": "mudaf ilayh to يَوْمِ"
-        }
-      ],
-      "important_rule": {
-        "rule": "idafah",
-        "explanation": "In an idafah construction, the second noun is majrur. The first noun loses tanwin and becomes definite through the construction.",
-        "example_from_ayah": "مَالِكِ يَوْمِ الدِّينِ"
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "Allah is the supreme Owner and Master of the Day when everyone will be judged.",
+        "grammar": "مَالِك means Master/Owner, يَوْم means Day, and الدِّين means Judgment/Recompense.",
+        "sarf": "مَالِك is an active participle derived from the root م-ل-ك."
+      },
+      "intermediate": {
+        "lesson": "The phrase is a nested chain of possessive annexation (إضافة متداخلة): Master → of the Day → of Judgment.",
+        "grammar": "Each of the three words carries a kasrah: مَالِكِ is an epithet/adjective, and both يَوْمِ and الدِّينِ are majrūr as mudāf ilayh.",
+        "sarf": "Pattern فَاعِل represents the doer or permanent possessor of the action from root م-ل-ك."
+      },
+      "advanced": {
+        "lesson": "The phrase combines absolute ownership and supreme sovereign kingship across the canonical mutawātir readings.",
+        "grammar": "Can be analyzed syntactically as na‘t (adjective) to the divine name, badal (apposition), or predicate of an elided pronoun (هو مالكُ) in qat‘.",
+        "rhetoric": "Annexing ownership specifically to the Day of Judgment highlights that all temporal claims of power by kings and tyrants will be completely stripped away."
       }
     },
-    "sarf_overview": {
-      "verbs_present": false,
-      "verb_analysis": [],
-      "derived_nouns": [
-        {
-          "word": "مَالِكِ",
-          "root": "م ل ك",
-          "pattern": "فَاعِل",
-          "type": "اسم فاعل"
-        }
-      ],
-      "sarf_rule": {
-        "rule": "اسم الفاعل",
-        "explanation": "For a basic triliteral verb, the active participle commonly follows the pattern فَاعِل."
-      }
-    },
-    "nahw_relations": [
+    "alternative_analyses": [
       {
-        "from": 1,
-        "to": 2,
-        "relation": "mudaf",
-        "relation_ar": "مضاف",
-        "explanation": "مَالِكِ is mudaf to يَوْمِ."
-      },
-      {
-        "from": 2,
-        "to": 1,
-        "relation": "mudaf_ilayh",
-        "relation_ar": "مضاف إليه",
-        "explanation": "يَوْمِ is mudaf ilayh governed by مَالِكِ."
-      },
-      {
-        "from": 2,
-        "to": 3,
-        "relation": "mudaf",
-        "relation_ar": "مضاف",
-        "explanation": "يَوْمِ is mudaf to الدِّينِ."
-      },
-      {
-        "from": 3,
-        "to": 2,
-        "relation": "mudaf_ilayh",
-        "relation_ar": "مضاف إليه",
-        "explanation": "الدِّينِ is mudaf ilayh governed by يَوْمِ."
-      }
-    ],
-    "phrase_structure": {
-      "phrase": "مَالِكِ يَوْمِ الدِّينِ",
-      "hierarchy": {
-        "head": "مَالِكِ",
-        "first_object_of_idafah": "يَوْمِ",
-        "second_level_idafah": "الدِّينِ"
-      },
-      "tree": [
-        {
-          "node": "مَالِكِ",
-          "children": [
-            {
-              "node": "يَوْمِ",
-              "children": [
-                {
-                  "node": "الدِّينِ",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "pronouns": {
-      "present": false,
-      "items": []
-    },
-    "particles": {
-      "present": false,
-      "items": []
-    },
-    "case_and_ending_map": [
-      {
-        "word_position": 1,
-        "word": "مَالِكِ",
-        "case": "majrur",
-        "ending": "kasrah"
-      },
-      {
-        "word_position": 2,
-        "word": "يَوْمِ",
-        "case": "majrur",
-        "ending": "kasrah"
-      },
-      {
-        "word_position": 3,
-        "word": "الدِّينِ",
-        "case": "majrur",
-        "ending": "kasrah"
-      }
-    ],
-    "word_color_coding": {
-      "enabled": true,
-      "limited_palette": true,
-      "categories": {
-        "verb": {
-          "enabled": true,
-          "base_color": "verb",
-          "past": "verb_past",
-          "present": "verb_present",
-          "future": "verb_future",
-          "imperative": "verb_imperative"
-        },
-        "pronoun": {
-          "enabled": true,
-          "color": "pronoun_blue"
-        },
-        "noun": {
-          "enabled": true,
-          "color": "noun_default"
-        },
-        "particle": {
-          "enabled": true,
-          "color": "particle_default"
-        },
-        "majrur": {
-          "enabled": true,
-          "visual_effect": "subtle_purple_case_indicator"
-        }
-      }
-    },
-    "interactive_word_data": [
-      {
-        "word_position": 1,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "مَالِكِ",
-          "meaning": "Master / Owner",
-          "word_type": "اسم",
-          "root": "م ل ك",
-          "pattern": "فَاعِل",
-          "sarf": "اسم فاعل",
-          "i3rab": "مجرور",
-          "grammatical_role": "description/apposition connected to Allah (نعت / بدل)",
-          "relationship": "mudaf to يَوْمِ"
-        }
-      },
-      {
-        "word_position": 2,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "يَوْمِ",
-          "meaning": "Day",
-          "word_type": "اسم",
-          "root": "ي و م",
-          "i3rab": "مجرور",
-          "grammatical_role": "مضاف إليه ومضاف",
-          "relationship": "mudaf ilayh to مَالِكِ, and mudaf to الدِّينِ"
-        }
-      },
-      {
-        "word_position": 3,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "الدِّينِ",
-          "meaning": "Judgment / Recompense",
-          "word_type": "اسم",
-          "root": "د ي ن",
-          "i3rab": "مجرور",
-          "grammatical_role": "مضاف إليه",
-          "relationship": "mudaf ilayh to يَوْمِ"
-        }
-      }
-    ],
-    "linguistic_insights": {
-      "semantic": [
-        "مَالِك emphasizes total ownership, mastery, and unshared authority.",
-        "يَوْمِ الدِّينِ identifies the ultimate Day: the Day of Reckoning, Recompense, and Accounting."
-      ],
-      "grammar": [
-        "The ayah is an exemplary model of a nested idafah (إضافة متداخلة): مَالِكِ ← يَوْمِ ← الدِّينِ.",
-        "A noun can simultaneously be mudaf ilayh in one relation and mudaf in another without structural conflict."
-      ],
-      "sarf": [
-        "مَالِك is an اسم فاعل from the triliteral sound root م ل ك.",
-        "Its pattern فَاعِل conveys the permanent possessor of the action and attribute."
-      ],
-      "rhetorical": [
-        "The phrase is extremely compact yet conveys sovereign supreme dominion.",
-        "Singling out the Day of Judgment underscores that all worldly claims of sovereignty and illusionary kingship will entirely vanish."
-      ]
-    },
-    "tafsir_insights": {
-      "level_1_simple": "Allah is the Master of the Day when every human will be resurrected and judged.",
-      "level_2_explanatory": "The ayah reminds the believer that true authority belongs solely to Allah. Every deed, public and private, will be weighed with absolute justice.",
-      "level_3_linguistic": "The pairing of مَالِك with the idafah يَوْمِ الدِّينِ creates a solemn, awe-inspiring transition right after the profound reassurance of mercy in الرَّحْمَٰنِ الرَّحِيمِ.",
-      "reflection": "Knowing that absolute accountability awaits creates a mindful balance of hope and reverence in daily conduct.",
-      "hope": "The Judge on that Day is the very same Rabb who introduced Himself as Ar-Rahman Ar-Rahim.",
-      "accountability": "Divine mercy does not negate moral accountability; justice validates every struggle and sacrifice of the righteous."
-    },
-    "key_vocabulary": [
-      {
-        "word": "مَالِك",
-        "meaning": "owner, master, sovereign possessor",
-        "root": "م ل ك"
-      },
-      {
-        "word": "يَوْم",
-        "meaning": "day, epoch, appointed time",
-        "root": "ي و م"
-      },
-      {
-        "word": "دِين",
-        "meaning_in_context": "judgment, reckoning, recompense",
-        "root": "د ي ن"
-      }
-    ],
-    "root_study": [
-      {
-        "root": "م ل ك",
-        "ayah_word": "مَالِك",
-        "root_concept": "possession / sovereign authority / dominion",
-        "related_words": [
-          "مَلِك (King)",
-          "مُلْك (Sovereignty/Dominion)",
-          "مَالِك (Owner/Master)",
-          "مَلَك (Angel)"
+        "topic": "syntactic_status_of_maalik",
+        "analysis": "Adjective/epithet (na't) modifying the Majesty 'Allah' in verse 2, or apposition (badal) / explicative adjunct ('atf bayan).",
+        "scholars_or_schools": [
+          "Sibawayh",
+          "Al-Zajjaj",
+          "Al-Ukbari",
+          "Majority Basran and Kufan Grammarians"
         ],
-        "note": "Mālik (owner) and Malik (king) represent complementary aspects of absolute divine authority."
+        "source": "Al-Bahr al-Muhit li Abi Hayyan; I'rab al-Qur'an li al-Ukbari",
+        "confidence": "high"
       },
       {
-        "root": "د ي ن",
-        "ayah_word": "الدِّين",
-        "root_concept": "judgment / recompense / reckoning / debt / submission",
-        "related_words": [
-          "دِين (Religion / Judgment)",
-          "دَيْن (Debt)",
-          "يَدِين (He submits / He judges)",
-          "مَدِين (Indebted)"
+        "topic": "qiraat_maalik_vs_malik",
+        "analysis": "Read as Mālik (with alif, active participle) by 'Asim, al-Kisa'i, Ya'qub, and Khalaf; read as Malik (without alif, assimilative adjective/noun) by Nafi', Ibn Kathir, Abu 'Amr, Ibn 'Amir, and Hamzah. Both readings are mutawatir: Mālik denotes comprehensive ownership of all things, while Malik denotes sovereign kingship and rule over all conscious beings.",
+        "scholars_or_schools": [
+          "Ten Canonical Readers of the Qur'an"
         ],
-        "note": "Derived from the ancient Arabian principle 'كَمَا تَدِينُ تُدَانُ' (As you judge, you shall be judged / As you do, you shall be repaid)."
+        "source": "Al-Nashr fi al-Qira'at al-'Ashr li Ibn al-Jazari; Tafsir al-Tabari",
+        "confidence": "mutawatir"
       }
     ],
-    "grammar_lessons": [
-      {
-        "lesson_id": "G001",
-        "topic": "Idafah (Possessive Annexation)",
-        "level": "beginner",
-        "rule": "The mudaf ilayh is always majrur (genitive). The mudaf cannot have nunation (tanwin) or the definite article al-.",
-        "example": "مَالِكِ يَوْمِ الدِّينِ"
-      },
-      {
-        "lesson_id": "G002",
-        "topic": "Nested Idafah (Chain Annexation)",
-        "level": "intermediate",
-        "rule": "A word can function as mudaf ilayh to the preceding term while simultaneously serving as mudaf to the succeeding term.",
-        "example": "مَالِكِ ← يَوْمِ ← الدِّينِ"
-      },
-      {
-        "lesson_id": "G003",
-        "topic": "Genitive Kasrah Marker",
-        "level": "beginner",
-        "rule": "A visible kasrah on singular declinable nouns marks the majrur (genitive) state.",
-        "example": "مَالِكِ، يَوْمِ، الدِّينِ"
-      }
-    ],
-    "sarf_lessons": [
-      {
-        "lesson_id": "S001",
-        "topic": "Ism al-Fa'il (Active Participle)",
-        "word": "مَالِك",
-        "root": "م ل ك",
-        "pattern": "فَاعِل",
-        "explanation": "From triliteral Form I verbs, the active participle is derived on the scale فَاعِل to denote the agent performing or embodying the quality."
-      }
-    ],
-    "common_mistakes": [
-      {
-        "mistake": "Assuming الدِّين always strictly means 'religion' in every Quranic context.",
-        "correction": "In phrases like يَوْمِ الدِّينِ, it specifically signifies the Day of Recompense, Judgment, and Accounting."
-      },
-      {
-        "mistake": "Treating يَوْمِ الدِّينِ as an adjective-noun phrase instead of an idafah.",
-        "correction": "They form a genitive annexation (idafah), not a noun-adjective construct (sifah wa mawsuf)."
-      },
-      {
-        "mistake": "Studying مَالِك only as a fixed vocabulary noun without recognizing its derived morphological pattern.",
-        "correction": "Its pattern فَاعِل links it directly to the active participle morphology of the verb مَلَكَ."
-      }
-    ],
-    "student_questions": [
-      {
-        "question": "Why does مَالِكِ end with a kasrah?",
-        "answer": "Because it is grammatically connected to the preceding divine name/attributes as an epithet (na't) or apposition (badal), following its genitive state."
-      },
-      {
-        "question": "Why does يَوْمِ end with a kasrah?",
-        "answer": "Because it is the mudaf ilayh (possessive annexee) governed by مَالِكِ."
-      },
-      {
-        "question": "Why does الدِّينِ end with a kasrah?",
-        "answer": "Because it is the mudaf ilayh governed by the preceding noun يَوْمِ."
-      },
-      {
-        "question": "What is the profound theological nuance between the readings مَالِك and مَلِك?",
-        "answer": "Mālik emphasizes ownership over every atom and possession, while Malik emphasizes supreme sovereignty and jurisdiction over all beings. Combining both affirms Allah as the absolute Owner and the supreme King."
-      }
-    ],
-    "memorization_aids": {
-      "key_structure": "مَالِكِ + يَوْمِ + الدِّينِ",
-      "grammar_pattern": "مضاف + مضاف إليه (مضاف) + مضاف إليه",
-      "memory_sentence": "The Sovereign Master → of the Day → of Recompense.",
-      "focus_words": [
-        "مَالِك",
-        "يَوْم",
-        "الدِّين"
-      ]
-    },
-    "reflection": {
-      "personal_questions": [
-        "How does remembering that Allah owns the Day of Reckoning transform my decisions today?",
-        "Am I balancing active hope in Allah's mercy with reverence for His ultimate judgment?",
-        "How does recognizing Allah as the sole Master liberate me from the fear of creation?"
-      ],
-      "action_point": "Before undertaking any deed or making a significant choice, pause and recall that you will stand before the Master of the Day of Judgment."
-    },
-    "quiz": {
-      "multiple_choice": [
-        {
-          "question": "What is the morphological classification of the word مَالِك?",
-          "options": [
-            "اسم فاعل (Active Participle)",
-            "فعل ماض (Past Tense Verb)",
-            "حرف جر (Preposition)",
-            "اسم مفعول (Passive Participle)"
-          ],
-          "correct_answer": "اسم فاعل (Active Participle)"
-        },
-        {
-          "question": "What syntactic relationship connects مَالِكِ with يَوْمِ?",
-          "options": [
-            "إضافة (Idafah / Possessive Annexation)",
-            "نعت ومنعوت (Adjective-Noun)",
-            "عطف نسق (Conjunction)",
-            "بدل ومبدل منه (Apposition)"
-          ],
-          "correct_answer": "إضافة (Idafah / Possessive Annexation)"
-        },
-        {
-          "question": "What is the primary contextual meaning of الدِّينِ in this ayah?",
-          "options": [
-            "الجزاء والحساب (Recompense and Accounting)",
-            "الشريعة والطقوس (Legislation and Rituals)",
-            "الديون المالية (Financial Debts)",
-            "العادات والتقاليد (Customs and Traditions)"
-          ],
-          "correct_answer": "الجزاء والحساب (Recompense and Accounting)"
-        }
-      ],
-      "identify_case": [
-        {
-          "word": "مَالِكِ",
-          "answer": "مجرور"
-        },
-        {
-          "word": "يَوْمِ",
-          "answer": "مجرور"
-        },
-        {
-          "word": "الدِّينِ",
-          "answer": "مجرور"
-        }
-      ]
-    },
-    "app_display": {
-      "arabic_font": "KFGQPC_Uthmani_Hafs",
-      "arabic_text_direction": "rtl",
-      "default_mode": "light",
-      "mobile_responsive": true,
-      "word_click_enabled": true,
-      "word_expansion_position": "below_ayah",
-      "preserve_word_positions": true,
-      "enable_copy": true,
-      "enable_share": true,
-      "whatsapp_share": true,
-      "tooltips": true,
-      "animations": {
-        "enabled": true,
-        "majrur_indicator": "subtle_purple_pulse",
-        "expansion": "smooth"
-      }
-    },
-    "audio": {
-      "available": true,
-      "recitation_data": null,
-      "audio_url": null
-    },
     "sources": {
-      "quran_text_source": "verified_quran_text",
-      "translation_sources": [],
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
       "grammar_sources": [
-        "I'rab al-Qur'an li al-Ukbari",
-        "Al-Bahr al-Muhit li Abi Hayyan",
-        "I'rab al-Qur'an wa Bayanuhu li Darwish"
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi",
+        "I'rab al-Qur'an li al-Ukbari"
       ],
       "tafsir_sources": [
-        "Tafsir al-Tabari",
+        "Tafsir al-Tabari (Jami' al-Bayan)",
         "Tafsir Ibn Kathir",
         "Al-Kashshaf li al-Zamakhshari"
       ],
-      "source_verification_required": true
-    },
-    "data_quality": {
-      "arabic_text_verified": true,
-      "grammar_verified": true,
-      "sarf_verified": true,
-      "translation_verified": true,
-      "tafsir_verified": true,
-      "needs_scholar_review": false,
-      "notes": "Classical alternative grammatical readings (Qira'at and syntactical appositions) explicitly incorporated."
+      "source_verification_status": "verified"
     }
   },
   {
-    "schema_version": "1.0",
+    "schema_version": "2.0",
     "ayah": {
       "surah_number": 1,
       "surah_name_ar": "الفاتحة",
       "surah_name_en": "Al-Fatihah",
       "ayah_number": 5,
       "juz": 1,
-      "hizb": null,
-      "rub": null,
-      "page_madinah_mushaf": null,
+      "hizb": 1,
+      "rub": 1,
+      "page_madinah_mushaf": 1,
       "revelation_place": "Makkah",
-      "revelation_order": null,
+      "revelation_order": 5,
       "text_uthmani": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
       "text_simple": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "orthographic_word_count": 4,
+      "morpheme_count": 7,
       "ayah_end_marker": true
     },
     "translations": {
       "english": {
         "literal": "You alone we worship, and You alone we ask for help.",
-        "natural": "It is You we worship and You we ask for help.",
-        "easy": "You alone we worship, and from You alone we seek help."
+        "natural": "You alone we worship, and You alone we seek help from.",
+        "easy": "We worship You alone, and we ask You alone for help."
       },
       "norwegian": {
         "natural": "Deg alene tilber vi, og Deg alene ber vi om hjelp."
       }
     },
     "ayah_meaning": {
-      "main_meaning": "We direct our worship exclusively to You, Allah, and we rely upon and seek aid solely from You.",
-      "simple_explanation": "A solemn declaration that we surrender completely to Allah alone in devotion, and that we cannot achieve any good or avoid any harm without His divine support.",
-      "key_message": "The twin foundations of true faith: pure monotheistic worship (Ibadah) free from polytheism, combined with complete reliance and request for aid (Isti'anah) free from arrogance.",
-      "practical_takeaway": "True freedom occurs when the soul relies solely on the Creator: it eliminates showing off (Riya') in worship and eliminates self-delusion ('Ujb) in personal achievements."
+      "main_meaning": "We direct our worship exclusively to Allah and seek His help exclusively.",
+      "simple_explanation": "The believer declares that worship belongs only to Allah and that Allah is the ultimate source of all help and success.",
+      "key_message": "Worship and dependence are both directed toward Allah alone.",
+      "practical_takeaway": "Make Allah the center of both your worship and your reliance, while still taking the practical, legitimate means available to you."
     },
     "context": {
       "previous_ayah_connection": {
         "previous_ayah": "مَـٰلِكِ يَوْمِ ٱلدِّينِ",
-        "connection": "In verses 1–4, Allah's perfections, universal lordship, vast mercy, and ultimate authority were praised in the third person. Having internalized these divine attributes, the servant enters intimate audience and transitions via Iltifāt (التفات) into direct second-person address: 'You alone we worship!'",
-        "lesson": "Contemplation of divine majesty naturally elevates the worshipper into an intimate audience before their Lord."
+        "connection": "After praising Allah in the 3rd person as Master of the Day of Judgment, the speech shifts intimately via Iltifāt (التفات) directly to Allah in the 2nd person.",
+        "lesson": "Recognizing who Allah is leads naturally to entering His divine presence and worshipping Him directly."
       },
       "next_ayah_connection": {
         "next_ayah": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
-        "connection": "Having covenanted exclusive worship and declared complete dependence on Allah's help, the servant immediately asks for the greatest possible help: perpetual guidance upon the Straight Path."
+        "connection": "After declaring worship and dependence upon Allah, the believer immediately asks Him for the greatest possible help: guidance.",
+        "lesson": "The person who worships Allah understands that guidance is the ultimate need requiring divine assistance."
       }
     },
     "words": [
       {
+        "word_id": 1,
         "position": 1,
-        "surface": "إِيَّاكَ",
-        "normalized": "إِيَّاكَ",
+        "surface_uthmani": "إِيَّاكَ",
+        "surface_simple": "إِيَّاكَ",
         "lemma": "إِيَّا",
         "root": null,
         "has_root": false,
         "word_type": "pronoun",
-        "pos": "dameer",
+        "pos": "damir",
         "subtype": "detached_object_pronoun",
         "english_gloss": [
           "You alone",
           "You specifically"
         ],
         "meaning_in_context": "You alone",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:1:1",
+            "text": "إِيَّا",
+            "type": "stem",
+            "pos_ar": "ضمير نصب منفصل",
+            "meaning": "You (accusative pronoun base)"
+          },
+          {
+            "morpheme_id": "1:5:1:2",
+            "text": "كَ",
+            "type": "suffix",
+            "pos_ar": "حرف خطاب للمفرد المذكر",
+            "meaning": "addressee marker (masculine singular)"
+          }
+        ],
         "morphology": {
           "sarf_applicable": false,
-          "derived_form": null,
-          "pattern": null,
+          "is_verb": false,
+          "pronoun_type": "detached_personal_pronoun_accusative",
+          "person": "second_person",
           "gender": "masculine",
           "number": "singular",
-          "person": "second_person",
-          "pronoun_type": "detached_personal_pronoun_accusative",
-          "grammatical_state": "mabni",
-          "constituent_parts": {
-            "base": "إِيَّا (ضمير نصب منفصل)",
-            "suffix_address": "كَ (حرف خطاب للمفرد المذكر)"
-          },
-          "is_verb": false
+          "grammatical_state": "mabni"
         },
         "grammar": {
           "i3rab": {
             "case": "mansub_in_place",
             "case_reason": "preposed direct object (مفعول به مقدم) of the verb نَعْبُدُ",
-            "visible_marker": "mabni_on_fatha",
-            "i3rab_ar": "إِيَّاكَ: ضمير منفصل مبني على الفتح في محل نصب مفعول به مقدم للفعل (نَعْبُدُ)، والكاف حرف خطاب لا محل له من الإعراب"
+            "visible_marker": "built on fatḥah (مبني على الفتح)",
+            "i3rab_ar": "ضمير منفصل مبني على الفتح في محل نصب مفعول به مقدم"
           },
-          "syntactic_role": [
-            "preposed direct object (مفعول به مقدم)",
-            "focal restrictive element (أداة حصر واختصاص)"
-          ],
-          "sentence_role": "restricts all worship exclusively to Allah alone",
-          "case_ending": "ـَ",
-          "alternative_analyses": [
-            {
-              "scholar_view": "مذهب البصريين وسيبويه والخليل (Basran / Sibawayh & Al-Khalil school)",
-              "analysis_ar": "الضمير هو كلمة (إِيَّا) فقط، والكاف اللاحقة حرف دال على الخطاب لا محل له من الإعراب، كالكاف في (ذلك) و(أرأيتك)",
-              "analysis_en": "'Iyyā' is the actual pronoun, and the suffixed kāf is a particle of direct address with no independent inflectional place."
-            },
-            {
-              "scholar_view": "مذهب الكوفيين وجمهور المتأخرين (Kufan school & many later grammarians)",
-              "analysis_ar": "الكلمة برمتها (إِيَّاكَ) كتلة واحدة هي الضمير المبني على الفتح في محل نصب",
-              "analysis_en": "The entire compound 'Iyyāka' is a single unified indeclinable pronoun."
-            },
-            {
-              "scholar_view": "السر البلاغي لتقديم المعمول (Rhetorical Balāghah of Preposing)",
-              "analysis_ar": "تقديم المفعول به (إِيَّاكَ) على عامله (نَعْبُدُ) يفيد الحصر والقصر والاختصاص (أي: نعبدك وحدك ولا نعبد غيرك)، والاهتمام والتبرك بالبداءة بذكره تعالى. ولو قيل (نعبدك) لصح في اللغة أن نعبدك ونعبد غيرك، فجاء التقديم نافياً لكل شريك",
-              "analysis_en": "Fronting the direct object before its verb creates grammatical restriction and exclusivity (Hasr & Qasr): 'You alone we worship and none other.' Saying 'Na'buduka' would not linguistically preclude worshipping others; preposing 'Iyyāka' firmly excludes all partners."
-            }
-          ]
+          "syntactic_role": "fronted_direct_object",
+          "governor": {
+            "word_id": 2,
+            "surface": "نَعْبُدُ",
+            "role": "verb_governor"
+          }
         },
-        "relations": {
-          "governs": [],
-          "related_to": [
-            {
-              "from": 1,
-              "to": 2,
-              "relation": "maf'ul_bihi_muqaddam",
-              "relation_ar": "مفعول به مقدم",
-              "explanation": "إِيَّاكَ is the preposed direct object governed by the verb نَعْبُدُ."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "إِيَّاكَ means 'You alone'. It is a special pronoun placed before the verb to show that worship belongs only to Allah.",
-          "intermediate": "إِيَّاكَ is a detached accusative pronoun (ضمير نصب منفصل). When a direct object is placed before its verb in Arabic, it produces exclusivity (حصر).",
-          "advanced": "Grammatically analyzed as a preposed direct object in the place of naṣb. Rhetorically, it shifts the discourse from third-person description to second-person direct communion (التفات), reflecting spiritual intimacy in prayer."
+        "rhetoric": {
+          "device": "تقديم المفعول به",
+          "device_en": "fronting the object",
+          "ordinary_order": "نَعْبُدُكَ",
+          "quranic_order": "إِيَّاكَ نَعْبُدُ",
+          "effect": "الحصر والاختصاص",
+          "contrast": {
+            "ordinary_meaning": "We worship You. (Does not grammatically exclude others)",
+            "quranic_meaning": "You alone we worship. (Strictly negates worship of anyone else)"
+          }
         },
         "visual": {
           "category": "pronoun",
-          "color_group": "pronoun",
+          "color_group": "pronoun_blue",
           "highlight": true,
           "expandable": true
-        },
-        "insights": [
-          "Fronting the pronoun establishes uncompromising monotheism (Tawhid): worship is restricted exclusively to Allah.",
-          "The shift from speaking about Allah (Verses 1-4) to speaking directly to Allah (Verse 5) mirrors the servant entering the divine presence.",
-          "It protects the worshipper from the subtle spiritual disease of polytheism and ostentation (Shirk and Riya')."
-        ]
+        }
       },
       {
+        "word_id": 2,
         "position": 2,
-        "surface": "نَعْبُدُ",
-        "normalized": "نَعْبُدُ",
+        "surface_uthmani": "نَعْبُدُ",
+        "surface_simple": "نَعْبُدُ",
         "lemma": "عَبَدَ",
         "root": "ع ب د",
         "has_root": true,
         "word_type": "verb",
-        "pos": "fi'l",
+        "pos": "fi3l",
         "subtype": "imperfect_verb",
         "english_gloss": [
           "we worship",
-          "we submit in complete devotion"
+          "we serve in complete devotion"
         ],
         "meaning_in_context": "we worship",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:2:1",
+            "text": "نَـ",
+            "type": "prefix",
+            "pos_ar": "حرف المضارعة",
+            "meaning": "imperfective first-person plural marker"
+          },
+          {
+            "morpheme_id": "1:5:2:2",
+            "text": "عْبُدُ",
+            "type": "stem",
+            "pos_ar": "فعل مضارع",
+            "meaning": "worship / serve"
+          }
+        ],
         "morphology": {
           "sarf_applicable": true,
           "is_verb": true,
-          "verb_lemma": "عَبَدَ",
-          "root": "ع ب د",
-          "root_type": "sound_triliteral (صحيح سالم)",
           "form": "Form I (ثلاثي مجرد)",
-          "form_number": 1,
           "pattern": "نَفْعُلُ",
-          "tense": "imperfect / present-future (مضارع)",
-          "aspect": "imperfective (continuous, living devotion)",
+          "tense": "imperfect (مضارع)",
           "mood": "indicative (مرفوع)",
           "voice": "active (معلوم)",
-          "person": "first_person (متكلم)",
-          "number": "plural (جمع)",
-          "gender": "common",
-          "subject_pronoun": "implied obligatory pronoun 'نحن' (ضمير مستتر وجوباً تقديره نحن)",
           "transitivity": "transitive (متعدٍ)",
-          "masdar": "عِبَادَة",
-          "derived_from": {
-            "root": "ع ب د",
-            "verb": "عَبَدَ",
-            "verb_meaning": "to worship, enslave oneself to, serve with utmost humility and love"
-          }
+          "masdar": "عِبَادَة"
+        },
+        "conjugation": {
+          "past": "عَبَدَ",
+          "present": "يَعْبُدُ",
+          "imperative": "اُعْبُدْ",
+          "first_person_singular": "أَعْبُدُ",
+          "first_person_plural": "نَعْبُدُ",
+          "second_person_singular_m": "تَعْبُدُ",
+          "third_person_singular_m": "يَعْبُدُ"
         },
         "grammar": {
           "i3rab": {
             "case": "marfu",
-            "case_reason": "bare imperfect verb not preceded by any subjunctive (نواصب) or jussive (جوازم) particle",
-            "visible_marker": "dammah",
-            "i3rab_ar": "نَعْبُدُ: فعل مضارع مرفوع لتجرده من الناصب والجازم وعلامة رفعه الضمة الظاهرة على آخره، والفاعل ضمير مستتر وجوباً تقديره (نحن)"
+            "case_reason": "bare imperfect verb not preceded by naṣb or jazm particles",
+            "visible_marker": "ḍammah (الضمة الظاهرة)",
+            "i3rab_ar": "فعل مضارع مرفوع لتجرده من الناصب والجازم وعلامة رفعه الضمة الظاهرة على آخره"
           },
-          "syntactic_role": [
-            "verb and concealed agent (فعل وفاعل)",
-            "governing operator of the preposed object إِيَّاكَ"
-          ],
-          "sentence_role": "expresses the central covenant of active monotheistic devotion",
-          "case_ending": "ـُ",
-          "alternative_analyses": [
-            {
-              "scholar_view": "دلالة ضمير الجمع (The wisdom of the 1st person plural 'نحن')",
-              "analysis_ar": "جاء الفعل بصيغة الجمع (نَعْبُدُ) ولم يقل (أَعْبُدُ) لأسرار بلاغية: 1) أدب العبد وتواضعه، فالواحد يستحي أن يقدم عبادته المنفردة الناقصة، فيخلطها بعبادة سائر المؤمنين لترجى بها الإجابة؛ 2) تأكيد روح الجماعة والأخوة الإسلامية؛ 3) الإخبار عن جنس المؤمنين كافة بأنهم عابدون لله وحده",
-              "analysis_en": "The plural 'we worship' rather than 'I worship' embodies profound humility (the individual feels their worship is deficient alone and merges it with the collective devotion of the entire Ummah), fosters communal solidarity, and affirms shared monotheism."
-            }
-          ]
+          "subject": {
+            "type": "ضمير مستتر وجوبا",
+            "taqdir": "نحن",
+            "person": "first",
+            "number": "plural",
+            "i3rab_ar": "والفاعل ضمير مستتر وجوباً تقديره نحن"
+          },
+          "syntactic_role": "main_verb"
         },
-        "relations": {
-          "governs": [
-            {
-              "from": 2,
-              "to": 1,
-              "relation": "governor_of_object",
-              "relation_ar": "عامل النصب في المفعول به",
-              "explanation": "نَعْبُدُ is the governing verb assigning the accusative role to the preposed direct object إِيَّاكَ."
-            }
-          ],
-          "related_to": [
-            {
-              "from": 2,
-              "to": 4,
-              "relation": "coordinated_clause",
-              "relation_ar": "معطوف عليه",
-              "explanation": "The clause إِيَّاكَ نَعْبُدُ is the base clause upon which وَإِيَّاكَ نَسْتَعِينُ is conjoined."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "نَعْبُدُ means 'we worship'. It is an imperfect (present tense) verb with an understood subject 'we' (نحن).",
-          "intermediate": "نَعْبُدُ is a Form I sound verb (فعل صحيح سالم). It is marfu' with a dammah because no particle precedes it to change its case.",
-          "advanced": "The concealment of the subject pronoun (نحن) is obligatory (استتار واجب) in first-person plural imperfect verbs. Combining worship with the preposed object defines the Islamic concept of 'Ibādah: maximum humility paired with supreme love."
+        "rhetoric": {
+          "device": "صيغة الجمع للمتكلم المعظم أو لجماعة المؤمنين",
+          "device_en": "communal first-person plural verb",
+          "ordinary_order": "أَعْبُدُ (بصيغة الإفراد)",
+          "quranic_order": "نَعْبُدُ (بصيغة الجمع)",
+          "effect": "التواضع وإخفاء العبد لعمله في جملة عبادات المؤمنين لترجى بها الإجابة، وتأكيد روح الجماعة"
         },
         "visual": {
           "category": "verb",
-          "color_group": "verb",
-          "highlight": false,
+          "color_group": "verb_present",
+          "highlight": true,
           "expandable": true
-        },
-        "insights": [
-          "Worship in Islam combines the highest degree of love with the ultimate degree of humility and submission.",
-          "Using the plural 'we' trains the worshipper never to view themselves as an isolated, arrogant individual, but as a humble part of a global fraternity.",
-          "Worship is positioned before asking for help because giving Allah His due right takes precedence over asking for one's personal needs."
-        ]
+        }
       },
       {
+        "word_id": 3,
         "position": 3,
-        "surface": "وَإِيَّاكَ",
-        "normalized": "وَإِيَّاكَ",
+        "surface_uthmani": "وَإِيَّاكَ",
+        "surface_simple": "وَإِيَّاكَ",
         "lemma": "إِيَّا",
         "root": null,
         "has_root": false,
-        "word_type": "conjunction_and_pronoun",
-        "pos": "harf_wa_dameer",
-        "subtype": "conjunction_with_detached_object_pronoun",
+        "word_type": "compound_particle_and_pronoun",
+        "pos": "harf_wa_damir",
+        "subtype": "conjunction_with_fronted_object_pronoun",
         "english_gloss": [
           "and You alone",
           "and from You specifically"
         ],
         "meaning_in_context": "and You alone",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:3:1",
+            "text": "وَ",
+            "type": "prefix",
+            "pos_ar": "واو العطف",
+            "function": "conjunction linking the two verbal clauses",
+            "i3rab_ar": "حرف عطف مبني على الفتح لا محل له من الإعراب"
+          },
+          {
+            "morpheme_id": "1:5:3:2",
+            "text": "إِيَّا",
+            "type": "stem",
+            "pos_ar": "ضمير نصب منفصل",
+            "meaning": "You (accusative base)"
+          },
+          {
+            "morpheme_id": "1:5:3:3",
+            "text": "كَ",
+            "type": "suffix",
+            "pos_ar": "حرف خطاب للمفرد المذكر",
+            "meaning": "addressee marker"
+          }
+        ],
         "morphology": {
           "sarf_applicable": false,
-          "prefix_particle": "وَ (حرف عطف)",
-          "stem": "إِيَّاكَ",
-          "pronoun_type": "detached_personal_pronoun_accusative",
-          "person": "second_person",
-          "gender": "masculine",
-          "number": "singular",
-          "grammatical_state": "mabni",
-          "constituent_parts": {
-            "conjunction": "وَ (حرف عطف مبني على الفتح)",
-            "pronoun_base": "إِيَّا (ضمير نصب منفصل)",
-            "address_letter": "كَ (حرف خطاب)"
-          },
-          "is_verb": false
+          "is_verb": false,
+          "grammatical_state": "mabni"
         },
         "grammar": {
           "i3rab": {
             "case": "mansub_in_place",
-            "case_reason": "preposed direct object of the verb نَسْتَعِينُ, preceded by the coordinating conjunction waw",
-            "visible_marker": "mabni_on_fatha",
-            "i3rab_ar": "الواو حرف عطف مبني على الفتح. إِيَّاكَ: ضمير منفصل مبني على الفتح في محل نصب مفعول به مقدم للفعل (نَسْتَعِينُ)، والكاف حرف خطاب"
+            "case_reason": "preposed direct object of نَسْتَعِينُ, linked via waw of coordination",
+            "visible_marker": "built on fatḥah (مبني على الفتح)",
+            "i3rab_ar": "الواو حرف عطف. إِيَّاكَ: ضمير منفصل مبني على الفتح في محل نصب مفعول به مقدم للفعل نَسْتَعِينُ"
           },
-          "syntactic_role": [
-            "coordinating conjunction prefix (حرف عطف)",
-            "preposed direct object (مفعول به مقدم)"
-          ],
-          "sentence_role": "restricts the seeking of ultimate assistance, reliance, and succor exclusively to Allah",
-          "case_ending": "ـَ",
-          "alternative_analyses": [
-            {
-              "scholar_view": "عطف جملة على جملة (Sentence-level coordination - Preferred by Abu Hayyan and Ibn Hisham)",
-              "analysis_ar": "الواو عاطفة جملة (إِيَّاكَ نَسْتَعِينُ) بأكملها على جملة (إِيَّاكَ نَعْبُدُ). وهذا هو الراجح لأن كل جملة مستقلة بتقديم معمولها وحصر معناها",
-              "analysis_en": "The conjunction 'waw' coordinates the entire second verbal sentence onto the first verbal sentence, preserving independent thematic exclusivity."
-            },
-            {
-              "scholar_view": "عطف مفرد على مفرد (Noun-level coordination)",
-              "analysis_ar": "عطف الضمير (إِيَّاكَ) على الضمير الأول (إِيَّاكَ). وضعفه المحققون لأن ذلك يخل بنظم تقديم المعمول على عامله المستقل",
-              "analysis_en": "Coordinating the pronoun directly onto the first pronoun; rejected by critical grammarians because each pronoun is governed by its own independent following verb."
-            },
-            {
-              "scholar_view": "بلاغة تكرار الضمير إِيَّاكَ (The Rhetorical Genius of Repeating the Pronoun)",
-              "analysis_ar": "لم يقل سبحانه (إِيَّاكَ نَعْبُدُ وَنَسْتَعِينُ)، بل كرر الضمير (وَإِيَّاكَ نَسْتَعِينُ) إشعاراً بأن كلاً من العبادة والاستعانة مقصودة بالذات، وأن الاستعانة بالله عبادة مستقلة قائمة بذاتها لا يستغنى عنها طرفة عين، وإفادة للحصر في كل منهما استقلالاً",
-              "analysis_en": "Repeating 'Iyyāka' rather than saying 'Iyyāka na'budu wa nasta'īn' emphasizes that seeking Allah's help is itself an independent, sacred act of worship that warrants its own explicit restriction."
-            }
-          ]
+          "syntactic_role": "conjunction_and_fronted_object",
+          "governor": {
+            "word_id": 4,
+            "surface": "نَسْتَعِينُ",
+            "role": "verb_governor"
+          }
         },
-        "relations": {
-          "governs": [],
-          "related_to": [
-            {
-              "from": 3,
-              "to": 1,
-              "relation": "coordination_conjunction",
-              "relation_ar": "عطف نسق",
-              "explanation": "The conjunction waw coordinates this clause with the preceding clause."
-            },
-            {
-              "from": 3,
-              "to": 4,
-              "relation": "maf'ul_bihi_muqaddam",
-              "relation_ar": "مفعول به مقدم",
-              "explanation": "إِيَّاكَ is the preposed direct object governed by the verb نَسْتَعِينُ."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "وَإِيَّاكَ means 'and You alone'. The letter waw means 'and', and إِيَّاكَ means 'You alone'.",
-          "intermediate": "The repetition of إِيَّاكَ ensures that seeking help (Isti'anah) is restricted to Allah alone just as worship (Ibadah) is.",
-          "advanced": "The waw is a coordinating conjunction linking two complete verbal sentences with parallel fronted objects, creating perfect rhetorical balance and theological precision."
+        "rhetoric": {
+          "device": "تكرار الضمير المنفصل للحصر المستقل",
+          "device_en": "pronoun repetition for independent exclusivity",
+          "ordinary_order": "إِيَّاكَ نَعْبُدُ وَنَسْتَعِينُ",
+          "quranic_order": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "effect": "تأكيد أن الاستعانة بالله عبادة مستقلة قائمة برأسها تستوجب حصراً مقصوداً، ونفي مطلق للشريك في العون",
+          "contrast": {
+            "ordinary_meaning": "You alone we worship and ask for help. (subordinates help to worship)",
+            "quranic_meaning": "You alone we worship, and You alone we ask for help. (independently elevates reliance to an explicit pillar)"
+          }
         },
         "visual": {
           "category": "pronoun",
-          "color_group": "pronoun",
+          "color_group": "pronoun_blue",
           "highlight": true,
           "expandable": true
-        },
-        "insights": [
-          "Repeating the pronoun affirms that just as worship cannot be shared with an idol, reliance for ultimate help cannot be directed to any creation.",
-          "It establishes total reliance on Allah (Tawakkul) in the heart of every believer.",
-          "It cures the human ego of self-sufficiency, pride, and arrogance (Kibr and 'Ujb)."
-        ]
+        }
       },
       {
+        "word_id": 4,
         "position": 4,
-        "surface": "نَسْتَعِينُ",
-        "normalized": "نَسْتَعِينُ",
+        "surface_uthmani": "نَسْتَعِينُ",
+        "surface_simple": "نَسْتَعِينُ",
         "lemma": "ٱسْتَعَانَ",
         "root": "ع و ن",
         "has_root": true,
         "word_type": "verb",
-        "pos": "fi'l",
+        "pos": "fi3l",
         "subtype": "imperfect_verb",
         "english_gloss": [
           "we seek help",
-          "we ask for aid and assistance"
+          "we ask for assistance"
         ],
-        "meaning_in_context": "we seek help",
+        "meaning_in_context": "we seek Your help",
+        "morphemes": [
+          {
+            "morpheme_id": "1:5:4:1",
+            "text": "نَـ",
+            "type": "prefix",
+            "pos_ar": "حرف المضارعة",
+            "meaning": "imperfective first-person plural marker"
+          },
+          {
+            "morpheme_id": "1:5:4:2",
+            "text": "سْتَعِينُ",
+            "type": "stem",
+            "pos_ar": "فعل مضارع مزيد بحروف الاستفعال من أجوف واوي",
+            "meaning": "seek assistance / aid"
+          }
+        ],
         "morphology": {
           "sarf_applicable": true,
           "is_verb": true,
-          "verb_lemma": "ٱسْتَعَانَ",
+          "form": "Form X (استفعال)",
           "root": "ع و ن",
-          "root_type": "hollow_wawi (أجوف واوي - معتل العين بالواو)",
-          "form": "Form X (استفعل)",
-          "form_number": 10,
+          "root_type": "hollow_wawi (معتل أجوف واوي)",
           "pattern": "نَسْتَفْعِلُ",
-          "original_pattern": "نَسْتَعْوِنُ",
-          "morphological_changes": "إعلال بالنقل والقلب: نقلت حركة الواو (الكسرة) إلى الساكن الصحيح قبلها (العين) فصارت نَسْتَعِوْنُ، ثم انقلبت الواو ياءً لسكونها وانكسار ما قبلها فصارت نَسْتَعِينُ",
-          "semantic_meaning_of_form": "The prefix (استـ) in Form X signifies seeking and petitioning (الطلب): seeking divine assistance and aid (طلب المعونة)",
-          "tense": "imperfect / present-future (مضارع)",
-          "aspect": "imperfective (perpetual, continuous dependence on divine aid)",
+          "tense": "imperfect (مضارع)",
           "mood": "indicative (مرفوع)",
           "voice": "active (معلوم)",
-          "person": "first_person (متكلم)",
-          "number": "plural (جمع)",
-          "gender": "common",
-          "subject_pronoun": "implied obligatory pronoun 'نحن' (ضمير مستتر وجوباً تقديره نحن)",
-          "transitivity": "transitive / intransitive with preposition (متعدٍ بنفسه وبحرف الجر)",
-          "masdar": "ٱسْتِعَانَة",
-          "derived_from": {
-            "root": "ع و ن",
-            "verb": "ٱسْتَعَانَ",
-            "verb_meaning": "to seek help, request assistance, rely upon for succor"
-          }
+          "masdar": "ٱسْتِعَانَة"
+        },
+        "conjugation": {
+          "past": "اِسْتَعَانَ",
+          "present": "يَسْتَعِينُ",
+          "imperative": "اِسْتَعِنْ",
+          "first_person_singular": "أَسْتَعِينُ",
+          "first_person_plural": "نَسْتَعِينُ",
+          "second_person_singular_m": "تَسْتَعِينُ",
+          "third_person_singular_m": "يَسْتَعِينُ"
+        },
+        "sarf_advanced_derivation": {
+          "root": "ع و ن",
+          "theoretical_origin": "نَسْتَعْوِنُ",
+          "phonological_steps": [
+            "Transfer of vowel (نقل): The kasrah on the weak letter Wāw moved to the silent preceding consonant ‘Ayn (نَسْتَعِوْنُ).",
+            "Vowel mutation (قلب): The vowelless Wāw changed into a Yā’ due to the preceding kasrah (نَسْتَعِينُ)."
+          ],
+          "semantic_value_of_form": "The prefix (استـ) conveys ṭalab (petition/seeking): earnestly requesting aid."
         },
         "grammar": {
           "i3rab": {
             "case": "marfu",
-            "case_reason": "bare imperfect verb not preceded by any subjunctive or jussive particle",
-            "visible_marker": "dammah",
-            "i3rab_ar": "نَسْتَعِينُ: فعل مضارع مرفوع لتجرده من الناصب والجازم وعلامة رفعه الضمة الظاهرة على آخره، والفاعل ضمير مستتر وجوباً تقديره (نحن). وجملة (إياك نستعين) معطوفة على جملة (إياك نعبد) لا محل لها من الإعراب"
+            "case_reason": "bare imperfect verb not preceded by naṣb or jazm particles",
+            "visible_marker": "ḍammah (الضمة الظاهرة)",
+            "i3rab_ar": "فعل مضارع مرفوع لتجرده من الناصب والجازم وعلامة رفعه الضمة الظاهرة على آخره"
           },
-          "syntactic_role": [
-            "verb and concealed agent (فعل وفاعل)",
-            "governor of the preposed object إِيَّاكَ"
-          ],
-          "sentence_role": "expresses total reliance and prayer for divine enablement",
-          "case_ending": "ـُ",
-          "alternative_analyses": [
-            {
-              "scholar_view": "سر تقديم العبادة على الاستعانة (Why Worship Precedes Seeking Help)",
-              "analysis_ar": "1) تقديم الغايات على الوسائل: فالعبادة هي الغاية التي خُلق من أجلها الخلق، والاستعانة وسيلة إليها؛ 2) تقديم حق الله على حوائج العبد: فالعبادة حق خالص لله، والاستعانة طلب لحاجة العبد، وحق الله أولى بالتقديم؛ 3) تقديم العام على الخاص: فالاستعانة فرد من أفراد العبادة، فعُطفت عليها تنبيهاً على عظم شأنها؛ 4) الاستعانة جزء من التوفيق للعبادة فكأن العبد يقول: نعبدك ولا نستطيع عبادتك إلا بمعونتك",
-              "analysis_en": "Worship is the ultimate purpose of human existence, whereas seeking help is the means to achieve it. Worship is Allah's supreme right upon servants, while seeking help is the servant's petition. Fulfilling Allah's right properly precedes requesting one's own needs."
-            }
-          ]
+          "subject": {
+            "type": "ضمير مستتر وجوبا",
+            "taqdir": "نحن",
+            "person": "first",
+            "number": "plural",
+            "i3rab_ar": "والفاعل ضمير مستتر وجوباً تقديره نحن"
+          },
+          "syntactic_role": "main_verb"
         },
-        "relations": {
-          "governs": [
-            {
-              "from": 4,
-              "to": 3,
-              "relation": "governor_of_object",
-              "relation_ar": "عامل النصب في المفعول به",
-              "explanation": "نَسْتَعِينُ is the governing verb assigning naṣb to the preposed object إِيَّاكَ."
-            }
-          ],
-          "related_to": [
-            {
-              "from": 4,
-              "to": 2,
-              "relation": "coordinated_clause",
-              "relation_ar": "معطوفة على جملة نعبد",
-              "explanation": "The clause (إياك نستعين) is coordinated to the clause (إياك نعبد)."
-            }
-          ]
-        },
-        "teaching": {
-          "beginner": "نَسْتَعِينُ means 'we ask for help'. The root means aid or assistance, and the form means to request it.",
-          "intermediate": "نَسْتَعِينُ is a Form X verb (استفعل) from the hollow root ع-و-ن. It undergoes vowel shifts: nasta'winu becomes nasta'īnu.",
-          "advanced": "Morphologically, the verb exemplifies I'lāl bi-l-naql wa-l-qalb (transfer and vowel mutation) in hollow verbs. The Form X prefix signifies 'ṭalab' (requesting), showing that the worshipper constantly seeks divine enablement."
+        "rhetoric": {
+          "device": "تقديم العبادة على الاستعانة",
+          "device_en": "prioritizing worship before requesting aid",
+          "ordinary_order": "إِيَّاكَ نَسْتَعِينُ وَإِيَّاكَ نَعْبُدُ",
+          "quranic_order": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "effect": "تقديم حق الله الخالص (العبادة) على حاجة العبد (المعونة)، وتقديم الغاية الكبرى على الوسيلة الموصلة إليها",
+          "contrast": {
+            "ordinary_meaning": "Asking for aid before declaring devotion.",
+            "quranic_meaning": "Fulfilling divine devotion as an act of gratitude before petitioning for divine help."
+          }
         },
         "visual": {
           "category": "verb",
-          "color_group": "verb",
-          "highlight": false,
+          "color_group": "verb_present",
+          "highlight": true,
           "expandable": true
-        },
-        "insights": [
-          "A servant cannot obey Allah or accomplish any spiritual or worldly good without Allah's direct help.",
-          "It strikes down human arrogance: even our ability to pray, fast, or perform good deeds is a divine gift, not our own independent strength.",
-          "Ibn al-Qayyim wrote in Madarij al-Salikin that the entire Quran is summarized in Surah al-Fatihah, and all of al-Fatihah is summarized in 'Iyyāka na'budu wa iyyāka nasta'īn'."
-        ]
-      }
-    ],
-    "grammar_overview": {
-      "sentence_type": "compound verbal sentences conjoined by waw (جملتان فعليتان معطوفتان)",
-      "main_structure": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "core_construction": "preposed detached accusative pronoun + imperfect verb with concealed agent, coordinated via waw",
-      "i3rab_chain": [
-        {
-          "word": "إِيَّاكَ",
-          "case": "mansub_in_place",
-          "reason": "preposed direct object (مفعول به مقدم) of نَعْبُدُ"
-        },
-        {
-          "word": "نَعْبُدُ",
-          "case": "marfu",
-          "reason": "bare imperfect verb with concealed agent نحن"
-        },
-        {
-          "word": "وَإِيَّاكَ",
-          "case": "mansub_in_place",
-          "reason": "conjunction waw + preposed direct object (مفعول به مقدم) of نَسْتَعِينُ"
-        },
-        {
-          "word": "نَسْتَعِينُ",
-          "case": "marfu",
-          "reason": "bare imperfect verb with concealed agent نحن, forming conjoined verbal clause"
-        }
-      ],
-      "important_rule": {
-        "rule": "Taqdim al-Ma'ful li al-Hasr (تقديم المفعول به لإفادة الحصر)",
-        "explanation": "Placing the direct object before its governing verb restricts the action exclusively to that object, negating its application to anyone else.",
-        "example_from_ayah": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ"
-      }
-    },
-    "sarf_overview": {
-      "verbs_present": true,
-      "verb_analysis": [
-        {
-          "word": "نَعْبُدُ",
-          "root": "ع ب د",
-          "form": "Form I (ثلاثي مجرد)",
-          "pattern": "نَفْعُلُ",
-          "tense": "imperfect (مضارع)",
-          "person_number": "1st person plural",
-          "type": "صحيح سالم"
-        },
-        {
-          "word": "نَسْتَعِينُ",
-          "root": "ع و ن",
-          "form": "Form X (استفعل)",
-          "pattern": "نَسْتَفْعِلُ",
-          "original_pattern": "نَسْتَعْوِنُ",
-          "tense": "imperfect (مضارع)",
-          "person_number": "1st person plural",
-          "type": "معتل أجوف واوي",
-          "morphological_feature": "إعلال بالنقل والقلب: نقلت كسرة الواو إلى العين وانقلبت الواو ياءً لسكونها وانكسار ما قبلها"
-        }
-      ],
-      "derived_nouns": [],
-      "sarf_rule": {
-        "rule": "صيغة استفعل في المعتل الأجوف (Form X in Hollow Verbs)",
-        "explanation": "Form X denotes petitioning/seeking (طلب الفعل). When derived from a hollow wawi root (ع و ن), the weak letter undergoes transfer of vowel and transformation into a long yā' in the imperfect tense (نَسْتَعِينُ)."
-      }
-    },
-    "nahw_relations": [
-      {
-        "from": 1,
-        "to": 2,
-        "relation": "maf'ul_bihi_muqaddam",
-        "relation_ar": "مفعول به مقدم",
-        "explanation": "إِيَّاكَ is the preposed direct object of the verb نَعْبُدُ."
-      },
-      {
-        "from": 2,
-        "to": 1,
-        "relation": "governor_of_object",
-        "relation_ar": "عامل النصب",
-        "explanation": "نَعْبُدُ is the governing verb that assigns naṣb to إِيَّاكَ."
-      },
-      {
-        "from": 3,
-        "to": 1,
-        "relation": "clause_coordination",
-        "relation_ar": "عطف نسق",
-        "explanation": "The waw in وَإِيَّاكَ coordinates the second clause with the first clause."
-      },
-      {
-        "from": 3,
-        "to": 4,
-        "relation": "maf'ul_bihi_muqaddam",
-        "relation_ar": "مفعول به مقدم",
-        "explanation": "إِيَّاكَ in وَإِيَّاكَ is the preposed direct object of the verb نَسْتَعِينُ."
-      },
-      {
-        "from": 4,
-        "to": 3,
-        "relation": "governor_of_object",
-        "relation_ar": "عامل النصب",
-        "explanation": "نَسْتَعِينُ is the governing verb that assigns naṣb to إِيَّاكَ."
-      },
-      {
-        "from": 4,
-        "to": 2,
-        "relation": "clause_coordination",
-        "relation_ar": "عطف جملة على جملة",
-        "explanation": "The verbal sentence (إياك نستعين) is coordinated to the verbal sentence (إياك نعبد)."
-      }
-    ],
-    "phrase_structure": {
-      "phrase": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
-      "hierarchy": {
-        "clause_1": {
-          "preposed_object": "إِيَّاكَ",
-          "verb": "نَعْبُدُ",
-          "subject": "نحن (ضمير مستتر وجوباً)"
-        },
-        "connector": "وَ (حرف عطف)",
-        "clause_2": {
-          "preposed_object": "إِيَّاكَ",
-          "verb": "نَسْتَعِينُ",
-          "subject": "نحن (ضمير مستتر وجوباً)"
-        }
-      },
-      "tree": [
-        {
-          "node": "الجملة الكبرى (إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ)",
-          "children": [
-            {
-              "node": "الجملة الأولى (إِيَّاكَ نَعْبُدُ)",
-              "children": [
-                {
-                  "node": "المفعول به المقدم (إِيَّاكَ)",
-                  "children": []
-                },
-                {
-                  "node": "الفعل والفاعل (نَعْبُدُ + نحن)",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "node": "حرف العطف (وَ)",
-              "children": []
-            },
-            {
-              "node": "الجملة المعطوفة (إِيَّاكَ نَسْتَعِينُ)",
-              "children": [
-                {
-                  "node": "المفعول به المقدم (إِيَّاكَ)",
-                  "children": []
-                },
-                {
-                  "node": "الفعل والفاعل (نَسْتَعِينُ + نحن)",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "pronouns": {
-      "present": true,
-      "items": [
-        {
-          "pronoun_id": "P1",
-          "text": "إِيَّاكَ",
-          "type": "detached_accusative (ضمير نصب منفصل)",
-          "person": "second_person",
-          "gender": "masculine",
-          "number": "singular",
-          "role": "preposed direct object of نَعْبُدُ",
-          "refers_to": "Allah (الله تعالى)"
-        },
-        {
-          "pronoun_id": "P2",
-          "text": "نحن (مستتر)",
-          "type": "latent_obligatory_pronoun (ضمير مستتر وجوباً)",
-          "person": "first_person",
-          "number": "plural",
-          "role": "agent / subject (فاعل) of نَعْبُدُ",
-          "refers_to": "the congregation of believers"
-        },
-        {
-          "pronoun_id": "P3",
-          "text": "إِيَّاكَ",
-          "type": "detached_accusative (ضمير نصب منفصل)",
-          "person": "second_person",
-          "gender": "masculine",
-          "number": "singular",
-          "role": "preposed direct object of نَسْتَعِينُ",
-          "refers_to": "Allah (الله تعالى)"
-        },
-        {
-          "pronoun_id": "P4",
-          "text": "نحن (مستتر)",
-          "type": "latent_obligatory_pronoun (ضمير مستتر وجوباً)",
-          "person": "first_person",
-          "number": "plural",
-          "role": "agent / subject (فاعل) of نَسْتَعِينُ",
-          "refers_to": "the congregation of believers"
-        }
-      ]
-    },
-    "particles": {
-      "present": true,
-      "items": [
-        {
-          "particle_id": "PT1",
-          "text": "وَ",
-          "type": "conjunction (حرف عطف)",
-          "meaning": "and",
-          "grammatical_effect": "coordinating conjunction linking the second verbal clause to the first (عطف جملة على جملة)"
-        }
-      ]
-    },
-    "case_and_ending_map": [
-      {
-        "word_position": 1,
-        "word": "إِيَّاكَ",
-        "case": "mansub_in_place",
-        "ending": "fatha (mabni)"
-      },
-      {
-        "word_position": 2,
-        "word": "نَعْبُدُ",
-        "case": "marfu",
-        "ending": "dammah"
-      },
-      {
-        "word_position": 3,
-        "word": "وَإِيَّاكَ",
-        "case": "mansub_in_place",
-        "ending": "fatha (mabni)"
-      },
-      {
-        "word_position": 4,
-        "word": "نَسْتَعِينُ",
-        "case": "marfu",
-        "ending": "dammah"
-      }
-    ],
-    "word_color_coding": {
-      "enabled": true,
-      "limited_palette": true,
-      "categories": {
-        "verb": {
-          "enabled": true,
-          "base_color": "verb",
-          "past": "verb_past",
-          "present": "verb_present",
-          "future": "verb_future",
-          "imperative": "verb_imperative"
-        },
-        "pronoun": {
-          "enabled": true,
-          "color": "pronoun_blue"
-        },
-        "noun": {
-          "enabled": true,
-          "color": "noun_default"
-        },
-        "particle": {
-          "enabled": true,
-          "color": "particle_default"
-        },
-        "mansub_in_place": {
-          "enabled": true,
-          "visual_effect": "highlight_accent_gold"
-        }
-      }
-    },
-    "interactive_word_data": [
-      {
-        "word_position": 1,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "إِيَّاكَ",
-          "meaning": "You alone",
-          "word_type": "ضمير",
-          "root": null,
-          "sarf": "ضمير نصب منفصل للمخاطب",
-          "i3rab": "في محل نصب مفعول به مقدم",
-          "grammatical_role": "مفعول به مقدم يفيد الحصر والقصر",
-          "relationship": "object of نَعْبُدُ"
-        }
-      },
-      {
-        "word_position": 2,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "نَعْبُدُ",
-          "meaning": "we worship",
-          "word_type": "فعل",
-          "root": "ع ب د",
-          "pattern": "نَفْعُلُ",
-          "sarf": "فعل مضارع ثلاثي مجرد",
-          "i3rab": "مرفوع بالضمة، والفاعل مستتر تقديره نحن",
-          "grammatical_role": "فعل مضارع وفاعله المستتر",
-          "relationship": "governor of first إِيَّاكَ"
-        }
-      },
-      {
-        "word_position": 3,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "وَإِيَّاكَ",
-          "meaning": "and You alone",
-          "word_type": "حرف + ضمير",
-          "root": null,
-          "sarf": "واو العطف + ضمير نصب منفصل",
-          "i3rab": "في محل نصب مفعول به مقدم",
-          "grammatical_role": "حرف عطف ومفعول به مقدم",
-          "relationship": "coordinated to first clause, object of نَسْتَعِينُ"
-        }
-      },
-      {
-        "word_position": 4,
-        "click_action": {
-          "expand_below": true,
-          "move_other_words": false
-        },
-        "panel": {
-          "word": "نَسْتَعِينُ",
-          "meaning": "we seek help",
-          "word_type": "فعل",
-          "root": "ع و ن",
-          "pattern": "نَسْتَفْعِلُ",
-          "sarf": "فعل مضارع مزيد بحروف (استفعل) من أجوف واوي مع إعلال",
-          "i3rab": "مرفوع بالضمة، والفاعل مستتر تقديره نحن",
-          "grammatical_role": "فعل مضارع وفاعله المستتر معطوف على جملة نعبد",
-          "relationship": "governor of second إِيَّاكَ"
         }
       }
     ],
-    "linguistic_insights": {
-      "semantic": [
-        "إِيَّاكَ strictly confines the sphere of devotion, worship, and prayer exclusively to Allah.",
-        "The combination of العبادة (Worship) and الاستعانة (Seeking Help) covers all aspects of human servitude: devotion directed upwards to God, and reliance flowing downwards from God."
-      ],
-      "grammar": [
-        "Fronting the direct object (تقديم المفعول به) is a classic rhetorical device producing absolute exclusivity (حصر وقصر).",
-        "The coordination of the two verbal clauses balances active duty with humble petition."
-      ],
-      "sarf": [
-        "نَعْبُدُ is a basic Form I sound verb representing primordial, direct servitude.",
-        "نَسْتَعِينُ is a Form X derived verb where the prefix (استـ) signifies intense, continuous petitioning (طلب المعونة) from a hollow root undergoing regular phonological I'lāl."
-      ],
-      "rhetorical": [
-        "The shift (التفات - Iltifāt) from the distant majesty of third-person praise (الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ) to immediate second-person communion (إِيَّاكَ نَعْبُدُ) creates an electrifying spiritual closeness in prayer.",
-        "The repetition of the pronoun إِيَّاكَ in both clauses avoids subordinating seeking help to worship, establishing each as an independent pillar of monotheism."
-      ]
-    },
-    "tafsir_insights": {
-      "level_1_simple": "We worship You alone, Allah, and we ask for help only from You.",
-      "level_2_explanatory": "This verse is the very heart of Surah al-Fatihah. It represents the covenant of the believer: we dedicate every prayer and righteous deed solely to Allah, and we recognize that without His divine assistance we cannot succeed in anything.",
-      "level_3_linguistic": "Ibn al-Qayyim observed in Madarij al-Salikin that 'Iyyāka na'budu' rejects polytheism and ostentation (Shirk and Riya'), while 'Iyyāka nasta'īn' cures arrogance and self-delusion (Kibr and 'Ujb).",
-      "reflection": "When I recite this in Salah, do I truly rely on Allah alone, or do I secretly put my absolute trust in my wealth, intelligence, or connections?",
-      "hope": "Allah pairs the demand for worship with the promise of His help: He never commands us to serve Him without offering His limitless support.",
-      "accountability": "Saying 'we worship You' is a solemn covenant uttered multiple times each day; our deeds must honor this declaration."
-    },
-    "key_vocabulary": [
-      {
-        "word": "إِيَّاكَ",
-        "meaning": "You alone (exclusive object pronoun)",
-        "root": null
+    "teaching_layers": {
+      "beginner": {
+        "lesson": "Allah alone deserves worship, and from Him alone we ask for help.",
+        "grammar": "إِيَّاكَ means 'You alone' and نَعْبُدُ means 'we worship'.",
+        "sarf": "نَعْبُدُ is a present-tense verb from the root ع-ب-د."
       },
-      {
-        "word": "نَعْبُدُ",
-        "meaning": "we worship, serve with humility and love",
-        "root": "ع ب د"
+      "intermediate": {
+        "lesson": "The Qur'an places the object before the verb to create exclusivity (حصر): worship and reliance belong only to Allah.",
+        "grammar": "إِيَّاكَ is a fronted direct object. The subject is the hidden pronoun نحن inside the verb.",
+        "sarf": "نَسْتَعِينُ is a Form X verb (استفعل) indicating actively seeking assistance."
       },
-      {
-        "word": "نَسْتَعِينُ",
-        "meaning": "we seek assistance and divine aid",
-        "root": "ع و ن"
+      "advanced": {
+        "lesson": "The ayah couples absolute monotheism in ritual worship with absolute reliance in psychological dependence via parallel fronted-object constructions.",
+        "grammar": "Two balanced verbal sentences coordinated by waw, each featuring a fronted detached accusative pronoun and an imperfect verb with an obligatorily latent agent.",
+        "rhetoric": "The transition from third-person description (1:1-4) to second-person direct address (1:5) is a masterclass in Iltifāt, drawing the servant into direct divine audience."
       }
-    ],
-    "root_study": [
+    },
+    "alternative_analyses": [
       {
-        "root": "ع ب د",
-        "ayah_word": "نَعْبُدُ",
-        "root_concept": "servitude / complete submission combined with supreme love and humility",
-        "related_words": [
-          "عِبَادَة (Worship)",
-          "عَبْد (Servant/Slave)",
-          "مَعْبُود (The One Worshipped)",
-          "عُبُودِيَّة (State of servitude)"
+        "topic": "structure_of_iyyaaka",
+        "analysis": "إِيَّا is the substantive pronoun element, while the attached kāf is a particle of address (حرف خطاب) without independent case.",
+        "scholars_or_schools": [
+          "Al-Khalil",
+          "Sibawayh",
+          "Majority Basran Grammarians"
         ],
-        "note": "A pathway that is 'mu'abbad' in classical Arabic is a path that has been smoothed and humbled by footprints; an 'abd' is one whose ego is completely smoothed and surrendered before Allah."
+        "source": "Al-Kitab li Sibawayh; Al-Bahr al-Muhit li Abi Hayyan",
+        "confidence": "high"
       },
       {
-        "root": "ع و ن",
-        "ayah_word": "نَسْتَعِينُ",
-        "root_concept": "aid / assistance / succor / support in times of weakness",
-        "related_words": [
-          "عَوْن (Help/Support)",
-          "إِعَانَة (Assistance)",
-          "ٱسْتِعَانَة (Seeking help)",
-          "مُعِين (Helper/Supporter)"
+        "topic": "structure_of_iyyaaka_compound",
+        "analysis": "The entire compound word (إِيَّاكَ) functions as a single unified indeclinable pronoun in the place of naṣb.",
+        "scholars_or_schools": [
+          "Kufan Grammarians",
+          "Later Pedagogical Grammarians"
         ],
-        "note": "Form X indicates taking the initiative to seek that aid with utter realization of one's own helplessness."
+        "source": "I'rab al-Qur'an li al-Zajjaj; Mughni al-Labib li Ibn Hisham",
+        "confidence": "high"
+      },
+      {
+        "topic": "scope_of_coordination",
+        "analysis": "The waw in وَإِيَّاكَ coordinates the whole second clause (sentence-level coordination) onto the first, preserving independent clauses.",
+        "scholars_or_schools": [
+          "Abu Hayyan",
+          "Ibn Hisham"
+        ],
+        "source": "Al-Bahr al-Muhit; Tafsir Ibn Kathir",
+        "confidence": "high"
       }
     ],
-    "grammar_lessons": [
-      {
-        "lesson_id": "G001",
-        "topic": "Preposed Direct Object for Restriction (تقديم المفعول به للحصر)",
-        "level": "intermediate",
-        "rule": "In Arabic syntax, moving a direct object ahead of its governing verb turns a simple statement of action into an exclusive restriction (Hasr & Qasr).",
-        "example": "إِيَّاكَ نَعْبُدُ (You alone we worship)"
-      },
-      {
-        "lesson_id": "G002",
-        "topic": "Obligatory Latent Pronouns (استتار الضمير وجوباً)",
-        "level": "intermediate",
-        "rule": "In first-person imperfect verbs (like نَعْبُدُ and نَسْتَعِينُ), the subject pronoun 'نحن' is obligatorily concealed and cannot be overtly replaced by an explicit external noun.",
-        "example": "نَعْبُدُ (Subject is obligatorily implicit 'we')"
-      },
-      {
-        "lesson_id": "G003",
-        "topic": "Sentence Coordination (عطف الجمل)",
-        "level": "intermediate",
-        "rule": "The particle waw can coordinate two independent verbal clauses together, sharing sentence standing or standing independent without inflectional place.",
-        "example": "إِيَّاكَ نَعْبُدُ + وَ + إِيَّاكَ نَسْتَعِينُ"
-      }
-    ],
-    "sarf_lessons": [
-      {
-        "lesson_id": "S001",
-        "topic": "Form X Derived Verb (صيغة استفعل)",
-        "word": "نَسْتَعِينُ",
-        "root": "ع و ن",
-        "pattern": "نَسْتَفْعِلُ",
-        "explanation": "Form X is constructed by prefixing hamzat al-wasl, seen, and ta. Its primary semantic function is 'Talab' (petitioning or requesting the root meaning)."
-      },
-      {
-        "lesson_id": "S002",
-        "topic": "Phonological Mutation in Hollow Verbs (الإعلال بالنقل والقلب في الأجوف)",
-        "word": "نَسْتَعِينُ",
-        "root": "ع و ن",
-        "pattern": "نَسْتَفْعِلُ",
-        "explanation": "In hollow verbs where the middle radical is wāw with a kasrah following a vowelless consonant, the vowel transfers to the preceding consonant (na-sta'-wi-nu → na-sta'i-w-nu) and the wāw mutates into yā' to harmonize with the kasrah (nasta'īnu)."
-      }
-    ],
-    "common_mistakes": [
-      {
-        "mistake": "Treating إِيَّاكَ as a nominative subject pronoun (like أَنْتَ).",
-        "correction": "إِيَّاكَ is strictly a detached accusative pronoun (ضمير نصب منفصل), functioning as a direct object."
-      },
-      {
-        "mistake": "Translating the verse as 'We worship You and we ask You for help' without the crucial word 'alone'.",
-        "correction": "Because the pronoun is preposed, it grammatically restricts the action: 'You alone we worship, and from You alone we seek help'."
-      },
-      {
-        "mistake": "Believing the root of نَسْتَعِينُ is ع-ي-ن (eye/spring).",
-        "correction": "The root is ع-و-ن (assistance/aid); the yā' is a morphological mutation of an original wāw."
-      }
-    ],
-    "student_questions": [
-      {
-        "question": "Why did Allah choose the plural 'we worship' (نَعْبُدُ) instead of 'I worship' (أَعْبُدُ)?",
-        "answer": "To foster humility, communal brotherhood, and because a single servant's worship is deficient when presented alone, but presented alongside all righteous believers it is embraced by divine mercy."
-      },
-      {
-        "question": "Why is 'worship' mentioned before 'seeking help'?",
-        "answer": "Because worship is Allah's divine right upon creation, whereas seeking help is the servant's petition. Proper adab dictates fulfilling Allah's right before asking for one's own needs."
-      },
-      {
-        "question": "What is the rhetorical significance of repeating إِيَّاكَ twice instead of saying 'إِيَّاكَ نَعْبُدُ وَنَسْتَعِينُ'?",
-        "answer": "Repeating the pronoun establishes that seeking help (Isti'ānah) is an independent, supreme act of devotion that must also be directed exclusively to Allah alone."
-      },
-      {
-        "question": "What is the concept of Iltifāt (التفات) seen between verses 4 and 5?",
-        "answer": "It is a sudden grammatical shift from third-person description ('Praise be to Allah... the Master of the Day') into direct second-person address ('You alone we worship'), signifying that the worshipper has entered into intimate divine audience."
-      }
-    ],
-    "memorization_aids": {
-      "key_structure": "إِيَّاكَ نَعْبُدُ + وَ + إِيَّاكَ نَسْتَعِينُ",
-      "grammar_pattern": "مفعول به مقدم + فعل مضارع + واو العطف + مفعول به مقدم + فعل مضارع",
-      "memory_sentence": "You alone we worship → and → from You alone we seek help.",
-      "focus_words": [
-        "إِيَّاكَ",
-        "نَعْبُدُ",
-        "نَسْتَعِينُ"
-      ]
-    },
-    "reflection": {
-      "personal_questions": [
-        "Do I genuinely rely on Allah in my day-to-day decisions, or do I rely only on my own skills and efforts?",
-        "Is my worship purely for Allah, or does a desire for social recognition taint my intentions?",
-        "How does reciting this verse reshape my vulnerability and humility before God?"
-      ],
-      "action_point": "Whenever facing a challenging situation, actively articulate: 'O Allah, from You alone I seek help' before attempting any worldly measure."
-    },
-    "quiz": {
-      "multiple_choice": [
-        {
-          "question": "What is the syntactic function of the fronted pronoun إِيَّاكَ?",
-          "options": [
-            "مفعول به مقدم يفيد الحصر (Preposed direct object indicating exclusivity)",
-            "مبتدأ مؤخر (Deferred subject)",
-            "فاعل مرفوع (Nominative agent)",
-            "خبر مقدم (Preposed predicate)"
-          ],
-          "correct_answer": "مفعول به مقدم يفيد الحصر (Preposed direct object indicating exclusivity)"
-        },
-        {
-          "question": "What is the root of the verb نَسْتَعِينُ?",
-          "options": [
-            "ع و ن (Assistance / Aid)",
-            "ع ي ن (Eye / Essence)",
-            "س ع ن",
-            "ت ع ن"
-          ],
-          "correct_answer": "ع و ن (Assistance / Aid)"
-        },
-        {
-          "question": "What is the grammatical term for the transition from 3rd-person description in verses 1-4 to 2nd-person direct address in verse 5?",
-          "options": [
-            "التفات (Iltifāt)",
-            "إيجاز (Conciseness)",
-            "إطناب (Elaboration)",
-            "جناس (Paronomasia)"
-          ],
-          "correct_answer": "التفات (Iltifāt)"
-        }
-      ],
-      "identify_case": [
-        {
-          "word": "إِيَّاكَ",
-          "answer": "في محل نصب (مفعول به مقدم مبني على الفتح)"
-        },
-        {
-          "word": "نَعْبُدُ",
-          "answer": "مرفوع (فعل مضارع بالضمة الظاهرة)"
-        },
-        {
-          "word": "وَإِيَّاكَ",
-          "answer": "في محل نصب (مفعول به مقدم مبني على الفتح)"
-        },
-        {
-          "word": "نَسْتَعِينُ",
-          "answer": "مرفوع (فعل مضارع بالضمة الظاهرة)"
-        }
-      ]
-    },
-    "app_display": {
-      "arabic_font": "KFGQPC_Uthmani_Hafs",
-      "arabic_text_direction": "rtl",
-      "default_mode": "light",
-      "mobile_responsive": true,
-      "word_click_enabled": true,
-      "word_expansion_position": "below_ayah",
-      "preserve_word_positions": true,
-      "enable_copy": true,
-      "enable_share": true,
-      "whatsapp_share": true,
-      "tooltips": true,
-      "animations": {
-        "enabled": true,
-        "majrur_indicator": "subtle_purple_pulse",
-        "expansion": "smooth"
-      }
-    },
-    "audio": {
-      "available": true,
-      "recitation_data": null,
-      "audio_url": null
-    },
     "sources": {
-      "quran_text_source": "verified_quran_text",
-      "translation_sources": [],
+      "quran_text_source": "King Fahd Complex Madinah Mushaf (Hafs 'an 'Asim)",
       "grammar_sources": [
-        "I'rab al-Qur'an li al-Ukbari",
-        "Al-Bahr al-Muhit li Abi Hayyan",
+        "I'rab al-Qur'an wa Bayanuhu li Muhyi al-Din Darwish",
+        "Al-Bahr al-Muhit li Abi Hayyan al-Andalusi",
         "Mughni al-Labib li Ibn Hisham"
       ],
       "tafsir_sources": [
-        "Madarij al-Salikin li Ibn al-Qayyim",
-        "Tafsir al-Tabari",
-        "Tafsir Ibn Kathir"
+        "Tafsir al-Sa'di (Taysir al-Karim al-Rahman)",
+        "Tafsir al-Qur'an al-'Azim li Ibn Kathir",
+        "Madarij al-Salikin li Ibn al-Qayyim"
       ],
-      "source_verification_required": true
-    },
-    "data_quality": {
-      "arabic_text_verified": true,
-      "grammar_verified": true,
-      "sarf_verified": true,
-      "translation_verified": true,
-      "tafsir_verified": true,
-      "needs_scholar_review": false,
-      "notes": "Morphological I'lal, Balaghah Iltifat, and alternative syntactic analyses fully documented."
+      "source_verification_status": "verified"
     }
   }
 ]
