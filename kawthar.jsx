@@ -1741,7 +1741,7 @@
 
           <footer className="app-footer">
             <p className="footer-text">Surah Al-Kawthar — Grammar Intelligence & AI Tutor</p>
-            <p className="footer-version">v1.1.6 (updated 2026-10-07 01:26)</p>
+            <p className="footer-version">v1.1.7 (updated 2026-10-08 07:53)</p>
           </footer>
         </div>
       );
